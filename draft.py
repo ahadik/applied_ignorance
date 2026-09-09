@@ -6,49 +6,19 @@ Only supplied stats are scored; this is not a prediction model.
 """
 import argparse
 import json
-import os
 from pathlib import Path
-import tempfile
 from datetime import datetime, timezone
-from urllib.request import urlopen, Request
 from zoneinfo import ZoneInfo
+from draft_data import read_draft_context
+from storage import save_atomic
 
 ROOT = Path(__file__).resolve().parent
 SNAPSHOT = ROOT / "data" / "snapshot.json"
 
 
-def fetch(path):
-    request = Request("https://api.sleeper.app/v1/" + path,
-                      headers={"User-Agent": "PersonalFantasyDraftAssistant/1.0"})
-    with urlopen(request, timeout=20) as response:
-        return json.load(response)
-
-
-def save_atomic(path, data):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.NamedTemporaryFile(mode="w", dir=path.parent, delete=False) as f:
-        json.dump(data, f, indent=2)
-        temp = f.name
-    os.replace(temp, path)
-
-
 def sync(config):
-    league_id = config["league_id"]
-    league = fetch(f"league/{league_id}")
-    if not isinstance(league, dict) or league.get("league_id") != league_id:
-        raise ValueError("League response missing or invalid; preserving saved snapshot")
-    draft = fetch(f"draft/{league['draft_id']}")
-    user = fetch(f"user/{config['username']}")
-    picks = fetch(f"draft/{league['draft_id']}/picks")
-    rosters = fetch(f"league/{league_id}/rosters")
-    if not isinstance(draft, dict) or not isinstance(user, dict) or not user.get("user_id"):
-        raise ValueError("Draft/user unavailable; preserving saved snapshot")
-    if not isinstance(picks, list) or not isinstance(rosters, list):
-        raise ValueError("Picks/rosters unavailable; preserving saved snapshot")
-    data = {"fetched_at": datetime.now(timezone.utc).isoformat(),
-            "league": league, "draft": draft, "user_id": user["user_id"],
-            "picks": picks, "rosters": rosters}
-    # Save one consistent bundle only after every required request succeeds.
+    data = read_draft_context(config)
+    # Publish only after every required read and scope check succeeds.
     save_atomic(SNAPSHOT, data)
     return data
 
@@ -104,7 +74,7 @@ def summary(data, config):
         info = pick.get("metadata") or {}
         name = " ".join(filter(None, [info.get("first_name"), info.get("last_name")]))
         lines.append(f"- {pick['pick_no']}: {name or pick['player_id']} ({info.get('position', '?')}) — {pick.get('picked_by', '?')}")
-    lines += ["", "No projection data is loaded. This report does not recommend players."]
+    lines += ["", "This context report does not calculate projections or recommend players. Use draft_board.py for the integrated draft board."]
     return "\n".join(lines) + "\n"
 
 

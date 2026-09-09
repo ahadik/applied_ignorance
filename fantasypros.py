@@ -17,6 +17,11 @@ from urllib.request import Request, build_opener, HTTPRedirectHandler
 
 ROOT = Path(__file__).resolve().parent
 BASE = 'https://api.fantasypros.com/public/v2/json/'
+# Account approval supplied by the user on 2026-09-08: full responses,
+# personal use, 1 request/second and 500/day. See docs/FANTASYPROS.md.
+# Reserve 20% for retries; rolling 24h avoids assuming a provider reset timezone.
+ROUTINE_LIMIT = 400
+HARD_LIMIT = 500
 TTL = {'players': 86400, 'news': 900, 'injuries': 900, 'projections': 21600,
        'rankings': 21600, 'consensus-rankings': 21600, 'experts': 86400,
        'compare-players': 21600}
@@ -36,6 +41,14 @@ class RateLimited(APIError):
 
 class InvalidData(APIError):
     pass
+
+
+def quota_headers(headers):
+    """Keep only numeric quota headers; never retain arbitrary provider headers."""
+    allowed = {'ratelimit-limit', 'ratelimit-remaining', 'ratelimit-reset',
+               'x-ratelimit-limit', 'x-ratelimit-remaining', 'x-ratelimit-reset'}
+    return {k.lower(): str(v) for k, v in headers.items()
+            if k.lower() in allowed and re.fullmatch(r'\d{1,16}', str(v))}
 
 
 def load_key():
@@ -142,6 +155,7 @@ class FantasyPros:
                     CREATE TABLE IF NOT EXISTS attempts (at REAL NOT NULL);
                     CREATE TABLE IF NOT EXISTS cache (id TEXT PRIMARY KEY, at REAL, payload TEXT);
                     CREATE TABLE IF NOT EXISTS control (id TEXT PRIMARY KEY, until REAL);
+                    CREATE TABLE IF NOT EXISTS cache_metadata (id TEXT PRIMARY KEY, headers TEXT);
                 ''')
                 yield db
             finally:
@@ -152,8 +166,8 @@ class FantasyPros:
         """Local attempts in the preceding 24 hours; not an account-wide quota API."""
         with self.locked() as db:
             count = db.execute('SELECT COUNT(*) FROM attempts WHERE at > ?', (self.clock()-86400,)).fetchone()[0]
-            return {'attempts_last_24h': count, 'routine_remaining': max(0, 80-count),
-                    'hard_remaining': max(0, 100-count), 'scope': 'this shared local cache directory'}
+            return {'attempts_last_24h': count, 'routine_remaining': max(0, ROUTINE_LIMIT-count),
+                    'hard_remaining': max(0, HARD_LIMIT-count), 'scope': 'this shared local cache directory'}
 
     def get(self, path, params=None, *, max_age=None, validator=None, retries=2):
         """Cache-first read; validators run on hits too. Never silently serves stale data.
@@ -175,17 +189,21 @@ class FantasyPros:
                 validate_payload(path, params, data)
                 if validator:
                     validator(data)
-                return self.result(data, row[0], True)
+                metadata = db.execute('SELECT headers FROM cache_metadata WHERE id=?', (identity,)).fetchone()
+                return self.result(data, row[0], True, json.loads(metadata[0]) if metadata else {})
             for attempt in range(retries + 1):
+                from provider_freeze import check
+                check('fantasypros',self.directory)
                 cooldown = db.execute('SELECT MAX(until) FROM control WHERE id IN (?,?)', ('rate', scope)).fetchone()[0]
                 if cooldown and cooldown > self.clock():
                     raise RateLimited('Provider cooldown or credential failure is active; no call sent')
                 count = db.execute('SELECT COUNT(*) FROM attempts WHERE at > ?', (self.clock()-86400,)).fetchone()[0]
-                if count >= (80 if attempt == 0 else 100):
+                if count >= (ROUTINE_LIMIT if attempt == 0 else HARD_LIMIT):
                     raise BudgetExceeded('Local rolling-24-hour request budget exhausted; no call sent')
                 last = db.execute('SELECT MAX(at) FROM attempts').fetchone()[0]
                 if last is not None:
                     self.sleep(max(0, last + 1.05 - self.clock()))
+                check('fantasypros',self.directory)
                 started = self.clock()
                 # Commit reservation BEFORE I/O: crashes and failed requests count.
                 db.execute('INSERT INTO attempts VALUES (?)', (started,))
@@ -203,8 +221,10 @@ class FantasyPros:
                         validator(data)
                     fetched = self.clock()
                     db.execute('INSERT OR REPLACE INTO cache VALUES (?,?,?)', (identity, fetched, json.dumps(data, allow_nan=False)))
+                    safe_headers = quota_headers(headers)
+                    db.execute('INSERT OR REPLACE INTO cache_metadata VALUES (?,?)', (identity, json.dumps(safe_headers)))
                     db.commit()
-                    return self.result(data, fetched, False)
+                    return self.result(data, fetched, False, safe_headers)
                 if status in (401, 403):
                     db.execute('INSERT OR REPLACE INTO control VALUES (?,?)', (scope, self.clock()+86400))
                     db.commit()
@@ -230,8 +250,9 @@ class FantasyPros:
                 self.sleep(2 ** (attempt + 1))
 
     @staticmethod
-    def result(data, fetched, hit):
+    def result(data, fetched, hit, headers=None):
         return {'data': data, 'fetched_at': datetime.fromtimestamp(fetched, timezone.utc).isoformat(),
+                'quota_headers_at_fetch': headers or {},
                 'cache_hit': hit, 'validation': 'transport/basic schema; not proof of production entitlement'}
 
 

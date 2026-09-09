@@ -1,10 +1,66 @@
 # FantasyPros data operating guidance
 
-Reviewed September 8, 2026. Read this before implementing or changing any FantasyPros collector, valuation model, or MCP tool. The shared request/cache client is implemented in `fantasypros.py`; endpoint-specific collectors, complete domain validation and production credential validation remain outstanding.
+**Current draft freeze:** all 11 required feeds were prefetched at 6:35 p.m.
+Eastern September 8. No further FP requests until the actual draft completes.
+See [DRAFT_SESSION.md](DRAFT_SESSION.md); its active guard and fixed-snapshot
+policy supersede routine refresh instructions for this session.
+
+Reviewed September 8, 2026. Read this before implementing or changing any FantasyPros collector, valuation model, or MCP tool. Milestones 1 and 2 are complete for access and integrated draft evidence. `draft_inputs.py` collects all six projection positions and other baseline feeds; `draft_board.py` validates identities, scoring coverage and calculates supported scoring subtotals/starter value. See `MILESTONE_2.md` for source limitations and review commands; exact full-league totals and an optimized live draft strategy are not claimed.
+
+## Stage 1 checkpoint — complete; account approval confirmed
+
+On September 8, 2026, the user supplied the approval reminder shown by their
+FantasyPros account: the API request is approved, the key receives full responses,
+and its allowance is **1 request/second and 500 requests/day**. Access is personal
+and non-commercial; commercial use, data resale and distribution of API access to
+third parties are excluded. Caching is requested. This account-specific evidence
+resolves the earlier production/full-response access and daily-limit questions;
+it supersedes our provisional use of the older generic 100/day figure.
+
+Evidence source: account notice transcribed by the user in this project, not an
+entitlement inferred from HTTP 200 or an independently inspected account page.
+No key is stored in this document. The notice does not specify a reset timezone,
+rolling-versus-calendar window or current remaining balance. Those remain unknown
+and do not block completion of the access milestone. Local enforcement is 400
+routine attempts / 500 hard attempts in any rolling 24 hours, plus at least 1.05
+seconds between requests. Existing usage records and cooldowns are preserved.
+If the account, plan or key entitlement changes, recheck this policy.
+
+Historical diagnostic files retain their original observations and may say
+entitlement was unconfirmed at that time. This checkpoint supersedes that status;
+do not rerun network probes just to rewrite an old report. Future diagnostics
+point to this account evidence while still checking technical access separately.
+
+Run the reusable access check from the project directory:
+
+```sh
+python3 fantasypros_diagnostic.py --season 2026
+```
+
+After the user saved the updated `.env`, all six access probes passed on September 8, 2026 at approximately 19:29 UTC (3:29 p.m. Eastern). The first credential-loading failure consumed zero calls. The successful run consumed six FantasyPros calls; a second run returned all six responses from cache and consumed zero additional FantasyPros calls. Each run also read Sleeper's public NFL state to establish injury week 1 of the 2026 regular season. That shared reader now lives at `sleeper.get_sleeper`; the diagnostic no longer depends on draft code. See `DATA_ACCESS.md` for the provider/domain separation.
+
+| Access probe | Observed result |
+|---|---|
+| Player directory | 8,545 records; season 2026 |
+| Draft PPR consensus | 551 records; 131 experts; season 2026, week 0; source update September 8 |
+| PPR ADP | 712 records; 5 sources reported in `total_experts`; season 2026, week 0; source update September 8 |
+| RB preseason projections | 132 records; season 2026, week 0; response labels scoring STD; no source update timestamp in diagnostic metadata |
+| Recent news | Three requested records; includes September 8 publication dates |
+| Injuries | 224 records requested for 2026 week 1; includes September 8 update dates |
+
+These probes established access to current-season, recently dated data. Account approval is now separately confirmed above; complete feed freshness remains a domain-validation task. No recognized numeric quota headers were returned, so remaining provider balance is unknown. The successful diagnostic recorded six attempts under the then-current 80/100 local policy; those historical counts are not a current usage report. Do not claim all data validation is complete or start Stage 2 or a mock without the next user instruction.
+
+Milestone 2 subsequently inspected all six projection positions, their raw stat fields, PPR totals, identities and injury scope. The observed STD label did not prevent using the separately supplied PPR fields; scoring gaps are recorded rather than hidden. See `MILESTONE_2.md` for the measured coverage and source limitations. The access probes themselves remain insufficient to establish a usable draft board.
+
+The command probes the player directory, draft PPR consensus, PPR ADP, RB season projections, three recent news records, and injuries for the current regular-season week established through Sleeper's central reader. It skips injuries if that week cannot be verified. At most six FantasyPros requests are sent on an uncached run, with no diagnostic retries. Auth, connection, budget and cooldown failures stop further probes. Cache hits cost no provider call. Other projection positions and complete semantic/coverage validation belong to Stage 2.
+
+Private reports are saved to `data/fantasypros/diagnostic.json` and `data/fantasypros/diagnostic.md`; rerunning replaces the diagnostic reports, not the validated provider cache. Reports contain scope/count/date metadata and any allowlisted numeric quota headers, not player feeds or credentials. Header observations retain the original fetch time on cache hits and are not a promise of current account balance. Successful basic checks alone never establish production entitlement or draft readiness; account evidence is recorded separately above. Review actual source dates during Stage 2. Do not start a mock as part of this command.
+
+Validation: 29 project tests pass, using simulated transport and consuming no real API calls. Diagnostic tests cover early stopping, unresolved season/week, invalid data, and avoiding unsupported entitlement claims. Client tests also verify only allowlisted numeric quota headers persist across cache hits.
 
 ## Implemented shared entry point
 
-All project FantasyPros reads must use `get_fantasypros`; do not create standalone requests in individual collectors or agents. Codex must invoke saved reusable commands that use this function, not run inline API snippets. The example below illustrates code to put inside a reusable collector module; it is not an instruction to execute a one-off request. A documented collection CLI remains to be implemented before operational use.
+All project FantasyPros reads must use `get_fantasypros`; do not create standalone requests in individual collectors or agents. Codex must invoke saved reusable commands that use this function, not run inline API snippets. The example below illustrates code to put inside a reusable collector module; it is not an instruction to execute a one-off request. The full collection CLI is now `draft_inputs.py collect --season 2026`; the diagnostic remains an access-only tool.
 
 ```python
 from fantasypros import get_fantasypros, FantasyPros
@@ -21,14 +77,14 @@ print(FantasyPros().usage())  # reads local ledger, makes no API call
 
 - Persistent SQLite cache and a process lock live in ignored `data/fantasypros/`. Equivalent parameter order and string/bool forms share cache entries. Different scopes/parameters and credentials remain separate. All callers must use this same directory; separate computers or custom directories do not share quota.
 - Defaults: players/experts 24 hours; projections/rankings/comparisons 6 hours; news/injuries 15 minutes. These are cache policies, not claims about provider freshness. Callers can shorten `max_age` for a justified deadline refresh. `max_age=0` intentionally requests new data; never use it in a routine loop.
-- Local budget: 80 initial requests per rolling 24 hours, with a 100-attempt absolute cap including retries. Up to two retries for transient failures; each attempt is persisted before network I/O. This is a conservative local budget, not the provider's actual remaining balance; activity outside this client is not counted.
+- Local budget: new requests stop at 400 attempts per rolling 24 hours, with a 500-attempt absolute cap including retries. Only retries already underway can use the reserve; at most two retries are permitted per request. Each attempt is persisted before network I/O. The 500/day provider allowance comes from the user's account approval; local remaining counts are not provider balances, and activity outside this client is not counted.
 - Calls are serialized and spaced at least 1.05 seconds apart. A shared lock coalesces simultaneous fresh-cache misses. A 429 saves a shared Retry-After cooldown and returns promptly; it does not sleep through long retry intervals or issue an immediate retry.
 - 401/403 do not retry and pause that credential for 24 hours. A corrected/new credential gets its own cache/cooldown scope. Diagnose the underlying issue; do not delete quota records to bypass limits.
 - Only supported relative NFL read paths are enabled. Historical player-points are intentionally excluded pending entitlement verification. No redirects are followed. Secret loading is non-executing and errors exclude headers/body.
 - Invalid responses do not overwrite the last good cache. Expired cache is not silently returned as fresh. Cache hits still run caller-provided validation. The basic validator checks expected collections, explicit sample flags, sport/season and returned week/scoring when present; it does NOT establish production entitlement or complete projection semantics.
 - Results expose retrieval time and cache-hit status. Provider update times remain inside returned data and must be handled separately by collectors. Domain adapters still must enforce data age, coverage, projection period, identity matching and scoring completeness.
 
-Validation: 11 client tests plus the existing 13 tests pass. Tests cover caching/restarts, concurrent duplicate reads, spacing, retries, auth failures, quotas, cooldowns, invalid data, validator execution, restricted URLs and image-field removal. Tests use simulated transport and consume no real API calls. Cloud portability requires replacing the local macOS/Linux file lock with a shared server-side collector/lock; this implementation is local, not distributed.
+Validation: 12 client tests, four diagnostic tests and the existing 13 tests pass. Tests cover caching/restarts, concurrent duplicate reads, spacing, retries, auth failures, quotas, cooldowns, invalid data, validator execution, restricted URLs and image-field removal. Tests use simulated transport and consume no real API calls. Cloud portability requires replacing the local macOS/Linux file lock with a shared server-side collector/lock; this implementation is local, not distributed.
 
 ## Sources and scope
 
@@ -45,7 +101,7 @@ The product page advertises personal production access through HOF and a sample-
 
 Base URL: `https://api.fantasypros.com/public/v2/json`. All 12 documented operations are GET reads and use header `x-api-key`. Load `FANTASYPROS_API_KEY` from environment or the local `.env` with a non-executing parser; never source arbitrary shell contents. Never place the secret in query strings, prompts, logs, browser code, checkpoints or commits. Restrict credentials to the official API host, reject cross-host redirects, sanitize errors, and use bounded request timeouts. In cloud deployment use a secret manager and server-side requests.
 
-The linked older terms specify personal/noncommercial use, one request/second and 100/day, caching, attribution for published work, and restrictions on historical player statistics and image URLs. The current product page offers other entitlements. Until account-specific terms/quotas are verified, use the conservative limits and avoid restricted fields/endpoints; discard image URLs if returned. Do not expose a raw-data redistribution service. Confirm historical-data rights before backtesting with this provider. These are source-specific implementation constraints, not a determination of the user's contract.
+The linked older terms specify personal/noncommercial use, one request/second and 100/day, caching, attribution for published work, and restrictions on historical player statistics and image URLs. The user's account approval explicitly supplies the applicable 500/day allowance and full responses; use that account-specific limit as recorded above. Full responses do not independently establish historical-data or redistribution rights. Historical points remain disabled and image fields are discarded; current work uses nflverse for history. Do not expose a raw-data redistribution service.
 
 Implement a durable shared request ledger, at most one concurrent FantasyPros request, at least one second between requests, and a daily budget with retry reserve. Count failed attempts too. Honor Retry-After on 429; back off with bounded retries on timeouts/5xx; stop on 401/403; fix parameters rather than retry 400. Cache by endpoint plus normalized parameters. Never run this feed at the Sleeper pick tracker's five-second frequency.
 
@@ -72,7 +128,7 @@ Documented NFL position aliases include ALL, FLX and OP; map provider DST to Sle
 
 ## Tonight: collection and computation
 
-1. Confirm credential is saved and production access with a small, current NFL read. Save only sanitized response metadata for access diagnostics. Do not print the secret or assume sample data is live.
+1. Access probes and account approval are complete as recorded above. Recheck on access failures or account changes; save only sanitized diagnostic metadata. Validate current source dates and scope during collection.
 2. Fetch player directory, draft PPR consensus, PPR ADP, six preseason positional projection sets, current injuries and recent news. A baseline should need about 11 calls, before optional expert/rank-stat queries. Some requests may be unavailable; report gaps rather than fabricate replacements.
 3. Build a persisted crosswalk from FantasyPros player IDs to Sleeper IDs. Prefer verified shared IDs: FantasyPros `sportsdata_player_id` is described as Sportradar, and projections include `mflid`. Compare with actual Sleeper fields. `external_ids` does NOT list Sleeper. Require one-to-one matches and position checks; quarantine collisions and fuzzy-name matches for review. Treat team changes as warnings, not automatic identity changes. Map team defenses explicitly.
 4. Validate season=2026, preseason scope, position, coverage/counts, unique IDs and numeric values. Store retrieval time separately from provider update time. If source time is absent, mark it unknown, not equal to retrieval time. Never use old-season examples as observations.
@@ -80,7 +136,7 @@ Documented NFL position aliases include ALL, FLX and OP; map provider DST to Sle
 6. Produce controller candidates with Sleeper IDs, deterministic priorities, scoring basis, provenance and a brief rationale. Leave injury/bye caveats visible. Agent reasoning may propose changes but must preserve numeric evidence and record overrides.
 7. Refresh the baseline around 8 p.m.; recheck news/injuries close to 9 p.m. During the draft reuse cached projections and recompute after Sleeper picks. Reserve calls for material news; do not refetch full projections every turn.
 
-Budget example under the conservative 100/day cap: two 11-call baselines (22), six extra injury/news pairs (12), six diagnostic/expert calls (6), leaving 60 calls for errors, changes or later use. This is a proposed ceiling-aware schedule, not an active automation or a promise of a provider update cadence.
+Budget example: two 11-call baselines (22), six extra injury/news pairs (12), six diagnostic/expert calls (6), totaling 40 calls before cache savings or retries. That is comfortably inside the 400-attempt routine budget; a larger allowance is not a reason to poll needlessly. This is a proposed schedule, not active automation or a promise of a provider update cadence.
 
 ## Scoring and schema hazards
 
@@ -129,7 +185,7 @@ This API does not document Sleeper writes, NFL play-by-play, snap counts, target
 
 ## Integration acceptance checks
 
-- Confirm production entitlement and real payload freshness before drafting with this source.
+- Account approval is confirmed above; still validate real payload freshness and scope before drafting with this source.
 - Validate all six positional projection schemas and required scoring coverage.
 - Review every unresolved player match; no name-only silent joins.
 - Prove PPR conversion on hand-calculated examples and test missing fields.

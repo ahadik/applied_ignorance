@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-08T15:58:27.326166+00:00",
+  "fetched_at": "2026-09-08T22:34:53.995724+00:00",
   "league": {
     "name": "Free Agents",
     "status": "pre_draft",
@@ -102,19 +102,20 @@
     "season_type": "regular",
     "sport": "nfl",
     "shard": 904,
-    "last_message_id": "1403070084133474304",
+    "last_message_id": "1403156222470819840",
     "last_author_avatar": null,
     "last_author_display_name": "sys",
     "last_author_id": "166666666666666666",
     "last_author_is_bot": true,
     "last_message_attachment": null,
     "last_message_text_map": null,
-    "last_message_time": 1788880485141,
+    "last_message_time": 1788901022120,
     "last_pinned_message_id": null,
     "draft_id": "1400628785413394432",
     "last_read_id": null,
     "league_id": "1400628784381612032",
     "previous_league_id": null,
+    "group_id": null,
     "roster_positions": [
       "QB",
       "RB",
@@ -122,7 +123,6 @@
       "WR",
       "WR",
       "TE",
-      "FLEX",
       "FLEX",
       "K",
       "DEF",
@@ -134,7 +134,6 @@
     ],
     "bracket_id": null,
     "bracket_overrides_id": null,
-    "group_id": null,
     "loser_bracket_id": null,
     "loser_bracket_overrides_id": null,
     "total_rosters": 14
@@ -146,7 +145,21 @@
       "1400628133748580352"
     ],
     "draft_id": "1400628785413394432",
-    "draft_order": null,
+    "draft_order": {
+      "1139954334642405376": 6,
+      "1400628133748580352": 9,
+      "1401739882870603791": 5,
+      "1402453531943780352": 2,
+      "1402671793696710656": 14,
+      "1402840752031014912": 8,
+      "1402844794807390208": 10,
+      "1403051057856180224": 7,
+      "1403051387058728960": 3,
+      "1403069775155884032": 13,
+      "1403084584492470272": 12,
+      "1403141182900428800": 4,
+      "1403143697196949504": 1
+    },
     "last_message_id": "1400628785413394432",
     "last_message_time": 1788298434161,
     "last_picked": null,
@@ -170,10 +183,10 @@
       "pick_timer": 120,
       "player_type": 0,
       "reversal_round": 0,
-      "rounds": 15,
+      "rounds": 14,
       "slots_bn": 5,
       "slots_def": 1,
-      "slots_flex": 2,
+      "slots_flex": 1,
       "slots_k": 1,
       "slots_qb": 1,
       "slots_rb": 2,
@@ -182,20 +195,20 @@
       "teams": 14
     },
     "slot_to_roster_id": {
-      "1": 1,
-      "10": 10,
-      "11": 11,
-      "12": 12,
-      "13": 13,
-      "14": 14,
-      "2": 2,
-      "3": 3,
-      "4": 4,
-      "5": 5,
+      "1": 13,
+      "10": 2,
+      "11": 14,
+      "12": 11,
+      "13": 10,
+      "14": 4,
+      "2": 7,
+      "3": 9,
+      "4": 12,
+      "5": 3,
       "6": 6,
-      "7": 7,
-      "8": 8,
-      "9": 9
+      "7": 8,
+      "8": 5,
+      "9": 1
     },
     "sport": "nfl",
     "start_time": 1788915900000,
@@ -226,7 +239,6 @@
         "wins": 0
       },
       "starters": [
-        "0",
         "0",
         "0",
         "0",
@@ -268,7 +280,6 @@
         "0",
         "0",
         "0",
-        "0",
         "0"
       ],
       "taxi": []
@@ -294,7 +305,6 @@
         "wins": 0
       },
       "starters": [
-        "0",
         "0",
         "0",
         "0",
@@ -336,7 +346,6 @@
         "0",
         "0",
         "0",
-        "0",
         "0"
       ],
       "taxi": []
@@ -362,7 +371,6 @@
         "wins": 0
       },
       "starters": [
-        "0",
         "0",
         "0",
         "0",
@@ -404,7 +412,6 @@
         "0",
         "0",
         "0",
-        "0",
         "0"
       ],
       "taxi": []
@@ -430,7 +437,6 @@
         "wins": 0
       },
       "starters": [
-        "0",
         "0",
         "0",
         "0",
@@ -472,7 +478,6 @@
         "0",
         "0",
         "0",
-        "0",
         "0"
       ],
       "taxi": []
@@ -498,7 +503,6 @@
         "wins": 0
       },
       "starters": [
-        "0",
         "0",
         "0",
         "0",
@@ -540,7 +544,6 @@
         "0",
         "0",
         "0",
-        "0",
         "0"
       ],
       "taxi": []
@@ -550,7 +553,7 @@
       "keepers": [],
       "league_id": "1400628784381612032",
       "metadata": null,
-      "owner_id": null,
+      "owner_id": "1403084584492470272",
       "player_map": null,
       "players": [],
       "reserve": [],
@@ -574,7 +577,6 @@
         "0",
         "0",
         "0",
-        "0",
         "0"
       ],
       "taxi": []
@@ -584,7 +586,7 @@
       "keepers": [],
       "league_id": "1400628784381612032",
       "metadata": null,
-      "owner_id": null,
+      "owner_id": "1403141182900428800",
       "player_map": null,
       "players": [],
       "reserve": [],
@@ -608,7 +610,6 @@
         "0",
         "0",
         "0",
-        "0",
         "0"
       ],
       "taxi": []
@@ -618,7 +619,7 @@
       "keepers": [],
       "league_id": "1400628784381612032",
       "metadata": null,
-      "owner_id": null,
+      "owner_id": "1403143697196949504",
       "player_map": null,
       "players": [],
       "reserve": [],
@@ -634,7 +635,6 @@
         "wins": 0
       },
       "starters": [
-        "0",
         "0",
         "0",
         "0",
@@ -668,7 +668,6 @@
         "wins": 0
       },
       "starters": [
-        "0",
         "0",
         "0",
         "0",

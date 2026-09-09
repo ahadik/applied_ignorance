@@ -6,7 +6,9 @@ import json
 import math
 from pathlib import Path
 import time
-from draft import fetch, save_atomic, snake_picks
+from draft import snake_picks
+from draft_data import read_live_draft
+from storage import save_atomic
 
 
 def now():
@@ -48,6 +50,7 @@ def roster_needs(roster, settings):
 
 def build(draft, picks, user_id):
     validate(draft, picks, draft['draft_id'])
+    picks = sorted(picks,key=lambda p:p['pick_no'])
     settings = draft['settings']
     if settings.get('slots_super_flex', 0) or settings.get('slots_idp_flex', 0):
         raise ValueError('Unsupported roster slots')
@@ -63,12 +66,18 @@ def build(draft, picks, user_id):
     roster = [{'player_id': p['player_id'], 'pick_no': p['pick_no'],
                'name': ' '.join(p['metadata'].get(k, '') for k in ('first_name', 'last_name')).strip(),
                'position': p['metadata']['position']} for p in mine]
+    rosters_by_slot = {str(s):[] for s in range(1,settings['teams']+1)}
+    for pick in sorted(picks,key=lambda p:p['pick_no']):
+        selected_slot = str(pick['draft_slot'])
+        if selected_slot not in rosters_by_slot:
+            raise ValueError('Unknown pick owner slot')
+        rosters_by_slot[selected_slot].append(pick['player_id'])
     upcoming = [n for n in snake_picks(slot, settings['teams'], settings['rounds']) if n > len(picks)]
     return {'observed_at': now(), 'draft_id': draft['draft_id'], 'league_id': draft.get('league_id'),
             'url': 'https://sleeper.com/draft/nfl/' + draft['draft_id'], 'status': draft['status'],
             'seat': slot, 'last_pick': len(picks), 'next_pick': upcoming[0] if upcoming else None,
             'our_turn': bool(upcoming and upcoming[0] == len(picks) + 1 and draft['status'] == 'drafting'),
-            'roster': roster, 'needs': roster_needs(roster, settings),
+            'roster': roster, 'rosters_by_slot':rosters_by_slot, 'needs': roster_needs(roster, settings),
             'remaining_slots': settings['rounds'] - len(roster),
             'drafted_ids': [p['player_id'] for p in picks], 'settings': settings}
 
@@ -78,6 +87,12 @@ def rank(state, candidates):
         raise ValueError('Candidate file belongs to another draft')
     if not candidates.get('source') or not 0 <= age(candidates['observed_at']) <= 86400:
         raise ValueError('Candidate source missing or older than 24 hours')
+    if candidates.get('expires_at') and age(candidates['expires_at']) >= 0:
+        raise ValueError('Candidate inputs expired; refresh sources and rebuild candidates')
+    if 'state_fingerprint' in candidates:
+        from draft_strategy import fingerprint
+        if candidates.get('based_on_pick')!=state['last_pick'] or candidates['state_fingerprint']!=fingerprint(state):
+            raise ValueError('Draft changed; recompute roster-specific strategy')
     players = candidates['players']
     if len({p['player_id'] for p in players}) != len(players):
         raise ValueError('Duplicate candidate IDs')
@@ -128,11 +143,7 @@ def assess(state, ui, candidates, pending=None):
 
 
 def refresh(folder, draft_id, user):
-    draft = fetch('draft/' + draft_id)
-    trades = fetch('draft/' + draft_id + '/traded_picks')
-    if trades:
-        raise ValueError('Traded picks require ownership support; controller will not assume snake ownership')
-    picks = fetch('draft/' + draft_id + '/picks')
+    draft, picks = read_live_draft(draft_id)
     validate(draft, picks, draft_id)
     state = build(draft, picks, user)
     save_atomic(folder / 'state.json', state)
@@ -151,10 +162,38 @@ def read(path):
     return json.loads(path.read_text()) if path.exists() else None
 
 
+def update_strategy(folder,state,board_path,policy_path=None,*,allow_mock=False):
+    """Offline planning after a fresh provider read; no browser writes."""
+    import hashlib
+    from draft_strategy import ENGINE_VERSION, Engine, candidate_export, fingerprint, load_policy
+    raw = board_path.read_bytes()
+    board = json.loads(raw)
+    policy = load_policy(policy_path)
+    digest = hashlib.sha256(raw).hexdigest()
+    previous = read(folder/'strategy_result.json')
+    if previous and previous.get('engine_version')==ENGINE_VERSION and previous.get('state_fingerprint')==fingerprint(state) and previous.get('board_sha256')==digest and previous.get('policy')==policy:
+        result = previous
+    else:
+        result = Engine(board,policy).recommend(state)
+        result['board_sha256'] = digest
+    candidates = candidate_export(board,state,result,datetime.now(timezone.utc),allow_mock=allow_mock)
+    save_atomic(folder/'strategy_result.json',result)
+    save_atomic(folder/'candidates.json',candidates)
+
+
 def report(folder):
     state = read(folder / 'state.json')
     if not state:
         raise ValueError('No state; run sync')
+    if state['next_pick'] is None:
+        pending = read(folder/'pending.json')
+        blockers = ['PENDING: reconcile previous submission'] if pending else []
+        if not (read(folder/'health.json') or {}).get('ok'):
+            blockers.append('FETCH_FAILED: refresh required')
+        result = {'ready':False,'finished_selecting':True,'blockers':blockers,'state':state,
+                  'recommended_queue':[],'candidates':[]}
+        save_atomic(folder/'checkpoint.json',result)
+        return result
     result = assess(state, read(folder / 'ui.json'), read(folder / 'candidates.json'), read(folder / 'pending.json'))
     if not (read(folder / 'health.json') or {}).get('ok'):
         result['blockers'].append('FETCH_FAILED: refresh required')
@@ -170,6 +209,9 @@ def main():
     parser.add_argument('--user', default='1403069775155884032')
     parser.add_argument('--file', type=Path)
     parser.add_argument('--player')
+    parser.add_argument('--strategy-board',type=Path,help='Recompute offline strategy from this board after live sync')
+    parser.add_argument('--strategy-policy',type=Path)
+    parser.add_argument('--allow-mock',action='store_true',help='Permit league-board valuations in a verified league-less mock')
     args = parser.parse_args()
     if not args.draft.isdigit():
         parser.error('Draft ID must be numeric')
@@ -180,6 +222,8 @@ def main():
             while True:
                 try:
                     state = refresh(folder, args.draft, args.user)
+                    if args.strategy_board and state['next_pick'] is not None:
+                        update_strategy(folder,state,args.strategy_board,args.strategy_policy,allow_mock=args.allow_mock)
                     report(folder)
                     print(f"Pick {state['last_pick']}; next {state['next_pick']}; ours={state['our_turn']}", flush=True)
                 except Exception as error:

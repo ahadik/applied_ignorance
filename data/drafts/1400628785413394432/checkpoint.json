@@ -1,0 +1,676 @@
+{
+  "blockers": [
+    "STALE_UI: observe room, queue and auto-pick",
+    "AUTO_PICK: verify off before supervised selection",
+    "BOARD_MISMATCH: reconcile browser and API",
+    "EMPTY_QUEUE: populate native queue"
+  ],
+  "ready": false,
+  "queue_depth_warning": true,
+  "queue_observed": [],
+  "recommended_queue": [
+    "6806",
+    "4199",
+    "6819",
+    "12534",
+    "7567",
+    "8126",
+    "7021",
+    "8136"
+  ],
+  "candidates": [
+    {
+      "player_id": "6806",
+      "name": "J.K. Dobbins",
+      "position": "RB",
+      "priority": 1,
+      "exclude": false,
+      "rationale": {
+        "player_id": "6806",
+        "name": "J.K. Dobbins",
+        "position": "RB",
+        "immediate_gain": 22.888439999999946,
+        "horizon_mean_gain": 43.22857452857147,
+        "pair_mean_gain": 38.6432014285715,
+        "terminal_mean_gain": 13.101065999999964,
+        "downside_gain": 41.46586019999995,
+        "score": 41.46586019999995,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.6666666666666666,
+        "pass_trials": 12,
+        "conditional_outcomes": 2,
+        "worst_case": {
+          "reply": "6819",
+          "score": 1771.8282602,
+          "pair_utility": 1767.2201,
+          "terminal_gain": 13.16617199999996,
+          "response": [
+            "11583",
+            "8142"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "8183",
+            "name": "Brock Purdy",
+            "scenarios": 6
+          },
+          {
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "scenarios": 6
+          },
+          {
+            "player_id": "6819",
+            "name": "Michael Pittman",
+            "scenarios": 1
+          }
+        ],
+        "flags": [],
+        "ecr": 102.0,
+        "adp_rank": 88.0,
+        "override": null,
+        "bye_conflicts": 2
+      }
+    },
+    {
+      "player_id": "4199",
+      "name": "Aaron Jones",
+      "position": "RB",
+      "priority": 2,
+      "exclude": false,
+      "rationale": {
+        "player_id": "4199",
+        "name": "Aaron Jones",
+        "position": "RB",
+        "immediate_gain": 21.94362000000001,
+        "horizon_mean_gain": 41.65462939285726,
+        "pair_mean_gain": 37.708505142857234,
+        "terminal_mean_gain": 11.274640714285738,
+        "downside_gain": 39.93352200000004,
+        "score": 39.93352200000004,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 1.0,
+        "pass_trials": 12,
+        "conditional_outcomes": 2,
+        "worst_case": {
+          "reply": "6806",
+          "score": 1770.295922,
+          "pair_utility": 1766.4170119999999,
+          "terminal_gain": 11.082600000000184,
+          "response": [
+            "11583",
+            "8142"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "8183",
+            "name": "Brock Purdy",
+            "scenarios": 6
+          },
+          {
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "scenarios": 6
+          },
+          {
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "scenarios": 1
+          }
+        ],
+        "flags": [],
+        "ecr": 118.0,
+        "adp_rank": 119.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "6819",
+      "name": "Michael Pittman",
+      "position": "WR",
+      "priority": 3,
+      "exclude": false,
+      "rationale": {
+        "player_id": "6819",
+        "name": "Michael Pittman",
+        "position": "WR",
+        "immediate_gain": 13.969260000000077,
+        "horizon_mean_gain": 42.45584197500011,
+        "pair_mean_gain": 37.927035000000046,
+        "terminal_mean_gain": 12.939448499999958,
+        "downside_gain": 39.84224670000003,
+        "score": 39.84224670000003,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 0.5,
+        "scenario_survival_if_pass": 0.42857142857142855,
+        "pass_trials": 7,
+        "conditional_outcomes": 2,
+        "worst_case": {
+          "reply": "4199",
+          "score": 1770.2046467,
+          "pair_utility": 1766.27528,
+          "terminal_gain": 11.226761999999894,
+          "response": [
+            "11583",
+            "6806"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "8183",
+            "name": "Brock Purdy",
+            "scenarios": 6
+          },
+          {
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "scenarios": 5
+          },
+          {
+            "player_id": "4199",
+            "name": "Aaron Jones",
+            "scenarios": 1
+          }
+        ],
+        "flags": [
+          "injury_review",
+          "team_changed_since_history"
+        ],
+        "ecr": 78.0,
+        "adp_rank": 96.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "12534",
+      "name": "Kyle Monangai",
+      "position": "RB",
+      "priority": 4,
+      "exclude": false,
+      "rationale": {
+        "player_id": "12534",
+        "name": "Kyle Monangai",
+        "position": "RB",
+        "immediate_gain": 19.339379999999892,
+        "horizon_mean_gain": 38.99186130000021,
+        "pair_mean_gain": 35.17867200000012,
+        "terminal_mean_gain": 10.89482657142865,
+        "downside_gain": 38.37097799999992,
+        "score": 38.37097799999992,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 1.0,
+        "pass_trials": 12,
+        "conditional_outcomes": 2,
+        "worst_case": {
+          "reply": "6806",
+          "score": 1768.733378,
+          "pair_utility": 1764.854468,
+          "terminal_gain": 11.082599999999957,
+          "response": [
+            "11583",
+            "8142"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "8183",
+            "name": "Brock Purdy",
+            "scenarios": 6
+          },
+          {
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "scenarios": 6
+          },
+          {
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "scenarios": 1
+          }
+        ],
+        "flags": [
+          "injury_review"
+        ],
+        "ecr": 121.0,
+        "adp_rank": 107.0,
+        "override": null,
+        "bye_conflicts": 2
+      }
+    },
+    {
+      "player_id": "7567",
+      "name": "Kenny Gainwell",
+      "position": "RB",
+      "priority": 5,
+      "exclude": false,
+      "rationale": {
+        "player_id": "7567",
+        "name": "Kenny Gainwell",
+        "position": "RB",
+        "immediate_gain": 19.21697999999992,
+        "horizon_mean_gain": 39.864924742857056,
+        "pair_mean_gain": 34.992369142857115,
+        "terminal_mean_gain": 13.921587428571485,
+        "downside_gain": 38.29753800000003,
+        "score": 38.29753800000003,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.75,
+        "pass_trials": 12,
+        "conditional_outcomes": 2,
+        "worst_case": {
+          "reply": "6806",
+          "score": 1768.659938,
+          "pair_utility": 1764.7810279999999,
+          "terminal_gain": 11.082600000000184,
+          "response": [
+            "11583",
+            "8142"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "scenarios": 7
+          },
+          {
+            "player_id": "8183",
+            "name": "Brock Purdy",
+            "scenarios": 5
+          },
+          {
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "scenarios": 1
+          }
+        ],
+        "flags": [
+          "team_changed_since_history"
+        ],
+        "ecr": 93.0,
+        "adp_rank": 93.0,
+        "override": null,
+        "bye_conflicts": 2
+      }
+    },
+    {
+      "player_id": "8126",
+      "name": "Wan'Dale Robinson",
+      "position": "WR",
+      "priority": 6,
+      "exclude": false,
+      "rationale": {
+        "player_id": "8126",
+        "name": "Wan'Dale Robinson",
+        "position": "WR",
+        "immediate_gain": 11.680380000000014,
+        "horizon_mean_gain": 41.33073070714295,
+        "pair_mean_gain": 36.79384285714298,
+        "terminal_mean_gain": 12.962536714285683,
+        "downside_gain": 37.55336669999997,
+        "score": 37.55336669999997,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 0.5,
+        "scenario_survival_if_pass": 0.5,
+        "pass_trials": 6,
+        "conditional_outcomes": 2,
+        "worst_case": {
+          "reply": "4199",
+          "score": 1767.9157667,
+          "pair_utility": 1763.9864,
+          "terminal_gain": 11.226762000000008,
+          "response": [
+            "11583",
+            "6806"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "8183",
+            "name": "Brock Purdy",
+            "scenarios": 6
+          },
+          {
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "scenarios": 6
+          },
+          {
+            "player_id": "4199",
+            "name": "Aaron Jones",
+            "scenarios": 1
+          }
+        ],
+        "flags": [
+          "injury_review",
+          "team_changed_since_history"
+        ],
+        "ecr": 86.0,
+        "adp_rank": 103.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "7021",
+      "name": "Rico Dowdle",
+      "position": "RB",
+      "priority": 7,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8136",
+      "name": "Rachaad White",
+      "position": "RB",
+      "priority": 8,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    }
+  ],
+  "state": {
+    "observed_at": "2026-09-09T02:18:24.203382+00:00",
+    "draft_id": "1400628785413394432",
+    "league_id": "1400628784381612032",
+    "url": "https://sleeper.com/draft/nfl/1400628785413394432",
+    "status": "drafting",
+    "seat": 13,
+    "last_pick": 90,
+    "next_pick": 97,
+    "our_turn": false,
+    "roster": [
+      {
+        "player_id": "3198",
+        "pick_no": 13,
+        "name": "Derrick Henry",
+        "position": "RB"
+      },
+      {
+        "player_id": "4866",
+        "pick_no": 16,
+        "name": "Saquon Barkley",
+        "position": "RB"
+      },
+      {
+        "player_id": "9997",
+        "pick_no": 41,
+        "name": "Zay Flowers",
+        "position": "WR"
+      },
+      {
+        "player_id": "6790",
+        "pick_no": 44,
+        "name": "D'Andre Swift",
+        "position": "RB"
+      },
+      {
+        "player_id": "9487",
+        "pick_no": 69,
+        "name": "Parker Washington",
+        "position": "WR"
+      },
+      {
+        "player_id": "12506",
+        "pick_no": 72,
+        "name": "Harold Fannin",
+        "position": "TE"
+      }
+    ],
+    "rosters_by_slot": {
+      "1": [
+        "9221",
+        "13287",
+        "8146",
+        "12490",
+        "11564",
+        "5045",
+        "1466"
+      ],
+      "2": [
+        "9509",
+        "8144",
+        "8155",
+        "12519",
+        "6770",
+        "11631",
+        "10232"
+      ],
+      "3": [
+        "4034",
+        "10229",
+        "8137",
+        "2133",
+        "8167",
+        "7594",
+        "4037"
+      ],
+      "4": [
+        "7564",
+        "8150",
+        "7588",
+        "5927",
+        "6904",
+        "9484",
+        "13294"
+      ],
+      "5": [
+        "6813",
+        "11632",
+        "5850",
+        "5846",
+        "4217",
+        "6797",
+        "4137"
+      ],
+      "6": [
+        "9493",
+        "8130",
+        "4984",
+        "13286",
+        "4983",
+        "13279",
+        "12489"
+      ],
+      "7": [
+        "8138",
+        "5859",
+        "7525",
+        "12518",
+        "7611",
+        "11628"
+      ],
+      "8": [
+        "9488",
+        "7569",
+        "12481",
+        "8148",
+        "11581",
+        "3294"
+      ],
+      "9": [
+        "7547",
+        "11604",
+        "7543",
+        "5892",
+        "2216",
+        "5967"
+      ],
+      "10": [
+        "9226",
+        "8112",
+        "11635",
+        "11584",
+        "12512",
+        "7553"
+      ],
+      "11": [
+        "6786",
+        "12527",
+        "12514",
+        "12517",
+        "11620",
+        "11560"
+      ],
+      "12": [
+        "6794",
+        "8151",
+        "6801",
+        "7526",
+        "8228",
+        "11566"
+      ],
+      "13": [
+        "3198",
+        "4866",
+        "9997",
+        "6790",
+        "9487",
+        "12506"
+      ],
+      "14": [
+        "9224",
+        "12507",
+        "4881",
+        "12526",
+        "10859",
+        "12529"
+      ]
+    },
+    "needs": {
+      "QB": 1,
+      "RB": 0,
+      "WR": 0,
+      "TE": 0,
+      "K": 1,
+      "DEF": 1,
+      "FLEX": 0
+    },
+    "remaining_slots": 8,
+    "drafted_ids": [
+      "9221",
+      "9509",
+      "4034",
+      "7564",
+      "6813",
+      "9493",
+      "8138",
+      "9488",
+      "7547",
+      "9226",
+      "6786",
+      "6794",
+      "3198",
+      "9224",
+      "12507",
+      "4866",
+      "8151",
+      "12527",
+      "8112",
+      "11604",
+      "7569",
+      "5859",
+      "8130",
+      "11632",
+      "8150",
+      "10229",
+      "8144",
+      "13287",
+      "8146",
+      "8155",
+      "8137",
+      "7588",
+      "5850",
+      "4984",
+      "7525",
+      "12481",
+      "7543",
+      "11635",
+      "12514",
+      "6801",
+      "9997",
+      "4881",
+      "12526",
+      "6790",
+      "7526",
+      "12517",
+      "11584",
+      "5892",
+      "8148",
+      "12518",
+      "13286",
+      "5846",
+      "5927",
+      "2133",
+      "12519",
+      "12490",
+      "11564",
+      "6770",
+      "8167",
+      "6904",
+      "4217",
+      "4983",
+      "7611",
+      "11581",
+      "2216",
+      "12512",
+      "11620",
+      "8228",
+      "9487",
+      "10859",
+      "12529",
+      "12506",
+      "11566",
+      "11560",
+      "7553",
+      "5967",
+      "3294",
+      "11628",
+      "13279",
+      "6797",
+      "9484",
+      "7594",
+      "11631",
+      "5045",
+      "1466",
+      "10232",
+      "4037",
+      "13294",
+      "4137",
+      "12489"
+    ],
+    "settings": {
+      "alpha_sort": 0,
+      "autopause_enabled": 0,
+      "autopause_end_time": 960,
+      "autopause_start_time": 240,
+      "autostart": 0,
+      "cpu_autopick": 1,
+      "nomination_timer": 60,
+      "pick_timer": 120,
+      "player_type": 0,
+      "reversal_round": 0,
+      "rounds": 14,
+      "slots_bn": 5,
+      "slots_def": 1,
+      "slots_flex": 1,
+      "slots_k": 1,
+      "slots_qb": 1,
+      "slots_rb": 2,
+      "slots_te": 1,
+      "slots_wr": 2,
+      "teams": 14
+    }
+  }
+}

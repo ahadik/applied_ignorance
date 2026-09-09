@@ -1,0 +1,562 @@
+{
+  "blockers": [
+    "STALE_UI: observe room, queue and auto-pick",
+    "AUTO_PICK: verify off before supervised selection",
+    "BOARD_MISMATCH: reconcile browser and API",
+    "EMPTY_QUEUE: populate native queue"
+  ],
+  "ready": false,
+  "queue_depth_warning": true,
+  "queue_observed": [],
+  "recommended_queue": [
+    "7611",
+    "4217",
+    "9487",
+    "1466",
+    "11628",
+    "11560",
+    "8228",
+    "5022"
+  ],
+  "candidates": [
+    {
+      "player_id": "7611",
+      "name": "Rhamondre Stevenson",
+      "position": "RB",
+      "priority": 1,
+      "exclude": false,
+      "rationale": {
+        "player_id": "7611",
+        "name": "Rhamondre Stevenson",
+        "position": "RB",
+        "immediate_gain": 27.566100000000006,
+        "horizon_mean_gain": 69.1557499999999,
+        "pair_mean_gain": 61.81310000000008,
+        "terminal_mean_gain": 20.978999999999814,
+        "downside_gain": 69.1557499999999,
+        "score": 69.1557499999999,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.5714285714285714,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "4217",
+          "score": 1750.24015,
+          "pair_utility": 1742.8975000000003,
+          "terminal_gain": 20.978999999999814,
+          "response": [
+            "11560",
+            "12529"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "4217",
+            "name": "George Kittle",
+            "scenarios": 6
+          }
+        ],
+        "flags": [],
+        "ecr": 70.0,
+        "adp_rank": 64.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "4217",
+      "name": "George Kittle",
+      "position": "TE",
+      "priority": 2,
+      "exclude": false,
+      "rationale": {
+        "player_id": "4217",
+        "name": "George Kittle",
+        "position": "TE",
+        "immediate_gain": 34.24700000000007,
+        "horizon_mean_gain": 69.05683999999974,
+        "pair_mean_gain": 61.714190000000144,
+        "terminal_mean_gain": 20.978999999999814,
+        "downside_gain": 68.9579299999998,
+        "score": 68.9579299999998,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 1.0,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "8228",
+          "score": 1750.04233,
+          "pair_utility": 1742.6996800000002,
+          "terminal_gain": 20.978999999999814,
+          "response": [
+            "11560",
+            "7611"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "7611",
+            "name": "Rhamondre Stevenson",
+            "scenarios": 3
+          },
+          {
+            "player_id": "8228",
+            "name": "Jaylen Warren",
+            "scenarios": 3
+          }
+        ],
+        "flags": [
+          "injury_review"
+        ],
+        "ecr": 91.0,
+        "adp_rank": 80.0,
+        "override": null,
+        "bye_conflicts": 1
+      }
+    },
+    {
+      "player_id": "9487",
+      "name": "Parker Washington",
+      "position": "WR",
+      "priority": 3,
+      "exclude": false,
+      "rationale": {
+        "player_id": "9487",
+        "name": "Parker Washington",
+        "position": "WR",
+        "immediate_gain": 22.79099999999994,
+        "horizon_mean_gain": 65.08505300000002,
+        "pair_mean_gain": 57.03800000000001,
+        "terminal_mean_gain": 22.99158,
+        "downside_gain": 65.08505300000002,
+        "score": 65.08505300000002,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.42857142857142855,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "4217",
+          "score": 1746.1694530000002,
+          "pair_utility": 1738.1224000000002,
+          "terminal_gain": 22.99158,
+          "response": [
+            "11560",
+            "11628"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "4217",
+            "name": "George Kittle",
+            "scenarios": 7
+          }
+        ],
+        "flags": [],
+        "ecr": 57.0,
+        "adp_rank": 62.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "1466",
+      "name": "Travis Kelce",
+      "position": "TE",
+      "priority": 4,
+      "exclude": false,
+      "rationale": {
+        "player_id": "1466",
+        "name": "Travis Kelce",
+        "position": "TE",
+        "immediate_gain": 27.80099999999993,
+        "horizon_mean_gain": 62.610839999999826,
+        "pair_mean_gain": 55.26818999999978,
+        "terminal_mean_gain": 20.978999999999814,
+        "downside_gain": 62.511929999999666,
+        "score": 62.511929999999666,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 1.0,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "8228",
+          "score": 1743.5963299999999,
+          "pair_utility": 1736.25368,
+          "terminal_gain": 20.978999999999814,
+          "response": [
+            "11560",
+            "7611"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "7611",
+            "name": "Rhamondre Stevenson",
+            "scenarios": 3
+          },
+          {
+            "player_id": "8228",
+            "name": "Jaylen Warren",
+            "scenarios": 3
+          }
+        ],
+        "flags": [],
+        "ecr": 99.0,
+        "adp_rank": 94.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "11628",
+      "name": "Marvin Harrison",
+      "position": "WR",
+      "priority": 5,
+      "exclude": false,
+      "rationale": {
+        "player_id": "11628",
+        "name": "Marvin Harrison",
+        "position": "WR",
+        "immediate_gain": 16.964999999999918,
+        "horizon_mean_gain": 59.259052999999994,
+        "pair_mean_gain": 51.21199999999999,
+        "terminal_mean_gain": 22.99158,
+        "downside_gain": 59.259052999999994,
+        "score": 59.259052999999994,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.7142857142857143,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "4217",
+          "score": 1740.3434530000002,
+          "pair_utility": 1732.2964000000002,
+          "terminal_gain": 22.99158,
+          "response": [
+            "11560",
+            "12529"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "4217",
+            "name": "George Kittle",
+            "scenarios": 6
+          }
+        ],
+        "flags": [],
+        "ecr": 66.0,
+        "adp_rank": 70.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "11560",
+      "name": "Caleb Williams",
+      "position": "QB",
+      "priority": 6,
+      "exclude": false,
+      "rationale": {
+        "player_id": "11560",
+        "name": "Caleb Williams",
+        "position": "QB",
+        "immediate_gain": 6.103399999999965,
+        "horizon_mean_gain": 48.39745300000004,
+        "pair_mean_gain": 40.350400000000036,
+        "terminal_mean_gain": 22.99158,
+        "downside_gain": 48.39745300000004,
+        "score": 48.39745300000004,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.42857142857142855,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "4217",
+          "score": 1729.4818530000002,
+          "pair_utility": 1721.4348000000002,
+          "terminal_gain": 22.99158,
+          "response": [
+            "12529",
+            "6797"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "4217",
+            "name": "George Kittle",
+            "scenarios": 7
+          }
+        ],
+        "flags": [],
+        "ecr": 63.0,
+        "adp_rank": 75.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "8228",
+      "name": "Jaylen Warren",
+      "position": "RB",
+      "priority": 7,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5022",
+      "name": "Dallas Goedert",
+      "position": "TE",
+      "priority": 8,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    }
+  ],
+  "state": {
+    "observed_at": "2026-09-08T23:02:06.885050+00:00",
+    "draft_id": "1403185547618349056",
+    "league_id": null,
+    "url": "https://sleeper.com/draft/nfl/1403185547618349056",
+    "status": "drafting",
+    "seat": 13,
+    "last_pick": 68,
+    "next_pick": 69,
+    "our_turn": true,
+    "roster": [
+      {
+        "player_id": "9224",
+        "pick_no": 13,
+        "name": "Chase Brown",
+        "position": "RB"
+      },
+      {
+        "player_id": "3198",
+        "pick_no": 16,
+        "name": "Derrick Henry",
+        "position": "RB"
+      },
+      {
+        "player_id": "8146",
+        "pick_no": 41,
+        "name": "Garrett Wilson",
+        "position": "WR"
+      },
+      {
+        "player_id": "7543",
+        "pick_no": 44,
+        "name": "Travis Etienne",
+        "position": "RB"
+      }
+    ],
+    "rosters_by_slot": {
+      "1": [
+        "4034",
+        "8130",
+        "8144",
+        "6904",
+        "5927"
+      ],
+      "2": [
+        "9509",
+        "10229",
+        "8150",
+        "8148",
+        "13286"
+      ],
+      "3": [
+        "7564",
+        "13287",
+        "11632",
+        "12519",
+        "6770"
+      ],
+      "4": [
+        "9493",
+        "4881",
+        "7525",
+        "5850",
+        "12490"
+      ],
+      "5": [
+        "9221",
+        "11604",
+        "12481",
+        "12512",
+        "11620"
+      ],
+      "6": [
+        "9488",
+        "7569",
+        "7588",
+        "2133",
+        "11566"
+      ],
+      "7": [
+        "6813",
+        "4984",
+        "11635",
+        "6790",
+        "2216"
+      ],
+      "8": [
+        "8138",
+        "12527",
+        "8155",
+        "11564",
+        "7553"
+      ],
+      "9": [
+        "4866",
+        "8137",
+        "12526",
+        "4983",
+        "10859"
+      ],
+      "10": [
+        "6786",
+        "8112",
+        "6801",
+        "7526",
+        "12506"
+      ],
+      "11": [
+        "7547",
+        "8151",
+        "9997",
+        "5892",
+        "8167"
+      ],
+      "12": [
+        "9226",
+        "12507",
+        "12517",
+        "11584",
+        "3294"
+      ],
+      "13": [
+        "9224",
+        "3198",
+        "8146",
+        "7543"
+      ],
+      "14": [
+        "6794",
+        "5859",
+        "12514",
+        "12518"
+      ]
+    },
+    "needs": {
+      "QB": 1,
+      "RB": 0,
+      "WR": 1,
+      "TE": 1,
+      "K": 1,
+      "DEF": 1,
+      "FLEX": 0
+    },
+    "remaining_slots": 10,
+    "drafted_ids": [
+      "4034",
+      "9509",
+      "7564",
+      "9493",
+      "9221",
+      "9488",
+      "6813",
+      "8138",
+      "4866",
+      "6786",
+      "7547",
+      "9226",
+      "9224",
+      "6794",
+      "5859",
+      "3198",
+      "12507",
+      "8151",
+      "8112",
+      "8137",
+      "12527",
+      "4984",
+      "7569",
+      "11604",
+      "4881",
+      "13287",
+      "10229",
+      "8130",
+      "8144",
+      "8150",
+      "11632",
+      "7525",
+      "12481",
+      "7588",
+      "11635",
+      "8155",
+      "12526",
+      "6801",
+      "9997",
+      "12517",
+      "8146",
+      "12514",
+      "12518",
+      "7543",
+      "11584",
+      "5892",
+      "7526",
+      "4983",
+      "11564",
+      "6790",
+      "2133",
+      "12512",
+      "5850",
+      "12519",
+      "8148",
+      "6904",
+      "5927",
+      "13286",
+      "6770",
+      "12490",
+      "11620",
+      "11566",
+      "2216",
+      "7553",
+      "10859",
+      "12506",
+      "8167",
+      "3294"
+    ],
+    "settings": {
+      "alpha_sort": 0,
+      "autopause_enabled": 0,
+      "autopause_end_time": 960,
+      "autopause_start_time": 240,
+      "autostart": 0,
+      "cpu_autopick": 1,
+      "nomination_timer": 60,
+      "pick_timer": 120,
+      "player_type": 0,
+      "reversal_round": 0,
+      "rounds": 14,
+      "slots_bn": 5,
+      "slots_def": 1,
+      "slots_flex": 1,
+      "slots_k": 1,
+      "slots_qb": 1,
+      "slots_rb": 2,
+      "slots_te": 1,
+      "slots_wr": 2,
+      "teams": 14
+    }
+  }
+}

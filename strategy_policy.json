@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "planning_mode": "ab",
+  "ab": {
+    "first_width": 6,
+    "future_width": 3,
+    "reply_width": 3,
+    "response_width": 3,
+    "prefix_samples": 2,
+    "tail_samples": 2,
+    "rank_slack": 8,
+    "tail_weight": 0.35,
+    "downside_fraction": 0.25
+  },
+  "seed": 20260908,
+  "scenario_modes": ["ecr", "adp", "needs", "rb_run"],
+  "samples_per_mode": 2,
+  "shortlist_each": 5,
+  "bench_weight": 0.18,
+  "bench_decay": 0.6,
+  "robust_weight": 0.25,
+  "opponent_temperature": 5.0,
+  "specialist_last_rounds": 2,
+  "backup_qb_te_round": 10,
+  "caps": {"QB": 2, "RB": 8, "WR": 8, "TE": 2, "K": 1, "DEF": 1},
+  "overrides": {},
+  "notes": "Explicit uncalibrated planning assumptions. No automatic season discount from weekly injury probabilities. Overrides require reasons. K/DEF use ECR and roster coverage, not cross-position partial point comparisons."
+}
