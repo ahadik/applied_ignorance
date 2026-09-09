@@ -146,6 +146,37 @@ class StrategyTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'FLEX'):
             self.engine.recommend(state)
 
+    def test_unknown_opponent_identity_counts_without_valuation(self):
+        state = state_from_ids(self.board,['RB0'],2,'identity')
+        state['drafted_ids'] = ['missing']
+        state['rosters_by_slot']['1'] = ['missing']
+        state['drafted_identity'] = {'missing':{'name':'Opponent receiver','position':'WR'}}
+        original = copy.deepcopy(self.board)
+        result = self.engine.recommend(state)
+        self.assertEqual(self.engine.needs(['missing'])['WR'],0)
+        self.assertNotIn('missing',self.engine.values)
+        self.assertNotIn('missing',self.engine.usable)
+        self.assertNotIn('missing',result['fallback_order'])
+        self.assertEqual(self.board,original)
+        changed = copy.deepcopy(state)
+        changed['drafted_identity']['missing']['position'] = 'RB'
+        self.assertNotEqual(fingerprint(state),fingerprint(changed))
+
+    def test_unknown_own_player_and_invalid_identity_still_fail(self):
+        state = state_from_ids(self.board,['RB0'],1,'identity')
+        state['drafted_ids'] = ['missing']
+        state['rosters_by_slot']['1'] = ['missing']
+        state['roster'][0]['player_id'] = 'missing'
+        state['drafted_identity'] = {'missing':{'name':'Missing owned player','position':'RB'}}
+        with self.assertRaisesRegex(ValueError,'absent'):
+            Engine(self.board,self.policy).recommend(state)
+        state = state_from_ids(self.board,['RB0'],2,'identity')
+        state['drafted_ids'] = ['missing']
+        state['rosters_by_slot']['1'] = ['missing']
+        state['drafted_identity'] = {'missing':{'name':'Unknown role','position':'UNKNOWN'}}
+        with self.assertRaisesRegex(ValueError,'absent'):
+            Engine(self.board,self.policy).recommend(state)
+
     def test_unsupported_extra_slots_and_bad_seat_fail(self):
         state = state_from_ids(self.board,[],1,'invalid')
         state['settings']['slots_super_flex'] = 1

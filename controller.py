@@ -79,7 +79,10 @@ def build(draft, picks, user_id):
             'our_turn': bool(upcoming and upcoming[0] == len(picks) + 1 and draft['status'] == 'drafting'),
             'roster': roster, 'rosters_by_slot':rosters_by_slot, 'needs': roster_needs(roster, settings),
             'remaining_slots': settings['rounds'] - len(roster),
-            'drafted_ids': [p['player_id'] for p in picks], 'settings': settings}
+            'drafted_ids': [p['player_id'] for p in picks],
+            'drafted_identity': {p['player_id']: {'position': p['metadata']['position'],
+                'name': ' '.join(p['metadata'].get(k, '') for k in ('first_name','last_name')).strip()}
+                for p in picks}, 'settings': settings}
 
 
 def rank(state, candidates):
@@ -177,8 +180,31 @@ def update_strategy(folder,state,board_path,policy_path=None,*,allow_mock=False)
         result = Engine(board,policy).recommend(state)
         result['board_sha256'] = digest
     candidates = candidate_export(board,state,result,datetime.now(timezone.utc),allow_mock=allow_mock)
+    choice = read(folder/'reviewed_choice.json')
+    if choice and state['our_turn'] and choice.get('pick_no') == state['next_pick']:
+        apply_reviewed_choice(state,candidates,choice)
     save_atomic(folder/'strategy_result.json',result)
     save_atomic(folder/'candidates.json',candidates)
+
+
+def apply_reviewed_choice(state,candidates,choice):
+    """Explicit specialist timing decision; never invent a model score."""
+    if choice.get('draft_id') != state['draft_id'] or not choice.get('reason'):
+        raise ValueError('Reviewed choice requires matching draft and a reason')
+    if not state['our_turn'] or choice.get('pick_no') != state['next_pick']:
+        raise ValueError('Reviewed choice must match our current turn')
+    player = next((p for p in candidates['players'] if p['player_id']==choice.get('player_id')),None)
+    if (not player or player.get('exclude') or player['player_id'] in state['drafted_ids']
+            or player['position'] not in ('K','DEF') or not state['needs'].get(player['position'])
+            or state['remaining_slots'] > 4):
+        raise ValueError('Reviewed specialist choice is unavailable or outside allowed scope')
+    candidates['players'].remove(player)
+    player['rationale'] = {'basis':'Explicit specialist timing review; not model-ranked first',
+                           'reason':choice['reason']}
+    candidates['players'].insert(0,player)
+    for i,p in enumerate(candidates['players'],1):
+        p['priority']=i
+    candidates['reviewed_choice']=choice
 
 
 def report(folder):

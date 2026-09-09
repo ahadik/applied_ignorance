@@ -3,11 +3,26 @@ import tempfile
 from pathlib import Path
 from unittest.mock import patch
 from datetime import datetime, timezone, timedelta
-from controller import assess, build, now, rank, validate, refresh, read
+from controller import assess, build, now, rank, validate, refresh, read, apply_reviewed_choice
 from storage import save_atomic
 
 
 class ControllerTests(unittest.TestCase):
+    def test_reviewed_specialist_preserves_legality_and_reason(self):
+        state = {'draft_id':'123','our_turn':True,'next_pick':10,'drafted_ids':[],
+                 'remaining_slots':4,'needs':{'DEF':1,'K':1}}
+        choice = {'draft_id':'123','pick_no':10,'player_id':'PIT','reason':'Reviewed timing'}
+        candidates = {'players':[{'player_id':'WR1','position':'WR','priority':1},
+                                {'player_id':'PIT','position':'DEF','priority':2}]}
+        apply_reviewed_choice(state,candidates,choice)
+        self.assertEqual(candidates['players'][0]['player_id'],'PIT')
+        self.assertNotIn('score',candidates['players'][0]['rationale'])
+        self.assertEqual(candidates['players'][0]['rationale']['reason'],'Reviewed timing')
+        for changes in ({'drafted_ids':['PIT']},{'remaining_slots':5},
+                        {'needs':{'DEF':0}},{'our_turn':False},{'next_pick':11}):
+            with self.assertRaises(ValueError):
+                apply_reviewed_choice(dict(state,**changes),candidates,choice)
+
     def setUp(self):
         self.draft = {'draft_id': '123', 'type': 'snake', 'status': 'drafting',
                       'draft_order': {'u': 1}, 'settings': {'teams': 2, 'rounds': 3,

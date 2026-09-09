@@ -14,11 +14,11 @@ from draft_board import OFFENSE, POSITIONS, export_candidates
 from storage import save_atomic
 
 ROOT = Path(__file__).resolve().parent
-ENGINE_VERSION = 2
+ENGINE_VERSION = 3
 
 
 def fingerprint(state):
-    fields = ('draft_id','league_id','seat','last_pick','next_pick','settings','drafted_ids','roster','rosters_by_slot')
+    fields = ('draft_id','league_id','seat','last_pick','next_pick','settings','drafted_ids','drafted_identity','roster','rosters_by_slot')
     return hashlib.sha256(json.dumps({k:state.get(k) for k in fields},sort_keys=True).encode()).hexdigest()
 
 
@@ -363,8 +363,17 @@ class Engine:
         ids = state['drafted_ids']
         if len(ids)!=state['last_pick'] or len(set(ids))!=len(ids):
             raise ValueError('Invalid drafted sequence')
-        if any(s not in self.players for s in ids):
-            raise ValueError('A drafted player is absent from the board; explicit identity integration required')
+        for sid in ids:
+            if sid in self.players:
+                continue
+            identity = state.get('drafted_identity',{}).get(sid,{})
+            if (sid in rosters[str(state['seat'])] or identity.get('position') not in POSITIONS
+                    or not identity.get('name')):
+                raise ValueError('A drafted player is absent from the board; explicit identity integration required')
+            # Opponent roster counts need identity, never an invented valuation.
+            # Already selected IDs cannot enter the available candidate pool.
+            self.players[sid] = dict(identity,player_id=sid,exclude=True)
+            self.position[sid] = identity['position']
         expected = {str(s):[] for s in range(1,self.teams+1)}
         for i,sid in enumerate(ids,1):
             expected[str(owner(i,self.teams))].append(sid)

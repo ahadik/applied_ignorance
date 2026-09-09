@@ -1,5 +1,7 @@
 # Frozen draft session: Sleeper-only fresh data
 
+**Session closed:** the user authorized release after full league completion. `draft_session.py release` confirmed completion through Sleeper and released the guard at 2026-09-09T03:46:42Z. No FantasyPros/nflverse refresh was performed. The remaining text documents the historical draft freeze and its implementation.
+
 User instruction: prefetch FantasyPros now, then fetch no new FantasyPros data
 until after the actual draft. Only Sleeper data should be refreshed during the
 session. This supersedes earlier pre-draft/15-minute alert-refresh instructions.

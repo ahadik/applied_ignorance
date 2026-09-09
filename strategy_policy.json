@@ -20,7 +20,7 @@
   "bench_decay": 0.6,
   "robust_weight": 0.25,
   "opponent_temperature": 5.0,
-  "specialist_last_rounds": 2,
+  "specialist_last_rounds": 4,
   "backup_qb_te_round": 10,
   "caps": {"QB": 2, "RB": 8, "WR": 8, "TE": 2, "K": 1, "DEF": 1},
   "overrides": {},
