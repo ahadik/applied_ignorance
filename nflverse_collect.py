@@ -9,7 +9,7 @@ from storage import save_atomic
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['catalog', 'collect', 'inspect', 'usage'])
-    parser.add_argument('--dataset', choices=DATASETS)
+    parser.add_argument('--dataset', choices=[*DATASETS, 'schedules'])
     parser.add_argument('--file', type=Path)
     parser.add_argument('--season', type=int)
     parser.add_argument('--refresh', action='store_true')
@@ -29,13 +29,16 @@ def main():
         elif not args.dataset:
             parser.error('catalog/collect requires --dataset')
         elif args.command == 'catalog':
+            if args.dataset == 'schedules':
+                raise ValueError('Schedules use a fixed nfldata file, not release assets; use collect --dataset schedules --season YEAR')
             result = shared_client().catalog(args.dataset, args.season)
             print(json.dumps([{'name': a['name'], 'bytes': a['size'], 'updated_at': a['updated_at']}
                               for a in result['assets'] if '.csv' in a['name'] and
                               (args.season is None or str(args.season) in a['name'])], indent=2))
         else:
             result = get_nflverse(args.dataset, args.season, refresh=args.refresh, revalidate=args.revalidate)
-            path = ROOT / 'data/nflverse/snapshots' / f'{args.dataset}_{args.season or "all"}.json'
+            folder = 'data/nflverse/local' if args.dataset == 'depth_charts' else 'data/nflverse/snapshots'
+            path = ROOT / folder / f'{args.dataset}_{args.season or "all"}.json'
             save_atomic(path, result)
             print(json.dumps({'rows': len(result['data']), 'provenance': result['provenance'], 'saved': str(path)}, indent=2))
     except (NFLVerseError, ValueError) as error:

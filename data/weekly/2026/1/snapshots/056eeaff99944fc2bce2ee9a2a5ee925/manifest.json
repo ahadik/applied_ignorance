@@ -1,0 +1,74 @@
+{
+  "complete": true,
+  "season": 2026,
+  "week": 1,
+  "started_at": "2026-09-09T04:44:16.934400+00:00",
+  "datasets": [
+    {
+      "name": "context",
+      "file": "context.json",
+      "sha256": "f3d194a1940783a4bf639ba59fbd93108b0b12a8f096290b2020c972c7b46008"
+    },
+    {
+      "name": "sleeper_players",
+      "file": "sleeper_players.json",
+      "sha256": "c218b3cbddf5e7282d983e88cf3f5044df257fc4159bdb57de2e59531811c36d"
+    },
+    {
+      "name": "schedule",
+      "file": "schedule.json",
+      "sha256": "7bc05c62163f42e3a280b8105bf5064dfc25aebe7ceee2c28eddf806d6c31aea"
+    },
+    {
+      "name": "fp_external",
+      "file": "fp_external.json",
+      "sha256": "0de8b417bebc1748dc6c77592a8e85f8c2ea409301c68c3c9a35a9d658577a38"
+    },
+    {
+      "name": "projections_QB",
+      "file": "projections_QB.json",
+      "sha256": "87d5be25c7033e7d5e92e884d406fc98b70bdfff117ca1ac65d5d0500797d322"
+    },
+    {
+      "name": "projections_RB",
+      "file": "projections_RB.json",
+      "sha256": "8f0495be582ac910c4e2aba852bd64b685d62c42c3dd2eb4d1b63a38dee761b3"
+    },
+    {
+      "name": "projections_WR",
+      "file": "projections_WR.json",
+      "sha256": "01194652f8cdc24d862b113157272747e032d09c65b42839ec99b869ae190f4c"
+    },
+    {
+      "name": "projections_TE",
+      "file": "projections_TE.json",
+      "sha256": "abf7e4b511704ef393b09fd978450642e2694b448e4ef76d6bef3181834dd927"
+    },
+    {
+      "name": "projections_K",
+      "file": "projections_K.json",
+      "sha256": "1cd543fff9605a7c369f45673550223f351677be4709995b14ad59f7367a6768"
+    },
+    {
+      "name": "projections_DST",
+      "file": "projections_DST.json",
+      "sha256": "2dde6f1d0b94dd3f7b621f29cc495004c8da8338c5e40082f29b849a4b9b51cb"
+    },
+    {
+      "name": "injuries",
+      "file": "injuries.json",
+      "sha256": "73f51e967d73d4c027a69e9473617b25bee470cc49bbe050bc0ec1868c8f7bf8"
+    },
+    {
+      "name": "news",
+      "file": "news.json",
+      "sha256": "77875ee39bc93143e06e198b91d146bcf24527180d651d29b472703d8eb9419a"
+    },
+    {
+      "name": "final_context",
+      "file": "final_context.json",
+      "sha256": "ceeb9158f2fcb38ff58f4e64d9d2f60f1a2e813b54b88c152755fc7081f4a178"
+    }
+  ],
+  "completed_at": "2026-09-09T04:44:21.103921+00:00"
+}

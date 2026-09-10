@@ -21,7 +21,8 @@ def collect(draft_season, seasons, request=get_nflverse, refresh=False, revalida
         entry = {'dataset': dataset, 'season': year}
         try:
             result = request(dataset, year, refresh=refresh, revalidate=revalidate)
-            path = folder / f'{dataset}_{year or "all"}.json'
+            target = ROOT / 'data/nflverse/local' / str(draft_season) if dataset == 'depth_charts' else folder
+            path = target / f'{dataset}_{year or "all"}.json'
             save_atomic(path, result)
             entry.update(status='ok', path=str(path), rows=len(result['data']), provenance=result['provenance'],
                          snapshot_sha256=hashlib.sha256(path.read_bytes()).hexdigest())

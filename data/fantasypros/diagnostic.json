@@ -1,0 +1,181 @@
+{
+  "generated_at": "2026-09-08T19:29:16.555740+00:00",
+  "requested_season": 2026,
+  "stage": 1,
+  "probes": [
+    {
+      "name": "player_directory",
+      "path": "nfl/players",
+      "parameters": {},
+      "status": "passed_basic_checks",
+      "records": 8545,
+      "scope_and_source_metadata": {
+        "sport": "NFL",
+        "season": "2026",
+        "week": "0",
+        "count": 8545
+      },
+      "source_date_examples": [],
+      "fetched_at": "2026-09-08T19:28:53.324542+00:00",
+      "cache_hit": true,
+      "quota_headers_at_fetch": {},
+      "freshness": "Source dates require review; retrieval time is not source freshness."
+    },
+    {
+      "name": "draft_ppr_consensus",
+      "path": "nfl/2026/consensus-rankings",
+      "parameters": {
+        "position": "ALL",
+        "type": "DRAFT",
+        "scoring": "PPR",
+        "week": 0
+      },
+      "status": "passed_basic_checks",
+      "records": 551,
+      "scope_and_source_metadata": {
+        "sport": "NFL",
+        "year": "2026",
+        "week": "0",
+        "scoring": "PPR",
+        "position_id": "ALL",
+        "ranking_type_name": "draft",
+        "count": 551,
+        "total_experts": 131,
+        "last_updated": "9/08",
+        "last_updated_ts": 1788895038
+      },
+      "source_date_examples": [],
+      "fetched_at": "2026-09-08T19:28:54.188063+00:00",
+      "cache_hit": true,
+      "quota_headers_at_fetch": {},
+      "freshness": "Source dates require review; retrieval time is not source freshness."
+    },
+    {
+      "name": "ppr_adp",
+      "path": "nfl/2026/consensus-rankings",
+      "parameters": {
+        "position": "ALL",
+        "type": "ADP",
+        "scoring": "PPR",
+        "week": 0
+      },
+      "status": "passed_basic_checks",
+      "records": 712,
+      "scope_and_source_metadata": {
+        "sport": "NFL",
+        "year": "2026",
+        "week": "0",
+        "scoring": "PPR",
+        "position_id": "ALL",
+        "ranking_type_name": "adp",
+        "count": 712,
+        "total_experts": 5,
+        "last_updated": "9/08",
+        "last_updated_ts": 1788851365
+      },
+      "source_date_examples": [],
+      "fetched_at": "2026-09-08T19:28:54.876617+00:00",
+      "cache_hit": true,
+      "quota_headers_at_fetch": {},
+      "freshness": "Source dates require review; retrieval time is not source freshness."
+    },
+    {
+      "name": "rb_season_projections",
+      "path": "nfl/2026/projections",
+      "parameters": {
+        "position": "RB",
+        "week": 0
+      },
+      "status": "passed_basic_checks",
+      "records": 132,
+      "scope_and_source_metadata": {
+        "season": "2026",
+        "week": "0",
+        "scoring": "STD",
+        "positions": "RB",
+        "count": "132"
+      },
+      "source_date_examples": [],
+      "fetched_at": "2026-09-08T19:28:55.708474+00:00",
+      "cache_hit": true,
+      "quota_headers_at_fetch": {},
+      "freshness": "Source dates require review; retrieval time is not source freshness."
+    },
+    {
+      "name": "recent_news",
+      "path": "nfl/news",
+      "parameters": {
+        "limit": 3,
+        "order_by": "updated"
+      },
+      "status": "passed_basic_checks",
+      "records": 3,
+      "scope_and_source_metadata": {
+        "sport": "NFL",
+        "count": 3
+      },
+      "source_date_examples": [
+        "2026-09-07 21:11:25",
+        "2026-09-08 19:05:34",
+        "2026-09-08 19:09:51"
+      ],
+      "fetched_at": "2026-09-08T19:28:58.147451+00:00",
+      "cache_hit": true,
+      "quota_headers_at_fetch": {},
+      "freshness": "Source dates require review; retrieval time is not source freshness."
+    },
+    {
+      "name": "current_injuries",
+      "path": "nfl/injuries",
+      "parameters": {
+        "year": 2026,
+        "week": 1,
+        "include_probabilities": true
+      },
+      "status": "passed_basic_checks",
+      "records": 224,
+      "scope_and_source_metadata": {
+        "sport": "NFL",
+        "count": 224
+      },
+      "source_date_examples": [
+        "2026-09-08 00:00:00",
+        "2026-09-08 12:00:00",
+        "2026-09-08 19:20:01"
+      ],
+      "fetched_at": "2026-09-08T19:28:58.478758+00:00",
+      "cache_hit": true,
+      "quota_headers_at_fetch": {},
+      "freshness": "Source dates require review; retrieval time is not source freshness."
+    }
+  ],
+  "production_entitlement": "unconfirmed: successful responses do not prove account entitlement",
+  "provider_quota": "No documented account quota endpoint; numeric headers, if present, are observations at fetch time.",
+  "limitations": [
+    "Access diagnostics only; no scoring, identity mapping, or draft recommendations.",
+    "RB is the projection access probe; QB/WR/TE/K/DST coverage remains for Stage 2.",
+    "Broad rankings, expert metadata, and comparison endpoints are not probed; historical points remain disabled.",
+    "An empty news/injury response does not prove absence of news/injuries."
+  ],
+  "injury_week_basis": {
+    "source": "Sleeper state/nfl",
+    "season": 2026,
+    "week": 1
+  },
+  "local_budget_before": {
+    "attempts_last_24h": 6,
+    "routine_remaining": 74,
+    "hard_remaining": 94,
+    "scope": "this shared local cache directory"
+  },
+  "local_budget_after": {
+    "attempts_last_24h": 6,
+    "routine_remaining": 74,
+    "hard_remaining": 94,
+    "scope": "this shared local cache directory"
+  },
+  "local_attempt_delta": 0,
+  "access_checks_passed": true,
+  "ready_for_draft_use": false,
+  "next_checkpoint": "Review access failures, data scope/source dates and production entitlement before Stage 2."
+}

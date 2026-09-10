@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "seed": 20260908,
+  "scenario_modes": [
+    "ecr",
+    "adp",
+    "needs",
+    "rb_run"
+  ],
+  "samples_per_mode": 2,
+  "shortlist_each": 5,
+  "bench_weight": 0.18,
+  "bench_decay": 0.6,
+  "robust_weight": 0.25,
+  "opponent_temperature": 5.0,
+  "specialist_last_rounds": 2,
+  "backup_qb_te_round": 10,
+  "caps": {
+    "QB": 2,
+    "RB": 8,
+    "WR": 8,
+    "TE": 2,
+    "K": 1,
+    "DEF": 1
+  },
+  "overrides": {
+    "7564": {
+      "multiplier": 0.8,
+      "reason": "Hypothetical 20% season-value haircut for sensitivity review; not a forecast"
+    }
+  },
+  "notes": "Explicit uncalibrated planning assumptions. No automatic season discount from weekly injury probabilities. Overrides require reasons. K/DEF use ECR and roster coverage, not cross-position partial point comparisons."
+}

@@ -3,7 +3,7 @@
 !.env.example
 __pycache__/
 *.pyc
-data/
 .venv/
 .DS_Store
 .pytest_cache/
+data/nflverse/local/

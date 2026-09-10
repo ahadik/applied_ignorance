@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "rationale": "This lineup fills the available legal starting slots and maximizes the supported weekly projected scoring components while preserving locked starters. Compared with the observed lineup, it changes Saquon Barkley to D'Andre Swift at RB; D'Andre Swift to Saquon Barkley at FLEX. The modeled gain is -0.00 supported points. Availability still needs review for Zay Flowers. These forecasts omit some league scoring categories; this proposal requires fresh validation and has not been applied.",
+  "rationale_source": "deterministic_report_summary",
+  "league_id": "1400628784381612032",
+  "roster_id": 10,
+  "season": 2026,
+  "week": 1,
+  "created_at": "2026-09-09T20:23:42.536784+00:00",
+  "origin": {
+    "kind": "optimizer",
+    "input_hash": "8551eb1faee3b1f33492c2876cc523e86beb69bc89ed279db0556654e729f0c0",
+    "engine_version": 1
+  },
+  "assignments": [
+    {
+      "slot_index": 0,
+      "slot": "QB",
+      "player_id": "8183"
+    },
+    {
+      "slot_index": 1,
+      "slot": "RB",
+      "player_id": "3198"
+    },
+    {
+      "slot_index": 2,
+      "slot": "RB",
+      "player_id": "6790"
+    },
+    {
+      "slot_index": 3,
+      "slot": "WR",
+      "player_id": "9997"
+    },
+    {
+      "slot_index": 4,
+      "slot": "WR",
+      "player_id": "9487"
+    },
+    {
+      "slot_index": 5,
+      "slot": "TE",
+      "player_id": "12506"
+    },
+    {
+      "slot_index": 6,
+      "slot": "FLEX",
+      "player_id": "4866"
+    },
+    {
+      "slot_index": 7,
+      "slot": "K",
+      "player_id": "12711"
+    },
+    {
+      "slot_index": 8,
+      "slot": "DEF",
+      "player_id": "PIT"
+    }
+  ],
+  "lineup_id": "f51f39003272476f8544a4cffb863b16",
+  "recorded_at": "2026-09-09T20:23:43.248912+00:00",
+  "previous_lineup_id": "4c1128b33c82440e92d326a0d40855c8"
+}

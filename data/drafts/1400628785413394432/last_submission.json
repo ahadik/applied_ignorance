@@ -1,0 +1,35 @@
+{
+  "expected": {
+    "player_id": "12711",
+    "pick_no": 184,
+    "prepared_at": "2026-09-09T03:21:58.139276+00:00"
+  },
+  "actual": {
+    "draft_id": "1400628785413394432",
+    "draft_slot": 13,
+    "is_keeper": null,
+    "metadata": {
+      "first_name": "Tyler",
+      "injury_status": "",
+      "last_name": "Loop",
+      "news_updated": "1788233413803",
+      "number": "33",
+      "player_id": "12711",
+      "position": "K",
+      "sport": "nfl",
+      "status": "Active",
+      "team": "BAL",
+      "team_abbr": "",
+      "team_changed_at": "",
+      "years_exp": "1"
+    },
+    "pick_no": 184,
+    "picked_by": "1403069775155884032",
+    "player_id": "12711",
+    "reactions": null,
+    "roster_id": 10,
+    "round": 14
+  },
+  "matched": true,
+  "observed_at": "2026-09-09T03:22:29.458734+00:00"
+}

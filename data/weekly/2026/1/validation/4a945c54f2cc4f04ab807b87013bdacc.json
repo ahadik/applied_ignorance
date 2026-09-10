@@ -1,0 +1,7 @@
+{
+  "status": "UNAVAILABLE",
+  "checks_passed": false,
+  "checked_at": "2026-09-09T04:52:31.517590+00:00",
+  "error": "Sleeper HTTP 503; no usable new data; expired cache not served",
+  "meaning": "No current validation pass. Prior success is not reusable."
+}

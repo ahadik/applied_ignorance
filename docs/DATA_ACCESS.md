@@ -10,6 +10,10 @@ one-off HTTP calls.
 | FantasyPros provider | `fantasypros.get_fantasypros(path, params, ...)` | General supported NFL feeds with shared authentication, cache, quota, cooldown and retry policy |
 | nflverse provider | `nflverse.get_nflverse(dataset, season, ...)` | Published CSV assets with revision-based caching, checksums, metadata revalidation, persistent request budgets/cooldowns and bounded retries |
 | Persistence | `storage.save_atomic(path, data)` | Replace local JSON only after serialization succeeds; no provider or strategy dependencies |
+| Weekly collection | `weekly_data.context`, `weekly_data.collect` | Validated live league/week state, weekly FP feeds and nflverse schedules; isolated snapshots |
+| Weekly analysis | `weekly_model.build`, `weekly_model.optimize` | Offline scoring, exact legal assignment, persistent-lock inputs, injury alternatives |
+| Weekly commands | `weekly_lineup.py run/recommend/verify` | Collect/analyze, fresh-snapshot recomputation, or read-back verification; no account writes |
+| Shared scoring | `player_scoring.py` | Identity joins and explicit scoring coverage, shared by draft and weekly analysis |
 | Draft collection | `draft_data.read_draft_context(config)` | Assemble league rules, user identity, draft, picks and rosters; validate resource scope |
 | Live draft collection | `draft_data.read_live_draft(draft_id)` | Read draft metadata, trades and picks; reject unknown or unsupported traded-pick ownership |
 | Draft commands | `draft.py`, `controller.py` | Save snapshots, calculate snake order/scoring, supervise picks and queue readiness |

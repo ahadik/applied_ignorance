@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "status": "REVIEW",
+  "checks_passed": false,
+  "checked_at": "2026-09-09T05:03:21.254999+00:00",
+  "expires_at": "2026-09-09T05:07:46.578387+00:00",
+  "proposal_hash": "743deeabad83ae0ffc008ab9bf39720fe1ee44c90804ab6764d0d9a5ba3c483b",
+  "input_hash": "165edb88c89d7c9905a89d93ac7a43cf5817c7d53dee36b8062b83f9353233d4",
+  "state_key": "92c16b40e791dff5044e1cdcfc44e65c34ef59c0d05a21c96dbe6a37bb1a911d",
+  "league_id": "1400628784381612032",
+  "season": 2026,
+  "week": 1,
+  "issues": [
+    {
+      "level": "review",
+      "code": "uncertain_availability",
+      "message": "Questionable/doubtful availability requires review",
+      "player_id": "9997",
+      "slot_index": 3
+    },
+    {
+      "level": "review",
+      "code": "concerning_news",
+      "message": "News contains availability/workload language; inspect dates and context (not a medical diagnosis)",
+      "player_id": "9997",
+      "slot_index": 3
+    },
+    {
+      "level": "review",
+      "code": "uncertain_availability",
+      "message": "Questionable/doubtful availability requires review",
+      "player_id": "6790",
+      "slot_index": 6
+    }
+  ],
+  "players": [
+    {
+      "slot_index": 0,
+      "player_id": "8183",
+      "name": "Brock Purdy",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_SF_LA",
+        "kickoff": "2026-09-11T00:35:00+00:00",
+        "opponent": "LAR",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 1,
+      "player_id": "3198",
+      "name": "Derrick Henry",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_BAL_IND",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "IND",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 2,
+      "player_id": "4866",
+      "name": "Saquon Barkley",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_WAS_PHI",
+        "kickoff": "2026-09-13T20:25:00+00:00",
+        "opponent": "WAS",
+        "home": true,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 3,
+      "player_id": "9997",
+      "name": "Zay Flowers",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_BAL_IND",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "IND",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": "Questionable",
+      "injury": {},
+      "concerning_news": [
+        {
+          "id": 606565,
+          "created": "2026-09-08 17:14:46",
+          "created_formated": "Tue, Sep 8th 5:14pm UTC",
+          "author": "Diego Sandoval",
+          "player_id": 22916,
+          "team_id": "BAL",
+          "title": "Zay Flowers (lower body) practices Tuesday",
+          "sport_id": "NFL",
+          "categories": [
+            "Commentary",
+            "News",
+            "Injury"
+          ],
+          "link": "https://www.fantasypros.com/nfl/news/606565/zay-flowers-lower-body-practices-tuesday.php",
+          "desc": "Zay Flowers is practicing for the Ravens on Tuesday after dealing with a lower-body injury.",
+          "impact": "Flowers had missed two full weeks of practice with a lower-body injury before returning last Thursday. The wideout being on the field on Tuesday is a good sign for him playing in Week 1, but fantasy managers should keep an eye on him leading up to Sunday. "
+        }
+      ]
+    },
+    {
+      "slot_index": 4,
+      "player_id": "9487",
+      "name": "Parker Washington",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_CLE_JAX",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "CLE",
+        "home": true,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 5,
+      "player_id": "12506",
+      "name": "Harold Fannin",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_CLE_JAX",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "JAX",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 6,
+      "player_id": "6790",
+      "name": "D'Andre Swift",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_CHI_CAR",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "CAR",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": "Questionable",
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 7,
+      "player_id": "12711",
+      "name": "Tyler Loop",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_BAL_IND",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "IND",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 8,
+      "player_id": "PIT",
+      "name": "Pittsburgh Steelers",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_ATL_PIT",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "ATL",
+        "home": true,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    }
+  ],
+  "acquisition": {
+    "sleeper": {
+      "network_attempts": 9,
+      "cache_hits": 2
+    },
+    "fantasypros": {
+      "network_attempts": 0,
+      "cache_hits": 3
+    },
+    "nflverse": {
+      "network_attempts": 1,
+      "cache_hits": 1
+    }
+  },
+  "locked_player_ids": [],
+  "meaning": "No detected error at check time is not guaranteed participation, medical clearance, optimality, or native unlock confirmation.",
+  "source_limits": [
+    "Provider publication times may be unknown; retrieval freshness is not source completeness.",
+    "News keyword screening is conservative and can miss subtle reports or flag old/negated reports.",
+    "Official inactives are not directly integrated. Repeat after new news or state changes."
+  ],
+  "applied": false,
+  "snapshot": "/Users/alex/Projects/Fantasy Football/data/weekly/2026/1/snapshots/955989b609ed49f192e02b1435b45064",
+  "proposal_file": "/Users/alex/Projects/Fantasy Football/data/weekly/2026/1/proposed_lineup.json"
+}

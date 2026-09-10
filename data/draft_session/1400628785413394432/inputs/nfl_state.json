@@ -1,0 +1,19 @@
+{
+  "data": {
+    "week": 1,
+    "leg": 1,
+    "season": "2026",
+    "season_type": "regular",
+    "league_season": "2026",
+    "previous_season": "2025",
+    "season_start_date": "2026-09-09",
+    "display_week": 1,
+    "league_create_season": "2026",
+    "season_has_scores": true
+  },
+  "fetched_at": "2026-09-08T22:34:55.900510+00:00",
+  "cache_hit": false,
+  "cache_age_seconds": 0.00011706352233886719,
+  "network_attempts": 1,
+  "source_updated_at": null
+}

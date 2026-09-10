@@ -1,0 +1,4982 @@
+{
+  "draft_id": "1403185547618349056",
+  "observed_at": "2026-09-08T22:34:58.590842+00:00",
+  "expires_at": "2026-09-09T10:35:08.145592+00:00",
+  "draft_session": {
+    "draft_id": "1400628785413394432",
+    "league_id": "1400628784381612032",
+    "frozen_at": "2026-09-08T22:35:08.145592+00:00",
+    "valid_until": "2026-09-09T10:35:08.145592+00:00",
+    "board_sha256": "c1f3923d5f662ba8330548440b892a93388500f18401f032cb6c5f96c9cfb54e",
+    "policy": "User-approved static draft snapshot; original source times preserved"
+  },
+  "source": "Draft scenario planner (ab); uncalibrated utility/availability assumptions.",
+  "players": [
+    {
+      "player_id": "7611",
+      "name": "Rhamondre Stevenson",
+      "position": "RB",
+      "priority": 1,
+      "exclude": false,
+      "rationale": {
+        "player_id": "7611",
+        "name": "Rhamondre Stevenson",
+        "position": "RB",
+        "immediate_gain": 27.566100000000006,
+        "horizon_mean_gain": 69.1557499999999,
+        "pair_mean_gain": 61.81310000000008,
+        "terminal_mean_gain": 20.978999999999814,
+        "downside_gain": 69.1557499999999,
+        "score": 69.1557499999999,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.5714285714285714,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "4217",
+          "score": 1750.24015,
+          "pair_utility": 1742.8975000000003,
+          "terminal_gain": 20.978999999999814,
+          "response": [
+            "11560",
+            "12529"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "4217",
+            "name": "George Kittle",
+            "scenarios": 6
+          }
+        ],
+        "flags": [],
+        "ecr": 70.0,
+        "adp_rank": 64.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "4217",
+      "name": "George Kittle",
+      "position": "TE",
+      "priority": 2,
+      "exclude": false,
+      "rationale": {
+        "player_id": "4217",
+        "name": "George Kittle",
+        "position": "TE",
+        "immediate_gain": 34.24700000000007,
+        "horizon_mean_gain": 69.05683999999974,
+        "pair_mean_gain": 61.714190000000144,
+        "terminal_mean_gain": 20.978999999999814,
+        "downside_gain": 68.9579299999998,
+        "score": 68.9579299999998,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 1.0,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "8228",
+          "score": 1750.04233,
+          "pair_utility": 1742.6996800000002,
+          "terminal_gain": 20.978999999999814,
+          "response": [
+            "11560",
+            "7611"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "7611",
+            "name": "Rhamondre Stevenson",
+            "scenarios": 3
+          },
+          {
+            "player_id": "8228",
+            "name": "Jaylen Warren",
+            "scenarios": 3
+          }
+        ],
+        "flags": [
+          "injury_review"
+        ],
+        "ecr": 91.0,
+        "adp_rank": 80.0,
+        "override": null,
+        "bye_conflicts": 1
+      }
+    },
+    {
+      "player_id": "9487",
+      "name": "Parker Washington",
+      "position": "WR",
+      "priority": 3,
+      "exclude": false,
+      "rationale": {
+        "player_id": "9487",
+        "name": "Parker Washington",
+        "position": "WR",
+        "immediate_gain": 22.79099999999994,
+        "horizon_mean_gain": 65.08505300000002,
+        "pair_mean_gain": 57.03800000000001,
+        "terminal_mean_gain": 22.99158,
+        "downside_gain": 65.08505300000002,
+        "score": 65.08505300000002,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.42857142857142855,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "4217",
+          "score": 1746.1694530000002,
+          "pair_utility": 1738.1224000000002,
+          "terminal_gain": 22.99158,
+          "response": [
+            "11560",
+            "11628"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "4217",
+            "name": "George Kittle",
+            "scenarios": 7
+          }
+        ],
+        "flags": [],
+        "ecr": 57.0,
+        "adp_rank": 62.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "1466",
+      "name": "Travis Kelce",
+      "position": "TE",
+      "priority": 4,
+      "exclude": false,
+      "rationale": {
+        "player_id": "1466",
+        "name": "Travis Kelce",
+        "position": "TE",
+        "immediate_gain": 27.80099999999993,
+        "horizon_mean_gain": 62.610839999999826,
+        "pair_mean_gain": 55.26818999999978,
+        "terminal_mean_gain": 20.978999999999814,
+        "downside_gain": 62.511929999999666,
+        "score": 62.511929999999666,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 1.0,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "8228",
+          "score": 1743.5963299999999,
+          "pair_utility": 1736.25368,
+          "terminal_gain": 20.978999999999814,
+          "response": [
+            "11560",
+            "7611"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "7611",
+            "name": "Rhamondre Stevenson",
+            "scenarios": 3
+          },
+          {
+            "player_id": "8228",
+            "name": "Jaylen Warren",
+            "scenarios": 3
+          }
+        ],
+        "flags": [],
+        "ecr": 99.0,
+        "adp_rank": 94.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "11628",
+      "name": "Marvin Harrison",
+      "position": "WR",
+      "priority": 5,
+      "exclude": false,
+      "rationale": {
+        "player_id": "11628",
+        "name": "Marvin Harrison",
+        "position": "WR",
+        "immediate_gain": 16.964999999999918,
+        "horizon_mean_gain": 59.259052999999994,
+        "pair_mean_gain": 51.21199999999999,
+        "terminal_mean_gain": 22.99158,
+        "downside_gain": 59.259052999999994,
+        "score": 59.259052999999994,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.7142857142857143,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "4217",
+          "score": 1740.3434530000002,
+          "pair_utility": 1732.2964000000002,
+          "terminal_gain": 22.99158,
+          "response": [
+            "11560",
+            "12529"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "4217",
+            "name": "George Kittle",
+            "scenarios": 6
+          }
+        ],
+        "flags": [],
+        "ecr": 66.0,
+        "adp_rank": 70.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "11560",
+      "name": "Caleb Williams",
+      "position": "QB",
+      "priority": 6,
+      "exclude": false,
+      "rationale": {
+        "player_id": "11560",
+        "name": "Caleb Williams",
+        "position": "QB",
+        "immediate_gain": 6.103399999999965,
+        "horizon_mean_gain": 48.39745300000004,
+        "pair_mean_gain": 40.350400000000036,
+        "terminal_mean_gain": 22.99158,
+        "downside_gain": 48.39745300000004,
+        "score": 48.39745300000004,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.42857142857142855,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "4217",
+          "score": 1729.4818530000002,
+          "pair_utility": 1721.4348000000002,
+          "terminal_gain": 22.99158,
+          "response": [
+            "12529",
+            "6797"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "4217",
+            "name": "George Kittle",
+            "scenarios": 7
+          }
+        ],
+        "flags": [],
+        "ecr": 63.0,
+        "adp_rank": 75.0,
+        "override": null,
+        "bye_conflicts": 0
+      }
+    },
+    {
+      "player_id": "8228",
+      "name": "Jaylen Warren",
+      "position": "RB",
+      "priority": 7,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5022",
+      "name": "Dallas Goedert",
+      "position": "TE",
+      "priority": 8,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5967",
+      "name": "Tony Pollard",
+      "position": "RB",
+      "priority": 9,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12529",
+      "name": "TreVeyon Henderson",
+      "position": "RB",
+      "priority": 10,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7594",
+      "name": "Chuba Hubbard",
+      "position": "RB",
+      "priority": 11,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6806",
+      "name": "J.K. Dobbins",
+      "position": "RB",
+      "priority": 12,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7021",
+      "name": "Rico Dowdle",
+      "position": "RB",
+      "priority": 13,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4199",
+      "name": "Aaron Jones",
+      "position": "RB",
+      "priority": 14,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8142",
+      "name": "Alec Pierce",
+      "position": "WR",
+      "priority": 15,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12489",
+      "name": "RJ Harvey",
+      "position": "RB",
+      "priority": 16,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5846",
+      "name": "DK Metcalf",
+      "position": "WR",
+      "priority": 17,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12534",
+      "name": "Kyle Monangai",
+      "position": "RB",
+      "priority": 18,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7567",
+      "name": "Kenny Gainwell",
+      "position": "RB",
+      "priority": 19,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8136",
+      "name": "Rachaad White",
+      "position": "RB",
+      "priority": 20,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12533",
+      "name": "Jacory Croskey-Merritt",
+      "position": "RB",
+      "priority": 21,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11583",
+      "name": "Jonathon Brooks",
+      "position": "RB",
+      "priority": 22,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8408",
+      "name": "Jordan Mason",
+      "position": "RB",
+      "priority": 23,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8183",
+      "name": "Brock Purdy",
+      "position": "QB",
+      "priority": 24,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9484",
+      "name": "Tucker Kraft",
+      "position": "TE",
+      "priority": 25,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11581",
+      "name": "MarShawn Lloyd",
+      "position": "RB",
+      "priority": 26,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11586",
+      "name": "Blake Corum",
+      "position": "RB",
+      "priority": 27,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7523",
+      "name": "Trevor Lawrence",
+      "position": "QB",
+      "priority": 28,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12474",
+      "name": "Woody Marks",
+      "position": "RB",
+      "priority": 29,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9508",
+      "name": "Tyjae Spears",
+      "position": "RB",
+      "priority": 30,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6819",
+      "name": "Michael Pittman",
+      "position": "WR",
+      "priority": 31,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4035",
+      "name": "Alvin Kamara",
+      "position": "RB",
+      "priority": 32,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9753",
+      "name": "Zach Charbonnet",
+      "position": "RB",
+      "priority": 33,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5045",
+      "name": "Courtland Sutton",
+      "position": "WR",
+      "priority": 34,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3163",
+      "name": "Jared Goff",
+      "position": "QB",
+      "priority": 35,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11563",
+      "name": "Bo Nix",
+      "position": "QB",
+      "priority": 36,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11631",
+      "name": "Brian Thomas",
+      "position": "WR",
+      "priority": 37,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9754",
+      "name": "Quentin Johnston",
+      "position": "WR",
+      "priority": 38,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12469",
+      "name": "Dylan Sampson",
+      "position": "RB",
+      "priority": 39,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8134",
+      "name": "Khalil Shakir",
+      "position": "WR",
+      "priority": 40,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5012",
+      "name": "Mark Andrews",
+      "position": "TE",
+      "priority": 41,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6828",
+      "name": "AJ Dillon",
+      "position": "RB",
+      "priority": 42,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4892",
+      "name": "Baker Mayfield",
+      "position": "QB",
+      "priority": 43,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8121",
+      "name": "Romeo Doubs",
+      "position": "WR",
+      "priority": 44,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "2449",
+      "name": "Stefon Diggs",
+      "position": "WR",
+      "priority": 45,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5872",
+      "name": "Deebo Samuel",
+      "position": "WR",
+      "priority": 46,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11624",
+      "name": "Xavier Worthy",
+      "position": "WR",
+      "priority": 47,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12545",
+      "name": "Tyler Shough",
+      "position": "QB",
+      "priority": 48,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8132",
+      "name": "Tyler Allgeier",
+      "position": "RB",
+      "priority": 49,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9500",
+      "name": "Josh Downs",
+      "position": "WR",
+      "priority": 50,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13417",
+      "name": "De'Zhaun Stribling",
+      "position": "WR",
+      "priority": 51,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4943",
+      "name": "Sam Darnold",
+      "position": "QB",
+      "priority": 52,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12501",
+      "name": "Matthew Golden",
+      "position": "WR",
+      "priority": 53,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6804",
+      "name": "Jordan Love",
+      "position": "QB",
+      "priority": 54,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11576",
+      "name": "Braelon Allen",
+      "position": "RB",
+      "priority": 55,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8161",
+      "name": "Malik Willis",
+      "position": "QB",
+      "priority": 56,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10236",
+      "name": "Dalton Kincaid",
+      "position": "TE",
+      "priority": 57,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8205",
+      "name": "Isiah Pacheco",
+      "position": "RB",
+      "priority": 58,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13294",
+      "name": "Makai Lemon",
+      "position": "WR",
+      "priority": 59,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7002",
+      "name": "Juwan Johnson",
+      "position": "TE",
+      "priority": 60,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8676",
+      "name": "Rashid Shaheed",
+      "position": "WR",
+      "priority": 61,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5870",
+      "name": "Daniel Jones",
+      "position": "QB",
+      "priority": 62,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13298",
+      "name": "KC Concepcion",
+      "position": "WR",
+      "priority": 63,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9480",
+      "name": "Brenton Strange",
+      "position": "TE",
+      "priority": 64,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5947",
+      "name": "Jakobi Meyers",
+      "position": "WR",
+      "priority": 65,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13414",
+      "name": "Kaelon Black",
+      "position": "RB",
+      "priority": 66,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4037",
+      "name": "Chris Godwin",
+      "position": "WR",
+      "priority": 67,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6783",
+      "name": "Jerry Jeudy",
+      "position": "WR",
+      "priority": 68,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4147",
+      "name": "Samaje Perine",
+      "position": "RB",
+      "priority": 69,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5995",
+      "name": "Justice Hill",
+      "position": "RB",
+      "priority": 70,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10219",
+      "name": "Chris Rodriguez",
+      "position": "RB",
+      "priority": 71,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8154",
+      "name": "Brian Robinson",
+      "position": "RB",
+      "priority": 72,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13305",
+      "name": "Mike Washington",
+      "position": "RB",
+      "priority": 73,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4046",
+      "name": "Patrick Mahomes",
+      "position": "QB",
+      "priority": 74,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11646",
+      "name": "Jalen Coker",
+      "position": "WR",
+      "priority": 75,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11370",
+      "name": "Chris Brooks",
+      "position": "RB",
+      "priority": 76,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4981",
+      "name": "Calvin Ridley",
+      "position": "WR",
+      "priority": 77,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4039",
+      "name": "Cooper Kupp",
+      "position": "WR",
+      "priority": 78,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5001",
+      "name": "Dalton Schultz",
+      "position": "TE",
+      "priority": 79,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9758",
+      "name": "C.J. Stroud",
+      "position": "QB",
+      "priority": 80,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6797",
+      "name": "Justin Herbert",
+      "position": "QB",
+      "priority": 81,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "1479",
+      "name": "Keenan Allen",
+      "position": "WR",
+      "priority": 82,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9511",
+      "name": "Keaton Mitchell",
+      "position": "RB",
+      "priority": 83,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9225",
+      "name": "Tank Bigsby",
+      "position": "RB",
+      "priority": 84,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8172",
+      "name": "Greg Dulcich",
+      "position": "TE",
+      "priority": 85,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5844",
+      "name": "T.J. Hockenson",
+      "position": "TE",
+      "priority": 86,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6039",
+      "name": "Ty Johnson",
+      "position": "RB",
+      "priority": 87,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8131",
+      "name": "Isaiah Likely",
+      "position": "TE",
+      "priority": 88,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11655",
+      "name": "Tyrone Tracy",
+      "position": "RB",
+      "priority": 89,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13346",
+      "name": "Denzel Boston",
+      "position": "WR",
+      "priority": 90,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9504",
+      "name": "Kayshon Boutte",
+      "position": "WR",
+      "priority": 91,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13281",
+      "name": "Jordyn Tyson",
+      "position": "WR",
+      "priority": 92,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12467",
+      "name": "Jordan James",
+      "position": "RB",
+      "priority": 93,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7528",
+      "name": "Najee Harris",
+      "position": "RB",
+      "priority": 94,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9228",
+      "name": "Bryce Young",
+      "position": "QB",
+      "priority": 95,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11618",
+      "name": "Jalen McMillan",
+      "position": "WR",
+      "priority": 96,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10232",
+      "name": "Michael Wilson",
+      "position": "WR",
+      "priority": 97,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13330",
+      "name": "Kenyon Sadiq",
+      "position": "TE",
+      "priority": 98,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5849",
+      "name": "Kyler Murray",
+      "position": "QB",
+      "priority": 99,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7600",
+      "name": "Pat Freiermuth",
+      "position": "TE",
+      "priority": 100,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13279",
+      "name": "Carnell Tate",
+      "position": "WR",
+      "priority": 101,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10213",
+      "name": "Tre Tucker",
+      "position": "WR",
+      "priority": 102,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12508",
+      "name": "Jaxson Dart",
+      "position": "QB",
+      "priority": 103,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8110",
+      "name": "Jake Ferguson",
+      "position": "TE",
+      "priority": 104,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11435",
+      "name": "Emanuel Wilson",
+      "position": "RB",
+      "priority": 105,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8111",
+      "name": "Cade Otton",
+      "position": "TE",
+      "priority": 106,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7571",
+      "name": "Rashod Bateman",
+      "position": "WR",
+      "priority": 107,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3257",
+      "name": "Jacoby Brissett",
+      "position": "QB",
+      "priority": 108,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11643",
+      "name": "Jaylen Wright",
+      "position": "RB",
+      "priority": 109,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7049",
+      "name": "Jauan Jennings",
+      "position": "WR",
+      "priority": 110,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8180",
+      "name": "Jalen Nailor",
+      "position": "WR",
+      "priority": 111,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8210",
+      "name": "Chig Okonkwo",
+      "position": "TE",
+      "priority": 112,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10222",
+      "name": "Jayden Reed",
+      "position": "WR",
+      "priority": 113,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11610",
+      "name": "Malik Washington",
+      "position": "WR",
+      "priority": 114,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12522",
+      "name": "Cam Ward",
+      "position": "QB",
+      "priority": 115,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12536",
+      "name": "Jaylin Noel",
+      "position": "WR",
+      "priority": 116,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "2505",
+      "name": "Darren Waller",
+      "position": "TE",
+      "priority": 117,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12487",
+      "name": "Terrance Ferguson",
+      "position": "TE",
+      "priority": 118,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9756",
+      "name": "Jordan Addison",
+      "position": "WR",
+      "priority": 119,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8800",
+      "name": "Malik Davis",
+      "position": "RB",
+      "priority": 120,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11603",
+      "name": "AJ Barner",
+      "position": "TE",
+      "priority": 121,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "96",
+      "name": "Aaron Rodgers",
+      "position": "QB",
+      "priority": 122,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4137",
+      "name": "James Conner",
+      "position": "RB",
+      "priority": 123,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13345",
+      "name": "Jonah Coleman",
+      "position": "RB",
+      "priority": 124,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11647",
+      "name": "Kimani Vidal",
+      "position": "RB",
+      "priority": 125,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8126",
+      "name": "Wan'Dale Robinson",
+      "position": "WR",
+      "priority": 126,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "421",
+      "name": "Matthew Stafford",
+      "position": "QB",
+      "priority": 127,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3214",
+      "name": "Hunter Henry",
+      "position": "TE",
+      "priority": 128,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11625",
+      "name": "Adonai Mitchell",
+      "position": "WR",
+      "priority": 129,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13337",
+      "name": "Emmett Johnson",
+      "position": "RB",
+      "priority": 130,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9486",
+      "name": "Dontayvion Wicks",
+      "position": "WR",
+      "priority": 131,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12509",
+      "name": "Tre' Harris",
+      "position": "WR",
+      "priority": 132,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13276",
+      "name": "Omar Cooper",
+      "position": "WR",
+      "priority": 133,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11575",
+      "name": "Ray Davis",
+      "position": "RB",
+      "priority": 134,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12492",
+      "name": "Pat Bryant",
+      "position": "WR",
+      "priority": 135,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11783",
+      "name": "Ryan Flournoy",
+      "position": "WR",
+      "priority": 136,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13293",
+      "name": "Ja'Kobi Lane",
+      "position": "WR",
+      "priority": 137,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9506",
+      "name": "Sean Tucker",
+      "position": "RB",
+      "priority": 138,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12530",
+      "name": "Travis Hunter",
+      "position": "WR",
+      "priority": 139,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "1373",
+      "name": "Geno Smith",
+      "position": "QB",
+      "priority": 140,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13311",
+      "name": "Chris Bell",
+      "position": "WR",
+      "priority": 141,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12502",
+      "name": "Gunnar Helm",
+      "position": "TE",
+      "priority": 142,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13285",
+      "name": "Malachi Fields",
+      "position": "WR",
+      "priority": 143,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12493",
+      "name": "Oronde Gadsden",
+      "position": "TE",
+      "priority": 144,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13288",
+      "name": "Nicholas Singleton",
+      "position": "RB",
+      "priority": 145,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12535",
+      "name": "Isaac TeSlaa",
+      "position": "WR",
+      "priority": 146,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13320",
+      "name": "Zachariah Branch",
+      "position": "WR",
+      "priority": 147,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7090",
+      "name": "Darnell Mooney",
+      "position": "WR",
+      "priority": 148,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13405",
+      "name": "Kaytron Allen",
+      "position": "RB",
+      "priority": 149,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13296",
+      "name": "Caleb Douglas",
+      "position": "WR",
+      "priority": 150,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13274",
+      "name": "Germie Bernard",
+      "position": "WR",
+      "priority": 151,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12048",
+      "name": "George Holani",
+      "position": "RB",
+      "priority": 152,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11627",
+      "name": "Troy Franklin",
+      "position": "WR",
+      "priority": 153,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11834",
+      "name": "Devaughn Vele",
+      "position": "WR",
+      "priority": 154,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13301",
+      "name": "Antonio Williams",
+      "position": "WR",
+      "priority": 155,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12504",
+      "name": "Kaleb Johnson",
+      "position": "RB",
+      "priority": 156,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4066",
+      "name": "Evan Engram",
+      "position": "TE",
+      "priority": 157,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13317",
+      "name": "Ted Hurst",
+      "position": "WR",
+      "priority": 158,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9502",
+      "name": "Tank Dell",
+      "position": "WR",
+      "priority": 159,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13269",
+      "name": "Fernando Mendoza",
+      "position": "QB",
+      "priority": 160,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12483",
+      "name": "Jack Bech",
+      "position": "WR",
+      "priority": 161,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4033",
+      "name": "David Njoku",
+      "position": "TE",
+      "priority": 162,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11637",
+      "name": "Keon Coleman",
+      "position": "WR",
+      "priority": 163,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13347",
+      "name": "Demond Claiborne",
+      "position": "RB",
+      "priority": 164,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12495",
+      "name": "Ollie Gordon",
+      "position": "RB",
+      "priority": 165,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13413",
+      "name": "Cyrus Allen",
+      "position": "WR",
+      "priority": 166,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6865",
+      "name": "Colby Parkinson",
+      "position": "TE",
+      "priority": 167,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13424",
+      "name": "Seth McGowan",
+      "position": "RB",
+      "priority": 168,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11571",
+      "name": "Isaiah Davis",
+      "position": "RB",
+      "priority": 169,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12499",
+      "name": "Elic Ayomanor",
+      "position": "WR",
+      "priority": 170,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12540",
+      "name": "Chimere Dike",
+      "position": "WR",
+      "priority": 171,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12544",
+      "name": "LeQuint Allen",
+      "position": "RB",
+      "priority": 172,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8188",
+      "name": "Tyquan Thornton",
+      "position": "WR",
+      "priority": 173,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6768",
+      "name": "Tua Tagovailoa",
+      "position": "QB",
+      "priority": 174,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11626",
+      "name": "Xavier Legette",
+      "position": "WR",
+      "priority": 175,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12497",
+      "name": "Tory Horton",
+      "position": "WR",
+      "priority": 176,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11559",
+      "name": "Michael Penix",
+      "position": "QB",
+      "priority": 177,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12498",
+      "name": "Mason Taylor",
+      "position": "TE",
+      "priority": 178,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9757",
+      "name": "Kendre Miller",
+      "position": "RB",
+      "priority": 179,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "1166",
+      "name": "Kirk Cousins",
+      "position": "QB",
+      "priority": 180,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9494",
+      "name": "Marvin Mims",
+      "position": "WR",
+      "priority": 181,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4017",
+      "name": "Deshaun Watson",
+      "position": "QB",
+      "priority": 182,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13268",
+      "name": "Elijah Sarratt",
+      "position": "WR",
+      "priority": 183,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11597",
+      "name": "Theo Johnson",
+      "position": "TE",
+      "priority": 184,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6149",
+      "name": "Darius Slayton",
+      "position": "WR",
+      "priority": 185,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12524",
+      "name": "Shedeur Sanders",
+      "position": "QB",
+      "priority": 186,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12547",
+      "name": "Kyle Williams",
+      "position": "WR",
+      "priority": 187,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4950",
+      "name": "Christian Kirk",
+      "position": "WR",
+      "priority": 188,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12455",
+      "name": "Brashard Smith",
+      "position": "RB",
+      "priority": 189,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12471",
+      "name": "DJ Giddens",
+      "position": "RB",
+      "priority": 190,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6130",
+      "name": "Devin Singletary",
+      "position": "RB",
+      "priority": 191,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13349",
+      "name": "Eli Stowers",
+      "position": "TE",
+      "priority": 192,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9501",
+      "name": "DeMario Douglas",
+      "position": "WR",
+      "priority": 193,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5848",
+      "name": "Marquise Brown",
+      "position": "WR",
+      "priority": 194,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13402",
+      "name": "Skyler Bell",
+      "position": "WR",
+      "priority": 195,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4993",
+      "name": "Mike Gesicki",
+      "position": "TE",
+      "priority": 196,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4177",
+      "name": "Mack Hollins",
+      "position": "WR",
+      "priority": 197,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10226",
+      "name": "Andrei Iosivas",
+      "position": "WR",
+      "priority": 198,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13302",
+      "name": "Adam Randall",
+      "position": "RB",
+      "priority": 199,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12503",
+      "name": "Isaiah Bond",
+      "position": "WR",
+      "priority": 200,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11199",
+      "name": "Emari Demercado",
+      "position": "RB",
+      "priority": 201,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8698",
+      "name": "Jake Tonges",
+      "position": "TE",
+      "priority": 202,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12476",
+      "name": "Devin Neal",
+      "position": "RB",
+      "priority": 203,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11577",
+      "name": "Will Shipley",
+      "position": "RB",
+      "priority": 204,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12531",
+      "name": "Trevor Etienne",
+      "position": "RB",
+      "priority": 205,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8127",
+      "name": "Charlie Kolar",
+      "position": "TE",
+      "priority": 206,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8119",
+      "name": "Jahan Dotson",
+      "position": "WR",
+      "priority": 207,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12543",
+      "name": "Tahj Brooks",
+      "position": "RB",
+      "priority": 208,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9482",
+      "name": "Michael Mayer",
+      "position": "TE",
+      "priority": 209,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11589",
+      "name": "Trey Benson",
+      "position": "RB",
+      "priority": 210,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9479",
+      "name": "Darnell Washington",
+      "position": "TE",
+      "priority": 211,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11651",
+      "name": "Isaac Guerendo",
+      "position": "RB",
+      "priority": 212,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11579",
+      "name": "Audric Estime",
+      "position": "RB",
+      "priority": 213,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11439",
+      "name": "Jaleel McLaughlin",
+      "position": "RB",
+      "priority": 214,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10218",
+      "name": "Xavier Hutchinson",
+      "position": "WR",
+      "priority": 215,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13319",
+      "name": "Oscar Delp",
+      "position": "TE",
+      "priority": 216,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12521",
+      "name": "Elijah Arroyo",
+      "position": "TE",
+      "priority": 217,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8117",
+      "name": "Jalen Tolbert",
+      "position": "WR",
+      "priority": 218,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13420",
+      "name": "Bryce Lance",
+      "position": "WR",
+      "priority": 219,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11569",
+      "name": "Jarquez Hunter",
+      "position": "RB",
+      "priority": 220,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8143",
+      "name": "Jerome Ford",
+      "position": "RB",
+      "priority": 221,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11237",
+      "name": "Jacob Saylors",
+      "position": "RB",
+      "priority": 222,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13272",
+      "name": "Carson Beck",
+      "position": "QB",
+      "priority": 223,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6826",
+      "name": "Cole Kmet",
+      "position": "TE",
+      "priority": 224,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4454",
+      "name": "Kendrick Bourne",
+      "position": "WR",
+      "priority": 225,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5906",
+      "name": "Dawson Knox",
+      "position": "TE",
+      "priority": 226,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7670",
+      "name": "Joshua Palmer",
+      "position": "WR",
+      "priority": 227,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13421",
+      "name": "Eli Raridon",
+      "position": "TE",
+      "priority": 228,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12485",
+      "name": "Tez Johnson",
+      "position": "WR",
+      "priority": 229,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6271",
+      "name": "Olamide Zaccheaus",
+      "position": "WR",
+      "priority": 230,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3271",
+      "name": "Tyler Higbee",
+      "position": "TE",
+      "priority": 231,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8122",
+      "name": "Zonovan Knight",
+      "position": "RB",
+      "priority": 232,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11592",
+      "name": "Erick All",
+      "position": "TE",
+      "priority": 233,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13329",
+      "name": "Malik Benson",
+      "position": "WR",
+      "priority": 234,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7828",
+      "name": "Noah Gray",
+      "position": "TE",
+      "priority": 235,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11565",
+      "name": "J.J. McCarthy",
+      "position": "QB",
+      "priority": 236,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10235",
+      "name": "Roschon Johnson",
+      "position": "RB",
+      "priority": 237,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7527",
+      "name": "Mac Jones",
+      "position": "QB",
+      "priority": 238,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12505",
+      "name": "Jalen Royals",
+      "position": "WR",
+      "priority": 239,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11630",
+      "name": "Roman Wilson",
+      "position": "WR",
+      "priority": 240,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11650",
+      "name": "Luke McCaffrey",
+      "position": "WR",
+      "priority": 241,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13380",
+      "name": "Brenen Thompson",
+      "position": "WR",
+      "priority": 242,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12718",
+      "name": "Konata Mumpfield",
+      "position": "WR",
+      "priority": 243,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13411",
+      "name": "Zavion Thomas",
+      "position": "WR",
+      "priority": 244,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3634",
+      "name": "Kalif Raymond",
+      "position": "WR",
+      "priority": 245,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8135",
+      "name": "Treylon Burks",
+      "position": "WR",
+      "priority": 246,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7591",
+      "name": "Justin Fields",
+      "position": "QB",
+      "priority": 247,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13278",
+      "name": "Max Klare",
+      "position": "TE",
+      "priority": 248,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11600",
+      "name": "Ja'Tavion Sanders",
+      "position": "TE",
+      "priority": 249,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8917",
+      "name": "KaVontae Turpin",
+      "position": "WR",
+      "priority": 250,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13423",
+      "name": "Eli Heidenreich",
+      "position": "RB",
+      "priority": 251,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "2078",
+      "name": "Odell Beckham",
+      "position": "WR",
+      "priority": 252,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12472",
+      "name": "Raheim Sanders",
+      "position": "RB",
+      "priority": 253,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13477",
+      "name": "Colbie Young",
+      "position": "WR",
+      "priority": 254,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9229",
+      "name": "Anthony Richardson",
+      "position": "QB",
+      "priority": 255,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11729",
+      "name": "Sione Vaki",
+      "position": "RB",
+      "priority": 256,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13275",
+      "name": "Ty Simpson",
+      "position": "QB",
+      "priority": 257,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5857",
+      "name": "Noah Fant",
+      "position": "TE",
+      "priority": 258,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7562",
+      "name": "Tutu Atwell",
+      "position": "WR",
+      "priority": 259,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11570",
+      "name": "Rasheen Ali",
+      "position": "RB",
+      "priority": 260,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "1379",
+      "name": "Kyle Juszczyk",
+      "position": "RB",
+      "priority": 261,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12541",
+      "name": "Dont'e Thornton",
+      "position": "WR",
+      "priority": 262,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3286",
+      "name": "Demarcus Robinson",
+      "position": "WR",
+      "priority": 263,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12482",
+      "name": "Savion Williams",
+      "position": "WR",
+      "priority": 264,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "2306",
+      "name": "Jameis Winston",
+      "position": "QB",
+      "priority": 265,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "19",
+      "name": "Joe Flacco",
+      "position": "QB",
+      "priority": 266,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8147",
+      "name": "John Metchie",
+      "position": "WR",
+      "priority": 267,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7694",
+      "name": "Tommy Tremble",
+      "position": "TE",
+      "priority": 268,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4144",
+      "name": "Jonnu Smith",
+      "position": "TE",
+      "priority": 269,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "2307",
+      "name": "Marcus Mariota",
+      "position": "QB",
+      "priority": 270,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11596",
+      "name": "Ben Sinnott",
+      "position": "TE",
+      "priority": 271,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12641",
+      "name": "Jaylin Lane",
+      "position": "WR",
+      "priority": 272,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13303",
+      "name": "Cade Klubnik",
+      "position": "QB",
+      "priority": 273,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13533",
+      "name": "Barion Brown",
+      "position": "WR",
+      "priority": 274,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6427",
+      "name": "Ashton Dulin",
+      "position": "WR",
+      "priority": 275,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11623",
+      "name": "Jordan Whittington",
+      "position": "WR",
+      "priority": 276,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11574",
+      "name": "Dylan Laube",
+      "position": "RB",
+      "priority": 277,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13400",
+      "name": "Justin Joly",
+      "position": "TE",
+      "priority": 278,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11608",
+      "name": "Isaiah Williams",
+      "position": "WR",
+      "priority": 279,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8225",
+      "name": "Daniel Bellinger",
+      "position": "TE",
+      "priority": 280,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11629",
+      "name": "Devontez Walker",
+      "position": "WR",
+      "priority": 281,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12473",
+      "name": "Mitchell Evans",
+      "position": "TE",
+      "priority": 282,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12491",
+      "name": "Corey Kiner",
+      "position": "RB",
+      "priority": 283,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10231",
+      "name": "Elijah Higgins",
+      "position": "TE",
+      "priority": 284,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7587",
+      "name": "Dyami Brown",
+      "position": "WR",
+      "priority": 285,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3202",
+      "name": "Austin Hooper",
+      "position": "TE",
+      "priority": 286,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4219",
+      "name": "Jeremy McNichols",
+      "position": "RB",
+      "priority": 287,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7496",
+      "name": "Nick Westbrook-Ikhine",
+      "position": "WR",
+      "priority": 288,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "2359",
+      "name": "Ameer Abdullah",
+      "position": "RB",
+      "priority": 289,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11510",
+      "name": "Hunter Luepke",
+      "position": "RB",
+      "priority": 290,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9481",
+      "name": "Luke Musgrave",
+      "position": "TE",
+      "priority": 291,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13079",
+      "name": "Jahdae Walker",
+      "position": "WR",
+      "priority": 292,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13264",
+      "name": "Dohnte Meyers",
+      "position": "WR",
+      "priority": 293,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8195",
+      "name": "Ronnie Rivers",
+      "position": "RB",
+      "priority": 294,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13307",
+      "name": "Marlin Klein",
+      "position": "TE",
+      "priority": 295,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12496",
+      "name": "Tai Felton",
+      "position": "WR",
+      "priority": 296,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11299",
+      "name": "Zavier Scott",
+      "position": "RB",
+      "priority": 297,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7716",
+      "name": "John Bates",
+      "position": "TE",
+      "priority": 298,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8208",
+      "name": "Tyler Badie",
+      "position": "RB",
+      "priority": 299,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7204",
+      "name": "Reggie Gilliam",
+      "position": "RB",
+      "priority": 300,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11557",
+      "name": "Joe Milton",
+      "position": "QB",
+      "priority": 301,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5973",
+      "name": "Josh Oliver",
+      "position": "TE",
+      "priority": 302,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4353",
+      "name": "Patrick Ricard",
+      "position": "RB",
+      "priority": 303,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12412",
+      "name": "Terrell Jennings",
+      "position": "RB",
+      "priority": 304,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6109",
+      "name": "Alec Ingold",
+      "position": "RB",
+      "priority": 305,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12523",
+      "name": "Jimmy Horn",
+      "position": "WR",
+      "priority": 306,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13297",
+      "name": "Reggie Virgil",
+      "position": "WR",
+      "priority": 307,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13434",
+      "name": "Will Kacmarek",
+      "position": "TE",
+      "priority": 308,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4351",
+      "name": "Tim Patrick",
+      "position": "WR",
+      "priority": 309,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13516",
+      "name": "Max Bredeson",
+      "position": "RB",
+      "priority": 310,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "2197",
+      "name": "Brandin Cooks",
+      "position": "WR",
+      "priority": 311,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13289",
+      "name": "Drew Allar",
+      "position": "QB",
+      "priority": 312,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13408",
+      "name": "Tanner Koziol",
+      "position": "TE",
+      "priority": 313,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6869",
+      "name": "Adam Trautman",
+      "position": "TE",
+      "priority": 314,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13299",
+      "name": "Nate Boerkircher",
+      "position": "TE",
+      "priority": 315,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7720",
+      "name": "Kene Nwangwu",
+      "position": "RB",
+      "priority": 316,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13394",
+      "name": "Josh Cameron",
+      "position": "WR",
+      "priority": 317,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7521",
+      "name": "Chris Blair",
+      "position": "WR",
+      "priority": 318,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8254",
+      "name": "Julius Chestnut",
+      "position": "RB",
+      "priority": 319,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "827",
+      "name": "Tyrod Taylor",
+      "position": "QB",
+      "priority": 320,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6011",
+      "name": "Gardner Minshew",
+      "position": "QB",
+      "priority": 321,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13210",
+      "name": "Drake Dabney",
+      "position": "TE",
+      "priority": 322,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13150",
+      "name": "Darius Cooper",
+      "position": "WR",
+      "priority": 323,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12860",
+      "name": "Theo Wease",
+      "position": "WR",
+      "priority": 324,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11616",
+      "name": "Jacob Cowing",
+      "position": "WR",
+      "priority": 325,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11256",
+      "name": "Tyson Bagent",
+      "position": "QB",
+      "priority": 326,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7891",
+      "name": "Brock Wright",
+      "position": "TE",
+      "priority": 327,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12670",
+      "name": "KeAndre Lambert-Smith",
+      "position": "WR",
+      "priority": 328,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10871",
+      "name": "Luke Schoonmaker",
+      "position": "TE",
+      "priority": 329,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12658",
+      "name": "Jackson Hawes",
+      "position": "TE",
+      "priority": 330,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5985",
+      "name": "Foster Moreau",
+      "position": "TE",
+      "priority": 331,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7585",
+      "name": "Davis Mills",
+      "position": "QB",
+      "priority": 332,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7610",
+      "name": "Trey Lance",
+      "position": "QB",
+      "priority": 333,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11599",
+      "name": "Cade Stover",
+      "position": "TE",
+      "priority": 334,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5938",
+      "name": "Lil'Jordan Humphrey",
+      "position": "WR",
+      "priority": 335,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11168",
+      "name": "Xavier Smith",
+      "position": "WR",
+      "priority": 336,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12500",
+      "name": "Quinn Ewers",
+      "position": "QB",
+      "priority": 337,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13491",
+      "name": "Kaden Wetjen",
+      "position": "WR",
+      "priority": 338,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6001",
+      "name": "Drew Sample",
+      "position": "TE",
+      "priority": 339,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12171",
+      "name": "British Brooks",
+      "position": "RB",
+      "priority": 340,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8219",
+      "name": "Jelani Woods",
+      "position": "TE",
+      "priority": 341,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5409",
+      "name": "Tanner Hudson",
+      "position": "TE",
+      "priority": 342,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8200",
+      "name": "Kevin Austin",
+      "position": "WR",
+      "priority": 343,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5008",
+      "name": "Durham Smythe",
+      "position": "TE",
+      "priority": 344,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12510",
+      "name": "Jalen Milroe",
+      "position": "QB",
+      "priority": 345,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12470",
+      "name": "Riley Leonard",
+      "position": "QB",
+      "priority": 346,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13322",
+      "name": "Sam Roush",
+      "position": "TE",
+      "priority": 347,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8423",
+      "name": "Brittain Brown",
+      "position": "RB",
+      "priority": 348,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3976",
+      "name": "Mitchell Trubisky",
+      "position": "QB",
+      "priority": 349,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11034",
+      "name": "Jalen Brooks",
+      "position": "WR",
+      "priority": 350,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8145",
+      "name": "Jeremy Ruckert",
+      "position": "TE",
+      "priority": 351,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8250",
+      "name": "Tay Martin",
+      "position": "WR",
+      "priority": 352,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6012",
+      "name": "Travis Homer",
+      "position": "RB",
+      "priority": 353,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10212",
+      "name": "Josh Whyle",
+      "position": "TE",
+      "priority": 354,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10214",
+      "name": "Davis Allen",
+      "position": "TE",
+      "priority": 355,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10220",
+      "name": "Will Mallory",
+      "position": "TE",
+      "priority": 356,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10223",
+      "name": "Eric Gray",
+      "position": "RB",
+      "priority": 357,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10225",
+      "name": "Jonathan Mingo",
+      "position": "WR",
+      "priority": 358,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10227",
+      "name": "Payne Durham",
+      "position": "TE",
+      "priority": 359,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10234",
+      "name": "Derius Davis",
+      "position": "WR",
+      "priority": 360,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10857",
+      "name": "Stetson Bennett",
+      "position": "QB",
+      "priority": 361,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10866",
+      "name": "Aidan O'Connell",
+      "position": "QB",
+      "priority": 362,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10867",
+      "name": "Jake Bobo",
+      "position": "WR",
+      "priority": 363,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11056",
+      "name": "Jared Wayne",
+      "position": "WR",
+      "priority": 364,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11082",
+      "name": "Ben Sims",
+      "position": "TE",
+      "priority": 365,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11157",
+      "name": "Brycen Tremayne",
+      "position": "WR",
+      "priority": 366,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11201",
+      "name": "Blake Whiteheart",
+      "position": "TE",
+      "priority": 367,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11210",
+      "name": "Malik Heath",
+      "position": "WR",
+      "priority": 368,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11292",
+      "name": "Tommy DeVito",
+      "position": "QB",
+      "priority": 369,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11306",
+      "name": "Xavier Gipson",
+      "position": "WR",
+      "priority": 370,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11320",
+      "name": "Nikko Remigio",
+      "position": "WR",
+      "priority": 371,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11371",
+      "name": "Julian Hill",
+      "position": "TE",
+      "priority": 372,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11377",
+      "name": "Tyrell Shavers",
+      "position": "WR",
+      "priority": 373,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11421",
+      "name": "Ryan Miller",
+      "position": "WR",
+      "priority": 374,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11433",
+      "name": "Nate Adkins",
+      "position": "TE",
+      "priority": 375,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11562",
+      "name": "Spencer Rattler",
+      "position": "QB",
+      "priority": 376,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11593",
+      "name": "Brevyn Spann-Ford",
+      "position": "TE",
+      "priority": 377,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11595",
+      "name": "Jared Wiley",
+      "position": "TE",
+      "priority": 378,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11617",
+      "name": "Malachi Corley",
+      "position": "WR",
+      "priority": 379,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11649",
+      "name": "Kendall Milton",
+      "position": "RB",
+      "priority": 380,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11716",
+      "name": "Tip Reiman",
+      "position": "TE",
+      "priority": 381,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11762",
+      "name": "Anthony Gould",
+      "position": "WR",
+      "priority": 382,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11802",
+      "name": "Tejhaun Palmer",
+      "position": "WR",
+      "priority": 383,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11820",
+      "name": "Devin Culp",
+      "position": "TE",
+      "priority": 384,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11821",
+      "name": "Tahj Washington",
+      "position": "WR",
+      "priority": 385,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11895",
+      "name": "Mason Tipton",
+      "position": "WR",
+      "priority": 386,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11921",
+      "name": "Xavier Weaver",
+      "position": "WR",
+      "priority": 387,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11963",
+      "name": "Chris Collier",
+      "position": "RB",
+      "priority": 388,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11994",
+      "name": "Kameron Johnson",
+      "position": "WR",
+      "priority": 389,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12045",
+      "name": "Jack Westover",
+      "position": "TE",
+      "priority": 390,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12357",
+      "name": "David Martin-Robinson",
+      "position": "TE",
+      "priority": 391,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12494",
+      "name": "Kyle McCord",
+      "position": "QB",
+      "priority": 392,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12511",
+      "name": "Will Howard",
+      "position": "QB",
+      "priority": 393,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12532",
+      "name": "Ja'Corey Brooks",
+      "position": "WR",
+      "priority": 394,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12538",
+      "name": "Brady Cook",
+      "position": "QB",
+      "priority": 395,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12539",
+      "name": "Arian Smith",
+      "position": "WR",
+      "priority": 396,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12542",
+      "name": "Efton Chism",
+      "position": "WR",
+      "priority": 397,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12699",
+      "name": "LaJohntay Wester",
+      "position": "WR",
+      "priority": 398,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12715",
+      "name": "Thomas Fidone",
+      "position": "TE",
+      "priority": 399,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12765",
+      "name": "Keleki Latu",
+      "position": "TE",
+      "priority": 400,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12829",
+      "name": "Coleman Owen",
+      "position": "WR",
+      "priority": 401,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12971",
+      "name": "Ke'Shawn Williams",
+      "position": "WR",
+      "priority": 402,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12984",
+      "name": "CJ Dippre",
+      "position": "TE",
+      "priority": 403,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13011",
+      "name": "Brennan Presley",
+      "position": "WR",
+      "priority": 404,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13075",
+      "name": "Myles Price",
+      "position": "WR",
+      "priority": 405,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13121",
+      "name": "Ben Yurosek",
+      "position": "TE",
+      "priority": 406,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13122",
+      "name": "Carter Runyon",
+      "position": "TE",
+      "priority": 407,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13151",
+      "name": "Nick Kallerup",
+      "position": "TE",
+      "priority": 408,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13173",
+      "name": "Jimmy Holiday",
+      "position": "WR",
+      "priority": 409,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13273",
+      "name": "Josh Cuevas",
+      "position": "TE",
+      "priority": 410,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13282",
+      "name": "Jack Endries",
+      "position": "TE",
+      "priority": 411,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13308",
+      "name": "Bauer Sharp",
+      "position": "TE",
+      "priority": 412,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13335",
+      "name": "Cole Payton",
+      "position": "QB",
+      "priority": 413,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13425",
+      "name": "Jalon Daniels",
+      "position": "QB",
+      "priority": 414,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13429",
+      "name": "Seydou Traore",
+      "position": "TE",
+      "priority": 415,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13435",
+      "name": "Joe Royer",
+      "position": "TE",
+      "priority": 416,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13577",
+      "name": "Dallen Bentley",
+      "position": "TE",
+      "priority": 417,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13580",
+      "name": "Carsen Ryan",
+      "position": "TE",
+      "priority": 418,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "2471",
+      "name": "Michael Burton",
+      "position": "RB",
+      "priority": 419,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "260",
+      "name": "Josh Johnson",
+      "position": "QB",
+      "priority": 420,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3048",
+      "name": "Chris Manhertz",
+      "position": "TE",
+      "priority": 421,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "3155",
+      "name": "Laquon Treadwell",
+      "position": "WR",
+      "priority": 422,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4040",
+      "name": "JuJu Smith-Schuster",
+      "position": "WR",
+      "priority": 423,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4054",
+      "name": "Mo Alie-Cox",
+      "position": "TE",
+      "priority": 424,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4179",
+      "name": "Joshua Dobbs",
+      "position": "QB",
+      "priority": 425,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4189",
+      "name": "Eric Saubert",
+      "position": "TE",
+      "priority": 426,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4274",
+      "name": "David Moore",
+      "position": "WR",
+      "priority": 427,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4314",
+      "name": "Johnny Mundt",
+      "position": "TE",
+      "priority": 428,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4435",
+      "name": "Anthony Firkser",
+      "position": "TE",
+      "priority": 429,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4464",
+      "name": "Nick Mullens",
+      "position": "QB",
+      "priority": 430,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4574",
+      "name": "Cooper Rush",
+      "position": "QB",
+      "priority": 431,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4972",
+      "name": "Mason Rudolph",
+      "position": "QB",
+      "priority": 432,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4995",
+      "name": "Ian Thomas",
+      "position": "TE",
+      "priority": 433,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5121",
+      "name": "Braxton Berrios",
+      "position": "WR",
+      "priority": 434,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5127",
+      "name": "Kyle Allen",
+      "position": "QB",
+      "priority": 435,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5781",
+      "name": "Malik Turner",
+      "position": "WR",
+      "priority": 436,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5854",
+      "name": "Drew Lock",
+      "position": "QB",
+      "priority": 437,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6111",
+      "name": "Jake Browning",
+      "position": "QB",
+      "priority": 438,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6136",
+      "name": "Jarrett Stidham",
+      "position": "QB",
+      "priority": 439,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6154",
+      "name": "David Sills",
+      "position": "WR",
+      "priority": 440,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6323",
+      "name": "Andrew Beck",
+      "position": "RB",
+      "priority": 441,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6699",
+      "name": "Gunner Olszewski",
+      "position": "WR",
+      "priority": 442,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6847",
+      "name": "Devin Duvernay",
+      "position": "WR",
+      "priority": 443,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6931",
+      "name": "DeeJay Dallas",
+      "position": "RB",
+      "priority": 444,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7039",
+      "name": "Cody White",
+      "position": "WR",
+      "priority": 445,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7075",
+      "name": "Charlie Woerner",
+      "position": "TE",
+      "priority": 446,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7083",
+      "name": "Tyler Huntley",
+      "position": "QB",
+      "priority": 447,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7531",
+      "name": "Feleipe Franks",
+      "position": "TE",
+      "priority": 448,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7535",
+      "name": "Hunter Long",
+      "position": "TE",
+      "priority": 449,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7536",
+      "name": "Quintin Morris",
+      "position": "TE",
+      "priority": 450,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7595",
+      "name": "Tylan Wallace",
+      "position": "WR",
+      "priority": 451,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7602",
+      "name": "Kylen Granson",
+      "position": "TE",
+      "priority": 452,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7757",
+      "name": "Ben Skowronek",
+      "position": "WR",
+      "priority": 453,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7812",
+      "name": "Simi Fehoko",
+      "position": "WR",
+      "priority": 454,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7842",
+      "name": "Luke Farrell",
+      "position": "TE",
+      "priority": 455,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7946",
+      "name": "Jack Stoll",
+      "position": "TE",
+      "priority": 456,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8025",
+      "name": "Adam Prentice",
+      "position": "RB",
+      "priority": 457,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8159",
+      "name": "Desmond Ridder",
+      "position": "QB",
+      "priority": 458,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8160",
+      "name": "Kenny Pickett",
+      "position": "QB",
+      "priority": 459,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8162",
+      "name": "Sam Howell",
+      "position": "QB",
+      "priority": 460,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8168",
+      "name": "Skyy Moore",
+      "position": "WR",
+      "priority": 461,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8170",
+      "name": "James Mitchell",
+      "position": "TE",
+      "priority": 462,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8177",
+      "name": "Grant Calcaterra",
+      "position": "TE",
+      "priority": 463,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8204",
+      "name": "Bo Melton",
+      "position": "WR",
+      "priority": 464,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8214",
+      "name": "Cole Turner",
+      "position": "TE",
+      "priority": 465,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8249",
+      "name": "Lucas Krull",
+      "position": "TE",
+      "priority": 466,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "829",
+      "name": "Andy Dalton",
+      "position": "QB",
+      "priority": 467,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8484",
+      "name": "Ko Kieft",
+      "position": "TE",
+      "priority": 468,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8489",
+      "name": "Drew Ogletree",
+      "position": "TE",
+      "priority": 469,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8500",
+      "name": "John FitzPatrick",
+      "position": "TE",
+      "priority": 470,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8527",
+      "name": "Dareke Young",
+      "position": "WR",
+      "priority": 471,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8849",
+      "name": "Tanner Conner",
+      "position": "TE",
+      "priority": 472,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9227",
+      "name": "Israel Abanikanda",
+      "position": "RB",
+      "priority": 473,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "9230",
+      "name": "Tanner McKee",
+      "position": "QB",
+      "priority": 474,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    }
+  ],
+  "mock_uses_league_board": true,
+  "based_on_pick": 68,
+  "state_fingerprint": "b26a500604a2cda8469a032b75a631e9f1b1765ba93bda1fb33a1d13195f0ce3",
+  "policy_sha256": "cac135718f82bfb1a6020ed18cd4b3782ec11e3c699a2002229e858fee9a4bcf"
+}

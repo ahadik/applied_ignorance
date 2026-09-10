@@ -1,0 +1,232 @@
+[
+  {
+    "scenario": "early_seat",
+    "seat": 1,
+    "round": 1,
+    "opponent_mode": "ecr",
+    "roster": [],
+    "engine_pick": "Jahmyr Gibbs",
+    "ecr_pick": "Ja'Marr Chase",
+    "same_pick": false,
+    "runtime_seconds": 1.2487776250054594,
+    "top_three": [
+      "Jahmyr Gibbs",
+      "Bijan Robinson",
+      "Ja'Marr Chase"
+    ],
+    "needs": {
+      "QB": 1,
+      "RB": 2,
+      "WR": 2,
+      "TE": 1,
+      "K": 1,
+      "DEF": 1,
+      "FLEX": 2
+    }
+  },
+  {
+    "scenario": "middle_seat",
+    "seat": 7,
+    "round": 1,
+    "opponent_mode": "needs",
+    "roster": [],
+    "engine_pick": "Puka Nacua",
+    "ecr_pick": "Puka Nacua",
+    "same_pick": true,
+    "runtime_seconds": 0.92121895798482,
+    "top_three": [
+      "Puka Nacua",
+      "Amon-Ra St. Brown",
+      "De'Von Achane"
+    ],
+    "needs": {
+      "QB": 1,
+      "RB": 2,
+      "WR": 2,
+      "TE": 1,
+      "K": 1,
+      "DEF": 1,
+      "FLEX": 2
+    }
+  },
+  {
+    "scenario": "turn_seat",
+    "seat": 14,
+    "round": 1,
+    "opponent_mode": "adp",
+    "roster": [],
+    "engine_pick": "Derrick Henry",
+    "ecr_pick": "Justin Jefferson",
+    "same_pick": false,
+    "runtime_seconds": 0.34906704199966043,
+    "top_three": [
+      "Derrick Henry",
+      "James Cook",
+      "Rashee Rice"
+    ],
+    "needs": {
+      "QB": 1,
+      "RB": 2,
+      "WR": 2,
+      "TE": 1,
+      "K": 1,
+      "DEF": 1,
+      "FLEX": 2
+    }
+  },
+  {
+    "scenario": "mid_draft",
+    "seat": 7,
+    "round": 5,
+    "opponent_mode": "needs",
+    "roster": [
+      "Puka Nacua",
+      "De'Von Achane",
+      "Lamar Jackson",
+      "DJ Moore"
+    ],
+    "engine_pick": "Rhamondre Stevenson",
+    "ecr_pick": "Bhayshul Tuten",
+    "same_pick": false,
+    "runtime_seconds": 1.0472096249868628,
+    "top_three": [
+      "Rhamondre Stevenson",
+      "Jaylen Warren",
+      "Bhayshul Tuten"
+    ],
+    "needs": {
+      "QB": 0,
+      "RB": 1,
+      "WR": 0,
+      "TE": 1,
+      "K": 1,
+      "DEF": 1,
+      "FLEX": 2
+    }
+  },
+  {
+    "scenario": "quarterback_run",
+    "seat": 7,
+    "round": 5,
+    "opponent_mode": "qb_run",
+    "roster": [
+      "Puka Nacua",
+      "Chase Brown",
+      "Ashton Jeanty",
+      "Luther Burden"
+    ],
+    "engine_pick": "David Montgomery",
+    "ecr_pick": "Christian Watson",
+    "same_pick": false,
+    "runtime_seconds": 0.9730160000035539,
+    "top_three": [
+      "David Montgomery",
+      "Rhamondre Stevenson",
+      "Jaylen Warren"
+    ],
+    "needs": {
+      "QB": 1,
+      "RB": 0,
+      "WR": 0,
+      "TE": 1,
+      "K": 1,
+      "DEF": 1,
+      "FLEX": 2
+    }
+  },
+  {
+    "scenario": "bench",
+    "seat": 7,
+    "round": 11,
+    "opponent_mode": "needs",
+    "roster": [
+      "Puka Nacua",
+      "De'Von Achane",
+      "Lamar Jackson",
+      "DJ Moore",
+      "Bhayshul Tuten",
+      "DK Metcalf",
+      "Quentin Johnston",
+      "Jordan Addison",
+      "Aaron Jones",
+      "Khalil Shakir"
+    ],
+    "engine_pick": "Josh Jacobs",
+    "ecr_pick": "Chris Rodriguez",
+    "same_pick": false,
+    "runtime_seconds": 1.2550781249883585,
+    "top_three": [
+      "Josh Jacobs",
+      "Brenton Strange",
+      "Alvin Kamara"
+    ],
+    "needs": {
+      "QB": 0,
+      "RB": 0,
+      "WR": 0,
+      "TE": 1,
+      "K": 1,
+      "DEF": 1,
+      "FLEX": 0
+    }
+  },
+  {
+    "scenario": "final_slots",
+    "seat": 7,
+    "round": 14,
+    "opponent_mode": "needs",
+    "roster": [
+      "Puka Nacua",
+      "De'Von Achane",
+      "Lamar Jackson",
+      "DJ Moore",
+      "Bhayshul Tuten",
+      "DK Metcalf",
+      "Quentin Johnston",
+      "Jordan Addison",
+      "Aaron Jones",
+      "Khalil Shakir",
+      "Chris Rodriguez",
+      "Cam Ward",
+      "T.J. Hockenson"
+    ],
+    "engine_pick": "Green Bay Packers",
+    "ecr_pick": "Green Bay Packers",
+    "same_pick": true,
+    "runtime_seconds": 0.29878283297875896,
+    "top_three": [
+      "Green Bay Packers",
+      "Jake Bates",
+      "Evan McPherson"
+    ],
+    "needs": {
+      "QB": 0,
+      "RB": 0,
+      "WR": 0,
+      "TE": 0,
+      "K": 1,
+      "DEF": 1,
+      "FLEX": 0
+    }
+  },
+  {
+    "scenario": "injury_sensitivity",
+    "hypothetical_player": "Ja'Marr Chase",
+    "hypothetical_multiplier": 0.8,
+    "engine_pick": "Jahmyr Gibbs",
+    "runtime_seconds": 1.2176255829981528,
+    "active_policy_changed": false
+  },
+  {
+    "scenario": "replay_1403085664475467776",
+    "source": "Recorded mock first-round prefix; later data, not a backtest",
+    "engine_pick": "Amon-Ra St. Brown",
+    "runtime_seconds": 0.925619750021724
+  },
+  {
+    "scenario": "replay_1403090401178435584",
+    "source": "Recorded mock first-round prefix; later data, not a backtest",
+    "engine_pick": "Puka Nacua",
+    "runtime_seconds": 0.9476804580190219
+  }
+]

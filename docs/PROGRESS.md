@@ -1,15 +1,27 @@
 # Current project handoff
 
+September 10 update: the user authorized committing all `data/` to Git and assumes only one Mac runs at a time. Use Git for code/data handoff; keep `.env` and credentials excluded. This supersedes older local-only data and separate-transfer guidance.
+
 Updated September 9, 2026 (UTC), following the September 8 draft in Eastern time.
 
 ## Verified state
+
+- Initial Week 1 lineup applied September 9 around 05:04 UTC: Purdy replaced Mahomes through native Sleeper controls; full browser reload confirmed Purdy starting. Other eight starters retained. Flowers/Swift remain questionable; manual return-to-practice review supports provisional retention, not medical clearance. Automated validator remains REVIEW. Public API reconciliation still failed after a short settling interval because roster and matchup starters disagree; do not repeat the swap blindly. See private `data/weekly/2026/1/APPLICATION.md` and archived rationale. No automation scheduled. This supersedes older statements below that no Week 1 browser application occurred; API reconciliation remains outstanding.
 
 - Real draft `1400628785413394432` is complete: 196 league selections, all 14 of our selections reconciled, zero required-position needs, no pending submission.
 - The first two selections were automatic before takeover; the remaining 12 were supervised. Full roster and numerical-versus-agent choices: [draft result](REAL_DRAFT_RESULT.md).
 - The read-only watcher is stopped. Do not resume draft actions.
 - Final state was saved using `controller.py sync --draft 1400628785413394432` and `draft.py sync`, through central Sleeper reads. Local snapshots live under `data/`; `DRAFT_CONTEXT.md` records the completed context.
 - User authorized `draft_session.py release`. It verified full completion and set the guard inactive at **2026-09-09T03:46:42Z**. No FantasyPros or nflverse data was refreshed. Preserve the frozen board as historical evidence.
-- No cloud backend, mobile MCP connection, weekly automation, or Week 1 starting lineup has been completed.
+- The weekly recommendation pipeline is implemented: see [weekly guide](WEEKLY_LINEUP.md).
+  First live Week 1 collection/optimization succeeded September 9 at 04:38 UTC.
+  All 14 owned players have matched weekly projections; scoring remains partial.
+  No cloud backend, mobile MCP connection, scheduled weekly automation, or verified
+  application of a Week 1 starting lineup has been completed.
+- Weekly checkpoint: 182 tests passed. Final live run at 04:44 UTC reused all nine
+  FP feeds; read-back at 04:45 UTC confirmed Mahomes still starts while the saved
+  model recommends Purdy. This is an unapplied recommendation, with injury review
+  and partial-scoring caveats. Run again for fresh advice before taking action.
 
 ## Delivered milestones
 
@@ -33,8 +45,25 @@ Updated September 9, 2026 (UTC), following the September 8 draft in Eastern time
 
 ## Next work
 
-1. Collect current Week 1 availability through central clients and determine the starting lineup. Draft-day data is historical.
-2. Build reusable weekly lineup and waiver services, then reminders and recovery procedures. No scheduled service currently exists.
+Lineup proposals now use schema v2 with an overall free-text rationale and
+append-only version records. `lineup_history.py list --season 2026 --week 1`
+reviews history offline. Run/export and explicit record all preserve prior versions;
+197 tests passed. See LINEUP_VALIDATION.md for writing and validating revisions.
+
+Independent lineup validation is now implemented: [guide](LINEUP_VALIDATION.md).
+The proposal JSON is exported by the weekly pipeline or its offline `export`
+command. `lineup_validate.py --lineup data/weekly/2026/1/proposed_lineup.json`
+collects fresh validation evidence without projections. 193 tests passed; the
+04:52 UTC live validation returned REVIEW for Flowers/Swift availability and
+Flowers news. A pass is time- and proposal-bound, not medical clearance or a
+guarantee of participation. No lineup submission occurred.
+
+1. Re-run `python3 weekly_lineup.py run --season 2026 --week 1`, review injuries,
+   and apply/verify the starting lineup. Draft-day data is historical. Early live
+   schedule observation puts Shaheed's game Wednesday evening; do not assume the
+   first relevant deadline is Thursday. Reverify the current schedule before use.
+2. Extend the implemented weekly pipeline with waiver services, richer inputs,
+   reminders and recovery procedures. No scheduled service currently exists.
 3. Audit draft decisions and evaluate model changes with paired simulations and sensitivity checks.
 4. Implement the planned authenticated cloud MCP adapter and verify phone access on the user's account; see [MCP design](MCP_DESIGN.md).
 

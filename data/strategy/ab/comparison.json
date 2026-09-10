@@ -1,0 +1,1201 @@
+{
+  "complete": true,
+  "engine_version": 2,
+  "board_sha256": "c62af3b5412ec1049587ebe19afc14fc28ea83d148693012f81429853dc2f10e",
+  "generated_at": "2026-09-08T22:23:35.714136+00:00",
+  "policy": {
+    "version": 2,
+    "planning_mode": "ab",
+    "ab": {
+      "first_width": 6,
+      "future_width": 3,
+      "reply_width": 3,
+      "response_width": 3,
+      "prefix_samples": 2,
+      "tail_samples": 2,
+      "rank_slack": 8,
+      "tail_weight": 0.35,
+      "downside_fraction": 0.25
+    },
+    "seed": 20260908,
+    "scenario_modes": [
+      "ecr",
+      "adp",
+      "needs",
+      "rb_run"
+    ],
+    "samples_per_mode": 2,
+    "shortlist_each": 5,
+    "bench_weight": 0.18,
+    "bench_decay": 0.6,
+    "robust_weight": 0.25,
+    "opponent_temperature": 5.0,
+    "specialist_last_rounds": 2,
+    "backup_qb_te_round": 10,
+    "caps": {
+      "QB": 2,
+      "RB": 8,
+      "WR": 8,
+      "TE": 2,
+      "K": 1,
+      "DEF": 1
+    },
+    "overrides": {},
+    "notes": "Explicit uncalibrated planning assumptions. No automatic season discount from weekly injury probabilities. Overrides require reasons. K/DEF use ECR and roster coverage, not cross-position partial point comparisons."
+  },
+  "seat": 13,
+  "results": [
+    {
+      "mode": "ecr",
+      "seed": 31001,
+      "ab": {
+        "roster": [
+          "9226",
+          "9224",
+          "8155",
+          "2133",
+          "12490",
+          "10859",
+          "8142",
+          "6806",
+          "12545",
+          "8134",
+          "3214",
+          "4035",
+          "NE",
+          "12711"
+        ],
+        "names": [
+          "De'Von Achane",
+          "Chase Brown",
+          "Breece Hall",
+          "Davante Adams",
+          "Bhayshul Tuten",
+          "Sam LaPorta",
+          "Alec Pierce",
+          "J.K. Dobbins",
+          "Tyler Shough",
+          "Khalil Shakir",
+          "Hunter Henry",
+          "Alvin Kamara",
+          "New England Patriots",
+          "Tyler Loop"
+        ],
+        "supported_offensive_starter_total": 1738.7486,
+        "planning_utility": 1828.3066224,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.3340205409913324
+          },
+          {
+            "pick": 16,
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "runtime_seconds": 0.19499870800063945
+          },
+          {
+            "pick": 41,
+            "player_id": "8155",
+            "name": "Breece Hall",
+            "runtime_seconds": 0.324284375004936
+          },
+          {
+            "pick": 44,
+            "player_id": "2133",
+            "name": "Davante Adams",
+            "runtime_seconds": 0.19709312499617226
+          },
+          {
+            "pick": 69,
+            "player_id": "12490",
+            "name": "Bhayshul Tuten",
+            "runtime_seconds": 0.3613887919927947
+          },
+          {
+            "pick": 72,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 0.21034575000521727
+          },
+          {
+            "pick": 97,
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "runtime_seconds": 0.3360203329939395
+          },
+          {
+            "pick": 100,
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "runtime_seconds": 0.21769941700040363
+          },
+          {
+            "pick": 125,
+            "player_id": "12545",
+            "name": "Tyler Shough",
+            "runtime_seconds": 0.4061484170088079
+          },
+          {
+            "pick": 128,
+            "player_id": "8134",
+            "name": "Khalil Shakir",
+            "runtime_seconds": 0.2205921659769956
+          },
+          {
+            "pick": 153,
+            "player_id": "3214",
+            "name": "Hunter Henry",
+            "runtime_seconds": 0.20896049999282695
+          },
+          {
+            "pick": 156,
+            "player_id": "4035",
+            "name": "Alvin Kamara",
+            "runtime_seconds": 0.1522719579807017
+          },
+          {
+            "pick": 181,
+            "player_id": "NE",
+            "name": "New England Patriots",
+            "runtime_seconds": 0.0066306669905316085
+          },
+          {
+            "pick": 184,
+            "player_id": "12711",
+            "name": "Tyler Loop",
+            "runtime_seconds": 0.0032767080119811
+          }
+        ]
+      },
+      "two_pick": {
+        "roster": [
+          "9226",
+          "9224",
+          "8155",
+          "2133",
+          "12490",
+          "10859",
+          "7594",
+          "3163",
+          "8134",
+          "5012",
+          "4035",
+          "6783",
+          "NE",
+          "12711"
+        ],
+        "names": [
+          "De'Von Achane",
+          "Chase Brown",
+          "Breece Hall",
+          "Davante Adams",
+          "Bhayshul Tuten",
+          "Sam LaPorta",
+          "Chuba Hubbard",
+          "Jared Goff",
+          "Khalil Shakir",
+          "Mark Andrews",
+          "Alvin Kamara",
+          "Jerry Jeudy",
+          "New England Patriots",
+          "Tyler Loop"
+        ],
+        "supported_offensive_starter_total": 1728.2484,
+        "planning_utility": 1816.3671144000002,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.4544525000092108
+          },
+          {
+            "pick": 16,
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "runtime_seconds": 0.46145595802227035
+          },
+          {
+            "pick": 41,
+            "player_id": "8155",
+            "name": "Breece Hall",
+            "runtime_seconds": 0.3296411250194069
+          },
+          {
+            "pick": 44,
+            "player_id": "2133",
+            "name": "Davante Adams",
+            "runtime_seconds": 0.4712386669998523
+          },
+          {
+            "pick": 69,
+            "player_id": "12490",
+            "name": "Bhayshul Tuten",
+            "runtime_seconds": 0.41706537501886487
+          },
+          {
+            "pick": 72,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 0.448388958000578
+          },
+          {
+            "pick": 97,
+            "player_id": "7594",
+            "name": "Chuba Hubbard",
+            "runtime_seconds": 0.24955783298355527
+          },
+          {
+            "pick": 100,
+            "player_id": "3163",
+            "name": "Jared Goff",
+            "runtime_seconds": 0.34152708400506526
+          },
+          {
+            "pick": 125,
+            "player_id": "8134",
+            "name": "Khalil Shakir",
+            "runtime_seconds": 0.3519469589809887
+          },
+          {
+            "pick": 128,
+            "player_id": "5012",
+            "name": "Mark Andrews",
+            "runtime_seconds": 0.5025709999899846
+          },
+          {
+            "pick": 153,
+            "player_id": "4035",
+            "name": "Alvin Kamara",
+            "runtime_seconds": 0.3059963340056129
+          },
+          {
+            "pick": 156,
+            "player_id": "6783",
+            "name": "Jerry Jeudy",
+            "runtime_seconds": 0.12423291700542904
+          },
+          {
+            "pick": 181,
+            "player_id": "NE",
+            "name": "New England Patriots",
+            "runtime_seconds": 0.026926167018245906
+          },
+          {
+            "pick": 184,
+            "player_id": "12711",
+            "name": "Tyler Loop",
+            "runtime_seconds": 0.0032951250032056123
+          }
+        ]
+      },
+      "ecr": {
+        "roster": [
+          "5859",
+          "9224",
+          "8155",
+          "7588",
+          "12490",
+          "11628",
+          "11563",
+          "7594",
+          "11646",
+          "12545",
+          "9753",
+          "5001",
+          "JAX",
+          "5189"
+        ],
+        "names": [
+          "A.J. Brown",
+          "Chase Brown",
+          "Breece Hall",
+          "Javonte Williams",
+          "Bhayshul Tuten",
+          "Marvin Harrison",
+          "Bo Nix",
+          "Chuba Hubbard",
+          "Jalen Coker",
+          "Tyler Shough",
+          "Zach Charbonnet",
+          "Dalton Schultz",
+          "Jacksonville Jaguars",
+          "Eddy Pineiro"
+        ],
+        "supported_offensive_starter_total": 1674.4605999999999,
+        "planning_utility": 1767.497584,
+        "decisions": []
+      },
+      "difference_vs_two_pick": 10.50019999999995,
+      "difference_vs_ecr": 64.28800000000001
+    },
+    {
+      "mode": "ecr",
+      "seed": 31002,
+      "ab": {
+        "roster": [
+          "6813",
+          "9226",
+          "12526",
+          "12481",
+          "10859",
+          "5967",
+          "6806",
+          "8142",
+          "8134",
+          "4943",
+          "5850",
+          "3214",
+          "PIT",
+          "5189"
+        ],
+        "names": [
+          "Jonathan Taylor",
+          "De'Von Achane",
+          "Tetairoa McMillan",
+          "Cam Skattebo",
+          "Sam LaPorta",
+          "Tony Pollard",
+          "J.K. Dobbins",
+          "Alec Pierce",
+          "Khalil Shakir",
+          "Sam Darnold",
+          "Josh Jacobs",
+          "Hunter Henry",
+          "Pittsburgh Steelers",
+          "Eddy Pineiro"
+        ],
+        "supported_offensive_starter_total": 1749.4422,
+        "planning_utility": 1840.176912,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "6813",
+            "name": "Jonathan Taylor",
+            "runtime_seconds": 0.32043454100494273
+          },
+          {
+            "pick": 16,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.19408333400497213
+          },
+          {
+            "pick": 41,
+            "player_id": "12526",
+            "name": "Tetairoa McMillan",
+            "runtime_seconds": 0.3261910830042325
+          },
+          {
+            "pick": 44,
+            "player_id": "12481",
+            "name": "Cam Skattebo",
+            "runtime_seconds": 0.20156362501438707
+          },
+          {
+            "pick": 69,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 0.3496367920015473
+          },
+          {
+            "pick": 72,
+            "player_id": "5967",
+            "name": "Tony Pollard",
+            "runtime_seconds": 0.20341404099599458
+          },
+          {
+            "pick": 97,
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "runtime_seconds": 0.30897745801485144
+          },
+          {
+            "pick": 100,
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "runtime_seconds": 0.226200915989466
+          },
+          {
+            "pick": 125,
+            "player_id": "8134",
+            "name": "Khalil Shakir",
+            "runtime_seconds": 0.40140683299978264
+          },
+          {
+            "pick": 128,
+            "player_id": "4943",
+            "name": "Sam Darnold",
+            "runtime_seconds": 0.22386845800792798
+          },
+          {
+            "pick": 153,
+            "player_id": "5850",
+            "name": "Josh Jacobs",
+            "runtime_seconds": 0.21003566699801013
+          },
+          {
+            "pick": 156,
+            "player_id": "3214",
+            "name": "Hunter Henry",
+            "runtime_seconds": 0.15234074997715652
+          },
+          {
+            "pick": 181,
+            "player_id": "PIT",
+            "name": "Pittsburgh Steelers",
+            "runtime_seconds": 0.006049499992514029
+          },
+          {
+            "pick": 184,
+            "player_id": "5189",
+            "name": "Eddy Pineiro",
+            "runtime_seconds": 0.0032500829838681966
+          }
+        ]
+      },
+      "two_pick": {
+        "roster": [
+          "6813",
+          "9226",
+          "12526",
+          "12481",
+          "10859",
+          "5967",
+          "8183",
+          "6806",
+          "8134",
+          "5012",
+          "5850",
+          "6783",
+          "PIT",
+          "5189"
+        ],
+        "names": [
+          "Jonathan Taylor",
+          "De'Von Achane",
+          "Tetairoa McMillan",
+          "Cam Skattebo",
+          "Sam LaPorta",
+          "Tony Pollard",
+          "Brock Purdy",
+          "J.K. Dobbins",
+          "Khalil Shakir",
+          "Mark Andrews",
+          "Josh Jacobs",
+          "Jerry Jeudy",
+          "Pittsburgh Steelers",
+          "Eddy Pineiro"
+        ],
+        "supported_offensive_starter_total": 1759.3758,
+        "planning_utility": 1832.860188,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "6813",
+            "name": "Jonathan Taylor",
+            "runtime_seconds": 0.386233583005378
+          },
+          {
+            "pick": 16,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.3960174579988234
+          },
+          {
+            "pick": 41,
+            "player_id": "12526",
+            "name": "Tetairoa McMillan",
+            "runtime_seconds": 0.3379015829996206
+          },
+          {
+            "pick": 44,
+            "player_id": "12481",
+            "name": "Cam Skattebo",
+            "runtime_seconds": 0.44949454101151787
+          },
+          {
+            "pick": 69,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 0.3886287909990642
+          },
+          {
+            "pick": 72,
+            "player_id": "5967",
+            "name": "Tony Pollard",
+            "runtime_seconds": 0.4123142909957096
+          },
+          {
+            "pick": 97,
+            "player_id": "8183",
+            "name": "Brock Purdy",
+            "runtime_seconds": 0.2879129580105655
+          },
+          {
+            "pick": 100,
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "runtime_seconds": 0.3748950420122128
+          },
+          {
+            "pick": 125,
+            "player_id": "8134",
+            "name": "Khalil Shakir",
+            "runtime_seconds": 0.3541069580242038
+          },
+          {
+            "pick": 128,
+            "player_id": "5012",
+            "name": "Mark Andrews",
+            "runtime_seconds": 0.44794979100697674
+          },
+          {
+            "pick": 153,
+            "player_id": "5850",
+            "name": "Josh Jacobs",
+            "runtime_seconds": 0.25589883400243707
+          },
+          {
+            "pick": 156,
+            "player_id": "6783",
+            "name": "Jerry Jeudy",
+            "runtime_seconds": 0.14279166600317694
+          },
+          {
+            "pick": 181,
+            "player_id": "PIT",
+            "name": "Pittsburgh Steelers",
+            "runtime_seconds": 0.02795866600354202
+          },
+          {
+            "pick": 184,
+            "player_id": "5189",
+            "name": "Eddy Pineiro",
+            "runtime_seconds": 0.0033367910073138773
+          }
+        ]
+      },
+      "ecr": {
+        "roster": [
+          "6813",
+          "9224",
+          "12526",
+          "6770",
+          "13279",
+          "8228",
+          "8142",
+          "10222",
+          "12534",
+          "8121",
+          "5850",
+          "HOU",
+          "12487",
+          "11539"
+        ],
+        "names": [
+          "Jonathan Taylor",
+          "Chase Brown",
+          "Tetairoa McMillan",
+          "Joe Burrow",
+          "Carnell Tate",
+          "Jaylen Warren",
+          "Alec Pierce",
+          "Jayden Reed",
+          "Kyle Monangai",
+          "Romeo Doubs",
+          "Josh Jacobs",
+          "Houston Texans",
+          "Terrance Ferguson",
+          "Jake Bates"
+        ],
+        "supported_offensive_starter_total": 1653.221,
+        "planning_utility": 1750.7993504,
+        "decisions": []
+      },
+      "difference_vs_two_pick": -9.93360000000007,
+      "difference_vs_ecr": 96.22119999999995
+    },
+    {
+      "mode": "qb_run",
+      "seed": 31001,
+      "ab": {
+        "roster": [
+          "9226",
+          "9224",
+          "8155",
+          "2133",
+          "10859",
+          "8228",
+          "8142",
+          "6806",
+          "8134",
+          "4943",
+          "5850",
+          "3214",
+          "BAL",
+          "11539"
+        ],
+        "names": [
+          "De'Von Achane",
+          "Chase Brown",
+          "Breece Hall",
+          "Davante Adams",
+          "Sam LaPorta",
+          "Jaylen Warren",
+          "Alec Pierce",
+          "J.K. Dobbins",
+          "Khalil Shakir",
+          "Sam Darnold",
+          "Josh Jacobs",
+          "Hunter Henry",
+          "Baltimore Ravens",
+          "Jake Bates"
+        ],
+        "supported_offensive_starter_total": 1737.1422000000002,
+        "planning_utility": 1831.151292,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.34333637499366887
+          },
+          {
+            "pick": 16,
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "runtime_seconds": 0.20320166600868106
+          },
+          {
+            "pick": 41,
+            "player_id": "8155",
+            "name": "Breece Hall",
+            "runtime_seconds": 0.33475733298109844
+          },
+          {
+            "pick": 44,
+            "player_id": "2133",
+            "name": "Davante Adams",
+            "runtime_seconds": 0.20528583298437297
+          },
+          {
+            "pick": 69,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 0.35142299998551607
+          },
+          {
+            "pick": 72,
+            "player_id": "8228",
+            "name": "Jaylen Warren",
+            "runtime_seconds": 0.2078802909818478
+          },
+          {
+            "pick": 97,
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "runtime_seconds": 0.38808612499269657
+          },
+          {
+            "pick": 100,
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "runtime_seconds": 0.23078595800325274
+          },
+          {
+            "pick": 125,
+            "player_id": "8134",
+            "name": "Khalil Shakir",
+            "runtime_seconds": 0.4149516670149751
+          },
+          {
+            "pick": 128,
+            "player_id": "4943",
+            "name": "Sam Darnold",
+            "runtime_seconds": 0.2285026659956202
+          },
+          {
+            "pick": 153,
+            "player_id": "5850",
+            "name": "Josh Jacobs",
+            "runtime_seconds": 0.23821491599665023
+          },
+          {
+            "pick": 156,
+            "player_id": "3214",
+            "name": "Hunter Henry",
+            "runtime_seconds": 0.19107237498974428
+          },
+          {
+            "pick": 181,
+            "player_id": "BAL",
+            "name": "Baltimore Ravens",
+            "runtime_seconds": 0.00987666699802503
+          },
+          {
+            "pick": 184,
+            "player_id": "11539",
+            "name": "Jake Bates",
+            "runtime_seconds": 0.003785334003623575
+          }
+        ]
+      },
+      "two_pick": {
+        "roster": [
+          "9226",
+          "9224",
+          "8155",
+          "2133",
+          "8228",
+          "10859",
+          "8142",
+          "6806",
+          "8134",
+          "4943",
+          "5850",
+          "3214",
+          "5189",
+          "GB"
+        ],
+        "names": [
+          "De'Von Achane",
+          "Chase Brown",
+          "Breece Hall",
+          "Davante Adams",
+          "Jaylen Warren",
+          "Sam LaPorta",
+          "Alec Pierce",
+          "J.K. Dobbins",
+          "Khalil Shakir",
+          "Sam Darnold",
+          "Josh Jacobs",
+          "Hunter Henry",
+          "Eddy Pineiro",
+          "Green Bay Packers"
+        ],
+        "supported_offensive_starter_total": 1737.1422000000002,
+        "planning_utility": 1831.151292,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.43465262500103563
+          },
+          {
+            "pick": 16,
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "runtime_seconds": 0.5067697920021601
+          },
+          {
+            "pick": 41,
+            "player_id": "8155",
+            "name": "Breece Hall",
+            "runtime_seconds": 0.34677966599701904
+          },
+          {
+            "pick": 44,
+            "player_id": "2133",
+            "name": "Davante Adams",
+            "runtime_seconds": 0.5450599169998895
+          },
+          {
+            "pick": 69,
+            "player_id": "8228",
+            "name": "Jaylen Warren",
+            "runtime_seconds": 0.4126755830075126
+          },
+          {
+            "pick": 72,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 0.4632433330116328
+          },
+          {
+            "pick": 97,
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "runtime_seconds": 0.3457631670171395
+          },
+          {
+            "pick": 100,
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "runtime_seconds": 0.4080824159900658
+          },
+          {
+            "pick": 125,
+            "player_id": "8134",
+            "name": "Khalil Shakir",
+            "runtime_seconds": 0.40695933302049525
+          },
+          {
+            "pick": 128,
+            "player_id": "4943",
+            "name": "Sam Darnold",
+            "runtime_seconds": 0.5837335420073941
+          },
+          {
+            "pick": 153,
+            "player_id": "5850",
+            "name": "Josh Jacobs",
+            "runtime_seconds": 0.4261491249781102
+          },
+          {
+            "pick": 156,
+            "player_id": "3214",
+            "name": "Hunter Henry",
+            "runtime_seconds": 0.156310874997871
+          },
+          {
+            "pick": 181,
+            "player_id": "5189",
+            "name": "Eddy Pineiro",
+            "runtime_seconds": 0.02835316600976512
+          },
+          {
+            "pick": 184,
+            "player_id": "GB",
+            "name": "Green Bay Packers",
+            "runtime_seconds": 0.0030572499963454902
+          }
+        ]
+      },
+      "ecr": {
+        "roster": [
+          "5859",
+          "7569",
+          "12526",
+          "8150",
+          "11620",
+          "13279",
+          "9500",
+          "8126",
+          "13417",
+          "12534",
+          "5001",
+          "3257",
+          "BAL",
+          "11539"
+        ],
+        "names": [
+          "A.J. Brown",
+          "Nico Collins",
+          "Tetairoa McMillan",
+          "Kyren Williams",
+          "Rome Odunze",
+          "Carnell Tate",
+          "Josh Downs",
+          "Wan'Dale Robinson",
+          "De'Zhaun Stribling",
+          "Kyle Monangai",
+          "Dalton Schultz",
+          "Jacoby Brissett",
+          "Baltimore Ravens",
+          "Jake Bates"
+        ],
+        "supported_offensive_starter_total": 1518.8404,
+        "planning_utility": 1664.8685572159998,
+        "decisions": []
+      },
+      "difference_vs_two_pick": 0.0,
+      "difference_vs_ecr": 218.30180000000018
+    },
+    {
+      "mode": "qb_run",
+      "seed": 31002,
+      "ab": {
+        "roster": [
+          "9226",
+          "9224",
+          "12526",
+          "12481",
+          "2216",
+          "10859",
+          "6806",
+          "8142",
+          "12534",
+          "4943",
+          "5850",
+          "3214",
+          "5189",
+          "GB"
+        ],
+        "names": [
+          "De'Von Achane",
+          "Chase Brown",
+          "Tetairoa McMillan",
+          "Cam Skattebo",
+          "Mike Evans",
+          "Sam LaPorta",
+          "J.K. Dobbins",
+          "Alec Pierce",
+          "Kyle Monangai",
+          "Sam Darnold",
+          "Josh Jacobs",
+          "Hunter Henry",
+          "Eddy Pineiro",
+          "Green Bay Packers"
+        ],
+        "supported_offensive_starter_total": 1729.3942000000002,
+        "planning_utility": 1821.168016,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.31525154199334793
+          },
+          {
+            "pick": 16,
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "runtime_seconds": 0.19831437498214655
+          },
+          {
+            "pick": 41,
+            "player_id": "12526",
+            "name": "Tetairoa McMillan",
+            "runtime_seconds": 0.3561420000041835
+          },
+          {
+            "pick": 44,
+            "player_id": "12481",
+            "name": "Cam Skattebo",
+            "runtime_seconds": 0.20019062497885898
+          },
+          {
+            "pick": 69,
+            "player_id": "2216",
+            "name": "Mike Evans",
+            "runtime_seconds": 0.3311718339973595
+          },
+          {
+            "pick": 72,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 0.21064866599044763
+          },
+          {
+            "pick": 97,
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "runtime_seconds": 0.321482041006675
+          },
+          {
+            "pick": 100,
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "runtime_seconds": 0.23176100000273436
+          },
+          {
+            "pick": 125,
+            "player_id": "12534",
+            "name": "Kyle Monangai",
+            "runtime_seconds": 0.40703091700561345
+          },
+          {
+            "pick": 128,
+            "player_id": "4943",
+            "name": "Sam Darnold",
+            "runtime_seconds": 0.2276099169976078
+          },
+          {
+            "pick": 153,
+            "player_id": "5850",
+            "name": "Josh Jacobs",
+            "runtime_seconds": 0.2367578340054024
+          },
+          {
+            "pick": 156,
+            "player_id": "3214",
+            "name": "Hunter Henry",
+            "runtime_seconds": 0.18263795899110846
+          },
+          {
+            "pick": 181,
+            "player_id": "5189",
+            "name": "Eddy Pineiro",
+            "runtime_seconds": 0.008043417008593678
+          },
+          {
+            "pick": 184,
+            "player_id": "GB",
+            "name": "Green Bay Packers",
+            "runtime_seconds": 0.003098374989349395
+          }
+        ]
+      },
+      "two_pick": {
+        "roster": [
+          "9226",
+          "9224",
+          "12526",
+          "12481",
+          "7611",
+          "10859",
+          "8142",
+          "6806",
+          "8134",
+          "4943",
+          "5850",
+          "3214",
+          "KC",
+          "12711"
+        ],
+        "names": [
+          "De'Von Achane",
+          "Chase Brown",
+          "Tetairoa McMillan",
+          "Cam Skattebo",
+          "Rhamondre Stevenson",
+          "Sam LaPorta",
+          "Alec Pierce",
+          "J.K. Dobbins",
+          "Khalil Shakir",
+          "Sam Darnold",
+          "Josh Jacobs",
+          "Hunter Henry",
+          "Kansas City Chiefs",
+          "Tyler Loop"
+        ],
+        "supported_offensive_starter_total": 1724.6042,
+        "planning_utility": 1818.811112,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.3898594170168508
+          },
+          {
+            "pick": 16,
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "runtime_seconds": 0.5037825420149602
+          },
+          {
+            "pick": 41,
+            "player_id": "12526",
+            "name": "Tetairoa McMillan",
+            "runtime_seconds": 0.3457796669972595
+          },
+          {
+            "pick": 44,
+            "player_id": "12481",
+            "name": "Cam Skattebo",
+            "runtime_seconds": 0.3985769580176566
+          },
+          {
+            "pick": 69,
+            "player_id": "7611",
+            "name": "Rhamondre Stevenson",
+            "runtime_seconds": 0.40214266697876155
+          },
+          {
+            "pick": 72,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 0.45280520801316015
+          },
+          {
+            "pick": 97,
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "runtime_seconds": 0.3388017089746427
+          },
+          {
+            "pick": 100,
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "runtime_seconds": 0.4126235000148881
+          },
+          {
+            "pick": 125,
+            "player_id": "8134",
+            "name": "Khalil Shakir",
+            "runtime_seconds": 0.4538715830130968
+          },
+          {
+            "pick": 128,
+            "player_id": "4943",
+            "name": "Sam Darnold",
+            "runtime_seconds": 0.5290537499822676
+          },
+          {
+            "pick": 153,
+            "player_id": "5850",
+            "name": "Josh Jacobs",
+            "runtime_seconds": 0.4250163340184372
+          },
+          {
+            "pick": 156,
+            "player_id": "3214",
+            "name": "Hunter Henry",
+            "runtime_seconds": 0.13880579199758358
+          },
+          {
+            "pick": 181,
+            "player_id": "KC",
+            "name": "Kansas City Chiefs",
+            "runtime_seconds": 0.029282832983881235
+          },
+          {
+            "pick": 184,
+            "player_id": "12711",
+            "name": "Tyler Loop",
+            "runtime_seconds": 0.0032375000009778887
+          }
+        ]
+      },
+      "ecr": {
+        "roster": [
+          "6786",
+          "7569",
+          "12526",
+          "12514",
+          "2216",
+          "12529",
+          "8126",
+          "10232",
+          "4199",
+          "13417",
+          "5001",
+          "3257",
+          "KC",
+          "7839"
+        ],
+        "names": [
+          "CeeDee Lamb",
+          "Nico Collins",
+          "Tetairoa McMillan",
+          "Emeka Egbuka",
+          "Mike Evans",
+          "TreVeyon Henderson",
+          "Wan'Dale Robinson",
+          "Michael Wilson",
+          "Aaron Jones",
+          "De'Zhaun Stribling",
+          "Dalton Schultz",
+          "Jacoby Brissett",
+          "Kansas City Chiefs",
+          "Evan McPherson"
+        ],
+        "supported_offensive_starter_total": 1505.1334000000002,
+        "planning_utility": 1647.056414976,
+        "decisions": []
+      },
+      "difference_vs_two_pick": 4.790000000000191,
+      "difference_vs_ecr": 224.26080000000002
+    }
+  ],
+  "mean_difference_vs_two_pick": 1.3391500000000178,
+  "mean_difference_vs_ecr": 150.76795000000004,
+  "max_ab_seconds": 0.4149516670149751,
+  "max_two_pick_seconds": 0.5837335420073941
+}

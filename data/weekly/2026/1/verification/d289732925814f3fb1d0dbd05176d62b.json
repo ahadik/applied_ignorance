@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-09-09T04:45:54.446827+00:00",
+  "matches": false,
+  "recommendation_age_seconds": 93.197612,
+  "observed_starters": [
+    "4046",
+    "3198",
+    "4866",
+    "9997",
+    "9487",
+    "12506",
+    "6790",
+    "12711",
+    "PIT"
+  ],
+  "recommended_starters": [
+    "8183",
+    "3198",
+    "4866",
+    "9997",
+    "9487",
+    "12506",
+    "6790",
+    "12711",
+    "PIT"
+  ],
+  "state_unchanged_since_analysis": true,
+  "note": "Read-back comparison only; not a refreshed recommendation or permission to change locked slots."
+}

@@ -94,7 +94,7 @@ def metadata_cache_age(headers):
 def safe_url(url):
     parts = urlsplit(url)
     return (parts.scheme == 'https' and parts.hostname in
-            ('api.github.com', 'github.com', 'release-assets.githubusercontent.com', 'objects.githubusercontent.com')
+            ('api.github.com', 'github.com', 'release-assets.githubusercontent.com', 'objects.githubusercontent.com', 'raw.githubusercontent.com')
             and not parts.username and not parts.password and parts.port in (None, 443))
 
 
@@ -198,7 +198,7 @@ class NFLVerse:
     def request(self, db, url, headers=None, retries=2):
         if type(retries) is not int or retries not in (0, 1, 2):
             raise ValueError('Retry count must be 0, 1 or 2')
-        kind = 'rest' if url.startswith(API) else 'asset'
+        kind = 'rest' if url.startswith('https://api.github.com/') else 'asset'
         for attempt in range(retries + 1):
             from provider_freeze import check
             check('nflverse',self.directory)
@@ -319,6 +319,8 @@ class NFLVerse:
             return self.release(db, tag, 300)
 
     def get(self, dataset, season=None, *, refresh=False, revalidate=False, validator=None):
+        if dataset == 'schedules':
+            return self.schedules(season, refresh=refresh, validator=validator)
         tag, filename, required = specification(dataset, season)
         # Current depth/identity feeds revalidate publication metadata on every read.
         now = datetime.fromtimestamp(self.clock(), timezone.utc)
@@ -364,6 +366,60 @@ class NFLVerse:
                     'fetched_at': datetime.fromtimestamp(fetched, timezone.utc).isoformat(),
                     'metadata_checked_at': datetime.fromtimestamp(checked, timezone.utc).isoformat(),
                     'cache_hit': bool(cached and not refresh), 'network_attempts': attempts}}
+
+
+    def schedules(self, season, *, refresh=False, validator=None):
+        """nfldata games.csv; revalidate Git blob identity on every read.
+
+        Uses the same request ledger, lock and asset store as release feeds.
+        Source publication time is unknown; revision checking is not publication.
+        """
+        if type(season) is not int or not 1999 <= season <= datetime.now(timezone.utc).year:
+            raise ValueError('An explicit supported season is required')
+        url = 'https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv'
+        meta = 'https://api.github.com/repos/nflverse/nfldata/contents/data/games.csv?ref=master'
+        with self.locked() as db:
+            start = db.execute('SELECT COUNT(*) FROM attempts').fetchone()[0]
+            status, headers, body = self.request(db, meta, {'Accept': 'application/vnd.github+json', 'Cache-Control': 'no-cache'})
+            if status != 200:
+                raise NFLVerseError('Schedule metadata unavailable')
+            info = json.loads(body)
+            sha = info.get('sha', '')
+            if (not re.fullmatch('[0-9a-f]{40}', sha) or info.get('path') != 'data/games.csv'
+                    or info.get('download_url') != url or not 0 < info.get('size', 0) <= MAX_BYTES):
+                raise NFLVerseError('Invalid schedule provenance')
+            revision = 'schedule:'+sha
+            cached = db.execute('SELECT fetched,payload,sha256 FROM assets WHERE revision=?', (revision,)).fetchone()
+            download_headers = {}
+            if cached and not refresh:
+                fetched, body, digest = cached
+            else:
+                status, download_headers, body = self.request(db, url, {'Cache-Control': 'no-cache'})
+                if status != 200:
+                    raise NFLVerseError('Schedule download failed')
+                fetched, digest = self.clock(), hashlib.sha256(body).hexdigest()
+            if (len(body) != info['size'] or hashlib.sha256(body).hexdigest() != digest
+                    or hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest() != sha):
+                raise NFLVerseError('Schedule revision/checksum mismatch; rerun collection')
+            rows, columns = parse_csv(body, 'games.csv',
+                {'game_id','season','game_type','week','gameday','gametime','away_team','home_team'}, None)
+            selected = [r for r in rows if r['season'] == str(season)]
+            if not selected:
+                raise NFLVerseError('Requested schedule season is unavailable')
+            if validator:
+                validator(selected)
+            if not cached or refresh:
+                if 'no-store' not in download_headers.get('cache-control', '').lower() and 'no-store' not in headers.get('cache-control', '').lower():
+                    db.execute('INSERT OR REPLACE INTO assets VALUES (?,?,?,?)', (revision, fetched, body, digest))
+                else:
+                    db.execute('DELETE FROM assets WHERE revision=?', (revision,))
+                db.commit()
+            return {'data': selected, 'provenance': {'dataset': 'schedules', 'season': season,
+                'url': url, 'git_blob_sha': sha, 'sha256': digest, 'columns': columns,
+                'asset_updated_at': None, 'fetched_at': datetime.fromtimestamp(fetched, timezone.utc).isoformat(),
+                'metadata_checked_at': datetime.fromtimestamp(self.clock(), timezone.utc).isoformat(),
+                'cache_hit': bool(cached and not refresh),
+                'network_attempts': db.execute('SELECT COUNT(*) FROM attempts').fetchone()[0]-start}}
 
 
 _client = None

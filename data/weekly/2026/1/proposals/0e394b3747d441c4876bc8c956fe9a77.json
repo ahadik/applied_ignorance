@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "league_id": "1400628784381612032",
+  "roster_id": 10,
+  "season": 2026,
+  "week": 1,
+  "created_at": "2026-09-09T04:44:21.249218+00:00",
+  "origin": {
+    "kind": "optimizer",
+    "input_hash": "6799301f9164f7ad267a5049ef249448ba33b67c32e4f767664cefb0e75ee9e6",
+    "engine_version": 1
+  },
+  "assignments": [
+    {
+      "slot_index": 0,
+      "slot": "QB",
+      "player_id": "8183"
+    },
+    {
+      "slot_index": 1,
+      "slot": "RB",
+      "player_id": "3198"
+    },
+    {
+      "slot_index": 2,
+      "slot": "RB",
+      "player_id": "4866"
+    },
+    {
+      "slot_index": 3,
+      "slot": "WR",
+      "player_id": "9997"
+    },
+    {
+      "slot_index": 4,
+      "slot": "WR",
+      "player_id": "9487"
+    },
+    {
+      "slot_index": 5,
+      "slot": "TE",
+      "player_id": "12506"
+    },
+    {
+      "slot_index": 6,
+      "slot": "FLEX",
+      "player_id": "6790"
+    },
+    {
+      "slot_index": 7,
+      "slot": "K",
+      "player_id": "12711"
+    },
+    {
+      "slot_index": 8,
+      "slot": "DEF",
+      "player_id": "PIT"
+    }
+  ],
+  "rationale": "This lineup follows the saved Week 1 numerical recommendation: keep Henry and Barkley at running back, Flowers and Washington at receiver, Fannin at tight end, Swift at FLEX, and our only rostered kicker and defense, Loop and Pittsburgh. The proposed change is Purdy for Mahomes because the saved league-scored projection subtotal favors Purdy by about 0.91 points. Fannin leads Juwan Johnson by about 0.84 supported points, and Washington leads the next receiver alternative, Johnston, by about 0.68. Those are small forecast differences, not guaranteed gains. The full legal lineup comparison also retains Swift in FLEX; individual injury alternatives must be recomputed together if more than one starter becomes unavailable. The most recent saved validator result requires review of Flowers and Swift's availability and Flowers-related news, so this is a provisional proposal, not a health-cleared or applied lineup. Some scoring categories are missing from the projections, especially kicker distance bands and defensive scoring events. This explanation summarizes the existing saved evidence and does not refresh it; rerun collection and validation before using the lineup, with particular attention to early-game and backup deadlines.",
+  "rationale_source": "supplied_free_text",
+  "lineup_id": "0e394b3747d441c4876bc8c956fe9a77",
+  "recorded_at": "2026-09-09T04:57:42.247712+00:00",
+  "previous_lineup_id": "preserved-9a09882026a9091c52afc6a5ac7962cf7b89d56e2c6d653ad62b65b63ea9eb00"
+}

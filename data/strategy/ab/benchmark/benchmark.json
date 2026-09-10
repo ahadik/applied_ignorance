@@ -1,0 +1,156 @@
+{
+  "engine_version": 2,
+  "board_sha256": "c62af3b5412ec1049587ebe19afc14fc28ea83d148693012f81429853dc2f10e",
+  "policy": {
+    "version": 2,
+    "planning_mode": "ab",
+    "ab": {
+      "first_width": 6,
+      "future_width": 3,
+      "reply_width": 3,
+      "response_width": 3,
+      "prefix_samples": 2,
+      "tail_samples": 2,
+      "rank_slack": 8,
+      "tail_weight": 0.35,
+      "downside_fraction": 0.25
+    },
+    "seed": 20260908,
+    "scenario_modes": [
+      "ecr",
+      "adp",
+      "needs",
+      "rb_run"
+    ],
+    "samples_per_mode": 2,
+    "shortlist_each": 5,
+    "bench_weight": 0.18,
+    "bench_decay": 0.6,
+    "robust_weight": 0.25,
+    "opponent_temperature": 5.0,
+    "specialist_last_rounds": 2,
+    "backup_qb_te_round": 10,
+    "caps": {
+      "QB": 2,
+      "RB": 8,
+      "WR": 8,
+      "TE": 2,
+      "K": 1,
+      "DEF": 1
+    },
+    "overrides": {},
+    "notes": "Explicit uncalibrated planning assumptions. No automatic season discount from weekly injury probabilities. Overrides require reasons. K/DEF use ECR and roster coverage, not cross-position partial point comparisons."
+  },
+  "seat": 13,
+  "rows": [
+    {
+      "round": 1,
+      "phase": "A",
+      "pick": 13,
+      "horizon": [
+        13,
+        16,
+        41
+      ],
+      "ab_pick": "De'Von Achane",
+      "two_pick": "De'Von Achane",
+      "ab_seconds": 0.3381125419982709,
+      "two_pick_seconds": 0.42604604101506993,
+      "work": {
+        "utility_evaluations": 14034,
+        "short_response_states": 72,
+        "simulated_opponent_picks": 5184,
+        "greedy_rankings_built": 25
+      }
+    },
+    {
+      "round": 2,
+      "phase": "B",
+      "pick": 16,
+      "horizon": [
+        16,
+        41,
+        44
+      ],
+      "ab_pick": "De'Von Achane",
+      "two_pick": "De'Von Achane",
+      "ab_seconds": 0.19248950001201592,
+      "two_pick_seconds": 0.3953440839832183,
+      "work": {
+        "utility_evaluations": 2206,
+        "simulated_opponent_picks": 2304,
+        "short_response_states": 901
+      }
+    },
+    {
+      "round": 5,
+      "phase": "A",
+      "pick": 69,
+      "horizon": [
+        69,
+        72,
+        97
+      ],
+      "ab_pick": "Sam LaPorta",
+      "two_pick": "Sam LaPorta",
+      "ab_seconds": 0.37401845800923184,
+      "two_pick_seconds": 0.434566417010501,
+      "work": {
+        "utility_evaluations": 11831,
+        "short_response_states": 82,
+        "simulated_opponent_picks": 5616,
+        "greedy_rankings_built": 27
+      }
+    },
+    {
+      "round": 6,
+      "phase": "B",
+      "pick": 72,
+      "horizon": [
+        72,
+        97,
+        100
+      ],
+      "ab_pick": "Sam LaPorta",
+      "two_pick": "Sam LaPorta",
+      "ab_seconds": 0.2129785839933902,
+      "two_pick_seconds": 0.4412919580063317,
+      "work": {
+        "utility_evaluations": 1873,
+        "simulated_opponent_picks": 2304,
+        "short_response_states": 894
+      }
+    },
+    {
+      "round": 13,
+      "phase": "A",
+      "pick": 181,
+      "horizon": [
+        181,
+        184
+      ],
+      "ab_pick": "Kansas City Chiefs",
+      "two_pick": "Kansas City Chiefs",
+      "ab_seconds": 0.008689457987202331,
+      "two_pick_seconds": 0.029480291006620973,
+      "work": {
+        "utility_evaluations": 85,
+        "short_response_states": 84
+      }
+    },
+    {
+      "round": 14,
+      "phase": "FINAL",
+      "pick": 184,
+      "horizon": [
+        184
+      ],
+      "ab_pick": "Tyler Loop",
+      "two_pick": "Tyler Loop",
+      "ab_seconds": 0.003608750004786998,
+      "two_pick_seconds": 0.0033083749876823276,
+      "work": {}
+    }
+  ],
+  "before_turn_seconds": 0.6069737910002004
+}

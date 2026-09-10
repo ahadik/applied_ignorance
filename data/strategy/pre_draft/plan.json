@@ -1,0 +1,2753 @@
+{
+  "review_only": true,
+  "generated_at": "2026-09-08T22:38:58.232343+00:00",
+  "order_observed_at": "2026-09-08T22:02:44.838696+00:00",
+  "context_sha256": "5aad52aa2849ac753c380a7a526e0d9e2ed2f6edd96e52604c34524d7433a03f",
+  "board_sha256": "65650b84a13d72c5f0fcd0383c0558552d28a13687eab59d9ec086aa09007d09",
+  "board_generated_at": "2026-09-08T22:35:08.145592+00:00",
+  "stale_board_sources": [],
+  "draft_id": "1400628785413394432",
+  "league_id": "1400628784381612032",
+  "our_seat": 13,
+  "order": [
+    {
+      "seat": 1,
+      "roster_id": 13,
+      "user_id": "1403143697196949504",
+      "ours": false,
+      "name": "Tianbo"
+    },
+    {
+      "seat": 2,
+      "roster_id": 7,
+      "user_id": "1402453531943780352",
+      "ours": false,
+      "name": "edenruro1"
+    },
+    {
+      "seat": 3,
+      "roster_id": 9,
+      "user_id": "1403051387058728960",
+      "ours": false,
+      "name": "jprince47"
+    },
+    {
+      "seat": 4,
+      "roster_id": 12,
+      "user_id": "1403141182900428800",
+      "ours": false,
+      "name": "SlaveAgent"
+    },
+    {
+      "seat": 5,
+      "roster_id": 3,
+      "user_id": "1401739882870603791",
+      "ours": false,
+      "name": "hrishi91"
+    },
+    {
+      "seat": 6,
+      "roster_id": 6,
+      "user_id": "1139954334642405376",
+      "ours": false,
+      "name": "mihir14"
+    },
+    {
+      "seat": 7,
+      "roster_id": 8,
+      "user_id": "1403051057856180224",
+      "ours": false,
+      "name": "rickganz"
+    },
+    {
+      "seat": 8,
+      "roster_id": 5,
+      "user_id": "1402840752031014912",
+      "ours": false,
+      "name": "Oehtly"
+    },
+    {
+      "seat": 9,
+      "roster_id": 1,
+      "user_id": "1400628133748580352",
+      "ours": false,
+      "name": "moltomolto"
+    },
+    {
+      "seat": 10,
+      "roster_id": 2,
+      "user_id": "1402844794807390208",
+      "ours": false,
+      "name": "trevorkeith"
+    },
+    {
+      "seat": 11,
+      "roster_id": 14,
+      "user_id": null,
+      "ours": false,
+      "name": "Unclaimed team (roster 14)"
+    },
+    {
+      "seat": 12,
+      "roster_id": 11,
+      "user_id": "1403084584492470272",
+      "ours": false,
+      "name": "defnotabot1"
+    },
+    {
+      "seat": 13,
+      "roster_id": 10,
+      "user_id": "1403069775155884032",
+      "ours": true,
+      "name": "ahadik"
+    },
+    {
+      "seat": 14,
+      "roster_id": 4,
+      "user_id": "1402671793696710656",
+      "ours": false,
+      "name": "pattyfayfay"
+    }
+  ],
+  "pick_schedule": [
+    {
+      "round": 1,
+      "overall_pick": 13,
+      "other_picks_until_next": 2
+    },
+    {
+      "round": 2,
+      "overall_pick": 16,
+      "other_picks_until_next": 24
+    },
+    {
+      "round": 3,
+      "overall_pick": 41,
+      "other_picks_until_next": 2
+    },
+    {
+      "round": 4,
+      "overall_pick": 44,
+      "other_picks_until_next": 24
+    },
+    {
+      "round": 5,
+      "overall_pick": 69,
+      "other_picks_until_next": 2
+    },
+    {
+      "round": 6,
+      "overall_pick": 72,
+      "other_picks_until_next": 24
+    },
+    {
+      "round": 7,
+      "overall_pick": 97,
+      "other_picks_until_next": 2
+    },
+    {
+      "round": 8,
+      "overall_pick": 100,
+      "other_picks_until_next": 24
+    },
+    {
+      "round": 9,
+      "overall_pick": 125,
+      "other_picks_until_next": 2
+    },
+    {
+      "round": 10,
+      "overall_pick": 128,
+      "other_picks_until_next": 24
+    },
+    {
+      "round": 11,
+      "overall_pick": 153,
+      "other_picks_until_next": 2
+    },
+    {
+      "round": 12,
+      "overall_pick": 156,
+      "other_picks_until_next": 24
+    },
+    {
+      "round": 13,
+      "overall_pick": 181,
+      "other_picks_until_next": 2
+    },
+    {
+      "round": 14,
+      "overall_pick": 184,
+      "other_picks_until_next": null
+    }
+  ],
+  "policy": {
+    "version": 2,
+    "planning_mode": "ab",
+    "ab": {
+      "first_width": 6,
+      "future_width": 3,
+      "reply_width": 3,
+      "response_width": 3,
+      "prefix_samples": 2,
+      "tail_samples": 2,
+      "rank_slack": 8,
+      "tail_weight": 0.35,
+      "downside_fraction": 0.25
+    },
+    "seed": 20260908,
+    "scenario_modes": [
+      "ecr",
+      "adp",
+      "needs",
+      "rb_run"
+    ],
+    "samples_per_mode": 2,
+    "shortlist_each": 5,
+    "bench_weight": 0.18,
+    "bench_decay": 0.6,
+    "robust_weight": 0.25,
+    "opponent_temperature": 5.0,
+    "specialist_last_rounds": 2,
+    "backup_qb_te_round": 10,
+    "caps": {
+      "QB": 2,
+      "RB": 8,
+      "WR": 8,
+      "TE": 2,
+      "K": 1,
+      "DEF": 1
+    },
+    "overrides": {},
+    "notes": "Explicit uncalibrated planning assumptions. No automatic season discount from weekly injury probabilities. Overrides require reasons. K/DEF use ECR and roster coverage, not cross-position partial point comparisons."
+  },
+  "branches": [
+    {
+      "scenario": "01_ecr",
+      "opponent_mode": "ecr",
+      "seed": 20261917,
+      "prefix_ids": [
+        "7564",
+        "9493",
+        "9488",
+        "9509",
+        "7547",
+        "9221",
+        "6786",
+        "8112",
+        "6813",
+        "4034",
+        "5859",
+        "6794"
+      ],
+      "preceding_picks": [
+        "Ja'Marr Chase",
+        "Puka Nacua",
+        "Jaxon Smith-Njigba",
+        "Bijan Robinson",
+        "Amon-Ra St. Brown",
+        "Jahmyr Gibbs",
+        "CeeDee Lamb",
+        "Drake London",
+        "Jonathan Taylor",
+        "Christian McCaffrey",
+        "A.J. Brown",
+        "Justin Jefferson"
+      ],
+      "first_choice": {
+        "player_id": "9226",
+        "name": "De'Von Achane",
+        "position": "RB",
+        "immediate_gain": 127.63499999999999,
+        "horizon_mean_gain": 259.27240000000006,
+        "pair_mean_gain": 237.67250000000013,
+        "terminal_mean_gain": 61.71399999999994,
+        "downside_gain": 256.27289999999994,
+        "score": 256.27289999999994,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.5,
+        "pass_trials": 6,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "3198",
+          "score": 1591.5892999999999,
+          "pair_utility": 1569.9894,
+          "terminal_gain": 61.71399999999994,
+          "response": [
+            "7569",
+            "9224"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "scenarios": 3
+          },
+          {
+            "player_id": "3198",
+            "name": "Derrick Henry",
+            "scenarios": 3
+          }
+        ],
+        "flags": [],
+        "ecr": 20.0,
+        "adp_rank": 11.0,
+        "override": null,
+        "bye_conflicts": 0
+      },
+      "alternatives": [
+        {
+          "player_id": "9226",
+          "name": "De'Von Achane",
+          "position": "RB",
+          "immediate_gain": 127.63499999999999,
+          "horizon_mean_gain": 259.27240000000006,
+          "pair_mean_gain": 237.67250000000013,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 256.27289999999994,
+          "score": 256.27289999999994,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1591.5892999999999,
+            "pair_utility": 1569.9894,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "7569",
+              "9224"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 3
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 20.0,
+          "adp_rank": 11.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "9224",
+          "name": "Chase Brown",
+          "position": "RB",
+          "immediate_gain": 113.03700000000003,
+          "horizon_mean_gain": 251.97340000000008,
+          "pair_mean_gain": 230.37350000000015,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 241.67489999999998,
+          "score": 241.67489999999998,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1576.9913,
+            "pair_utility": 1555.3914,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "7569",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 15.0,
+          "adp_rank": 13.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "3198",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "immediate_gain": 107.03800000000024,
+          "horizon_mean_gain": 249.65740000000005,
+          "pair_mean_gain": 228.05750000000012,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "8130",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 4
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 1
+            },
+            {
+              "player_id": "8130",
+              "name": "Trey McBride",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 33.0,
+          "adp_rank": 16.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8130",
+          "name": "Trey McBride",
+          "position": "TE",
+          "immediate_gain": 102.54000000000019,
+          "horizon_mean_gain": 245.9090666666666,
+          "pair_mean_gain": 224.30916666666667,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 4
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 1
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 18.0,
+          "adp_rank": 25.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8138",
+          "name": "James Cook",
+          "position": "RB",
+          "immediate_gain": 100.3710000000001,
+          "horizon_mean_gain": 241.30706666666674,
+          "pair_mean_gain": 219.7071666666668,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 229.00890000000004,
+          "score": 229.00890000000004,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1564.3253,
+            "pair_utility": 1542.7254,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 14.0,
+          "adp_rank": 9.0,
+          "override": null,
+          "bye_conflicts": 0
+        }
+      ],
+      "runtime_seconds": 0.3335990000050515
+    },
+    {
+      "scenario": "02_ecr",
+      "opponent_mode": "ecr",
+      "seed": 20262927,
+      "prefix_ids": [
+        "9221",
+        "9488",
+        "9509",
+        "9493",
+        "7547",
+        "7564",
+        "5859",
+        "6813",
+        "7569",
+        "4034",
+        "6794",
+        "8112"
+      ],
+      "preceding_picks": [
+        "Jahmyr Gibbs",
+        "Jaxon Smith-Njigba",
+        "Bijan Robinson",
+        "Puka Nacua",
+        "Amon-Ra St. Brown",
+        "Ja'Marr Chase",
+        "A.J. Brown",
+        "Jonathan Taylor",
+        "Nico Collins",
+        "Christian McCaffrey",
+        "Justin Jefferson",
+        "Drake London"
+      ],
+      "first_choice": {
+        "player_id": "9226",
+        "name": "De'Von Achane",
+        "position": "RB",
+        "immediate_gain": 127.63499999999999,
+        "horizon_mean_gain": 260.7167333333334,
+        "pair_mean_gain": 239.1168333333335,
+        "terminal_mean_gain": 61.71399999999994,
+        "downside_gain": 256.27289999999994,
+        "score": 256.27289999999994,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.5,
+        "pass_trials": 6,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "3198",
+          "score": 1591.5892999999999,
+          "pair_utility": 1569.9894,
+          "terminal_gain": 61.71399999999994,
+          "response": [
+            "6786",
+            "9224"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "scenarios": 3
+          },
+          {
+            "player_id": "6786",
+            "name": "CeeDee Lamb",
+            "scenarios": 2
+          },
+          {
+            "player_id": "3198",
+            "name": "Derrick Henry",
+            "scenarios": 1
+          }
+        ],
+        "flags": [],
+        "ecr": 20.0,
+        "adp_rank": 11.0,
+        "override": null,
+        "bye_conflicts": 0
+      },
+      "alternatives": [
+        {
+          "player_id": "9226",
+          "name": "De'Von Achane",
+          "position": "RB",
+          "immediate_gain": 127.63499999999999,
+          "horizon_mean_gain": 260.7167333333334,
+          "pair_mean_gain": 239.1168333333335,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 256.27289999999994,
+          "score": 256.27289999999994,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1591.5892999999999,
+            "pair_utility": 1569.9894,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "9224"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 3
+            },
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 2
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 20.0,
+          "adp_rank": 11.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "9224",
+          "name": "Chase Brown",
+          "position": "RB",
+          "immediate_gain": 113.03700000000003,
+          "horizon_mean_gain": 253.41773333333344,
+          "pair_mean_gain": 231.8178333333335,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 241.67489999999998,
+          "score": 241.67489999999998,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1576.9913,
+            "pair_utility": 1555.3914,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 2
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 15.0,
+          "adp_rank": 13.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "6786",
+          "name": "CeeDee Lamb",
+          "position": "WR",
+          "immediate_gain": 111.37099999999987,
+          "horizon_mean_gain": 252.30706666666674,
+          "pair_mean_gain": 230.7071666666668,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 240.00890000000004,
+          "score": 240.00890000000004,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1575.3253,
+            "pair_utility": 1553.7254,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 9.0,
+          "adp_rank": 10.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "3198",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "immediate_gain": 107.03800000000024,
+          "horizon_mean_gain": 251.12923333333333,
+          "pair_mean_gain": 229.5293333333334,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 240.00890000000004,
+          "score": 240.00890000000004,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "6786",
+            "score": 1575.3253,
+            "pair_utility": 1553.7254,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 4
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 1
+            },
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 33.0,
+          "adp_rank": 16.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8138",
+          "name": "James Cook",
+          "position": "RB",
+          "immediate_gain": 100.3710000000001,
+          "horizon_mean_gain": 242.02923333333342,
+          "pair_mean_gain": 220.4293333333335,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 233.3418999999999,
+          "score": 233.3418999999999,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "6786",
+            "score": 1568.6582999999998,
+            "pair_utility": 1547.0584,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 14.0,
+          "adp_rank": 9.0,
+          "override": null,
+          "bye_conflicts": 0
+        }
+      ],
+      "runtime_seconds": 0.31729441598872654
+    },
+    {
+      "scenario": "03_adp",
+      "opponent_mode": "adp",
+      "seed": 20263935,
+      "prefix_ids": [
+        "9493",
+        "9221",
+        "9509",
+        "7564",
+        "6813",
+        "7547",
+        "4034",
+        "6786",
+        "6794",
+        "9488",
+        "8138",
+        "4866"
+      ],
+      "preceding_picks": [
+        "Puka Nacua",
+        "Jahmyr Gibbs",
+        "Bijan Robinson",
+        "Ja'Marr Chase",
+        "Jonathan Taylor",
+        "Amon-Ra St. Brown",
+        "Christian McCaffrey",
+        "CeeDee Lamb",
+        "Justin Jefferson",
+        "Jaxon Smith-Njigba",
+        "James Cook",
+        "Saquon Barkley"
+      ],
+      "first_choice": {
+        "player_id": "9226",
+        "name": "De'Von Achane",
+        "position": "RB",
+        "immediate_gain": 127.63499999999999,
+        "horizon_mean_gain": 258.8439000000001,
+        "pair_mean_gain": 237.24400000000014,
+        "terminal_mean_gain": 61.71399999999994,
+        "downside_gain": 256.27289999999994,
+        "score": 256.27289999999994,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.5,
+        "pass_trials": 6,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "3198",
+          "score": 1591.5892999999999,
+          "pair_utility": 1569.9894,
+          "terminal_gain": 61.71399999999994,
+          "response": [
+            "5859",
+            "9224"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "3198",
+            "name": "Derrick Henry",
+            "scenarios": 4
+          },
+          {
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "scenarios": 3
+          }
+        ],
+        "flags": [],
+        "ecr": 20.0,
+        "adp_rank": 11.0,
+        "override": null,
+        "bye_conflicts": 0
+      },
+      "alternatives": [
+        {
+          "player_id": "9226",
+          "name": "De'Von Achane",
+          "position": "RB",
+          "immediate_gain": 127.63499999999999,
+          "horizon_mean_gain": 258.8439000000001,
+          "pair_mean_gain": 237.24400000000014,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 256.27289999999994,
+          "score": 256.27289999999994,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1591.5892999999999,
+            "pair_utility": 1569.9894,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "5859",
+              "9224"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 4
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 20.0,
+          "adp_rank": 11.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "9224",
+          "name": "Chase Brown",
+          "position": "RB",
+          "immediate_gain": 113.03700000000003,
+          "horizon_mean_gain": 250.50218571428582,
+          "pair_mean_gain": 228.90228571428588,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 241.67489999999998,
+          "score": 241.67489999999998,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1576.9913,
+            "pair_utility": 1555.3914,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "5859",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 4
+            },
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 15.0,
+          "adp_rank": 13.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "3198",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "immediate_gain": 107.03800000000024,
+          "horizon_mean_gain": 247.22440000000006,
+          "pair_mean_gain": 225.62450000000013,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "8130",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "8130",
+              "name": "Trey McBride",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 33.0,
+          "adp_rank": 16.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8112",
+          "name": "Drake London",
+          "position": "WR",
+          "immediate_gain": 98.62300000000005,
+          "horizon_mean_gain": 239.5590666666667,
+          "pair_mean_gain": 217.95916666666676,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 227.2609,
+          "score": 227.2609,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1562.5773,
+            "pair_utility": 1540.9774,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 12.0,
+          "adp_rank": 20.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "5859",
+          "name": "A.J. Brown",
+          "position": "WR",
+          "immediate_gain": 91.83799999999997,
+          "horizon_mean_gain": 232.77406666666684,
+          "pair_mean_gain": 211.17416666666668,
+          "terminal_mean_gain": 61.71400000000002,
+          "downside_gain": 220.4758999999999,
+          "score": 220.4758999999999,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1555.7922999999998,
+            "pair_utility": 1534.1924,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [
+            "team_changed_since_history"
+          ],
+          "ecr": 11.0,
+          "adp_rank": 18.0,
+          "override": null,
+          "bye_conflicts": 0
+        }
+      ],
+      "runtime_seconds": 0.34279150000656955
+    },
+    {
+      "scenario": "04_adp",
+      "opponent_mode": "adp",
+      "seed": 20264945,
+      "prefix_ids": [
+        "7564",
+        "4034",
+        "9221",
+        "6813",
+        "9488",
+        "9509",
+        "7547",
+        "9226",
+        "9493",
+        "4866",
+        "6794",
+        "9224"
+      ],
+      "preceding_picks": [
+        "Ja'Marr Chase",
+        "Christian McCaffrey",
+        "Jahmyr Gibbs",
+        "Jonathan Taylor",
+        "Jaxon Smith-Njigba",
+        "Bijan Robinson",
+        "Amon-Ra St. Brown",
+        "De'Von Achane",
+        "Puka Nacua",
+        "Saquon Barkley",
+        "Justin Jefferson",
+        "Chase Brown"
+      ],
+      "first_choice": {
+        "player_id": "6786",
+        "name": "CeeDee Lamb",
+        "position": "WR",
+        "immediate_gain": 111.37099999999987,
+        "horizon_mean_gain": 240.00890000000004,
+        "pair_mean_gain": 218.4090000000001,
+        "terminal_mean_gain": 61.71399999999994,
+        "downside_gain": 240.00890000000004,
+        "score": 240.00890000000004,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.5714285714285714,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "3198",
+          "score": 1575.3253,
+          "pair_utility": 1553.7254,
+          "terminal_gain": 61.71399999999994,
+          "response": [
+            "5859",
+            "7569"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "3198",
+            "name": "Derrick Henry",
+            "scenarios": 7
+          }
+        ],
+        "flags": [],
+        "ecr": 9.0,
+        "adp_rank": 10.0,
+        "override": null,
+        "bye_conflicts": 0
+      },
+      "alternatives": [
+        {
+          "player_id": "6786",
+          "name": "CeeDee Lamb",
+          "position": "WR",
+          "immediate_gain": 111.37099999999987,
+          "horizon_mean_gain": 240.00890000000004,
+          "pair_mean_gain": 218.4090000000001,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 240.00890000000004,
+          "score": 240.00890000000004,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5714285714285714,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1575.3253,
+            "pair_utility": 1553.7254,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "5859",
+              "7569"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 7
+            }
+          ],
+          "flags": [],
+          "ecr": 9.0,
+          "adp_rank": 10.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "3198",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "immediate_gain": 107.03800000000024,
+          "horizon_mean_gain": 236.2241857142858,
+          "pair_mean_gain": 214.62428571428586,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "8130",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "5859"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 4
+            },
+            {
+              "player_id": "8130",
+              "name": "Trey McBride",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 33.0,
+          "adp_rank": 16.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8130",
+          "name": "Trey McBride",
+          "position": "TE",
+          "immediate_gain": 102.54000000000019,
+          "horizon_mean_gain": 233.65390000000002,
+          "pair_mean_gain": 212.0540000000001,
+          "terminal_mean_gain": 61.714000000000205,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "5859"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 4
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 18.0,
+          "adp_rank": 25.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "10229",
+          "name": "Rashee Rice",
+          "position": "WR",
+          "immediate_gain": 100.7059999999999,
+          "horizon_mean_gain": 231.81989999999996,
+          "pair_mean_gain": 210.22000000000003,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 229.34390000000008,
+          "score": 229.34390000000008,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1564.6603,
+            "pair_utility": 1543.0604,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "5859"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 4
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 27.0,
+          "adp_rank": 31.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8112",
+          "name": "Drake London",
+          "position": "WR",
+          "immediate_gain": 98.62300000000005,
+          "horizon_mean_gain": 229.73689999999988,
+          "pair_mean_gain": 208.13699999999994,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 227.2609,
+          "score": 227.2609,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5714285714285714,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1562.5773,
+            "pair_utility": 1540.9774,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "5859"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 4
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 12.0,
+          "adp_rank": 20.0,
+          "override": null,
+          "bye_conflicts": 0
+        }
+      ],
+      "runtime_seconds": 0.354493958002422
+    },
+    {
+      "scenario": "05_needs",
+      "opponent_mode": "needs",
+      "seed": 20265953,
+      "prefix_ids": [
+        "7564",
+        "9509",
+        "9221",
+        "9493",
+        "4034",
+        "7547",
+        "9488",
+        "6794",
+        "6813",
+        "5859",
+        "6786",
+        "8138"
+      ],
+      "preceding_picks": [
+        "Ja'Marr Chase",
+        "Bijan Robinson",
+        "Jahmyr Gibbs",
+        "Puka Nacua",
+        "Christian McCaffrey",
+        "Amon-Ra St. Brown",
+        "Jaxon Smith-Njigba",
+        "Justin Jefferson",
+        "Jonathan Taylor",
+        "A.J. Brown",
+        "CeeDee Lamb",
+        "James Cook"
+      ],
+      "first_choice": {
+        "player_id": "9226",
+        "name": "De'Von Achane",
+        "position": "RB",
+        "immediate_gain": 127.63499999999999,
+        "horizon_mean_gain": 259.27240000000006,
+        "pair_mean_gain": 237.67250000000013,
+        "terminal_mean_gain": 61.71399999999994,
+        "downside_gain": 256.27289999999994,
+        "score": 256.27289999999994,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.5,
+        "pass_trials": 6,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "3198",
+          "score": 1591.5892999999999,
+          "pair_utility": 1569.9894,
+          "terminal_gain": 61.71399999999994,
+          "response": [
+            "8112",
+            "9224"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "scenarios": 3
+          },
+          {
+            "player_id": "3198",
+            "name": "Derrick Henry",
+            "scenarios": 3
+          }
+        ],
+        "flags": [],
+        "ecr": 20.0,
+        "adp_rank": 11.0,
+        "override": null,
+        "bye_conflicts": 0
+      },
+      "alternatives": [
+        {
+          "player_id": "9226",
+          "name": "De'Von Achane",
+          "position": "RB",
+          "immediate_gain": 127.63499999999999,
+          "horizon_mean_gain": 259.27240000000006,
+          "pair_mean_gain": 237.67250000000013,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 256.27289999999994,
+          "score": 256.27289999999994,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1591.5892999999999,
+            "pair_utility": 1569.9894,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "8112",
+              "9224"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 3
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 20.0,
+          "adp_rank": 11.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "9224",
+          "name": "Chase Brown",
+          "position": "RB",
+          "immediate_gain": 113.03700000000003,
+          "horizon_mean_gain": 251.97340000000008,
+          "pair_mean_gain": 230.37350000000015,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 241.67489999999998,
+          "score": 241.67489999999998,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1576.9913,
+            "pair_utility": 1555.3914,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "8112",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 15.0,
+          "adp_rank": 13.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "3198",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "immediate_gain": 107.03800000000024,
+          "horizon_mean_gain": 247.22440000000006,
+          "pair_mean_gain": 225.62450000000013,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "8130",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "8130",
+              "name": "Trey McBride",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 33.0,
+          "adp_rank": 16.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8130",
+          "name": "Trey McBride",
+          "position": "TE",
+          "immediate_gain": 102.54000000000019,
+          "horizon_mean_gain": 243.4760666666666,
+          "pair_mean_gain": 221.87616666666668,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 18.0,
+          "adp_rank": 25.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8112",
+          "name": "Drake London",
+          "position": "WR",
+          "immediate_gain": 98.62300000000005,
+          "horizon_mean_gain": 239.5590666666667,
+          "pair_mean_gain": 217.95916666666676,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 227.2609,
+          "score": 227.2609,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1562.5773,
+            "pair_utility": 1540.9774,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 12.0,
+          "adp_rank": 20.0,
+          "override": null,
+          "bye_conflicts": 0
+        }
+      ],
+      "runtime_seconds": 0.33170420897658914
+    },
+    {
+      "scenario": "06_needs",
+      "opponent_mode": "needs",
+      "seed": 20266963,
+      "prefix_ids": [
+        "9221",
+        "9493",
+        "9509",
+        "9488",
+        "7547",
+        "6786",
+        "7564",
+        "6813",
+        "6794",
+        "8112",
+        "4034",
+        "5859"
+      ],
+      "preceding_picks": [
+        "Jahmyr Gibbs",
+        "Puka Nacua",
+        "Bijan Robinson",
+        "Jaxon Smith-Njigba",
+        "Amon-Ra St. Brown",
+        "CeeDee Lamb",
+        "Ja'Marr Chase",
+        "Jonathan Taylor",
+        "Justin Jefferson",
+        "Drake London",
+        "Christian McCaffrey",
+        "A.J. Brown"
+      ],
+      "first_choice": {
+        "player_id": "9226",
+        "name": "De'Von Achane",
+        "position": "RB",
+        "immediate_gain": 127.63499999999999,
+        "horizon_mean_gain": 259.27240000000006,
+        "pair_mean_gain": 237.67250000000013,
+        "terminal_mean_gain": 61.71399999999994,
+        "downside_gain": 256.27289999999994,
+        "score": 256.27289999999994,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.5,
+        "pass_trials": 6,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "3198",
+          "score": 1591.5892999999999,
+          "pair_utility": 1569.9894,
+          "terminal_gain": 61.71399999999994,
+          "response": [
+            "7569",
+            "9224"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "scenarios": 3
+          },
+          {
+            "player_id": "3198",
+            "name": "Derrick Henry",
+            "scenarios": 3
+          }
+        ],
+        "flags": [],
+        "ecr": 20.0,
+        "adp_rank": 11.0,
+        "override": null,
+        "bye_conflicts": 0
+      },
+      "alternatives": [
+        {
+          "player_id": "9226",
+          "name": "De'Von Achane",
+          "position": "RB",
+          "immediate_gain": 127.63499999999999,
+          "horizon_mean_gain": 259.27240000000006,
+          "pair_mean_gain": 237.67250000000013,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 256.27289999999994,
+          "score": 256.27289999999994,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1591.5892999999999,
+            "pair_utility": 1569.9894,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "7569",
+              "9224"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 3
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 20.0,
+          "adp_rank": 11.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "9224",
+          "name": "Chase Brown",
+          "position": "RB",
+          "immediate_gain": 113.03700000000003,
+          "horizon_mean_gain": 251.97340000000008,
+          "pair_mean_gain": 230.37350000000015,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 241.67489999999998,
+          "score": 241.67489999999998,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1576.9913,
+            "pair_utility": 1555.3914,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "7569",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 15.0,
+          "adp_rank": 13.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "3198",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "immediate_gain": 107.03800000000024,
+          "horizon_mean_gain": 249.65740000000005,
+          "pair_mean_gain": 228.05750000000012,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "8130",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 4
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 1
+            },
+            {
+              "player_id": "8130",
+              "name": "Trey McBride",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 33.0,
+          "adp_rank": 16.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8130",
+          "name": "Trey McBride",
+          "position": "TE",
+          "immediate_gain": 102.54000000000019,
+          "horizon_mean_gain": 245.9090666666666,
+          "pair_mean_gain": 224.30916666666667,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 4
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 1
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 18.0,
+          "adp_rank": 25.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8138",
+          "name": "James Cook",
+          "position": "RB",
+          "immediate_gain": 100.3710000000001,
+          "horizon_mean_gain": 241.30706666666674,
+          "pair_mean_gain": 219.7071666666668,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 229.00890000000004,
+          "score": 229.00890000000004,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1564.3253,
+            "pair_utility": 1542.7254,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9224",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9224",
+              "name": "Chase Brown",
+              "scenarios": 2
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 14.0,
+          "adp_rank": 9.0,
+          "override": null,
+          "bye_conflicts": 0
+        }
+      ],
+      "runtime_seconds": 0.3340221249964088
+    },
+    {
+      "scenario": "07_rb_run",
+      "opponent_mode": "rb_run",
+      "seed": 20267971,
+      "prefix_ids": [
+        "9509",
+        "9221",
+        "4034",
+        "7564",
+        "7547",
+        "6813",
+        "8138",
+        "4866",
+        "9224",
+        "9493",
+        "6786",
+        "9226"
+      ],
+      "preceding_picks": [
+        "Bijan Robinson",
+        "Jahmyr Gibbs",
+        "Christian McCaffrey",
+        "Ja'Marr Chase",
+        "Amon-Ra St. Brown",
+        "Jonathan Taylor",
+        "James Cook",
+        "Saquon Barkley",
+        "Chase Brown",
+        "Puka Nacua",
+        "CeeDee Lamb",
+        "De'Von Achane"
+      ],
+      "first_choice": {
+        "player_id": "9488",
+        "name": "Jaxon Smith-Njigba",
+        "position": "WR",
+        "immediate_gain": 151.79999999999995,
+        "horizon_mean_gain": 280.4379000000001,
+        "pair_mean_gain": 258.8380000000002,
+        "terminal_mean_gain": 61.71399999999994,
+        "downside_gain": 280.4379000000001,
+        "score": 280.4379000000001,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.5,
+        "pass_trials": 6,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "3198",
+          "score": 1615.7543,
+          "pair_utility": 1594.1544000000001,
+          "terminal_gain": 61.71399999999994,
+          "response": [
+            "12507",
+            "5859"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "3198",
+            "name": "Derrick Henry",
+            "scenarios": 6
+          }
+        ],
+        "flags": [],
+        "ecr": 6.0,
+        "adp_rank": 7.0,
+        "override": null,
+        "bye_conflicts": 0
+      },
+      "alternatives": [
+        {
+          "player_id": "9488",
+          "name": "Jaxon Smith-Njigba",
+          "position": "WR",
+          "immediate_gain": 151.79999999999995,
+          "horizon_mean_gain": 280.4379000000001,
+          "pair_mean_gain": 258.8380000000002,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 280.4379000000001,
+          "score": 280.4379000000001,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1615.7543,
+            "pair_utility": 1594.1544000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "12507",
+              "5859"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 6
+            }
+          ],
+          "flags": [],
+          "ecr": 6.0,
+          "adp_rank": 7.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "3198",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "immediate_gain": 107.03800000000024,
+          "horizon_mean_gain": 255.80790000000002,
+          "pair_mean_gain": 234.2080000000003,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "8130",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9488",
+              "12507"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "8130",
+              "name": "Trey McBride",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9488",
+              "name": "Jaxon Smith-Njigba",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 33.0,
+          "adp_rank": 16.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8130",
+          "name": "Trey McBride",
+          "position": "TE",
+          "immediate_gain": 102.54000000000019,
+          "horizon_mean_gain": 253.55890000000022,
+          "pair_mean_gain": 231.95900000000006,
+          "terminal_mean_gain": 61.71400000000017,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9488",
+              "12507"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9488",
+              "name": "Jaxon Smith-Njigba",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 18.0,
+          "adp_rank": 25.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "10229",
+          "name": "Rashee Rice",
+          "position": "WR",
+          "immediate_gain": 100.7059999999999,
+          "horizon_mean_gain": 251.72489999999993,
+          "pair_mean_gain": 230.12500000000023,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 229.34390000000008,
+          "score": 229.34390000000008,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1564.6603,
+            "pair_utility": 1543.0604,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9488",
+              "12507"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9488",
+              "name": "Jaxon Smith-Njigba",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 27.0,
+          "adp_rank": 31.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "6794",
+          "name": "Justin Jefferson",
+          "position": "WR",
+          "immediate_gain": 100.01199999999994,
+          "horizon_mean_gain": 251.03089999999997,
+          "pair_mean_gain": 229.43100000000027,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 228.64990000000012,
+          "score": 228.64990000000012,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5,
+          "pass_trials": 6,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1563.9663,
+            "pair_utility": 1542.3664,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "9488",
+              "12507"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            },
+            {
+              "player_id": "9488",
+              "name": "Jaxon Smith-Njigba",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 7.0,
+          "adp_rank": 12.0,
+          "override": null,
+          "bye_conflicts": 0
+        }
+      ],
+      "runtime_seconds": 0.3141901670023799
+    },
+    {
+      "scenario": "08_rb_run",
+      "opponent_mode": "rb_run",
+      "seed": 20268981,
+      "prefix_ids": [
+        "9221",
+        "4034",
+        "9509",
+        "9224",
+        "8138",
+        "6813",
+        "7564",
+        "9488",
+        "6794",
+        "4866",
+        "7547",
+        "9493"
+      ],
+      "preceding_picks": [
+        "Jahmyr Gibbs",
+        "Christian McCaffrey",
+        "Bijan Robinson",
+        "Chase Brown",
+        "James Cook",
+        "Jonathan Taylor",
+        "Ja'Marr Chase",
+        "Jaxon Smith-Njigba",
+        "Justin Jefferson",
+        "Saquon Barkley",
+        "Amon-Ra St. Brown",
+        "Puka Nacua"
+      ],
+      "first_choice": {
+        "player_id": "9226",
+        "name": "De'Von Achane",
+        "position": "RB",
+        "immediate_gain": 127.63499999999999,
+        "horizon_mean_gain": 258.4394,
+        "pair_mean_gain": 236.83950000000004,
+        "terminal_mean_gain": 61.71399999999994,
+        "downside_gain": 256.27289999999994,
+        "score": 256.27289999999994,
+        "mode_mean_gains": {},
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": 0.42857142857142855,
+        "pass_trials": 7,
+        "conditional_outcomes": 1,
+        "worst_case": {
+          "reply": "3198",
+          "score": 1591.5892999999999,
+          "pair_utility": 1569.9894,
+          "terminal_gain": 61.71399999999994,
+          "response": [
+            "6786",
+            "12507"
+          ]
+        },
+        "likely_continuations": [
+          {
+            "player_id": "3198",
+            "name": "Derrick Henry",
+            "scenarios": 3
+          },
+          {
+            "player_id": "6786",
+            "name": "CeeDee Lamb",
+            "scenarios": 3
+          }
+        ],
+        "flags": [],
+        "ecr": 20.0,
+        "adp_rank": 11.0,
+        "override": null,
+        "bye_conflicts": 0
+      },
+      "alternatives": [
+        {
+          "player_id": "9226",
+          "name": "De'Von Achane",
+          "position": "RB",
+          "immediate_gain": 127.63499999999999,
+          "horizon_mean_gain": 258.4394,
+          "pair_mean_gain": 236.83950000000004,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 256.27289999999994,
+          "score": 256.27289999999994,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.42857142857142855,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1591.5892999999999,
+            "pair_utility": 1569.9894,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "12507"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 3
+            },
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 20.0,
+          "adp_rank": 11.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "6786",
+          "name": "CeeDee Lamb",
+          "position": "WR",
+          "immediate_gain": 111.37099999999987,
+          "horizon_mean_gain": 248.83618571428565,
+          "pair_mean_gain": 227.2362857142857,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 240.00890000000004,
+          "score": 240.00890000000004,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5714285714285714,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1575.3253,
+            "pair_utility": 1553.7254,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "5859",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 4
+            },
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            }
+          ],
+          "flags": [],
+          "ecr": 9.0,
+          "adp_rank": 10.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "3198",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "immediate_gain": 107.03800000000024,
+          "horizon_mean_gain": 245.71761428571426,
+          "pair_mean_gain": 224.11771428571433,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "8130",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 3
+            },
+            {
+              "player_id": "8130",
+              "name": "Trey McBride",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 33.0,
+          "adp_rank": 16.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8130",
+          "name": "Trey McBride",
+          "position": "TE",
+          "immediate_gain": 102.54000000000019,
+          "horizon_mean_gain": 241.86218571428572,
+          "pair_mean_gain": 220.26228571428555,
+          "terminal_mean_gain": 61.714000000000134,
+          "downside_gain": 231.17790000000014,
+          "score": 231.17790000000014,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 1.0,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1566.4943,
+            "pair_utility": 1544.8944000000001,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 3
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 18.0,
+          "adp_rank": 25.0,
+          "override": null,
+          "bye_conflicts": 0
+        },
+        {
+          "player_id": "8112",
+          "name": "Drake London",
+          "position": "WR",
+          "immediate_gain": 98.62300000000005,
+          "horizon_mean_gain": 237.94518571428557,
+          "pair_mean_gain": 216.34528571428564,
+          "terminal_mean_gain": 61.71399999999994,
+          "downside_gain": 227.2609,
+          "score": 227.2609,
+          "mode_mean_gains": {},
+          "scenario_survival_to_our_pick": 1.0,
+          "scenario_survival_if_pass": 0.5714285714285714,
+          "pass_trials": 7,
+          "conditional_outcomes": 1,
+          "worst_case": {
+            "reply": "3198",
+            "score": 1562.5773,
+            "pair_utility": 1540.9774,
+            "terminal_gain": 61.71399999999994,
+            "response": [
+              "6786",
+              "9226"
+            ]
+          },
+          "likely_continuations": [
+            {
+              "player_id": "9226",
+              "name": "De'Von Achane",
+              "scenarios": 3
+            },
+            {
+              "player_id": "6786",
+              "name": "CeeDee Lamb",
+              "scenarios": 3
+            },
+            {
+              "player_id": "3198",
+              "name": "Derrick Henry",
+              "scenarios": 1
+            }
+          ],
+          "flags": [],
+          "ecr": 12.0,
+          "adp_rank": 20.0,
+          "override": null,
+          "bye_conflicts": 0
+        }
+      ],
+      "runtime_seconds": 0.34421979199396446
+    }
+  ],
+  "mock_profile": {
+    "review_only": true,
+    "source_draft_id": "1400628785413394432",
+    "source_league_id": "1400628784381612032",
+    "source_order_sha256": "2066375d0deafe2bf2300f5f64b835d3875dbf8d21533e7b7960e2a4c66a728e",
+    "source_observed_at": "2026-09-08T22:02:44.838696+00:00",
+    "seat": 13,
+    "teams": 14,
+    "rounds": 14,
+    "draft_type": "snake",
+    "pick_timer": 120,
+    "roster_positions": [
+      "QB",
+      "RB",
+      "RB",
+      "WR",
+      "WR",
+      "TE",
+      "FLEX",
+      "K",
+      "DEF",
+      "BN",
+      "BN",
+      "BN",
+      "BN",
+      "BN"
+    ],
+    "scoring_settings": {
+      "sack": 1.0,
+      "fgm_40_49": 4.0,
+      "pass_int": -1.0,
+      "pts_allow_0": 10.0,
+      "pass_2pt": 2.0,
+      "st_td": 6.0,
+      "rec_td": 6.0,
+      "fgm_30_39": 3.0,
+      "fgm_50_59": 5.0,
+      "xpmiss": -1.0,
+      "rush_td": 6.0,
+      "rec_2pt": 2.0,
+      "st_fum_rec": 1.0,
+      "fgmiss": -1.0,
+      "ff": 1.0,
+      "rec": 1.0,
+      "pts_allow_14_20": 1.0,
+      "fgm_0_19": 3.0,
+      "int": 2.0,
+      "def_st_fum_rec": 1.0,
+      "fum_lost": -2.0,
+      "pts_allow_1_6": 7.0,
+      "fgm_60p": 6.0,
+      "fgm_20_29": 3.0,
+      "pts_allow_21_27": 0.0,
+      "xpm": 1.0,
+      "rush_2pt": 2.0,
+      "fum_rec": 2.0,
+      "def_st_td": 6.0,
+      "def_td": 6.0,
+      "safe": 2.0,
+      "pass_yd": 0.04,
+      "blk_kick": 2.0,
+      "pass_td": 4.0,
+      "rush_yd": 0.1,
+      "fum": 0.0,
+      "pts_allow_28_34": -1.0,
+      "pts_allow_35p": -4.0,
+      "fum_rec_td": 6.0,
+      "rec_yd": 0.1,
+      "def_st_ff": 1.0,
+      "pts_allow_7_13": 4.0,
+      "st_ff": 1.0
+    },
+    "requires_verified_new_mock_id": true
+  },
+  "draft_session": {
+    "draft_id": "1400628785413394432",
+    "league_id": "1400628784381612032",
+    "frozen_at": "2026-09-08T22:35:08.145592+00:00",
+    "valid_until": "2026-09-09T10:35:08.145592+00:00",
+    "board_sha256": "c1f3923d5f662ba8330548440b892a93388500f18401f032cb6c5f96c9cfb54e",
+    "policy": "User-approved static draft snapshot; original source times preserved"
+  },
+  "limitations": [
+    "Static order must be verified again before live use.",
+    "Scenario counts are uncalibrated examples, not probabilities or guaranteed availability.",
+    "Member identities do not imply known opponent strategies; all use the same scenario rules.",
+    "Original player-data timestamps are preserved. This does not refresh or export live candidates."
+  ]
+}

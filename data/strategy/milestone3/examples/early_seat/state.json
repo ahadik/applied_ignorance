@@ -1,0 +1,39 @@
+{
+  "simulation": true,
+  "scenario": "early_seat",
+  "observed_at": "2026-09-08T21:08:37.695153+00:00",
+  "draft_id": "simulation-early_seat",
+  "league_id": "1400628784381612032",
+  "settings": {
+    "teams": 14,
+    "rounds": 15,
+    "slots_flex": 2,
+    "slots_qb": 1,
+    "slots_rb": 2,
+    "slots_wr": 2,
+    "slots_te": 1,
+    "slots_k": 1,
+    "slots_def": 1
+  },
+  "seat": 1,
+  "last_pick": 0,
+  "next_pick": 1,
+  "drafted_ids": [],
+  "rosters_by_slot": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": [],
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": []
+  },
+  "roster": []
+}

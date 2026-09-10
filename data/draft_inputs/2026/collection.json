@@ -1,0 +1,90 @@
+{
+  "season": 2026,
+  "started_at": "2026-09-08T22:34:53.002381+00:00",
+  "complete": true,
+  "datasets": [
+    {
+      "name": "context",
+      "file": "context.json",
+      "sha256": "28916b4f5232b5d364167cd5e3d751b8bd401dbb7df9b6fdf940feb7bcc3c23e"
+    },
+    {
+      "name": "sleeper_players",
+      "file": "sleeper_players.json",
+      "sha256": "8546b4b114bedf42eece1ce74b980aaf809dfa15399245eb30b208cbe338151a"
+    },
+    {
+      "name": "nfl_state",
+      "file": "nfl_state.json",
+      "sha256": "d10d26be8d3fe39f39b209f592435701d2921dda11fb53ffccee0b8a4c4fec4a"
+    },
+    {
+      "name": "fp_external",
+      "file": "fp_external.json",
+      "sha256": "b38487a7b8e94bfc4b7d37cc36b892418ce2fa9b26a77b31ae080205fb9a7618"
+    },
+    {
+      "name": "ecr",
+      "file": "ecr.json",
+      "sha256": "180a37ffae157ffa19cbc090f91b407ff33116ef93cad3811af58989787a0e1d"
+    },
+    {
+      "name": "adp",
+      "file": "adp.json",
+      "sha256": "10927613cc4ff85cc84d52a7bd1e2aab97ec2f16cbe69a8cd30f158f03ed9182"
+    },
+    {
+      "name": "projections_QB",
+      "file": "projections_QB.json",
+      "sha256": "7e5f8c9c047b56eef88c58c9f15d8230534d25fde19ed2ef6872773f31999153"
+    },
+    {
+      "name": "projections_RB",
+      "file": "projections_RB.json",
+      "sha256": "0720520af3636c11d271c183eb79464a35b05c88fbfb571ce3d0c6c44d86cdd7"
+    },
+    {
+      "name": "projections_WR",
+      "file": "projections_WR.json",
+      "sha256": "54228c87d9a51fea97495f4f41714d8aa9c8faca85340d9aa993bc99a47a0448"
+    },
+    {
+      "name": "projections_TE",
+      "file": "projections_TE.json",
+      "sha256": "8cc170f05659ddfd24ead4a110487b4a3ec9c9c828a72e1a093abc51848a685d"
+    },
+    {
+      "name": "projections_K",
+      "file": "projections_K.json",
+      "sha256": "9ff7616c58f7102a6361d2e08bec9f79339a9b6a45245e33067f7a61db761a54"
+    },
+    {
+      "name": "projections_DST",
+      "file": "projections_DST.json",
+      "sha256": "712c57576e042c7fc5782b0d49642019f8b6bf2143f773325fd5bef0d67e7627"
+    },
+    {
+      "name": "news",
+      "file": "news.json",
+      "sha256": "195c0cd1905e5e2fea4fe65cca3fec185410817a071121124d1debc0bbf5fa35"
+    },
+    {
+      "name": "injuries",
+      "file": "injuries.json",
+      "sha256": "f6041837ee5f337d954b62b4d160a8f6c215e3c19a809c64ccf2364f0e2505e6"
+    }
+  ],
+  "fp_usage_before": {
+    "attempts_last_24h": 16,
+    "routine_remaining": 384,
+    "hard_remaining": 484,
+    "scope": "this shared local cache directory"
+  },
+  "completed_at": "2026-09-08T22:35:07.977777+00:00",
+  "fp_usage_after": {
+    "attempts_last_24h": 27,
+    "routine_remaining": 373,
+    "hard_remaining": 473,
+    "scope": "this shared local cache directory"
+  }
+}

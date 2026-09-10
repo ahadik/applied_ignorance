@@ -1,0 +1,191 @@
+{
+  "active": false,
+  "status": "released_after_draft",
+  "blocked_providers": [
+    "fantasypros",
+    "nflverse"
+  ],
+  "session": {
+    "draft_id": "1400628785413394432",
+    "league_id": "1400628784381612032",
+    "frozen_at": "2026-09-08T22:35:08.145592+00:00",
+    "valid_until": "2026-09-09T10:35:08.145592+00:00",
+    "board_sha256": "c1f3923d5f662ba8330548440b892a93388500f18401f032cb6c5f96c9cfb54e",
+    "policy": "User-approved static draft snapshot; original source times preserved"
+  },
+  "fp_attempts": 11,
+  "fetch_seconds": 15.000924749998376,
+  "total_seconds": 18.949487165984465,
+  "board_file": "/Users/alex/Projects/Fantasy Football/data/draft_session/1400628785413394432/board.json",
+  "source_times": [
+    {
+      "name": "context",
+      "fetched_at": "2026-09-08T22:34:53.995724+00:00",
+      "cache_hit_at_collection": null,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.003930518888888889,
+      "max_fetch_age_hours": 1.0,
+      "stale": false,
+      "provider_tier": null,
+      "public_api_limited": null,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "sleeper_players",
+      "fetched_at": "2026-09-08T22:34:55.089580+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.0036266700000000002,
+      "max_fetch_age_hours": 24.0,
+      "stale": false,
+      "provider_tier": null,
+      "public_api_limited": null,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "nfl_state",
+      "fetched_at": "2026-09-08T22:34:55.900510+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.0034014116666666668,
+      "max_fetch_age_hours": 6.0,
+      "stale": false,
+      "provider_tier": null,
+      "public_api_limited": null,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "fp_external",
+      "fetched_at": "2026-09-08T22:34:57.989417+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.002821159722222222,
+      "max_fetch_age_hours": 24.0,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "ecr",
+      "fetched_at": "2026-09-08T22:34:58.590842+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": "2026-09-08T22:21:14+00:00",
+      "fetch_age_hours": 0.002654097222222222,
+      "max_fetch_age_hours": 6.0,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "adp",
+      "fetched_at": "2026-09-08T22:34:59.662320+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": "2026-09-08T07:09:25+00:00",
+      "fetch_age_hours": 0.0023564644444444443,
+      "max_fetch_age_hours": 6.0,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "projections_QB",
+      "fetched_at": "2026-09-08T22:35:00.508489+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.0021214174999999997,
+      "max_fetch_age_hours": 6.0,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "projections_RB",
+      "fetched_at": "2026-09-08T22:35:01.678197+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.001796498611111111,
+      "max_fetch_age_hours": 6.0,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "projections_WR",
+      "fetched_at": "2026-09-08T22:35:02.734090+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.001503195,
+      "max_fetch_age_hours": 6.0,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "projections_TE",
+      "fetched_at": "2026-09-08T22:35:03.756831+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.0012191002777777776,
+      "max_fetch_age_hours": 6.0,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "projections_K",
+      "fetched_at": "2026-09-08T22:35:04.793885+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.0009310297222222222,
+      "max_fetch_age_hours": 6.0,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "projections_DST",
+      "fetched_at": "2026-09-08T22:35:05.746385+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.0006664463888888889,
+      "max_fetch_age_hours": 6.0,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "news",
+      "fetched_at": "2026-09-08T22:35:06.907758+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 0.0003438427777777778,
+      "max_fetch_age_hours": 0.25,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    },
+    {
+      "name": "injuries",
+      "fetched_at": "2026-09-08T22:35:07.969926+00:00",
+      "cache_hit_at_collection": false,
+      "source_updated_at": null,
+      "fetch_age_hours": 4.879611111111111e-05,
+      "max_fetch_age_hours": 0.25,
+      "stale": false,
+      "provider_tier": "premium",
+      "public_api_limited": true,
+      "freshness_note": "Unknown publication time is not replaced with retrieval time."
+    }
+  ],
+  "released_at": "2026-09-09T03:46:42.210781+00:00"
+}

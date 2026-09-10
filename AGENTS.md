@@ -1,5 +1,9 @@
 # Working principles
 
+- Large-file exception: depth-chart JSON snapshots go under ignored `data/nflverse/local/`, not Git. After cloning, `python3 setup_repo.py --season 2026` restores them through the central nflverse client with a matching collection manifest and normal cache/quota policies.
+
+- SEPTEMBER 10 UPDATE: user explicitly authorized committing all project data to Git and assumes only one Mac operates at a time. Track `data/` including snapshots and provider ledgers; keep `.env` and credentials excluded. Use normal Git commit/push/pull for handoff; no separate data-transfer system, host-isolation system, clean-history export, or concurrent-Mac coordination is required. This supersedes older local-only data/publication instructions below. Do not push unless requested.
+
 - CURRENT STATUS (supersedes historical draft instructions below): the real draft is complete, all 196 league picks and our 14 players reconciled. Watcher stopped; no pending submission. Do not resume drafting or start another mock. Read `docs/PROGRESS.md` and `docs/REAL_DRAFT_RESULT.md` on resume. Week 1 lineup work is still outstanding.
 - DATA FREEZE RELEASED: user explicitly authorized release after completion. `python3 draft_session.py release` confirmed completion through central Sleeper access and released the guard at 2026-09-09T03:46:42Z. No FantasyPros/nflverse refresh was made during release. Historical frozen files remain evidence, not current weekly advice. Future collection must retain normal central-client cache/quota policies.
 - Treat informational questions as curiosity, not instructions to change strategy. Distinguish numerical advice from agent overrides and explain the evidence and uncertainty.

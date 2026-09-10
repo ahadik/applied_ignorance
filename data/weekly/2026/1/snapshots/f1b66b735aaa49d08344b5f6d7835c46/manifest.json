@@ -1,0 +1,9 @@
+{
+  "complete": false,
+  "season": 2026,
+  "week": 1,
+  "started_at": "2026-09-09T04:52:31.493878+00:00",
+  "purpose": "validation",
+  "datasets": [],
+  "error": "Sleeper HTTP 503; no usable new data; expired cache not served"
+}

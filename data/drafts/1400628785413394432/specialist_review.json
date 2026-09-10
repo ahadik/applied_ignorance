@@ -1,0 +1,287 @@
+{
+  "draft_id": "1400628785413394432",
+  "based_on_pick": 176,
+  "observed_at": "2026-09-09T03:18:02.064925+00:00",
+  "next_pick": 181,
+  "specialists": {
+    "K": {
+      "available_count": 44,
+      "opponents_with_open_slot": 3,
+      "leaders": [
+        {
+          "name": "Tyler Loop",
+          "player_id": "12711",
+          "ecr": 207.0,
+          "partial_points": 42.67,
+          "provider_points": 132.0,
+          "uncovered_rules": [
+            "fgm_0_19",
+            "fgm_20_29",
+            "fgm_30_39",
+            "fgm_40_49",
+            "fgm_50_59",
+            "fgm_60p",
+            "xpmiss"
+          ],
+          "flags": []
+        },
+        {
+          "name": "Jake Bates",
+          "player_id": "11539",
+          "ecr": 213.0,
+          "partial_points": 45.53,
+          "provider_points": 135.89,
+          "uncovered_rules": [
+            "fgm_0_19",
+            "fgm_20_29",
+            "fgm_30_39",
+            "fgm_40_49",
+            "fgm_50_59",
+            "fgm_60p",
+            "xpmiss"
+          ],
+          "flags": []
+        },
+        {
+          "name": "Evan McPherson",
+          "player_id": "7839",
+          "ecr": 219.0,
+          "partial_points": 41.080000000000005,
+          "provider_points": 128.58,
+          "uncovered_rules": [
+            "fgm_0_19",
+            "fgm_20_29",
+            "fgm_30_39",
+            "fgm_40_49",
+            "fgm_50_59",
+            "fgm_60p",
+            "xpmiss"
+          ],
+          "flags": []
+        },
+        {
+          "name": "Cairo Santos",
+          "player_id": "2020",
+          "ecr": 226.0,
+          "partial_points": 38.7,
+          "provider_points": 133.17,
+          "uncovered_rules": [
+            "fgm_0_19",
+            "fgm_20_29",
+            "fgm_30_39",
+            "fgm_40_49",
+            "fgm_50_59",
+            "fgm_60p",
+            "xpmiss"
+          ],
+          "flags": []
+        },
+        {
+          "name": "Chase McLaughlin",
+          "player_id": "6650",
+          "ecr": 227.0,
+          "partial_points": 33.61,
+          "provider_points": 132.82,
+          "uncovered_rules": [
+            "fgm_0_19",
+            "fgm_20_29",
+            "fgm_30_39",
+            "fgm_40_49",
+            "fgm_50_59",
+            "fgm_60p",
+            "xpmiss"
+          ],
+          "flags": []
+        }
+      ],
+      "stress_remainder": {
+        "name": "Cairo Santos",
+        "player_id": "2020",
+        "ecr": 226.0,
+        "partial_points": 38.7,
+        "provider_points": 133.17,
+        "uncovered_rules": [
+          "fgm_0_19",
+          "fgm_20_29",
+          "fgm_30_39",
+          "fgm_40_49",
+          "fgm_50_59",
+          "fgm_60p",
+          "xpmiss"
+        ],
+        "flags": []
+      }
+    },
+    "DEF": {
+      "available_count": 25,
+      "opponents_with_open_slot": 6,
+      "leaders": [
+        {
+          "name": "Pittsburgh Steelers",
+          "player_id": "PIT",
+          "ecr": 185.0,
+          "partial_points": 116.96000000000001,
+          "provider_points": 112.44,
+          "uncovered_rules": [
+            "blk_kick",
+            "def_st_ff",
+            "def_st_fum_rec",
+            "def_st_td",
+            "def_td",
+            "pts_allow_0",
+            "pts_allow_14_20",
+            "pts_allow_1_6",
+            "pts_allow_28_34",
+            "pts_allow_35p",
+            "pts_allow_7_13"
+          ],
+          "flags": []
+        },
+        {
+          "name": "Jacksonville Jaguars",
+          "player_id": "JAX",
+          "ecr": 188.0,
+          "partial_points": 97.7,
+          "provider_points": 99.83,
+          "uncovered_rules": [
+            "blk_kick",
+            "def_st_ff",
+            "def_st_fum_rec",
+            "def_st_td",
+            "def_td",
+            "pts_allow_0",
+            "pts_allow_14_20",
+            "pts_allow_1_6",
+            "pts_allow_28_34",
+            "pts_allow_35p",
+            "pts_allow_7_13"
+          ],
+          "flags": []
+        },
+        {
+          "name": "Los Angeles Chargers",
+          "player_id": "LAC",
+          "ecr": 191.0,
+          "partial_points": 109.73,
+          "provider_points": 108.78,
+          "uncovered_rules": [
+            "blk_kick",
+            "def_st_ff",
+            "def_st_fum_rec",
+            "def_st_td",
+            "def_td",
+            "pts_allow_0",
+            "pts_allow_14_20",
+            "pts_allow_1_6",
+            "pts_allow_28_34",
+            "pts_allow_35p",
+            "pts_allow_7_13"
+          ],
+          "flags": []
+        },
+        {
+          "name": "Baltimore Ravens",
+          "player_id": "BAL",
+          "ecr": 192.0,
+          "partial_points": 104.18,
+          "provider_points": 101.69,
+          "uncovered_rules": [
+            "blk_kick",
+            "def_st_ff",
+            "def_st_fum_rec",
+            "def_st_td",
+            "def_td",
+            "pts_allow_0",
+            "pts_allow_14_20",
+            "pts_allow_1_6",
+            "pts_allow_28_34",
+            "pts_allow_35p",
+            "pts_allow_7_13"
+          ],
+          "flags": []
+        },
+        {
+          "name": "Kansas City Chiefs",
+          "player_id": "KC",
+          "ecr": 202.0,
+          "partial_points": 94.08,
+          "provider_points": 93.16,
+          "uncovered_rules": [
+            "blk_kick",
+            "def_st_ff",
+            "def_st_fum_rec",
+            "def_st_td",
+            "def_td",
+            "pts_allow_0",
+            "pts_allow_14_20",
+            "pts_allow_1_6",
+            "pts_allow_28_34",
+            "pts_allow_35p",
+            "pts_allow_7_13"
+          ],
+          "flags": []
+        }
+      ],
+      "stress_remainder": {
+        "name": "Detroit Lions",
+        "player_id": "DET",
+        "ecr": 225.0,
+        "partial_points": 107.74,
+        "provider_points": 106.92,
+        "uncovered_rules": [
+          "blk_kick",
+          "def_st_ff",
+          "def_st_fum_rec",
+          "def_st_td",
+          "def_td",
+          "pts_allow_0",
+          "pts_allow_14_20",
+          "pts_allow_1_6",
+          "pts_allow_28_34",
+          "pts_allow_35p",
+          "pts_allow_7_13"
+        ],
+        "flags": []
+      }
+    }
+  },
+  "bench": [
+    {
+      "name": "Alvin Kamara",
+      "player_id": "4035",
+      "marginal_utility": 7.502003999999943
+    },
+    {
+      "name": "Dylan Sampson",
+      "player_id": "12469",
+      "marginal_utility": 6.718679999999949
+    },
+    {
+      "name": "AJ Dillon",
+      "player_id": "6828",
+      "marginal_utility": 6.5323799999998755
+    },
+    {
+      "name": "Isiah Pacheco",
+      "player_id": "8205",
+      "marginal_utility": 5.109371999999894
+    },
+    {
+      "name": "Brenton Strange",
+      "player_id": "9480",
+      "marginal_utility": 4.719923999999992
+    },
+    {
+      "name": "Samaje Perine",
+      "player_id": "4147",
+      "marginal_utility": 4.426811999999927
+    }
+  ],
+  "limitations": [
+    "Advisory only; no queue or policy changes.",
+    "Partial specialist points and provider totals are not exact league totals.",
+    "Stress remainder assumes opponents fill one open specialist slot by ECR; not a probability.",
+    "Bench utility uses existing uncalibrated weights; no cross-position specialist comparison is asserted.",
+    "No weekly matchup or streaming projection is available in this report."
+  ]
+}

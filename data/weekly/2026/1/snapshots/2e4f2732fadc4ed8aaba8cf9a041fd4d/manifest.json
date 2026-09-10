@@ -1,0 +1,75 @@
+{
+  "complete": true,
+  "season": 2026,
+  "week": 1,
+  "started_at": "2026-09-09T20:23:30.570705+00:00",
+  "purpose": "recommendation",
+  "datasets": [
+    {
+      "name": "context",
+      "file": "context.json",
+      "sha256": "3b41f69409c828c327fcfefc828ef7ed66e0fcf75ed7c29148266221d25d09eb"
+    },
+    {
+      "name": "sleeper_players",
+      "file": "sleeper_players.json",
+      "sha256": "1e0bc62472c6591a0143e15ea76afccf519369525145a6c5b94a20fcc5a4d679"
+    },
+    {
+      "name": "schedule",
+      "file": "schedule.json",
+      "sha256": "8744c46551e686725595b7536e728bca0665ecb82c00e456771f1b57ff55f091"
+    },
+    {
+      "name": "fp_external",
+      "file": "fp_external.json",
+      "sha256": "0de8b417bebc1748dc6c77592a8e85f8c2ea409301c68c3c9a35a9d658577a38"
+    },
+    {
+      "name": "projections_QB",
+      "file": "projections_QB.json",
+      "sha256": "1ca6b8d51e6a0cfd93d5e80d16d708e05eba8da19b4129c0d33b25c17ef6fb29"
+    },
+    {
+      "name": "projections_RB",
+      "file": "projections_RB.json",
+      "sha256": "c284619f8ebc73fed6707e99fe4ca95990850f95ba77718b0d70e307f788969f"
+    },
+    {
+      "name": "projections_WR",
+      "file": "projections_WR.json",
+      "sha256": "a2f0c152f7a5d31d34e916a3474dc256f533885fdc6b1593f614df4e3378402d"
+    },
+    {
+      "name": "projections_TE",
+      "file": "projections_TE.json",
+      "sha256": "a12953bc5fd3aee17782e151a6d88840bc7a46e29aa9b5039b0820ca8e88bf20"
+    },
+    {
+      "name": "projections_K",
+      "file": "projections_K.json",
+      "sha256": "651aa74b194c6ccbd8940efbc4f10abd639c76464248169dc053ffd3c10cffa9"
+    },
+    {
+      "name": "projections_DST",
+      "file": "projections_DST.json",
+      "sha256": "30a32b2d0f1b596e922ad470b96fbe3795f14200cd70421e6c6747e9c3527c35"
+    },
+    {
+      "name": "injuries",
+      "file": "injuries.json",
+      "sha256": "afe40077bdafca4c95016b06253b46dfb41310ca57398130604eced7fa7c02cd"
+    },
+    {
+      "name": "news",
+      "file": "news.json",
+      "sha256": "52fd385f18fc0d21a7b1559d80982855b318554c89edd043355f26d1f00b3afd"
+    },
+    {
+      "name": "final_context",
+      "file": "final_context.json",
+      "sha256": "751f37fa7f2bdd64bbb516ad8fd25fd7bbc09a041cb4335127583d036379e013"
+    }
+  ],
+  "completed_at": "2026-09-09T20:23:42.383166+00:00"
+}

@@ -1,5 +1,19 @@
 # nflverse pipeline
 
+Large depth-chart JSON outputs are now stored under ignored `data/nflverse/local/`.
+Run `python3 setup_repo.py --season 2026` after cloning to collect depth and its
+companion datasets through the central client and write a matching manifest.
+This checks current publication metadata and respects existing cache/budgets;
+it does not recreate the exact historical draft snapshot if upstream changed.
+
+September 9 extension: `get_nflverse('schedules', season)` now supports nfldata's
+multi-season `games.csv` through the same central ledger/cache. It checks GitHub
+Contents metadata every read, verifies Git blob identity and SHA-256, reuses
+unchanged bytes and selects the requested season. Publication time remains
+unknown. See [weekly guide](WEEKLY_LINEUP.md) for sources, schema, time zone and
+lock limitations. Use `nflverse_collect.py collect --dataset schedules --season 2026`;
+this feed uses a fixed repository file, not a release catalog.
+
 Implemented September 8, 2026. This is a third, general provider alongside Sleeper
 and FantasyPros. Python reads the published files used by nflreadr; R and the
 nflreadr package are not runtime dependencies. No API key is required for the

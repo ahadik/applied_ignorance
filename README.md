@@ -1,5 +1,7 @@
 # Fantasy Football Agent Lab
 
+September 10 update: the user authorized committing all `data/` to Git and assumes only one Mac runs at a time. Use Git for code/data handoff; keep `.env` and credentials excluded. This supersedes older local-only data and separate-transfer guidance.
+
 A personal experiment in managing a Sleeper fantasy football team with deterministic software and agent-assisted analysis. Python owns data access, validation and calculations; the agent interprets evidence, explains choices and supervises authorized browser actions.
 
 The 2026 draft is complete: a 14-team, 14-round PPR league, drafting from seat 13. The first two picks were automatic before takeover and the remaining 12 were supervised. This is an experimental decision system, not a demonstrated winning strategy.
@@ -7,11 +9,16 @@ The 2026 draft is complete: a 14-team, 14-round PPR league, drafting from seat 1
 ## Start here
 
 - [Current progress and next steps](docs/PROGRESS.md)
+- [Mac automation design](docs/MAC_AUTOMATION_DESIGN.md) and [implementation milestones](docs/MAC_AUTOMATION_MILESTONES.md) (proposed)
 - [Final roster, decisions and lessons](docs/REAL_DRAFT_RESULT.md)
 - [Agent operating instructions](AGENTS.md)
 - [Saved draft context](DRAFT_CONTEXT.md)
 
-Weekly lineup management, waivers, cloud hosting and mobile MCP access are future work. There is no unattended weekly service running.
+The [weekly lineup pipeline](docs/WEEKLY_LINEUP.md) now collects current inputs and
+produces deterministic, lock-aware recommendations. Run
+`python3 weekly_lineup.py run --season 2026 --week 1` from this directory.
+Waiver analysis, cloud hosting and mobile MCP access remain future work. There is
+no unattended weekly service or automatic lineup submission.
 
 ## Architecture
 
@@ -46,6 +53,13 @@ central clients: authentication, caching, limits, retries
 Application services should remain independent of chat history. A future MCP adapter will wrap those services; it is [designed](docs/MCP_DESIGN.md), not deployed. Sleeper's public API is read-only; the controller does not execute browser selections.
 
 ## Local setup
+
+After cloning, run `python3 setup_repo.py --season 2026` to restore the large
+nflverse depth-chart JSON under ignored `data/nflverse/local/2026/`. This uses
+the central nflverse client and normal shared cache/quota policies, collecting
+the companion datasets and a matching manifest too. It may make network calls;
+it does not change Sleeper. Fresh upstream data is not a reproduction of the
+original draft-day snapshot. Configure `.env` separately for FantasyPros work.
 
 Developed with Python 3.13 on macOS using the standard library. File locking uses POSIX `fcntl`; use macOS, Linux or WSL.
 
@@ -105,4 +119,7 @@ The last command should return nothing. **Generated data was previously tracked 
 
 ## Next steps
 
-Prepare the Week 1 lineup from fresh availability data; build reusable lineup/waiver services and reminders; evaluate draft-model limitations; then deploy an authenticated backend and test mobile MCP access. See [progress](docs/PROGRESS.md) for the handoff.
+Review and apply the Week 1 lineup from fresh availability data; extend the weekly
+pipeline with waiver analysis and reminders; evaluate model limitations; then
+deploy an authenticated backend and test mobile MCP access. See
+[progress](docs/PROGRESS.md) for the handoff.

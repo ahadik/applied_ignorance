@@ -1,0 +1,565 @@
+{
+  "draft_id": "1400628785413394432",
+  "observed_at": "2026-09-08T22:34:58.590842+00:00",
+  "expires_at": "2026-09-09T10:35:08.145592+00:00",
+  "draft_session": {
+    "draft_id": "1400628785413394432",
+    "league_id": "1400628784381612032",
+    "frozen_at": "2026-09-08T22:35:08.145592+00:00",
+    "valid_until": "2026-09-09T10:35:08.145592+00:00",
+    "board_sha256": "c1f3923d5f662ba8330548440b892a93388500f18401f032cb6c5f96c9cfb54e",
+    "policy": "User-approved static draft snapshot; original source times preserved"
+  },
+  "source": "Draft scenario planner (two_pick); uncalibrated utility/availability assumptions.",
+  "players": [
+    {
+      "player_id": "12711",
+      "name": "Tyler Loop",
+      "position": "K",
+      "priority": 1,
+      "exclude": false,
+      "rationale": {
+        "player_id": "12711",
+        "name": "Tyler Loop",
+        "position": "K",
+        "immediate_gain": 0.0,
+        "two_pick_mean_gain": 0.0,
+        "worst_mode_mean_gain": 0.0,
+        "score": 0.0,
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": null,
+        "pass_trials": 0,
+        "mode_mean_gains": {
+          "ecr": 0.0,
+          "adp": 0.0,
+          "needs": 0.0,
+          "rb_run": 0.0
+        },
+        "likely_continuations": [],
+        "flags": [],
+        "ecr": 207.0,
+        "adp_rank": 181.0,
+        "override": null,
+        "bye_conflicts": 2
+      }
+    },
+    {
+      "player_id": "11539",
+      "name": "Jake Bates",
+      "position": "K",
+      "priority": 2,
+      "exclude": false,
+      "rationale": {
+        "player_id": "11539",
+        "name": "Jake Bates",
+        "position": "K",
+        "immediate_gain": 0.0,
+        "two_pick_mean_gain": 0.0,
+        "worst_mode_mean_gain": 0.0,
+        "score": 0.0,
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": null,
+        "pass_trials": 0,
+        "mode_mean_gains": {
+          "ecr": 0.0,
+          "adp": 0.0,
+          "needs": 0.0,
+          "rb_run": 0.0
+        },
+        "likely_continuations": [],
+        "flags": [],
+        "ecr": 213.0,
+        "adp_rank": 158.0,
+        "override": null,
+        "bye_conflicts": 1
+      }
+    },
+    {
+      "player_id": "7839",
+      "name": "Evan McPherson",
+      "position": "K",
+      "priority": 3,
+      "exclude": false,
+      "rationale": {
+        "player_id": "7839",
+        "name": "Evan McPherson",
+        "position": "K",
+        "immediate_gain": 0.0,
+        "two_pick_mean_gain": 0.0,
+        "worst_mode_mean_gain": 0.0,
+        "score": 0.0,
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": null,
+        "pass_trials": 0,
+        "mode_mean_gains": {
+          "ecr": 0.0,
+          "adp": 0.0,
+          "needs": 0.0,
+          "rb_run": 0.0
+        },
+        "likely_continuations": [],
+        "flags": [],
+        "ecr": 219.0,
+        "adp_rank": 189.0,
+        "override": null,
+        "bye_conflicts": 1
+      }
+    },
+    {
+      "player_id": "2020",
+      "name": "Cairo Santos",
+      "position": "K",
+      "priority": 4,
+      "exclude": false,
+      "rationale": {
+        "player_id": "2020",
+        "name": "Cairo Santos",
+        "position": "K",
+        "immediate_gain": 0.0,
+        "two_pick_mean_gain": 0.0,
+        "worst_mode_mean_gain": 0.0,
+        "score": 0.0,
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": null,
+        "pass_trials": 0,
+        "mode_mean_gains": {
+          "ecr": 0.0,
+          "adp": 0.0,
+          "needs": 0.0,
+          "rb_run": 0.0
+        },
+        "likely_continuations": [],
+        "flags": [],
+        "ecr": 226.0,
+        "adp_rank": 194.0,
+        "override": null,
+        "bye_conflicts": 2
+      }
+    },
+    {
+      "player_id": "6650",
+      "name": "Chase McLaughlin",
+      "position": "K",
+      "priority": 5,
+      "exclude": false,
+      "rationale": {
+        "player_id": "6650",
+        "name": "Chase McLaughlin",
+        "position": "K",
+        "immediate_gain": 0.0,
+        "two_pick_mean_gain": 0.0,
+        "worst_mode_mean_gain": 0.0,
+        "score": 0.0,
+        "scenario_survival_to_our_pick": 1.0,
+        "scenario_survival_if_pass": null,
+        "pass_trials": 0,
+        "mode_mean_gains": {
+          "ecr": 0.0,
+          "adp": 0.0,
+          "needs": 0.0,
+          "rb_run": 0.0
+        },
+        "likely_continuations": [],
+        "flags": [],
+        "ecr": 227.0,
+        "adp_rank": 217.0,
+        "override": null,
+        "bye_conflicts": 2
+      }
+    },
+    {
+      "player_id": "12713",
+      "name": "Andy Borregales",
+      "position": "K",
+      "priority": 6,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11792",
+      "name": "Will Reichard",
+      "position": "K",
+      "priority": 7,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11653",
+      "name": "Charlie Smyth",
+      "position": "K",
+      "priority": 8,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4195",
+      "name": "Jake Elliott",
+      "position": "K",
+      "priority": 9,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7042",
+      "name": "Tyler Bass",
+      "position": "K",
+      "priority": 10,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13545",
+      "name": "Trey Smack",
+      "position": "K",
+      "priority": 11,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5095",
+      "name": "Daniel Carlson",
+      "position": "K",
+      "priority": 12,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4233",
+      "name": "Zane Gonzalez",
+      "position": "K",
+      "priority": 13,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12185",
+      "name": "Spencer Shrader",
+      "position": "K",
+      "priority": 14,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "650",
+      "name": "Nick Folk",
+      "position": "K",
+      "priority": 15,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10955",
+      "name": "Chad Ryland",
+      "position": "K",
+      "priority": 16,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11058",
+      "name": "Blake Grupe",
+      "position": "K",
+      "priority": 17,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6528",
+      "name": "Joey Slye",
+      "position": "K",
+      "priority": 18,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12961",
+      "name": "Ryan Fitzgerald",
+      "position": "K",
+      "priority": 19,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "1433",
+      "name": "Brandon McManus",
+      "position": "K",
+      "priority": 20,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13066",
+      "name": "Ben Sauls",
+      "position": "K",
+      "priority": 21,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13968",
+      "name": "Drew Stevens",
+      "position": "K",
+      "priority": 22,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5119",
+      "name": "Jason Sanders",
+      "position": "K",
+      "priority": 23,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13833",
+      "name": "Dominic Zvada",
+      "position": "K",
+      "priority": 24,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "10937",
+      "name": "Jake Moody",
+      "position": "K",
+      "priority": 25,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11092",
+      "name": "B.T. Potter",
+      "position": "K",
+      "priority": 26,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11145",
+      "name": "Tanner Brown",
+      "position": "K",
+      "priority": 27,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11261",
+      "name": "Andre Szmyt",
+      "position": "K",
+      "priority": 28,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "11789",
+      "name": "Joshua Karty",
+      "position": "K",
+      "priority": 29,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "12385",
+      "name": "Jude McAtamney",
+      "position": "K",
+      "priority": 30,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "1264",
+      "name": "Justin Tucker",
+      "position": "K",
+      "priority": 31,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "13149",
+      "name": "Caden Davis",
+      "position": "K",
+      "priority": 32,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "1348",
+      "name": "Dustin Hopkins",
+      "position": "K",
+      "priority": 33,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "17",
+      "name": "Matt Prater",
+      "position": "K",
+      "priority": 34,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "4666",
+      "name": "Younghoe Koo",
+      "position": "K",
+      "priority": 35,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "503",
+      "name": "Graham Gano",
+      "position": "K",
+      "priority": 36,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5230",
+      "name": "Michael Badgley",
+      "position": "K",
+      "priority": 37,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "5272",
+      "name": "Greg Joseph",
+      "position": "K",
+      "priority": 38,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6083",
+      "name": "Matt Gay",
+      "position": "K",
+      "priority": 39,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "6219",
+      "name": "Austin Seibert",
+      "position": "K",
+      "priority": 40,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "7922",
+      "name": "Riley Patterson",
+      "position": "K",
+      "priority": 41,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8258",
+      "name": "Cade York",
+      "position": "K",
+      "priority": 42,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8670",
+      "name": "Parker Romo",
+      "position": "K",
+      "priority": 43,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    },
+    {
+      "player_id": "8932",
+      "name": "Lucas Havrisik",
+      "position": "K",
+      "priority": 44,
+      "exclude": false,
+      "rationale": {
+        "basis": "Unevaluated marginal-utility fallback; refresh after next selection"
+      }
+    }
+  ],
+  "mock_uses_league_board": false,
+  "based_on_pick": 183,
+  "state_fingerprint": "b15ccfcc43fa210ca35ebfef0cde3c77bcee775262f4c6670c286f44adfda3f0",
+  "policy_sha256": "e4db2e5b29b199c7e755aa9bd931ce659d3a0a6039fd9e47908bb87a66cec307"
+}

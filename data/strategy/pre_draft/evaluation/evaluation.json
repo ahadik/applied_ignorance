@@ -1,0 +1,387 @@
+{
+  "complete": true,
+  "generated_at": "2026-09-08T22:06:45.871960+00:00",
+  "board_generated_at": "2026-09-08T22:04:14.452350+00:00",
+  "board_sha256": "c62af3b5412ec1049587ebe19afc14fc28ea83d148693012f81429853dc2f10e",
+  "policy": {
+    "version": 1,
+    "seed": 20260908,
+    "scenario_modes": [
+      "ecr",
+      "adp",
+      "needs",
+      "rb_run"
+    ],
+    "samples_per_mode": 2,
+    "shortlist_each": 5,
+    "bench_weight": 0.18,
+    "bench_decay": 0.6,
+    "robust_weight": 0.25,
+    "opponent_temperature": 5.0,
+    "specialist_last_rounds": 2,
+    "backup_qb_te_round": 10,
+    "caps": {
+      "QB": 2,
+      "RB": 8,
+      "WR": 8,
+      "TE": 2,
+      "K": 1,
+      "DEF": 1
+    },
+    "overrides": {},
+    "notes": "Explicit uncalibrated planning assumptions. No automatic season discount from weekly injury probabilities. Overrides require reasons. K/DEF use ECR and roster coverage, not cross-position partial point comparisons."
+  },
+  "summary": {
+    "pairs": 2,
+    "mean_difference": 136.04480000000012,
+    "median_difference": 136.04480000000012,
+    "minimum_difference": 53.78780000000006,
+    "maximum_difference": 218.30180000000018,
+    "positive_pairs": 2,
+    "max_recommendation_seconds": 2.017662875005044,
+    "stress_mean_difference": 139.05271789977618
+  },
+  "results": [
+    {
+      "seat": 13,
+      "opponent_mode": "ecr",
+      "seed": 31001,
+      "engine": {
+        "roster": [
+          "9226",
+          "9224",
+          "8155",
+          "2133",
+          "12490",
+          "10859",
+          "7594",
+          "3163",
+          "8134",
+          "5012",
+          "4035",
+          "6783",
+          "NE",
+          "12711"
+        ],
+        "names": [
+          "De'Von Achane",
+          "Chase Brown",
+          "Breece Hall",
+          "Davante Adams",
+          "Bhayshul Tuten",
+          "Sam LaPorta",
+          "Chuba Hubbard",
+          "Jared Goff",
+          "Khalil Shakir",
+          "Mark Andrews",
+          "Alvin Kamara",
+          "Jerry Jeudy",
+          "New England Patriots",
+          "Tyler Loop"
+        ],
+        "supported_offensive_starter_total": 1728.2484,
+        "planning_utility": 1816.3671144000002,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.5418617919785902
+          },
+          {
+            "pick": 16,
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "runtime_seconds": 1.5996053749986459
+          },
+          {
+            "pick": 41,
+            "player_id": "8155",
+            "name": "Breece Hall",
+            "runtime_seconds": 0.43474179197801277
+          },
+          {
+            "pick": 44,
+            "player_id": "2133",
+            "name": "Davante Adams",
+            "runtime_seconds": 1.8133425420091953
+          },
+          {
+            "pick": 69,
+            "player_id": "12490",
+            "name": "Bhayshul Tuten",
+            "runtime_seconds": 0.5534658330143429
+          },
+          {
+            "pick": 72,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 1.8171640829823446
+          },
+          {
+            "pick": 97,
+            "player_id": "7594",
+            "name": "Chuba Hubbard",
+            "runtime_seconds": 0.33969650001381524
+          },
+          {
+            "pick": 100,
+            "player_id": "3163",
+            "name": "Jared Goff",
+            "runtime_seconds": 1.5202207499823999
+          },
+          {
+            "pick": 125,
+            "player_id": "8134",
+            "name": "Khalil Shakir",
+            "runtime_seconds": 0.4755996669991873
+          },
+          {
+            "pick": 128,
+            "player_id": "5012",
+            "name": "Mark Andrews",
+            "runtime_seconds": 1.7630833339935634
+          },
+          {
+            "pick": 153,
+            "player_id": "4035",
+            "name": "Alvin Kamara",
+            "runtime_seconds": 0.34711129099014215
+          },
+          {
+            "pick": 156,
+            "player_id": "6783",
+            "name": "Jerry Jeudy",
+            "runtime_seconds": 0.9243188749824185
+          },
+          {
+            "pick": 181,
+            "player_id": "NE",
+            "name": "New England Patriots",
+            "runtime_seconds": 0.04199312499258667
+          },
+          {
+            "pick": 184,
+            "player_id": "12711",
+            "name": "Tyler Loop",
+            "runtime_seconds": 0.0018970000091940165
+          }
+        ]
+      },
+      "ecr": {
+        "roster": [
+          "5859",
+          "9224",
+          "8155",
+          "7588",
+          "12490",
+          "11628",
+          "11563",
+          "7594",
+          "11646",
+          "12545",
+          "9753",
+          "5001",
+          "JAX",
+          "5189"
+        ],
+        "names": [
+          "A.J. Brown",
+          "Chase Brown",
+          "Breece Hall",
+          "Javonte Williams",
+          "Bhayshul Tuten",
+          "Marvin Harrison",
+          "Bo Nix",
+          "Chuba Hubbard",
+          "Jalen Coker",
+          "Tyler Shough",
+          "Zach Charbonnet",
+          "Dalton Schultz",
+          "Jacksonville Jaguars",
+          "Eddy Pineiro"
+        ],
+        "supported_offensive_starter_total": 1674.4605999999999,
+        "planning_utility": 1767.497584,
+        "decisions": []
+      },
+      "starter_total_difference": 53.78780000000006,
+      "stress_mean_difference": 36.579990584422006,
+      "stress_positive_fraction": 0.575
+    },
+    {
+      "seat": 13,
+      "opponent_mode": "qb_run",
+      "seed": 31001,
+      "engine": {
+        "roster": [
+          "9226",
+          "9224",
+          "8155",
+          "2133",
+          "8228",
+          "10859",
+          "8142",
+          "6806",
+          "8134",
+          "4943",
+          "5850",
+          "3214",
+          "5189",
+          "GB"
+        ],
+        "names": [
+          "De'Von Achane",
+          "Chase Brown",
+          "Breece Hall",
+          "Davante Adams",
+          "Jaylen Warren",
+          "Sam LaPorta",
+          "Alec Pierce",
+          "J.K. Dobbins",
+          "Khalil Shakir",
+          "Sam Darnold",
+          "Josh Jacobs",
+          "Hunter Henry",
+          "Eddy Pineiro",
+          "Green Bay Packers"
+        ],
+        "supported_offensive_starter_total": 1737.1422000000002,
+        "planning_utility": 1831.151292,
+        "decisions": [
+          {
+            "pick": 13,
+            "player_id": "9226",
+            "name": "De'Von Achane",
+            "runtime_seconds": 0.5351892500184476
+          },
+          {
+            "pick": 16,
+            "player_id": "9224",
+            "name": "Chase Brown",
+            "runtime_seconds": 1.757794457982527
+          },
+          {
+            "pick": 41,
+            "player_id": "8155",
+            "name": "Breece Hall",
+            "runtime_seconds": 0.42812679198686965
+          },
+          {
+            "pick": 44,
+            "player_id": "2133",
+            "name": "Davante Adams",
+            "runtime_seconds": 1.9800993749813642
+          },
+          {
+            "pick": 69,
+            "player_id": "8228",
+            "name": "Jaylen Warren",
+            "runtime_seconds": 0.5130721669993363
+          },
+          {
+            "pick": 72,
+            "player_id": "10859",
+            "name": "Sam LaPorta",
+            "runtime_seconds": 1.8400735830073245
+          },
+          {
+            "pick": 97,
+            "player_id": "8142",
+            "name": "Alec Pierce",
+            "runtime_seconds": 0.45859479100909084
+          },
+          {
+            "pick": 100,
+            "player_id": "6806",
+            "name": "J.K. Dobbins",
+            "runtime_seconds": 1.5884974999935366
+          },
+          {
+            "pick": 125,
+            "player_id": "8134",
+            "name": "Khalil Shakir",
+            "runtime_seconds": 0.5125153749831952
+          },
+          {
+            "pick": 128,
+            "player_id": "4943",
+            "name": "Sam Darnold",
+            "runtime_seconds": 2.017662875005044
+          },
+          {
+            "pick": 153,
+            "player_id": "5850",
+            "name": "Josh Jacobs",
+            "runtime_seconds": 0.5297670829750132
+          },
+          {
+            "pick": 156,
+            "player_id": "3214",
+            "name": "Hunter Henry",
+            "runtime_seconds": 1.248462333023781
+          },
+          {
+            "pick": 181,
+            "player_id": "5189",
+            "name": "Eddy Pineiro",
+            "runtime_seconds": 0.06407745799515396
+          },
+          {
+            "pick": 184,
+            "player_id": "GB",
+            "name": "Green Bay Packers",
+            "runtime_seconds": 0.0018401249835733324
+          }
+        ]
+      },
+      "ecr": {
+        "roster": [
+          "5859",
+          "7569",
+          "12526",
+          "8150",
+          "11620",
+          "13279",
+          "9500",
+          "8126",
+          "13417",
+          "12534",
+          "5001",
+          "3257",
+          "BAL",
+          "11539"
+        ],
+        "names": [
+          "A.J. Brown",
+          "Nico Collins",
+          "Tetairoa McMillan",
+          "Kyren Williams",
+          "Rome Odunze",
+          "Carnell Tate",
+          "Josh Downs",
+          "Wan'Dale Robinson",
+          "De'Zhaun Stribling",
+          "Kyle Monangai",
+          "Dalton Schultz",
+          "Jacoby Brissett",
+          "Baltimore Ravens",
+          "Jake Bates"
+        ],
+        "supported_offensive_starter_total": 1518.8404,
+        "planning_utility": 1664.8685572159998,
+        "decisions": []
+      },
+      "starter_total_difference": 218.30180000000018,
+      "stress_mean_difference": 241.52544521513036,
+      "stress_positive_fraction": 0.975
+    }
+  ],
+  "limitations": [
+    "Synthetic drafts, not actual season outcomes or proof of a winning edge.",
+    "Primary evaluation uses the same partial projection inputs as the planner, creating a favorable model-based yardstick.",
+    "Both policies share eligibility constraints; baseline is highest legal ECR, not an intentionally broken drafter.",
+    "Stress draws use arbitrary 20% lognormal dispersion, plus a 20% injury-flag discount in half the draws. No calibration or win probabilities.",
+    "Offensive starters only are scored; K/DEF scoring gaps, weekly matchups, trades, waivers and real opponent agents are not evaluated."
+  ]
+}
