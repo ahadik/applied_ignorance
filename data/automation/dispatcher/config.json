@@ -1,0 +1,16 @@
+{
+  "contract": {
+    "schema_version": 1,
+    "project": "/Users/alex/Projects/Fantasy Football",
+    "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+    "expires_at": "2026-09-11T20:00:00Z",
+    "interval_seconds": 60,
+    "lateness_allowance_seconds": 120,
+    "max_checks_per_wake": 1,
+    "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a"
+  },
+  "revision": "2756185315844ae0717718c8098b76d841fcc638f0f50f6abbd9b05dceee36f0",
+  "prompt": "Continue the Fantasy Football M4 dispatcher in /Users/alex/Projects/Fantasy Football. First check whether data/automation/m4/live/setup.json exists without live/acceptance.json. If that acceptance test is active, read docs/M4_LIVE_ACCEPTANCE.md and run its cycle procedure instead of a separate tick. Otherwise run python3 automation_dispatch.py tick --revision 2756185315844ae0717718c8098b76d841fcc638f0f50f6abbd9b05dceee36f0. This command reads local schedules and executes at most one registered observe/propose workflow. Use the central provider permissions if a registered workflow requires network access. Do not rerun an uncertain workflow. Save actual scheduler-trigger evidence separately. If the result says retire, delete this automation through the supported control. Stay quiet while results are unchanged or non-actionable. Notify only on completion, failure or required user action.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m4-dispatcher/anchor/2756185315844ae0717718c8098b76d841fcc638f0f50f6abbd9b05dceee36f0.",
+  "name": "Fantasy Football bounded dispatcher",
+  "rrule": "FREQ=MINUTELY;INTERVAL=1"
+}

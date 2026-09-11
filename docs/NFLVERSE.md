@@ -3,19 +3,24 @@
 Large depth-chart JSON outputs are now stored under ignored `data/nflverse/local/`.
 Run `python3 setup_repo.py --season 2026` after cloning to collect depth and its
 companion datasets through the central client and write a matching manifest.
-This checks current publication metadata and respects existing cache/budgets;
-it does not recreate the exact historical draft snapshot if upstream changed.
+This checks current publication metadata and respects existing cache/budgets.
+It does not recreate the exact historical draft snapshot if upstream changed.
 
 September 9 extension: `get_nflverse('schedules', season)` now supports nfldata's
 multi-season `games.csv` through the same central ledger/cache. It checks GitHub
 Contents metadata every read, verifies Git blob identity and SHA-256, reuses
 unchanged bytes and selects the requested season. Publication time remains
 unknown. See [weekly guide](WEEKLY_LINEUP.md) for sources, schema, time zone and
-lock limitations. Use `nflverse_collect.py collect --dataset schedules --season 2026`;
-this feed uses a fixed repository file, not a release catalog.
+lock limitations. Use `nflverse_collect.py collect --dataset schedules --season 2026`.
+This feed uses a fixed repository file, not a release catalog.
+
+September 11 recovery: if raw schedule bytes differ from Contents metadata, the client retrieves the exact advertised Git blob once.
+It uses the shared budget and cooldown, verifies size and Git identity, and saves only verified bytes.
+An incorrect replacement still stops collection. Provenance records `exact_blob_recovery` and actual request counts.
+See GitHub's [blob endpoint](https://docs.github.com/en/rest/git/blobs#get-a-blob).
 
 Implemented September 8, 2026. This is a third, general provider alongside Sleeper
-and FantasyPros. Python reads the published files used by nflreadr; R and the
+and FantasyPros. Python reads the published files used by nflreadr.  R and the
 nflreadr package are not runtime dependencies. No API key is required for the
 public GitHub release assets used here.
 
@@ -32,8 +37,8 @@ limitations, licensing and future integration decisions.
   request-budget status CLI.
 - `draft_history.py`: draft-specific selection and collection of current depth
   charts, player identities and two completed seasons of historical evidence.
-- `draft_history_analysis.py`: offline historical calculations and role analysis;
-  no HTTP calls. Saved commands must use the central client for any new downloads.
+- `draft_history_analysis.py`: offline historical calculations and role analysis.
+  No HTTP calls. Saved commands must use the central client for any new downloads.
 
 All generated files live under ignored `data/nflverse/`. The default shared cache
 is `data/nflverse/cache/`. No credentials from `.env`, Sleeper or FantasyPros are
@@ -44,16 +49,16 @@ redirects allow GitHub's asset delivery without accepting arbitrary endpoints.
 
 | Dataset | Published release tag / asset | Use tonight |
 |---|---|---|
-| `players` | `players` / `players.csv` | GSIS, PFR and ESPN crosswalk; names for display |
+| `players` | `players` / `players.csv` | GSIS, PFR and ESPN crosswalk. Names for display |
 | `depth_charts` | `depth_charts` / `depth_charts_YEAR.csv` | Current formation/slot/depth ordering |
 | `player_stats` | `stats_player` / `stats_player_week_YEAR.csv` | Regular-season production and workload |
 | `snap_counts` | `snap_counts` / `snap_counts_YEAR.csv` | Offensive participation and late usage |
 
 Files are discovered in release metadata, not assumed present. CSV is preferred,
 with CSV.gz supported if that is the published asset. Missing seasons or formats
-raise an explicit error; no earlier-season or sample-data substitution occurs.
+raise an explicit error. No earlier-season or sample-data substitution occurs.
 The general reader checks required schema and season columns where present. The
-2025+ depth format uses `dt` timestamps instead of a season/week field; its filename
+2025+ depth format uses `dt` timestamps instead of a season/week field. Its filename
 and exact release metadata establish the requested year and the analysis checks
 actual row timestamps. Historical depth schemas are not supported by the current
 role-analysis adapter.
@@ -90,8 +95,8 @@ python3 draft_history.py collect --draft-season 2026 --seasons 2024 2025 --reval
 The draft collector prints each dataset's status, record count, file location,
 cache status, logical network attempts and asset publication time. Its manifest
 records every successful and failed operation plus SHA-256 checksums of saved
-snapshots. A failed collection never treats an old file as a successful new read;
-the offline builder requires a complete matching manifest. Valid source assets
+snapshots. A failed collection never treats an old file as a successful new read.
+The offline builder requires a complete matching manifest. Valid source assets
 remain in the shared cache after failed replacements.
 
 `--revalidate` on either collector forces publication metadata checks, preserving
@@ -111,21 +116,21 @@ never refreshes any source. Recollect before rebuilding when freshness matters.
 - Completed-season weekly stats and snaps reuse metadata for up to six hours.
   They are not permanently immutable: later corrections are detected on the next
   metadata refresh. A prior-year NFL season is treated as completed only from
-  March onward; older years qualify immediately. Current-season files revalidate
+  March onward. Older years qualify immediately. Current-season files revalidate
   on every read.
 - Six hours is a maximum: metadata `Cache-Control: no-cache`, `no-store`,
   `max-age` and `Age` can shorten or disable local reuse. Catalog reads have a
   five-minute maximum. ETag 304 responses renew the check time, not the original
-  asset download time. Metadata marked `no-store` is removed from the HTTP cache;
-  a downloaded asset marked `no-store` likewise is not retained there. Explicit
+  asset download time. Metadata marked `no-store` is removed from the HTTP cache.
+  A downloaded asset marked `no-store` likewise is not retained there. Explicit
   collector outputs are analytical snapshots, separate from this HTTP cache.
 - Asset bytes are cached by revision and verified against a local SHA-256 hash on
   every use. Published SHA-256 digests are checked when available. Exact advertised
-  size, CSV decoding, required fields and season checks run before cache writes;
-  optional caller validators run on cache hits too.
+  size, CSV decoding, required fields and season checks run before cache writes.
+  Optional caller validators run on cache hits too.
 - Metadata revalidation failure raises rather than silently returning an outdated
   view of a current feed. Asset publication time, metadata-check time, original
-  download time and depth observation time are distinct; none substitutes for the
+  download time and depth observation time are distinct. None substitutes for the
   others. Publication metadata is not proof that every field reflects current NFL
   conditions.
 - Serial local requests are spaced at least 0.25 seconds apart. Connection failures
@@ -134,15 +139,15 @@ never refreshes any source. Recollect before rebuilding when freshness matters.
   not retried. GitHub rate-limit responses create a persistent shared cooldown,
   honoring the later applicable Retry-After/reset deadline and a conservative
   backoff floor. Retry-After accepts seconds or an HTTP date. Repeated limit
-  failures double the fallback delay from 60 seconds, capped at 3,840 seconds;
-  longer server deadlines still apply. A successful request resets that failure
+  failures double the fallback delay from 60 seconds, capped at 3,840 seconds.
+  Longer server deadlines still apply. A successful request resets that failure
   count. A 403 JSON message can identify a secondary limit even without headers.
   Error bodies are bounded and never logged or saved.
 - Rolling-hour local budgets are **45 routine / 50 hard REST attempts** and
   **120 routine / 150 hard total attempts**. New requests stop at the routine
-  boundary; only bounded retries can use the reserve. These are conservative
+  boundary. Only bounded retries can use the reserve. These are conservative
   project limits. Unauthenticated GitHub REST quota is IP-wide, and downloads are
-  not assumed to share that REST bucket. Attempts are recorded before I/O; ETag
+  not assumed to share that REST bucket. Attempts are recorded before I/O.  ETag
   304s count conservatively. Redirects belong to one logical download attempt,
   rather than separately counted HTTP requests.
 - REST responses save quota observations. A successful response reporting zero
@@ -154,10 +159,10 @@ never refreshes any source. Recollect before rebuilding when freshness matters.
 - SQLite migration preserves the earlier attempt ledger. Unclassified legacy
   attempts count against both local buckets until they age out. Do not delete the
   database, switch cache directories or add a different downloader to evade a
-  budget/cooldown. A rejected refresh fails explicitly; callers may separately
+  budget/cooldown. A rejected refresh fails explicitly. Callers may separately
   inspect saved evidence with its existing timestamps.
-- A process lock coalesces local access. This does not coordinate separate hosts;
-  future cloud deployment should retain a single collector or distributed lock.
+- A process lock coalesces local access. This does not coordinate separate hosts.
+  Future cloud deployment should retain a single collector or distributed lock.
   Socket timeouts and lock waits are not a strict total command deadline. Do large
   collection before drafting and keep pick-time analysis offline.
 - Download and decompression limits are 256 MiB per file. The annual depth-chart
@@ -169,23 +174,23 @@ never refreshes any source. Recollect before rebuilding when freshness matters.
 The offline output is `data/nflverse/draft/2026/draft_evidence.json`, with a readable
 `DRAFT_EVIDENCE.md` beside it. Computation is deterministic for the same files,
 analysis time and freshness threshold. `--as-of` accepts an explicit timezone-aware
-ISO timestamp; assets published later than that time are rejected.
+ISO timestamp. Assets published later than that time are rejected.
 
 - Include regular-season rows only. Check year, week and player/game uniqueness.
   Quarantine missing identity/game IDs and ambiguous crosswalks. Do not use names
-  for silent joins. Derived player records carry GSIS/PFR/ESPN IDs; joining them to
+  for silent joins. Derived player records carry GSIS/PFR/ESPN IDs. Joining them to
   Sleeper and FantasyPros remains a separate integration step.
 - Calculate passing, rushing, receiving, kicking and source PPR totals and averages
   over recorded stat rows. Missing values remain unknown. A missing player/game row
   is not automatically a zero, proof of inactivity or a game played.
 - Compare full-season usage with the last four observed regular-season league
   weeks. This is not the player's last four appearances. Preserve sample sizes.
-- Offensive snap-share means are unweighted per-game means; they are not weighted
+- Offensive snap-share means are unweighted per-game means. They are not weighted
   season shares. No route participation or red-zone opportunity is inferred from
   these files.
 - Select the latest snapshot for each team at or before analysis time, rather than
   each player's latest appearance, so removed players do not remain in a current
-  depth chart. Roles older than 36 hours are flagged unusable; record every team's
+  depth chart. Roles older than 36 hours are flagged unusable. Record every team's
   actual age. Override the threshold deliberately if justified.
 - Depth order is within a formation and slot. Listed-ahead IDs provide role context,
   not a guarantee that the next player inherits all work. Flag current teams absent
@@ -218,7 +223,7 @@ The subsequent documentation/policy audit passed **79 offline tests**. It added
 coverage for request budgets, retry reserve, successful quota exhaustion, secondary
 403 limits, metadata expiry, no-store handling, polling intervals, explicit
 historical revalidation and preserving the legacy ledger. The local-only usage
-check preserved all 12 earlier attempts; it sent no provider requests. Those
+check preserved all 12 earlier attempts. It sent no provider requests. Those
 legacy attempts are conservatively classified as REST until the hour expires.
 
 ## Source documentation
@@ -233,5 +238,5 @@ legacy attempts are conservatively classified as REST until the hour expires.
 Credit nflverse and underlying providers when sharing derived material. Public
 availability does not imply unrestricted redistribution. Generated data is kept
 local/private. The documented injury-feed outage and delayed participation feed
-are reasons those datasets are not used here; FantasyPros remains the current
+are reasons those datasets are not used here.  FantasyPros remains the current
 injury/news source in our draft plan.

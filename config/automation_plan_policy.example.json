@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "timezone": "America/New_York",
+  "daily_time": "09:00",
+  "horizon_hours": 48,
+  "recovery_overlap_hours": 24,
+  "lateness_minutes": 10,
+  "execution_buffer_minutes": 15,
+  "task_cap": 10,
+  "reserved_slots": 2,
+  "retry_minutes": 15,
+  "source_max_age_seconds": 300,
+  "timing_max_age_seconds": 86400,
+  "offsets_minutes": {"game": [90, 30], "waiver": [1440, 60], "review": [30]},
+  "allowed_operations": ["inspect_sleeper", "validate_lineup"]
+}

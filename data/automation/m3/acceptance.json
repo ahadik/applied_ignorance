@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-11",
+  "milestone": "M3",
+  "status": "accepted_local_manual_mode",
+  "tests_passed": 274,
+  "m3_tests_passed": 21,
+  "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+  "probe_scheduler_id": "fantasy-football-m3-disposable-probe-v1",
+  "create_operation": "1132bc3bc40c45f59837a3d7d442d5b2",
+  "update_operation": "6b130d804d344e33b86e06d33f6716f2",
+  "delete_operation": "d4db9312ec594d1cb4a5f70a7157ef37",
+  "final_inventory_id": "2f49ab9c5b854bd4bb1173ebd9da6111",
+  "final_local_inventory_entries": 0,
+  "live_read_back_verified": ["create", "update", "delete"],
+  "idempotent_repeat_operations": 0,
+  "probe_executed": false,
+  "provider_calls": 0,
+  "sleeper_changes": false,
+  "production_automation_enabled": false,
+  "automatic_exact_one_time_reconciliation_available": false,
+  "evidence": ["data/automation/m3/live-cycle.json", "data/automation/m3/create-tool-result.json", "data/automation/m3/update-tool-result.json", "data/automation/m3/delete-tool-result.json"]
+}

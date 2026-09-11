@@ -1,13 +1,13 @@
 # Static assigned-order preparation
 
-The active policy now uses distinct A/B planning; see [AB_STRATEGY.md](AB_STRATEGY.md).
+The active policy now uses distinct A/B planning. See [AB_STRATEGY.md](AB_STRATEGY.md).
 `draft_preplan.py build` uses that policy automatically when regenerating the opening branches.
 
 Latest verified observation: September 8, 2026, 22:02:44 UTC. League
-1400628784381612032; draft 1400628785413394432; ahadik is **seat 13 of 14**.
+1400628784381612032. Draft 1400628785413394432. Ahadik is **seat 13 of 14**.
 The current rules are **14 rounds and one FLEX**, with five bench slots, a
 120-second timer and PPR scoring. These supersede the earlier 15-round/two-FLEX
-mock configuration. Sleeper lists 9:05 p.m. America/New_York; prepare by the user's
+mock configuration. Sleeper lists 9:05 p.m. America/New_York. Prepare by the user's
 9 p.m. target. These are saved observations, not immutable league settings.
 
 Our picks: **13, 16, 41, 44, 69, 72, 97, 100, 125, 128, 153, 156, 181, 184**.
@@ -20,10 +20,10 @@ Open `data/strategy/pre_draft/PRE_DRAFT_PLAN.md` for the full member order, pick
 schedule and eight illustrative opening branches. `plan.json` records context and
 board content hashes, the policy, original observation times, expired input names
 and each hypothetical prefix. `mock_profile.json` saves seat/format/roster/scoring
-settings for the next mock; it does not apply settings to Sleeper.
+settings for the next mock. It does not apply settings to Sleeper.
 
 The member-to-seat order contains 13 owners. The complete slot-to-roster mapping
-establishes all 14 seats; seat 11 maps to unclaimed roster 14. This is represented
+establishes all 14 seats. Seat 11 maps to unclaimed roster 14. This is represented
 explicitly, not filled with an invented owner or removed from the draft. The code
 cross-checks known member seats against roster owners and rejects conflicts,
 duplicate/missing slots, unknown members and unsupported traded/reversed drafts.
@@ -58,7 +58,7 @@ python3 draft_strategy_evaluate.py evaluate --seats 13 --seeds 31001 --modes ecr
 `context.json` only after the order passes validation. `accept` is not a bypass:
 it repeats those same checks without a new provider read. Provider acquisition
 failure leaves prior accepted context intact. The shared client owns network
-attempts, caching, rate limits and cooldowns; seven logical reads does not imply
+attempts, caching, rate limits and cooldowns. Seven logical reads does not imply
 seven network attempts when profiles are cached or retries occur.
 
 `adopt-context` validates league/draft/season and observation chronology, writes an
@@ -68,7 +68,7 @@ this shortcut. Other scoring and roster changes are applied by the normal board
 builder. It also updates `data/snapshot.json` and `DRAFT_CONTEXT.md`.
 
 No FantasyPros or nflverse API calls were needed for this order update. Player
-data retain their original timestamps; news/injuries were expired at this static
+data retain their original timestamps. News/injuries were expired at this static
 review. All artifacts are for review. Refresh inputs before live/mock operational
 exports, verify assigned order and rules again, and maintain the actual native
 queue through the supervised browser workflow. No browser mock was started.

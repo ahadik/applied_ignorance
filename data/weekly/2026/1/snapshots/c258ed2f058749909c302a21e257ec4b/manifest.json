@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "season": 2026,
+  "week": 1,
+  "started_at": "2026-09-11T18:00:55.952725+00:00",
+  "purpose": "validation",
+  "datasets": [
+    {
+      "name": "context",
+      "file": "context.json",
+      "sha256": "ffe3ccacf4754aa52870cb60bfd4d25bae91c392a685907df1ab246652e2e90a"
+    },
+    {
+      "name": "sleeper_players",
+      "file": "sleeper_players.json",
+      "sha256": "34104a6c98820cbf1e5ffad89f074f4606c8332b6b1e17fd93c66a2a5dc82c35"
+    },
+    {
+      "name": "schedule",
+      "file": "schedule.json",
+      "sha256": "f68c0d973481030cb7b1eb5c87bc4f8a36e4bd593cc6c647f672458d4d54acf6"
+    },
+    {
+      "name": "fp_external",
+      "file": "fp_external.json",
+      "sha256": "62b2b94c3834fe604cff2e40129f5faa4ab2d48d1642ac3215d126de700ef5f8"
+    },
+    {
+      "name": "injuries",
+      "file": "injuries.json",
+      "sha256": "58ba80417852a5031ff91a32ea46392f061d93dcca45fd3469e0bba6263048cc"
+    },
+    {
+      "name": "news",
+      "file": "news.json",
+      "sha256": "9cb118cb30a1b8545247969a2d62882d62f456971b3ab473b7bf0a674a07bec2"
+    },
+    {
+      "name": "final_context",
+      "file": "final_context.json",
+      "sha256": "ac8a1a22f73b03904f164147753ae0b1e30f1fc64246bd6a3dd1f34efa5d1745"
+    }
+  ],
+  "completed_at": "2026-09-11T18:00:59.093307+00:00"
+}

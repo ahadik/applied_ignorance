@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "kind": "observation",
+  "observation_id": "cd3923669df54767b647dbb0ae220f38",
+  "run_id": "72cba698b93243808d83e6434e044606",
+  "capability": "app_restart",
+  "reported_status": "verified",
+  "provenance": "operator_supplied_evidence; requires review",
+  "evidence": {
+    "observed_at": "2026-09-11T04:21:52Z",
+    "surface": "User message in this conversation",
+    "execution_mode": "scheduled",
+    "result": "The user confirmed quitting and reopening the app, no required approval, and notification receipt in response to the occurrence 4 questions. This confirms the requested quit/reopen sequence after scheduling and before the run. Together with the successful API, browser and evidence-writing results, this verifies the controlled restart test for this occurrence.",
+    "reference": "User response: Quit and reopened. Didn't need to approve. Notification. Run 72cba698b93243808d83e6434e044606.",
+    "confirmation_received_mode": "interactive",
+    "restart_sequence_confirmed": true,
+    "new_approval_required": false,
+    "notification_received": true,
+    "scope": "Occurrence 4 on this Mac and account only"
+  },
+  "evidence_sha256": "e136ad113420302d82705b56bd3bd5cb773f706e4091a4f322f462188cddd673"
+}

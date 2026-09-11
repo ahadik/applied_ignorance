@@ -1,0 +1,36 @@
+{
+  "observed_at": "2026-09-11T04:33:47.756628+00:00",
+  "surface": "documented local automation.toml files",
+  "execution_mode": "interactive",
+  "scope": "All direct local automation directories; excludes cloud tasks and run history",
+  "reference": "/Users/alex/.codex/automations",
+  "complete": true,
+  "entries": [
+    {
+      "id": "fantasy-football-m0-disposable-probe",
+      "kind": "heartbeat",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=DAILY;COUNT=1;BYHOUR=0;BYMINUTE=33;BYSECOND=0",
+      "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+      "project_id": null,
+      "cwds": [],
+      "file_sha256": "0b6b44deb14a5d6f551233fe8bc82e142cae1d83a3ea940a2216ac73a90eb545",
+      "prompt_sha256": "add04d5ba110186c73684a4df0dd44c71940adc7edcf56e8a7f5c2f2465a0017"
+    },
+    {
+      "id": "fantasy-football-m0-standalone-probe",
+      "kind": "cron",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=DAILY;COUNT=1;BYHOUR=0;BYMINUTE=28;BYSECOND=0",
+      "target_thread_id": null,
+      "project_id": "f2956e4c-2b7a-4221-acff-9a6e34e07b63",
+      "cwds": [
+        "/Users/alex/Projects/Fantasy Football"
+      ],
+      "file_sha256": "f9a3315f9b28f1d8964159b2d8670dc61ff3fb952ca1193880607f18b2977bf4",
+      "prompt_sha256": "928521238293d885125bbb4fbe67f8abfdf4e5cc24291f7956657c106e4b4a86"
+    }
+  ],
+  "errors": [],
+  "result": "Complete local file enumeration"
+}

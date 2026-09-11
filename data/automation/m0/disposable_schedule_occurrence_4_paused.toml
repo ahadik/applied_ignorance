@@ -1,0 +1,10 @@
+version = 1
+id = "fantasy-football-m0-disposable-probe"
+kind = "heartbeat"
+name = "Fantasy Football M0 disposable probe"
+prompt = "Run M0 disposable occurrence 4, the controlled app-restart test, in /Users/alex/Projects/Fantasy Football. Read docs/M0_PROBE.md first. The user was instructed to fully quit and reopen this desktop app after this occurrence was scheduled, before 2026-09-11 00:18 America/New_York, then keep the app running and Mac awake. Do not assume the restart occurred. Run python3 automation_probe.py run --sleeper-read exactly once using the supported require_escalated mode and existing scoped approval, as in successful occurrences 2 and 3. Do not alter persistent permissions, bypass denial, install software or change network paths. Record any approval requirement. Use the scheduler heartbeat as scheduled-start evidence. Inspect the configured Sleeper team through the in-app browser only. Save scheduled_start and browser_inspection observations linked to the receipt. Do not change Sleeper state. Record API attempts, cache hits, visible account/team and failures. Pause only fantasy-football-m0-disposable-probe afterward and verify its saved status. Save evidence and update docs/M0_PROBE.md and docs/PROGRESS.md, then run python3 check_docs.py. Ask the user to confirm that they fully quit and reopened the app after scheduling and before this run, whether any approval was needed, and whether a notification arrived. Keep controlled-restart acceptance pending that confirmation. Occurrence 3 already verified closed-conversation execution and notification delivery without new approval. Do not create another schedule. Report the result and cleanup. Do not declare M0 fully accepted without reviewing its remaining acceptance requirements."
+status = "PAUSED"
+rrule = "RRULE:FREQ=DAILY;COUNT=1;BYHOUR=0;BYMINUTE=18;BYSECOND=0"
+target_thread_id = "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+created_at = 1789098155655
+updated_at = 1789100380512

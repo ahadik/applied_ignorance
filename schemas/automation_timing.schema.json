@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verified waiver and review timing observations",
+  "description": "Explicit timing evidence tied to the observed league settings. Empty events require verified absence within the coverage interval.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "league_id", "season", "week", "settings_hash", "complete", "observed_at", "coverage_start", "coverage_end", "evidence_refs", "events"],
+  "properties": {
+    "schema_version": {"const": 1}, "league_id": {"type": "string", "minLength": 1},
+    "season": {"type": "integer", "minimum": 2000, "maximum": 2200},
+    "week": {"type": "integer", "minimum": 1, "maximum": 18},
+    "settings_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "complete": {"type": "boolean"},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "coverage_start": {"type": "string", "format": "date-time"},
+    "coverage_end": {"type": "string", "format": "date-time"},
+    "evidence_refs": {"type": "array", "minItems": 1, "maxItems": 5, "items": {"type": "string", "minLength": 1}},
+    "events": {"type": "array", "maxItems": 500, "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["event_id", "kind", "week", "deadline_at", "player_ids"],
+      "properties": {
+        "event_id": {"type": "string", "minLength": 1, "maxLength": 200},
+        "kind": {"enum": ["waiver", "review"]},
+        "week": {"type": "integer", "minimum": 1, "maximum": 18},
+        "deadline_at": {"type": "string", "format": "date-time"},
+        "player_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+      }
+    }}
+  }
+}

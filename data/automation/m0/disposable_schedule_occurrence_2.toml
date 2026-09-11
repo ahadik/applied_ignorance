@@ -1,0 +1,10 @@
+version = 1
+id = "fantasy-football-m0-disposable-probe"
+kind = "heartbeat"
+name = "Fantasy Football M0 disposable probe"
+prompt = "Run M0 disposable occurrence 2 in /Users/alex/Projects/Fantasy Football. Read docs/M0_PROBE.md first. The user completed macOS Screen Recording permission setup and restarted the app before this occurrence. The interactive diagnostic proved that python3 automation_probe.py run --sleeper-read failed with a connection error under restricted execution and succeeded with the supported require_escalated network permission. Run that exact saved command once using the same supported permission mode and existing scoped approval. Do not alter persistent permissions, install software, bypass denial, or use a different network path. If approval is required or access is unavailable, record that limitation and do not call the result unattended. Use the scheduler heartbeat as scheduled-start evidence; the probe's default interactive trigger is only a caller label. Inspect the configured Sleeper team through the in-app browser only. Save separate scheduled_start and browser_inspection observations with the returned receipt. Do not change Sleeper state. Record actual API attempt/cache evidence and any user intervention. Do not infer closed-chat status, notification delivery, or a clean restart test from elapsed time. After the test, pause only fantasy-football-m0-disposable-probe using the supported automation tool and verify its saved status. Save evidence and update docs/M0_PROBE.md and docs/PROGRESS.md using the project writing guidance, then run python3 check_docs.py. Do not create another schedule. Report completion, failure, or required user action."
+status = "ACTIVE"
+rrule = "RRULE:FREQ=DAILY;COUNT=1;BYHOUR=23;BYMINUTE=58;BYSECOND=0"
+target_thread_id = "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+created_at = 1789098155655
+updated_at = 1789098895924

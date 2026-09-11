@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Normalized deadline observations version 1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "league_id", "season", "week", "roster_id", "observed_at", "settings_hash", "owned_player_ids", "source_refs", "source_checksums", "sources", "timing_coverage", "complete", "issues", "events"],
+  "properties": {
+    "schema_version": {"const": 1}, "league_id": {"type": "string"},
+    "season": {"type": "integer"}, "week": {"type": "integer", "minimum": 1, "maximum": 18},
+    "roster_id": {"type": ["integer", "null"]}, "observed_at": {"type": "string", "format": "date-time"},
+    "settings_hash": {"type": ["string", "null"]},
+    "owned_player_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "source_refs": {"type": "array", "items": {"type": "string"}},
+    "source_checksums": {"type": "array", "items": {"$ref": "automation_ledger.schema.json#/$defs/reference"}},
+    "sources": {"type": "object"}, "timing_coverage": {"type": ["object", "null"]},
+    "known_waiver_rules": {"type": "object"},
+    "rule_settings_checked_at": {"type": "string", "format": "date-time"},
+    "complete": {"type": "boolean"}, "issues": {"type": "array", "items": {"type": "string"}},
+    "acquisition": {"type": "object"},
+    "events": {"type": "array", "maxItems": 2000, "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["event_id", "kind", "week", "player_ids", "deadline_at", "locked", "source", "published_at"],
+      "properties": {
+        "event_id": {"type": "string", "minLength": 1, "maxLength": 200},
+        "kind": {"enum": ["game", "waiver", "review"]}, "week": {"type": "integer", "minimum": 1, "maximum": 18},
+        "player_ids": {"type": "array", "items": {"type": "string"}},
+        "deadline_at": {"type": ["string", "null"], "format": "date-time"}, "locked": {"type": "boolean"},
+        "source": {"enum": ["schedule", "timing"]}, "published_at": {"type": ["string", "null"]}
+      }
+    }}
+  }
+}

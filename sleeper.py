@@ -23,6 +23,16 @@ ROOT = Path(__file__).resolve().parent
 class SleeperError(OSError):
     """Safe provider error without response bodies or arbitrary error text."""
 
+    def __init__(self, message, *, category=None, http_status=None, network_attempts=None):
+        super().__init__(message)
+        self.category = category
+        self.http_status = http_status
+        self.network_attempts = network_attempts
+
+    def diagnostic(self):
+        return {'category': self.category, 'http_status': self.http_status,
+                'network_attempts': self.network_attempts, 'cache_hit': False}
+
 
 class SleeperConnectionError(SleeperError):
     pass
@@ -162,7 +172,8 @@ class Sleeper:
                 now = self.clock()
                 until = db.execute('SELECT until FROM control WHERE id=?', ('rate',)).fetchone()
                 if until and until[0] > now:
-                    raise SleeperRateLimited('Sleeper shared cooldown active; no request sent')
+                    raise SleeperRateLimited('Sleeper shared cooldown active; no request sent',
+                                             category='cooldown', network_attempts=attempt)
                 # Local pacing, not a claim about the provider's account quota.
                 last = db.execute('SELECT MAX(at) FROM attempts').fetchone()[0]
                 if last is not None:
@@ -170,9 +181,11 @@ class Sleeper:
                 db.execute('DELETE FROM attempts WHERE at<=?', (self.clock()-172800,))
                 db.execute('INSERT INTO attempts VALUES (?)', (self.clock(),))
                 db.commit()  # Failed requests and interrupted processes still count.
+                connection_failed = False
                 try:
                     status, raw_headers, data = self.send(path)
                 except SleeperConnectionError:
+                    connection_failed = True
                     status, raw_headers, data = 503, {}, None
                 headers = {k.lower(): str(v) for k, v in raw_headers.items()}
                 if status == 200:
@@ -193,9 +206,14 @@ class Sleeper:
                     db.execute('INSERT OR REPLACE INTO control VALUES (?,?)',
                                ('rate', self.clock()+retry_delay(headers, self.clock())))
                     db.commit()
-                    raise SleeperRateLimited(f'Sleeper HTTP {status}; shared cooldown saved; no immediate retry')
+                    raise SleeperRateLimited(f'Sleeper HTTP {status}; shared cooldown saved; no immediate retry',
+                                             category='http', http_status=status, network_attempts=attempt+1)
                 if status not in (500, 502, 503, 504) or attempt == retries:
-                    raise SleeperError(f'Sleeper HTTP {status}; no usable new data; expired cache not served')
+                    if connection_failed:
+                        raise SleeperConnectionError('Sleeper connection failed; no usable new data',
+                                                     category='connection', network_attempts=attempt+1)
+                    raise SleeperError(f'Sleeper HTTP {status}; no usable new data; expired cache not served',
+                                       category='http', http_status=status, network_attempts=attempt+1)
                 self.sleep(2 ** attempt)
 
     def result(self, data, fetched, hit, attempts, metadata):

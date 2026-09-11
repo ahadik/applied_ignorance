@@ -104,6 +104,14 @@ def weekly_fixture():
 
 
 class WeeklyPipelineTests(unittest.TestCase):
+    def test_analysis_pool_scores_verified_projection_position_for_two_way_player(self):
+        inputs, games = weekly_fixture()
+        inputs['sleeper_players']['data']['b']['position'] = 'DB'
+        inputs['sleeper_players']['data']['b']['fantasy_positions'] = ['QB', 'DB']
+        result = self.run_build(inputs, games, analysis_pool=True)
+        self.assertEqual(result['players']['b']['points'], 20)
+        self.assertFalse(result['operational_export'])
+
     def run_build(self, inputs, games, **kwargs):
         with patch('weekly_model.schedule_games', return_value=(games, {'BUF','NYJ'})):
             return build(inputs, timestamp('2026-09-09T12:00:01+00:00'), **kwargs)
@@ -167,6 +175,35 @@ class WeeklyPipelineTests(unittest.TestCase):
 
 
 class ScheduleProviderTests(unittest.TestCase):
+    def test_mutable_download_mismatch_uses_verified_blob_once(self):
+        body = b'game_id,season,game_type,week,gameday,gametime,away_team,home_team\nx,2026,REG,1,2026-09-13,13:00,BUF,NYJ\n'
+        sha = hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest()
+        for valid in (True, False):
+            calls = []
+            def send(url, headers):
+                calls.append(url)
+                if '/git/blobs/' in url:
+                    self.assertTrue(url.endswith(sha))
+                    self.assertEqual(headers['Accept'], 'application/vnd.github.raw+json')
+                    return 200, {}, body if valid else b'wrong'
+                if url.startswith('https://api.github.com/'):
+                    return 200, {}, json.dumps({'sha': sha, 'path': 'data/games.csv', 'size': len(body),
+                        'download_url': 'https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv'}).encode()
+                return 200, {}, b'outdated branch bytes'
+            with tempfile.TemporaryDirectory() as folder:
+                client = NFLVerse(folder, send=send, sleep=lambda _: None)
+                if valid:
+                    result = client.get('schedules', 2026)
+                    self.assertTrue(result['provenance']['exact_blob_recovery'])
+                    self.assertEqual(result['provenance']['network_attempts'], 3)
+                    self.assertTrue(client.get('schedules', 2026)['provenance']['cache_hit'])
+                else:
+                    with self.assertRaises(NFLVerseError):
+                        client.get('schedules', 2026)
+                    with client.locked() as db:
+                        self.assertEqual(db.execute('SELECT COUNT(*) FROM assets').fetchone()[0], 0)
+                self.assertEqual(sum('/git/blobs/' in url for url in calls), 1)
+
     def test_revision_reuse_and_integrity(self):
         body = b'game_id,season,game_type,week,gameday,gametime,away_team,home_team\nx,2026,REG,1,2026-09-13,13:00,BUF,NYJ\n'
         sha = hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest()

@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "mode": "disabled",
+  "timezone": "America/New_York",
+  "lease_seconds": 300,
+  "allowed_operations": ["collect_inputs", "inspect_sleeper", "propose_lineup", "validate_lineup", "integrated_review"]
+}

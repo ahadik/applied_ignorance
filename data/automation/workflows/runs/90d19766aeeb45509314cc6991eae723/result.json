@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run_id": "90d19766aeeb45509314cc6991eae723",
+  "check_id": "m4-live-cycle-2",
+  "revision": "f5217a8ee37e250f033333a0b5c245ed813ece140d1ce5a639b7c8f692e6f109",
+  "kind": "inspection",
+  "started_at": "2026-09-11T16:50:38.055722+00:00",
+  "trigger_claim": "scheduled",
+  "scheduled_execution_verified": false,
+  "status": "completed",
+  "sleeper_writes": false,
+  "acquisition": {},
+  "inspection": {
+    "schema_version": 1,
+    "project": "/Users/alex/Projects/Fantasy Football",
+    "observed_at": "2026-09-11T16:50:38.056967+00:00",
+    "policy": {
+      "allowed_operations": [
+        "collect_inputs",
+        "inspect_sleeper",
+        "propose_lineup",
+        "validate_lineup"
+      ],
+      "lease_seconds": 300,
+      "mode": "observe",
+      "schema_version": 1,
+      "timezone": "America/New_York"
+    },
+    "checks": 3,
+    "runs": {
+      "completed": 1,
+      "running": 1
+    },
+    "events": 8,
+    "expired_leases": 0,
+    "external_execution": false
+  },
+  "finished_at": "2026-09-11T16:50:38.057243+00:00"
+}

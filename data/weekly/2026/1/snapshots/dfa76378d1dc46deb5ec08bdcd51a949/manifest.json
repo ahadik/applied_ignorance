@@ -1,0 +1,15 @@
+{
+  "complete": false,
+  "season": 2026,
+  "week": 1,
+  "started_at": "2026-09-11T19:28:25.020752+00:00",
+  "purpose": "recommendation",
+  "datasets": [
+    {
+      "name": "context",
+      "file": "context.json",
+      "sha256": "819c524d6111970525c227e9a5587e91f30878a0969d9831f298c505e9c9bf21"
+    }
+  ],
+  "error": "Sleeper connection failed; no usable new data"
+}

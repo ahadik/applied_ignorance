@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "observation",
+  "observation_id": "82bd8b8949464fdc9fce5756cdeaa8f2",
+  "run_id": "72cba698b93243808d83e6434e044606",
+  "capability": "scheduled_start",
+  "reported_status": "verified",
+  "provenance": "operator_supplied_evidence; requires review",
+  "evidence": {
+    "observed_at": "2026-09-11T04:19:40Z",
+    "surface": "Scheduler heartbeat, central Sleeper probe, in-app browser and saved schedule",
+    "execution_mode": "scheduled",
+    "result": "Occurrence 4 resumed at 04:18:28.905 UTC. The central Sleeper probe succeeded with one API attempt and no cache hit. In-app browser tab 1 displayed ahadik, Free Agents 2026 14-Team PPR and Applied Ignorance, Week 1, with Purdy starting and Mahomes benched. No login screen appeared. No tool reported an approval interruption. User confirmation of the quit/reopen sequence, approval requirements and notification receipt remains pending. The saved schedule is PAUSED. No Sleeper state changed.",
+    "reference": "fantasy-football-m0-disposable-probe heartbeat 2026-09-11T04:18:28.905Z; run 72cba698b93243808d83e6434e044606; occurrence4Tab.getAXState, tab 1; disposable_schedule_occurrence_4_paused.toml",
+    "run_id": "72cba698b93243808d83e6434e044606",
+    "requested_due_at": "2026-09-11T00:18:00-04:00",
+    "scheduler_event_at": "2026-09-11T04:18:28.905Z",
+    "event_delay_from_requested_time_seconds": 28.905,
+    "network_attempts": 1,
+    "cache_hit": false,
+    "fetched_at": "2026-09-11T04:18:59.843431+00:00",
+    "source_updated_at": null,
+    "app_version": null,
+    "account_workspace": "Sleeper ahadik; /Users/alex/Projects/Fantasy Football; app account unknown",
+    "filesystem_context": "This resumed session lists only temporary directories as writable. The probe used supported scoped escalation. Local evidence writes also require supported approval review. No persistent permission change was made.",
+    "restart_sequence_confirmed": null,
+    "no_new_approval_confirmed": null,
+    "notification_delivery_confirmed": null,
+    "cleanup": "PAUSED verified. Local automation.toml inventory contains only the disposable test; app-wide inventory remains unverified."
+  },
+  "evidence_sha256": "954b88f50d3c310d6c59a9a25a33fc61afcad3854d29c38262e5f2cd33dee793"
+}

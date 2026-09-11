@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "observation",
+  "observation_id": "77a336f779394c3fa7af29f831a965e4",
+  "run_id": "29fd98a2bf6e49828fd50ddfad881570",
+  "capability": "task_cancel",
+  "reported_status": "verified",
+  "provenance": "operator_supplied_evidence; requires review",
+  "evidence": {
+    "observed_at": "2026-09-11T03:51:00Z",
+    "surface": "Scheduler heartbeat, mcp__cua_repl.js, local probe receipts, user reports, and automation.toml",
+    "execution_mode": "scheduled",
+    "result": "The scheduler delivered prompt revision B at 2026-09-11T03:49:17.639Z. The local probe ran in the correct project. The central Sleeper read returned SleeperError. In-app browser tab 2 displayed ahadik, Free Agents 2026 14-Team PPR, Applied Ignorance, Week 1, Purdy starting and Mahomes benched, without a login screen. The user reported granting macOS Screen Recording permission and restarting the app. Permission and restart timing relative to the browser observation are not established. The agent initially misinterpreted permission as API access and repeated the central read; it also returned SleeperError. No network permission grant is established. Unattended operation is not verified. The disposable schedule was paused and its saved record confirmed PAUSED. No Sleeper state changed.",
+    "reference": "Scheduler heartbeat fantasy-football-m0-disposable-probe at 2026-09-11T03:49:17.639Z; mcp__cua_repl.js scheduledTab.getAXState, tab 2; user clarification in this conversation; disposable_schedule_paused.toml",
+    "run_id": "29fd98a2bf6e49828fd50ddfad881570",
+    "repeat_run_id": "df6df9d9f7a841a892ab9307e25bd178",
+    "automation_id": "fantasy-football-m0-disposable-probe",
+    "requested_due_at": "2026-09-10T23:49:00-04:00",
+    "scheduler_event_at": "2026-09-11T03:49:17.639Z",
+    "event_delay_from_requested_time_seconds": 17.639,
+    "delay_scope": "Single scheduler event relative to requested time, not a general latency guarantee. Probe start includes agent preparation time.",
+    "api_attempts_and_cache_hits": null,
+    "app_version": null,
+    "account_workspace": "Sleeper ahadik; /Users/alex/Projects/Fantasy Football; app account unknown",
+    "unattended_operation_verified": false,
+    "closed_chat_verified": false,
+    "scheduled_start_after_restart_verified": false,
+    "notification_delivery_verified": false,
+    "cleanup": "PAUSED verified by saved automation record. Local automation.toml inventory contained only this disposable schedule. App-wide inventory remains unverified."
+  },
+  "evidence_sha256": "8774b08770b04f78246c8e9c8bd7598ff4d82e1b6e2990cbdac3533588663cc5"
+}

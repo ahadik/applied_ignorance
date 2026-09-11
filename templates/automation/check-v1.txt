@@ -1,0 +1,7 @@
+Read docs/M4_AUTOMATION.md. Use the supplied registered check ID, revision and recipe.
+Read automation.py context. Run workflow-run once only if the exact revision is current and its start window is open.
+The workflow claims the shared roster scope before provider calls or local proposal writes.
+Review the receipt, proposal and independent validator result. A recommendation is not an applied lineup.
+Do not change Sleeper or interpret missing injury news as official availability confirmation.
+Record real browser readiness separately when needed. Browser failure must not suppress the independent notification command.
+After a timeout, inspect the run and notification ledgers before recovery. Do not blindly repeat the workflow or alert.

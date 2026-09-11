@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "dispatcher_revision": "2756185315844ae0717718c8098b76d841fcc638f0f50f6abbd9b05dceee36f0",
+  "created_at": "2026-09-11T16:43:38.527723+00:00",
+  "horizon_end": "2026-09-11T18:43:38.517787+00:00",
+  "checks": [
+    {
+      "check_id": "m4-live-cycle-1",
+      "revision": "2ab0d48764769a9837fd48d9ffe7c95aef5a0b4069df052118d0494a6ff62a0c",
+      "recipe": "data/automation/m4/live/cycle-1.json"
+    },
+    {
+      "check_id": "m4-live-cycle-2",
+      "revision": "f5217a8ee37e250f033333a0b5c245ed813ece140d1ce5a639b7c8f692e6f109",
+      "recipe": "data/automation/m4/live/cycle-2.json"
+    },
+    {
+      "check_id": "m4-live-future-sentinel",
+      "revision": "e8ceadd348de2b23b3f487cb510caafa916eb59773bb6e2a958b30f5ca4b9c9a",
+      "recipe": "data/automation/m4/live/future-sentinel.json"
+    }
+  ],
+  "plan": null,
+  "publication_id": "e329ddd68742ebebb71fd4f58e2d2533e482892c95882f818e2b624a962aaf55"
+}

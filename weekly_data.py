@@ -21,7 +21,7 @@ def fingerprint(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, allow_nan=False).encode()).hexdigest()
 
 
-def context(config, season, week):
+def context(config, season, week, *, require_agreement=True):
     evidence = {}
     def read(name, path):
         result = get_sleeper(path, with_metadata=True, retries=0)
@@ -49,7 +49,7 @@ def context(config, season, week):
     if len(ours_match) != 1:
         raise ValueError('Our weekly matchup is missing or ambiguous')
     roster, matchup = ours[0], ours_match[0]
-    if roster.get('starters') != matchup.get('starters'):
+    if require_agreement and roster.get('starters') != matchup.get('starters'):
         raise ValueError('Roster and weekly starters disagree; rerun after platform settles')
     if not isinstance(roster.get('players'), list) or not isinstance(matchup.get('starters'), list):
         raise ValueError('Missing ownership or starters')

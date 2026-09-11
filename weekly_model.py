@@ -99,7 +99,7 @@ def optimize(players, slots, current, *, excluded=()):
             'filled_slots': sum(bool(x) for x in lineup), 'fixed_slots': fixed}
 
 
-def build(inputs, now, previous_locks=(), previous_kickoffs=None):
+def build(inputs, now, previous_locks=(), previous_kickoffs=None, *, analysis_pool=False):
     ctx = inputs['final_context']
     season, week = ctx['season'], ctx['week']
     for meta in ctx['evidence'].values():
@@ -169,7 +169,8 @@ def build(inputs, now, previous_locks=(), previous_kickoffs=None):
     for sid, kickoff in (previous_kickoffs or {}).items():
         if timestamp(kickoff) <= now:
             lock_set.add(sid)
-    for sid in sorted(set(owned) | {x for x in current if x}):
+    pool = set(projected) if analysis_pool else set()
+    for sid in sorted(set(owned) | {x for x in current if x} | pool):
         p, projection = sl[sid], projected.get(sid)
         club = team(p.get('team') or (sid if p.get('position') == 'DEF' else None))
         game = games.get(club)
@@ -180,14 +181,16 @@ def build(inputs, now, previous_locks=(), previous_kickoffs=None):
             blockers.append('Unknown current NFL team for '+sid)
         if locked and game and timestamp(game['kickoff']) > now:
             warnings.append('Prior kickoff passed but schedule moved later; conservatively locked: '+sid)
-        if sid not in owned and not locked:
+        if sid in current and sid not in owned and not locked:
             blockers.append('Off-roster starter is not confirmed locked: '+sid)
         fpid = projection['fpid'] if projection else None
         injury = injuries.get(fpid, {})
         statuses = [str(x or '').lower() for x in (p.get('injury_status'), injury.get('status'))]
         unavailable = game is None or any(s in ('out','o','ir','injured reserve','suspended','pup','inactive') for s in statuses)
         review = any(s in ('questionable','q','doubtful','d') for s in statuses)
-        scored = scoring(projection['row']['stats'], position(p.get('position')), ctx['league']['scoring_settings']) if projection else None
+        # A two-way player's primary roster position can differ from the
+        # verified projection position (for example DB with WR eligibility).
+        scored = scoring(projection['row']['stats'], position(projection['row']['position_id']), ctx['league']['scoring_settings']) if projection else None
         if not locked and not unavailable and (scored is None or not scored['core_fields_complete']):
             blockers.append('Missing usable weekly projection for '+sid)
         points = scored['supported_points'] if scored and scored['core_fields_complete'] else None
@@ -214,6 +217,9 @@ def build(inputs, now, previous_locks=(), previous_kickoffs=None):
         'objective': 'Maximize supported weekly projected components, subject to filling legal slots and fixed locks',
         'applied': False, 'uncertainty': 'Not calibrated; forecasts may omit scoring categories and already include injury/matchup effects.'}
     result['acquisition'] = acquisition_summary(inputs)
+    if analysis_pool:
+        result.update(status='analysis_only', operational_export=False)
+        return result
     if blockers:
         result['status'] = 'blocked'
         return result

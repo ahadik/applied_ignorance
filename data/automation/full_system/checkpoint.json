@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "implementation_status": "ready_for_supervised_live_acceptance",
+  "offline_acceptance": "data/automation/full_system/acceptance-final.json",
+  "tests_passed": 346,
+  "tests_failed": 0,
+  "documentation_structural_findings": 0,
+  "live_read_only_review": "data/agent_cycles/024dd47b097640ac804de1933572cc7f/result.json",
+  "corrected_offline_replay": "data/agent_cycles/replay-475000e97c6b4317934f572a097fe1dc/result.json",
+  "live_review_acquisition": {"sleeper_attempts": 15, "fantasypros_attempts": 0, "nflverse_attempts": 1, "cache_hits": 13},
+  "replay_comparisons": 20,
+  "platform_changes_this_implementation_turn": false,
+  "lineup_autonomy_enabled": false,
+  "roster_autonomy_enabled": false,
+  "game_windows_completed": 0,
+  "game_windows_required": 2,
+  "sunday_runbook": "docs/FULL_SYSTEM_SUNDAY.md",
+  "automation_id": "m5-sunday-early-game-review",
+  "automation_inventory_id": "646ad01c04274814a1b130f83738dde2",
+  "currently_scheduled": "2026-09-13T12:00:00-04:00",
+  "later_review": "2026-09-13T15:25:00-04:00",
+  "later_review_dependency": "Noon run first updates and verifies the same heartbeat before collection or waiting for approval.",
+  "live_acceptance_remaining": [
+    "Two actual supervised relevant game windows",
+    "Explicit limited lineup delegation before promotion",
+    "Actual legitimate transaction lifecycle including processing results when applicable",
+    "Verified continuing dispatcher configuration after Sunday",
+    "Second-Mac acceptance after local milestones pass"
+  ],
+  "data_limitations": [
+    "Future player forecasts are not extrapolated from the current week",
+    "Specialist streaming requires complete supported scoring",
+    "The league has zero IR slots",
+    "Sunday cannot prove Wednesday waiver processing"
+  ]
+}

@@ -1,0 +1,10 @@
+version = 1
+id = "fantasy-football-m0-disposable-probe"
+kind = "heartbeat"
+name = "Fantasy Football M0 disposable probe"
+prompt = "Run the M0 capability probe in /Users/alex/Projects/Fantasy Football. Read docs/M0_PROBE.md and docs/M0_TASK_PROMPT.md first, then follow the M0 task prompt. Use the existing Python interpreter. Run python3 automation_probe.py run --sleeper-read through the central Sleeper client. Retain the receipt and record the in-app browser inspection through automation_probe.py observe. Do not change Sleeper state, use another browser, install software, expand permissions, or bypass failures. Do not create further tasks. Record scheduler evidence and distinguish it from caller claims. This is disposable test occurrence 1, prompt revision B. Report completion, failure, or required user action. After the probe, use the supported automation control to pause only fantasy-football-m0-disposable-probe, then read its saved record to verify cleanup. Do not create a replacement schedule. Save the evidence and update the M0 checkpoint. This occurrence tests scheduled continuation in the same conversation only; do not claim closed-chat or app-restart success without evidence."
+status = "PAUSED"
+rrule = "RRULE:FREQ=DAILY;COUNT=1;BYHOUR=23;BYMINUTE=49;BYSECOND=0"
+target_thread_id = "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+created_at = 1789098155655
+updated_at = 1789098652775

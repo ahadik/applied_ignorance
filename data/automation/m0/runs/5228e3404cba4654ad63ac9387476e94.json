@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "kind": "run",
+  "run_id": "5228e3404cba4654ad63ac9387476e94",
+  "started_at": "2026-09-11T04:28:58.634478+00:00",
+  "context": {
+    "project": "/Users/alex/Projects/Fantasy Football",
+    "cwd": "/Users/alex/Projects/Fantasy Football",
+    "cwd_matches": true,
+    "host": "MacBookPro.lan",
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.6",
+    "executable": "/opt/homebrew/opt/python@3.13/bin/python3.13",
+    "commit": "c88be0a2cd44550e0e690fe9b4e4620e77a31db7",
+    "python_source_sha256": "ba2c80c98e19cab831dfd831448696866fda3c1647421d15bfeb6fcfbf7c929a",
+    "app_version": null,
+    "account_workspace": null
+  },
+  "trigger_claim": "interactive",
+  "task_id_claim": null,
+  "expected_at_claim": null,
+  "start_delay_seconds": null,
+  "capabilities": {
+    "local_command": {
+      "status": "verified",
+      "basis": "script_execution",
+      "scope": "this process only; trigger is a caller claim"
+    },
+    "sleeper_read": {
+      "status": "verified",
+      "basis": "central_sleeper_client",
+      "league_id": "1400628784381612032",
+      "acquisition": {
+        "cache_hit": false,
+        "network_attempts": 1,
+        "fetched_at": "2026-09-11T04:28:58.888111+00:00",
+        "source_updated_at": null
+      },
+      "scope": "public league read only; not browser login or roster verification"
+    },
+    "scheduled_start": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "browser_inspection": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "task_inventory": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "task_create": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "task_update": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "task_cancel": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "one_off_timing": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "timezone": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "chat_closed": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "app_restart": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "notification_delivery": {
+      "status": "untested",
+      "basis": "none"
+    }
+  },
+  "external_writes": false
+}

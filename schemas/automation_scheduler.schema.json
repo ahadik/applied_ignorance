@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "M3 scheduler contracts",
+  "description": "Schemas describe saved contracts. Runtime checks additionally enforce scope, freshness, ownership and operation ordering.",
+  "$defs": {
+    "inventory": {
+      "type": "object",
+      "required": ["schema_version", "started_at", "observed_at", "scope", "complete", "entries", "errors", "source_hashes", "provenance", "account_wide"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "started_at": {"type": "string", "format": "date-time"},
+        "observed_at": {"type": "string", "format": "date-time"},
+        "scope": {"type": "string"}, "complete": {"type": "boolean"},
+        "entries": {"type": "array", "items": {"$ref": "#/$defs/task"}},
+        "errors": {"type": "array", "items": {"type": "string"}},
+        "source_hashes": {"type": "object"}, "provenance": {"type": "string"},
+        "account_wide": {"const": false}, "trusted_local_read": {"type": "boolean"}
+      }
+    },
+    "task": {
+      "type": "object", "required": ["id", "owner", "config", "fingerprint", "file_sha256"],
+      "properties": {
+        "id": {"type": "string"}, "owner": {"type": ["object", "null"]},
+        "fingerprint": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "file_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "config": {"type": "object", "required": ["kind", "status", "rrule", "name", "prompt_sha256", "target_thread_id", "project_id", "cwds", "notification_policy"],
+          "properties": {"kind": {"enum": ["heartbeat", "cron"]}, "status": {"enum": ["ACTIVE", "PAUSED"]}}}
+      }
+    },
+    "desired": {
+      "type": "object", "required": ["schema_version", "installation", "project", "created_at", "expires_at", "task_cap", "target_thread_id", "retire_keys", "checks"],
+      "properties": {
+        "schema_version": {"const": 1}, "installation": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+        "project": {"type": "string"}, "created_at": {"type": "string", "format": "date-time"},
+        "expires_at": {"type": "string", "format": "date-time"}, "task_cap": {"type": "integer", "minimum": 2, "maximum": 100},
+        "target_thread_id": {"type": "string"}, "retire_keys": {"type": "array", "items": {"type": "string"}},
+        "checks": {"type": "array", "items": {
+          "type": "object", "required": ["key", "role", "revision", "name", "prompt", "status", "target_thread_id", "rrule"],
+          "properties": {"role": {"enum": ["check", "anchor", "probe"]}, "status": {"enum": ["ACTIVE", "PAUSED"]}}
+        }}
+      }
+    },
+    "diff": {
+      "type": "object", "required": ["schema_version", "installation", "project", "created_at", "expires_at", "desired", "operations", "findings", "coverage", "automatic_reconciliation", "scope", "inventory_id"],
+      "properties": {
+        "schema_version": {"const": 1}, "desired": {"$ref": "#/$defs/desired"},
+        "automatic_reconciliation": {"const": false},
+        "operations": {"type": "array", "items": {"type": "object", "required": ["action", "task_id", "key", "expected", "desired"],
+          "properties": {"action": {"enum": ["create", "update", "disable", "delete"]}}}},
+        "findings": {"type": "array", "items": {"type": "string"}}, "coverage": {"type": "array"}
+      }
+    },
+    "verification": {
+      "type": "object", "required": ["operation_id", "inventory_id", "verified", "task_id", "scope", "provenance", "deadline_coverage_verified"],
+      "properties": {"verified": {"type": "boolean"}, "deadline_coverage_verified": {"const": false}}
+    }
+  }
+}

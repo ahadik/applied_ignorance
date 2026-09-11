@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "observation",
+  "observation_id": "961259910cde40e89ea132103f37d4b7",
+  "run_id": "5228e3404cba4654ad63ac9387476e94",
+  "capability": "scheduled_start",
+  "reported_status": "verified",
+  "provenance": "operator_supplied_evidence; requires review",
+  "evidence": {
+    "observed_at": "2026-09-11T04:28:42Z",
+    "surface": "Scheduler-injected automation message, saved automation.toml, and local execution tools",
+    "execution_mode": "scheduled",
+    "result": "The scheduler supplied the standalone automation prompt with Automation ID fantasy-football-m0-standalone-probe and Last run: never. The saved cron record targets the existing project checkout. This is separate scheduler evidence; the receipt interactive trigger_claim is the unchanged caller default, not the trigger source.",
+    "reference": "Current task automation message; /Users/alex/.codex/automations/fantasy-football-m0-standalone-probe/automation.toml; exec chunk acb65c",
+    "automation_id": "fantasy-football-m0-standalone-probe",
+    "thread_id": "01a08eb9-5f7e-7961-86b7-a97fbfa908f6",
+    "project_id": "f2956e4c-2b7a-4221-acff-9a6e34e07b63",
+    "requested_due_at": "2026-09-11T00:28:00-04:00",
+    "timezone": "America/New_York",
+    "exact_scheduler_dispatch_at": null,
+    "first_clock_observation_at": "2026-09-11T04:28:42Z",
+    "checkout_verification": {
+      "top_level": "/Users/alex/Projects/Fantasy Football",
+      "git_dir": ".git",
+      "git_common_dir": ".git"
+    },
+    "approval": {
+      "mode": "require_escalated",
+      "tool_reported_interruption": false,
+      "user_intervention_message_received": false,
+      "owner_confirmation": null
+    },
+    "app_version": null,
+    "app_account_workspace": null,
+    "natural_expiration": "unverified; schedule left unchanged"
+  },
+  "evidence_sha256": "2c4fbb9730b6674563501099468f0cee41e7a4b19dad4c9223c0cb1ed3e99008"
+}

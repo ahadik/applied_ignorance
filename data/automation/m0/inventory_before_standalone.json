@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-09-11T04:24:40.780959+00:00",
+  "surface": "documented local automation.toml files",
+  "execution_mode": "interactive",
+  "scope": "All direct local automation directories; excludes cloud tasks and run history",
+  "reference": "/Users/alex/.codex/automations",
+  "complete": true,
+  "entries": [
+    {
+      "id": "fantasy-football-m0-disposable-probe",
+      "kind": "heartbeat",
+      "status": "PAUSED",
+      "rrule": "RRULE:FREQ=DAILY;COUNT=1;BYHOUR=0;BYMINUTE=18;BYSECOND=0",
+      "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+      "project_id": null,
+      "file_sha256": "b2cb5d827c8c932a050954420ff076277f5b8320b32722290b4fb7b5ec0d33c0",
+      "prompt_sha256": "85b60acea796e170ab90a6ec45ac0f947ddad2f722ece7c33eb777e28843643e"
+    }
+  ],
+  "errors": [],
+  "result": "Complete local file enumeration"
+}

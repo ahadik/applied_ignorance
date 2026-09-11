@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-09-11T19:26:59.795015+00:00",
+  "status": "blocked",
+  "platform_changes": false,
+  "lineup_state": {
+    "executions": [
+      {
+        "id": "dc0f789e44c2411eaf2cbf41acf39bde",
+        "scope": "1400628784381612032:10:2026:1",
+        "proposal_hash": "8ef7d47ee84b8e8e40504352e4a04628dd1367165e4b4937bbfa2d90d036bd2c",
+        "state": "completed"
+      }
+    ],
+    "actions": [
+      {
+        "id": "a840fe77a209456abd8667a6240b8bfd",
+        "execution_id": "dc0f789e44c2411eaf2cbf41acf39bde",
+        "state": "confirmed"
+      }
+    ],
+    "standing_autonomy_enabled": false
+  },
+  "transaction_state": {
+    "plans": [],
+    "actions": [],
+    "autonomous_transactions_enabled": false
+  },
+  "acquisition": {
+    "sleeper": {
+      "network_attempts": 10,
+      "cache_hits": 1
+    },
+    "fantasypros": {
+      "network_attempts": 2,
+      "cache_hits": 7
+    },
+    "nflverse": {
+      "network_attempts": 2,
+      "cache_hits": 0
+    }
+  },
+  "snapshot": "/Users/alex/Projects/Fantasy Football/data/weekly/2026/1/snapshots/cdb663f7ebf84d2baeefd97a5eec71e7",
+  "proposal": "/Users/alex/Projects/Fantasy Football/data/weekly/2026/1/proposals/2b8e15c547064ce59f7800b07e343ad9.json",
+  "validation_status": "PASS",
+  "error_type": "KeyError",
+  "cause": "Collection or analysis failed; inspect saved provider evidence.",
+  "finished_at": "2026-09-11T19:27:06.722363+00:00"
+}

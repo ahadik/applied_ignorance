@@ -2,13 +2,13 @@
 
 The pipeline now exports `data/weekly/SEASON/WEEK/proposed_lineup.json` on a
 successful recommendation. The format is documented in
-`schemas/lineup.schema.json`; `lineup_validation.check_document` implements the
+`schemas/lineup.schema.json`.  `lineup_validation.check_document` implements the
 required shape checks without third-party dependencies. An agent or person can
 edit the assignments or create their own document using the same contract.
 
 Each assignment specifies the exact zero-based league slot index, slot label and
 Sleeper player ID. Repeated RB/WR slots are separate entries. Scope includes
-league ID, roster ID, season and week; creation time and optional origin retain
+league ID, roster ID, season and week. Creation time and optional origin retain
 provenance. Additional claimed health/ownership/lock flags are ignored. Null
 represents an empty slot and fails lineup validation.
 
@@ -23,11 +23,11 @@ text. Validation still ignores prose as an assertion of health or legality.
 
 Every new proposal is appended as `proposals/<lineup_id>.json`, with `recorded_at`
 and `previous_lineup_id`. The exclusive atomic writer refuses overwrites.
-`proposed_lineup.json` remains a convenience copy of the latest record; its prior
+`proposed_lineup.json` remains a convenience copy of the latest record. Its prior
 contents are preserved before replacement, including legacy or manually edited
 versions. Existing history is not retroactively rewritten or assigned invented
-reasoning. Legacy v1 documents remain readable/validatable; new writes require v2.
-The original `created_at` remains the analysis time; `recorded_at` records the new
+reasoning. Legacy v1 documents remain readable/validatable. New writes require v2.
+The original `created_at` remains the analysis time.  `recorded_at` records the new
 history entry. No entry implies the lineup was applied.
 
 ```sh
@@ -38,7 +38,7 @@ python3 lineup_history.py record --lineup data/weekly/2026/1/proposed_lineup.jso
 python3 lineup_history.py list --season 2026 --week 1
 ```
 
-To revise assignments, edit a working copy and pass that file to `record`; do not
+To revise assignments, edit a working copy and pass that file to `record`. Do not
 edit archived files. Editing even just the rationale creates a new proposal hash
 and requires a new validation. History is local/private under `data/`, so a private
 backup is still needed. Append-only behavior is enforced by these commands, not
@@ -61,7 +61,7 @@ python3 lineup_validate.py --lineup data/weekly/2026/1/proposed_lineup.json
 ```
 
 Validation uses `weekly_data.collect(validation_only=True)` for Sleeper league,
-week, roster, starters and player directory; nflverse schedule checks; and
+week, roster, starters and player directory. Nflverse schedule checks. And
 FantasyPros identities, injuries and news. It skips projections and never calls
 the optimizer or trusts its inferred player flags. The validator shares tested
 identity/slot/schedule utilities, so it is an independent decision check, not an
@@ -89,10 +89,10 @@ Checks cover:
   starters. Questionable/doubtful, unknown statuses, or an uncalibrated provider
   playing probability below 0.5 require review. No invented medical severity
   score or universal injury multiplier is used.
-- Injury/news identity ambiguity requires review; missing news is not proof of
+- Injury/news identity ambiguity requires review. Missing news is not proof of
   health. Conservative keyword screening flags injury/workload language for a
   person to read, with original source text/links/timestamps in the saved result.
-  It can flag old or negated stories and miss subtle reports; it never diagnoses
+  It can flag old or negated stories and miss subtle reports. It never diagnoses
   a player or treats narrative extraction as an official inactive announcement.
 - Inside 90 minutes of a selected unlocked player's kickoff, require official
   active/inactive and native lock confirmation. That authoritative inactive feed
@@ -100,7 +100,7 @@ Checks cover:
   players solely because the existing feeds have no injury label.
 
 A health flag on a locked starter is REVIEW, not a suggested illegal repair.
-This validator checks the supplied lineup; it does not change assignments to
+This validator checks the supplied lineup. It does not change assignments to
 hide mistakes, optimize projections, or certify a winning strategy.
 
 ## Durable evidence and future scheduling
@@ -121,19 +121,24 @@ There is no automatic override or review-acknowledgment bypass in this version.
 
 Expiry is capped at five minutes and shortened to the relevant input freshness
 deadline or next selected-player kickoff. Unknown provider publication times stay
-unknown; fresh retrieval does not guarantee current underlying information.
-Immediately before browser application, verify native locks and availability;
-after application, use `weekly_lineup.py verify` for read-back reconciliation.
+unknown. Fresh retrieval does not guarantee current underlying information.
+Immediately before browser application, verify native locks and availability.
+After application, use `weekly_lineup.py verify` for read-back reconciliation.
 That existing `verify` command checks actual assignments, whereas this validator
 checks whether the proposed assignments have a detected problem.
 
 ## Verified checkpoint
 
-September 9, 2026: 193 tests passed, including provider-failure invalidation and attempts to spoof health flags,
-duplicate slots/players, wrong ownership/position/week, stale evidence, byes,
-locked-starter and bench moves, injury concerns, missing identity joins and
-near-kickoff review. The live check at 04:52 UTC returned REVIEW for Flowers and
-Swift availability and Flowers news, with no structural errors. It made 11
-Sleeper API attempts, reused three FP cache entries with zero new FP attempts,
-and made one nflverse metadata request with cached schedule bytes. No lineup
+September 9, 2026: 193 tests passed. Tests include provider-failure invalidation and attempts to spoof health flags. They also cover:
+
+- Duplicate slots/players.
+- Wrong ownership/position/week.
+- Stale evidence.
+- Byes.
+- Moves of locked starters and bench players.
+- Injury concerns.
+- Missing identity joins.
+- Review near kickoff.
+ The live check at 04:52 UTC returned REVIEW for Flowers and
+Swift availability and Flowers news, with no structural errors. It made 11 Sleeper API attempts. It reused three FP cache entries with zero new FP attempts. It made one nflverse metadata request with cached schedule bytes. No lineup
 changes, cloud scheduling or notifications were performed.

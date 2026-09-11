@@ -1,0 +1,7 @@
+{
+  "scope": "harmless M4 local workflow acceptance",
+  "authorized_by": "Finish m4",
+  "provider_requests": false,
+  "sleeper_writes": false,
+  "prior_mode": "disabled"
+}

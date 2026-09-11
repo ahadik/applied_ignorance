@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "incident": "m4-phone-setup-2026-09-11",
+  "confirmation_date": "2026-09-11",
+  "basis": "explicit_user_message",
+  "user_response": "Yes, received on my phone",
+  "phone_delivery_confirmed": true
+}

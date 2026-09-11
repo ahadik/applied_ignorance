@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-11T04:52:42.086616+00:00",
+  "policy": {
+    "allowed_operations": [
+      "collect_inputs",
+      "inspect_sleeper",
+      "propose_lineup",
+      "validate_lineup"
+    ],
+    "lease_seconds": 300,
+    "mode": "disabled",
+    "schema_version": 1,
+    "timezone": "America/New_York"
+  },
+  "checks": [],
+  "current_checks": [],
+  "runs": [],
+  "refs": [],
+  "events": [
+    {
+      "sequence": 1,
+      "at": 1789102361.845152,
+      "kind": "initialized",
+      "run_id": null,
+      "payload": {
+        "from_version": 0,
+        "policy": {
+          "allowed_operations": [
+            "collect_inputs",
+            "inspect_sleeper",
+            "propose_lineup",
+            "validate_lineup"
+          ],
+          "lease_seconds": 300,
+          "mode": "disabled",
+          "schema_version": 1,
+          "timezone": "America/New_York"
+        },
+        "to_version": 1
+      }
+    }
+  ]
+}

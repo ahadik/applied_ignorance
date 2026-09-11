@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Immutable desired deadline plan version 1",
+  "description": "Desired checks do not establish observed scheduler coverage. Runtime validation also verifies hashes and time ordering.",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "league_id", "season", "scope", "as_of", "horizon", "next_daily_at", "policy_hash", "input_hash", "source_references", "source_timestamps", "issues", "obligations", "desired_checks", "preserved_obligations", "lock_history", "capacity", "coverage", "retry_obligation", "deletion_authorized", "external_execution", "plan_id"],
+  "properties": {
+    "schema_version": {"const": 1}, "league_id": {"type": "string"}, "season": {"type": "integer"}, "scope": {"type": "string"},
+    "as_of": {"type": "string", "format": "date-time"}, "horizon": {"$ref": "#/$defs/interval"},
+    "next_daily_at": {"type": "string", "format": "date-time"},
+    "policy_hash": {"$ref": "#/$defs/hash"}, "input_hash": {"$ref": "#/$defs/hash"}, "plan_id": {"$ref": "#/$defs/hash"},
+    "source_references": {"type": "array", "minItems": 1, "maxItems": 20, "items": {"$ref": "automation_ledger.schema.json#/$defs/reference"}},
+    "source_timestamps": {"type": "object"}, "issues": {"type": "array", "items": {"type": "string"}},
+    "known_waiver_rules": {"type": ["object", "null"]},
+    "rule_settings_checked_at": {"type": ["string", "null"], "format": "date-time"},
+    "obligations": {"type": "array", "items": {"$ref": "#/$defs/obligation"}},
+    "desired_checks": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/obligation"}, {
+      "required": ["template_version", "prompt", "display_time"],
+      "properties": {"template_version": {"const": 1}, "prompt": {"type": "string"}, "display_time": {"type": "string", "format": "date-time"}}
+    }]}},
+    "preserved_obligations": {"type": "array", "items": {"$ref": "#/$defs/obligation"}},
+    "lock_history": {"type": "object", "additionalProperties": {"type": "string", "format": "date-time"}},
+    "capacity": {"type": "object", "required": ["task_cap", "reserved_slots", "available", "required", "selected", "uncovered", "inventory_verified"],
+      "properties": {"inventory_verified": {"const": false}}},
+    "coverage": {"type": "object", "required": ["basis", "scheduler_verified", "intervals", "gaps", "unknown_intervals"],
+      "properties": {"basis": {"const": "desired_only"}, "scheduler_verified": {"const": false}}},
+    "retry_obligation": {"type": ["object", "null"]}, "deletion_authorized": {"const": false}, "external_execution": {"const": false}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "interval": {"type": "object", "required": ["start", "end"], "properties": {
+      "start": {"type": "string", "format": "date-time"}, "end": {"type": "string", "format": "date-time"}}},
+    "obligation": {"type": "object", "required": ["check_id", "event_id", "event_key", "kind", "offset_minutes", "deadline_at", "player_ids", "nominal_run_at", "disposition", "spec", "revision", "policy_hash", "input_hash"],
+      "properties": {
+        "spec": {"$ref": "automation_check.schema.json"}, "revision": {"$ref": "#/$defs/hash"},
+        "disposition": {"enum": ["planned", "due", "locked", "missed", "input_blocked", "capacity_blocked", "operation_blocked"]}
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+version = 1
+id = "fantasy-football-m0-disposable-probe"
+kind = "heartbeat"
+name = "Fantasy Football M0 disposable probe"
+prompt = "Run M0 disposable occurrence 3, the closed-conversation test, in /Users/alex/Projects/Fantasy Football. Read docs/M0_PROBE.md first. The user was instructed to open another conversation before the requested 2026-09-11 00:07 America/New_York start, keep this app running and keep the Mac awake. Do not assume the user followed these instructions. Run python3 automation_probe.py run --sleeper-read exactly once using the supported require_escalated mode and existing scoped approval, as in successful occurrence 2. Do not alter persistent permissions, bypass denial, install software or change network paths. Record any approval requirement. Use the scheduler heartbeat as scheduled-start evidence. Inspect the configured Sleeper team through the in-app browser only. Save scheduled_start and browser_inspection observations linked to the receipt. Do not change Sleeper state. Record API attempts, cache hits, visible account/team and failures. Pause only fantasy-football-m0-disposable-probe afterward and verify its saved status. Save evidence and update docs/M0_PROBE.md and docs/PROGRESS.md, then run python3 check_docs.py. Ask the user whether they kept this conversation closed until the scheduled run, whether any approval was needed, and whether a notification arrived. Keep closed-chat and notification results unverified until the user confirms them. Do not treat this as an app-restart test. Do not create another schedule. Report the result and cleanup."
+status = "ACTIVE"
+rrule = "RRULE:FREQ=DAILY;COUNT=1;BYHOUR=0;BYMINUTE=7;BYSECOND=0"
+target_thread_id = "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+created_at = 1789098155655
+updated_at = 1789099421922

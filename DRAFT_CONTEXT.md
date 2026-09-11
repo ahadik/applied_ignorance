@@ -1,12 +1,12 @@
 # Draft context
 
 Snapshot: 2026-09-09T03:41:54.186545+00:00
-This is saved data. Run sync to refresh; no background monitoring is active.
+This is saved data. Run sync to refresh. No background monitoring is active.
 
 League: Free Agents (2026)
-Status: complete; format: snake
+Status: complete. Format: snake
 Scheduled start: 2026-09-08T21:06:09.741000-04:00
-Teams: 14; rounds: 14; seconds/pick: 120
+Teams: 14. Rounds: 14. Seconds/pick: 120
 Draft slot: 13
 Roster: QB, RB, RB, WR, WR, TE, FLEX, K, DEF, BN, BN, BN, BN, BN
 Points per reception: 1.0

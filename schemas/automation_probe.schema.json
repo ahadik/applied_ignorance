@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "M0 probe receipt",
+  "type": "object",
+  "required": ["schema_version", "kind", "run_id", "started_at", "context", "trigger_claim", "task_id_claim", "expected_at_claim", "start_delay_seconds", "capabilities", "external_writes"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "kind": {"const": "run"},
+    "run_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "context": {
+      "type": "object",
+      "required": ["project", "cwd", "cwd_matches", "host", "os", "python", "executable", "commit", "python_source_sha256", "app_version", "account_workspace"],
+      "properties": {
+        "project": {"type": "string"}, "cwd": {"type": "string"},
+        "cwd_matches": {"type": "boolean"}, "host": {"type": "string"},
+        "os": {"type": "string"}, "python": {"type": "string"},
+        "executable": {"type": "string"}, "commit": {"type": ["string", "null"]},
+        "python_source_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "app_version": {"type": ["string", "null"]},
+        "account_workspace": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "trigger_claim": {"enum": ["interactive", "scheduled"]},
+    "task_id_claim": {"type": ["string", "null"]},
+    "expected_at_claim": {"type": ["string", "null"], "format": "date-time"},
+    "start_delay_seconds": {"type": ["number", "null"]},
+    "external_writes": {"const": false},
+    "capabilities": {
+      "type": "object",
+      "required": ["local_command", "sleeper_read", "scheduled_start", "browser_inspection", "task_inventory", "task_create", "task_update", "task_cancel", "one_off_timing", "timezone", "chat_closed", "app_restart", "notification_delivery"],
+      "propertyNames": {"enum": ["local_command", "sleeper_read", "scheduled_start", "browser_inspection", "task_inventory", "task_create", "task_update", "task_cancel", "one_off_timing", "timezone", "chat_closed", "app_restart", "notification_delivery"]},
+      "additionalProperties": {
+        "type": "object", "required": ["status", "basis"],
+        "properties": {
+          "status": {"enum": ["verified", "unsupported", "unavailable", "untested"]},
+          "basis": {"type": "string", "minLength": 1},
+          "scope": {"type": "string"}, "league_id": {"type": "string"},
+          "error_type": {"type": "string"}, "acquisition": {"type": ["object", "null"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

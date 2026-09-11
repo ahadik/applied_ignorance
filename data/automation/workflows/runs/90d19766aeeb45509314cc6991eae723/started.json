@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "run_id": "90d19766aeeb45509314cc6991eae723",
+  "check_id": "m4-live-cycle-2",
+  "revision": "f5217a8ee37e250f033333a0b5c245ed813ece140d1ce5a639b7c8f692e6f109",
+  "kind": "inspection",
+  "started_at": "2026-09-11T16:50:38.055722+00:00",
+  "trigger_claim": "scheduled",
+  "scheduled_execution_verified": false,
+  "status": "running",
+  "sleeper_writes": false
+}

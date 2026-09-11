@@ -4,9 +4,9 @@ Confirmed actual room: https://sleeper.com/draft/nfl/1400628785413394432 .
 At 7:06 p.m. Eastern September 8, the default command successfully read this room
 and calculated using the approved frozen board: pre_draft, seat 13, zero picks,
 next pick 13. The snapshot and live roster-format validation passed. A preview
-before the draft starts is expected; rerun when on the clock. This was a read-only
+before the draft starts is expected. Rerun when on the clock. This was a read-only
 preflight, not a guarantee of future provider availability. The user has finished
-rehearsals; do not initiate another mock.
+rehearsals. Do not initiate another mock.
 
 Stop the agent's browser actions before taking over manually. This command does
 not stop an agent, disable Sleeper autopick, or submit a selection.
@@ -20,7 +20,7 @@ python3 "/Users/alex/Projects/Fantasy Football/draft_now.py"
 It prints one recommended player and up to two alternatives. `DRAFT NOW` means
 the fresh API observation placed you on the clock. `PREVIEW ONLY` means you must
 wait and rerun when your turn arrives. Always check the room and availability
-before clicking; API observations and browser selections are not atomic.
+before clicking.  API observations and browser selections are not atomic.
 
 For just the name on standard output:
 
@@ -31,7 +31,7 @@ python3 "/Users/alex/Projects/Fantasy Football/draft_now.py" --name-only
 That mode prints no name and exits 2 when it is not your turn. Failures exit 1
 without substituting old advice. Progress/errors go to standard error.
 
-The default always reads tonight's real draft; it does not detect the browser tab.
+The default always reads tonight's real draft. It does not detect the browser tab.
 For a separately verified mock with matching roster settings, supply its URL's ID:
 
 ```sh

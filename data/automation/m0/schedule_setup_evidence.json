@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-09-11T03:43:30Z",
+  "surface": "mcp__codex_app__automation_update and saved automation.toml",
+  "execution_mode": "interactive",
+  "result": "Created one disposable heartbeat for this conversation. Read the record after creation. Updated the requested time from 23:48 to 23:49 and changed the prompt from revision A to revision B. Read the record again and verified both changes. Tool view calls rendered cards but returned no next-run time to the model. Computer Use denied access to com.openai.codex; no bypass attempted. Actual scheduler firing and cleanup remain pending.",
+  "reference": "automation fantasy-football-m0-disposable-probe; data/automation/m0/disposable_schedule_revision_b.toml; current conversation create, view, update and view tool calls",
+  "automation_id": "fantasy-football-m0-disposable-probe",
+  "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+  "requested_timezone": "America/New_York",
+  "requested_due_at": "2026-09-10T23:49:00-04:00",
+  "scheduler_computed_due_at": null,
+  "timezone_verified_by_scheduler": false,
+  "inventory_scope": "All automation.toml files under /Users/alex/.codex/automations were enumerated. The directory was absent before creation. After creation it contained only the disposable probe. App-wide inventory was not verified.",
+  "scope": "Same-conversation scheduled continuation only. Closed-chat and app-restart occurrences remain separate tests.",
+  "initial_create_failure": "Rejected target and anchored time arguments; no schedule created by that call.",
+  "saved_schedule": "disposable_schedule_revision_b.toml"
+}

@@ -1,0 +1,8 @@
+Read docs/M4_AUTOMATION.md. Use the registered daily recipe and exact check revision supplied with this task.
+Run automation.py context before workflow-run. Stop before external work if the check is missing, stale, disabled or expired.
+Run the workflow once. Read its receipt and coverage findings. A desired plan does not prove future scheduler coverage.
+In propose mode, review the saved football analysis and independent validation. Do not change Sleeper.
+Inspect browser readiness through the authorized in-app browser workflow when relevant. Record the real observation and evidence.
+If browser inspection fails, run browser-observation with the failure status so the independent Pushover path can notify the owner.
+Do not repeat a failed or uncertain workflow. Inspect its saved state and follow explicit recovery.
+Report actionable failures, missing coverage and required owner decisions. Keep routine unchanged results quiet.

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "observation",
+  "observation_id": "40a079ebee7a4d14adbbcb1b3d1fc40f",
+  "run_id": "d10b1de378084d7c912a1e989118ba9d",
+  "capability": "browser_inspection",
+  "reported_status": "unavailable",
+  "provenance": "operator_supplied_evidence; requires review",
+  "evidence": {
+    "observed_at": "2026-09-11T03:34:32Z",
+    "surface": "mcp__cua_repl",
+    "execution_mode": "interactive",
+    "result": "IDE test: browser discovery returned no browsers. getBrowser returned No browser is available. Native Chrome access was not approved. Owner selected the ChatGPT in-app browser for the next test.",
+    "reference": "M0 IDE conversation: cua.getState, cua.getBrowser and cua.getApp calls before the successful Sleeper probe",
+    "time_basis": "Recorded at the successful API probe checkpoint; exact UI observation times were not returned",
+    "app_version": null,
+    "account_workspace": null
+  },
+  "evidence_sha256": "609c30ccfac585a2c641f9cd6b9bfe8086ec3ce12c6266395525bda5e00a933a"
+}

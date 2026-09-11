@@ -1,0 +1,10 @@
+version = 1
+id = "fantasy-football-m0-disposable-probe"
+kind = "heartbeat"
+name = "Fantasy Football M0 disposable probe"
+prompt = "Continue M0 acceptance review in /Users/alex/Projects/Fantasy Football. This is the supervisor check for the standalone test scheduled at 2026-09-11 00:28 America/New_York. Read docs/M0_PROBE.md and data/automation/m0/standalone_result.json if present. Use supported task tools to locate the actual standalone run and inspect its status; do not infer failure merely from a missing file while it is running. Use wait_threads for bounded waits on an identified active task. Run python3 automation_probe.py inventory with a new output under data/automation/m0/ to inspect all local schedules. Before cleanup, preserve the standalone schedule record and record whether it naturally changed to completed/paused or remains active; active with no known next-run timestamp does not establish natural expiration. Do not repeat provider or browser work from this supervisor. If the standalone task needs approval, report the limitation without granting permissions on the user's behalf. After it finishes, remove only fantasy-football-m0-standalone-probe and fantasy-football-m0-disposable-probe with supported automation controls and verify removal through a fresh complete local inventory. If deletion is unsupported, pause both and record the limitation. Do not change unrelated tasks or create further schedules. Produce a concise capability matrix and M0 exit report, with source evidence and explicit scope. Review docs/MAC_AUTOMATION_MILESTONES.md and docs/MAC_AUTOMATION_DESIGN.md; choose only a supported fallback when a required capability remains unavailable. Distinguish verified scheduled operation from unverified exact one-off semantics, cloud inventory and provider permissions beyond Sleeper. Update docs/M0_PROBE.md and docs/PROGRESS.md, run python3 check_docs.py, and report the result or the concrete remaining blocker."
+status = "ACTIVE"
+rrule = "RRULE:FREQ=DAILY;COUNT=1;BYHOUR=0;BYMINUTE=33;BYSECOND=0"
+target_thread_id = "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+created_at = 1789098155655
+updated_at = 1789100744166

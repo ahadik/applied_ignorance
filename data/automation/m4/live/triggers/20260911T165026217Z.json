@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "automation_id": "fantasy-football-bounded-dispatcher",
+  "basis": "observed_scheduler_injected_message",
+  "observed_scheduler_time": "2026-09-11T16:50:26.217Z",
+  "message_context": "Actual codex_app.automation_update heartbeat received after the first acceptance heartbeat completed. It directs the M4 acceptance cycle procedure instead of a separate dispatcher tick.",
+  "dispatcher_revision": "2756185315844ae0717718c8098b76d841fcc638f0f50f6abbd9b05dceee36f0"
+}

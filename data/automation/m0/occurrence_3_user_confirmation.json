@@ -1,0 +1,11 @@
+{
+  "observed_at": "2026-09-11T04:12:48Z",
+  "surface": "User messages in this conversation",
+  "execution_mode": "scheduled",
+  "result": "The user confirmed that the conversation was closed, no approvals were required, and a notification was received for occurrence 3. Together with the saved successful API and browser results, this verifies closed-conversation execution and notification delivery for this occurrence. This is not a controlled app-restart test.",
+  "reference": "User messages: Conversation closed / No approvals; notification received. Run 8dcf7f45486648c897b88fdd4df69962.",
+  "confirmation_received_mode": "interactive",
+  "conversation_closed": true,
+  "new_approval_required": false,
+  "notification_received": true
+}

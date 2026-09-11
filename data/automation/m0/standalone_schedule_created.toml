@@ -1,0 +1,14 @@
+version = 1
+id = "fantasy-football-m0-standalone-probe"
+kind = "cron"
+name = "Fantasy Football M0 standalone probe"
+prompt = "Run the harmless M0 standalone scheduled capability test in the saved Fantasy Football project at /Users/alex/Projects/Fantasy Football. Read AGENTS.md, docs/PROGRESS.md, docs/M0_PROBE.md and docs/M0_TASK_PROMPT.md. This test must run from the saved checkout, not a worktree. Do not draft or change Sleeper state. Run python3 automation_probe.py run --sleeper-read exactly once through the central Sleeper client using supported require_escalated mode, as authorized for prior M0 probes. Respect denied access and record any approval requirement. Inspect the configured league in the in-app browser only; record visible account, league and team, or the access failure. Save separate scheduled_start and browser_inspection evidence with automation_probe.py observe, linked to the probe receipt. Include scheduler trigger evidence, task identity, current project/interpreter, actual API attempts/cache metadata and unknowns. The default interactive label in the probe receipt is a caller default, not the trigger source. Save a concise standalone result at data/automation/m0/standalone_result.json. If this result already exists, do not repeat provider/browser work; record that this is an unexpected repeat. Run python3 automation_probe.py inventory --output data/automation/m0/inventory_standalone_run.json if that output does not already exist. Do not change unrelated schedules, create new schedules, install software, alter persistent permissions, or use undocumented APIs. Leave this one-occurrence schedule unchanged so the supervisor can inspect natural expiration. The supervising conversation will perform cleanup. Report the result, receipt and any required user action."
+status = "ACTIVE"
+rrule = "RRULE:FREQ=DAILY;COUNT=1;BYHOUR=0;BYMINUTE=28;BYSECOND=0"
+model = "gpt-6-astra"
+reasoning_effort = "medium"
+execution_environment = "local"
+target = { type = "project", project_id = "f2956e4c-2b7a-4221-acff-9a6e34e07b63" }
+cwds = ["/Users/alex/Projects/Fantasy Football"]
+created_at = 1789100689489
+updated_at = 1789100689489

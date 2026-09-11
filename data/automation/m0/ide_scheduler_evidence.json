@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-09-11T03:34:32Z",
+  "surface": "tool inventory and mcp__cua_repl",
+  "execution_mode": "interactive",
+  "result": "No scheduling tool was exposed to this IDE session. Computer Use refused access to com.openai.codex for safety reasons. No task was created, changed or cancelled. Scheduler inventory and scheduled-run capabilities remain untested in the ChatGPT app.",
+  "reference": "M0 IDE conversation: tool discovery and cua.getApp('com.openai.codex')",
+  "time_basis": "Recorded at the successful API probe checkpoint; exact UI observation times were not returned",
+  "app_version": null,
+  "account_workspace": null
+}

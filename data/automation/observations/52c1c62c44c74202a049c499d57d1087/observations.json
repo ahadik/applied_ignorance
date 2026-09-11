@@ -1,0 +1,2348 @@
+{
+  "schema_version": 1,
+  "league_id": "1400628784381612032",
+  "season": 2026,
+  "week": 1,
+  "roster_id": 10,
+  "observed_at": "2026-09-11T05:06:17.248965+00:00",
+  "settings_hash": "838eaaf079e5483067ebf4e2486d72d773c08fc96b9a98df4859d02941e7b419",
+  "owned_player_ids": [
+    "12506",
+    "12711",
+    "3198",
+    "4046",
+    "4199",
+    "4866",
+    "6790",
+    "7002",
+    "8183",
+    "8676",
+    "9487",
+    "9754",
+    "9997",
+    "PIT"
+  ],
+  "source_refs": [
+    "data/automation/observations/52c1c62c44c74202a049c499d57d1087/final_league.json",
+    "data/automation/observations/52c1c62c44c74202a049c499d57d1087/final_rosters.json",
+    "data/automation/observations/52c1c62c44c74202a049c499d57d1087/league.json",
+    "data/automation/observations/52c1c62c44c74202a049c499d57d1087/players.json",
+    "data/automation/observations/52c1c62c44c74202a049c499d57d1087/rosters.json",
+    "data/automation/observations/52c1c62c44c74202a049c499d57d1087/schedule.json",
+    "data/automation/observations/52c1c62c44c74202a049c499d57d1087/state.json",
+    "data/automation/observations/52c1c62c44c74202a049c499d57d1087/user.json"
+  ],
+  "sources": {
+    "league": {
+      "fetched_at": "2026-09-11T05:06:12.838695+00:00",
+      "cache_hit": false,
+      "cache_age_seconds": 0.00012636184692382812,
+      "network_attempts": 1,
+      "source_updated_at": null
+    },
+    "state": {
+      "fetched_at": "2026-09-11T05:06:12.940429+00:00",
+      "cache_hit": false,
+      "cache_age_seconds": 0.00015807151794433594,
+      "network_attempts": 1,
+      "source_updated_at": null
+    },
+    "user": {
+      "fetched_at": "2026-09-11T05:06:13.164698+00:00",
+      "cache_hit": false,
+      "cache_age_seconds": 0.0009908676147460938,
+      "network_attempts": 1,
+      "source_updated_at": null
+    },
+    "rosters": {
+      "fetched_at": "2026-09-11T05:06:13.390898+00:00",
+      "cache_hit": false,
+      "cache_age_seconds": 0.00015997886657714844,
+      "network_attempts": 1,
+      "source_updated_at": null
+    },
+    "players": {
+      "fetched_at": "2026-09-11T05:06:14.604933+00:00",
+      "cache_hit": false,
+      "cache_age_seconds": 0.00015282630920410156,
+      "network_attempts": 1,
+      "source_updated_at": null
+    },
+    "schedule": {
+      "dataset": "schedules",
+      "season": 2026,
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "git_blob_sha": "7a02a84177bd38e2cda9d5ad8517f1e8a41ddc3d",
+      "sha256": "b2efaff208ab2262a37da827345abfb4c7e623590fa6c9b54d14e4cc75569651",
+      "columns": [
+        "game_id",
+        "season",
+        "game_type",
+        "week",
+        "gameday",
+        "weekday",
+        "gametime",
+        "away_team",
+        "away_score",
+        "home_team",
+        "home_score",
+        "location",
+        "result",
+        "total",
+        "overtime",
+        "old_game_id",
+        "gsis",
+        "nfl_detail_id",
+        "pfr",
+        "pff",
+        "espn",
+        "ftn",
+        "away_rest",
+        "home_rest",
+        "away_moneyline",
+        "home_moneyline",
+        "spread_line",
+        "away_spread_odds",
+        "home_spread_odds",
+        "total_line",
+        "under_odds",
+        "over_odds",
+        "div_game",
+        "roof",
+        "surface",
+        "temp",
+        "wind",
+        "away_qb_id",
+        "home_qb_id",
+        "away_qb_name",
+        "home_qb_name",
+        "away_coach",
+        "home_coach",
+        "referee",
+        "stadium_id",
+        "stadium"
+      ],
+      "asset_updated_at": null,
+      "fetched_at": "2026-09-11T05:06:16.947570+00:00",
+      "metadata_checked_at": "2026-09-11T05:06:17.024227+00:00",
+      "cache_hit": false,
+      "network_attempts": 2
+    },
+    "final_league": {
+      "fetched_at": "2026-09-11T05:06:17.177356+00:00",
+      "cache_hit": false,
+      "cache_age_seconds": 0.000102996826171875,
+      "network_attempts": 1,
+      "source_updated_at": null
+    },
+    "final_rosters": {
+      "fetched_at": "2026-09-11T05:06:17.247090+00:00",
+      "cache_hit": false,
+      "cache_age_seconds": 0.0001480579376220703,
+      "network_attempts": 1,
+      "source_updated_at": null
+    }
+  },
+  "timing_coverage": null,
+  "complete": false,
+  "issues": [
+    "waiver_and_review_timing_unverified"
+  ],
+  "events": [
+    {
+      "event_id": "2026_01_ARI_LAC",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-09-13T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_ATL_PIT",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2026-09-13T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_BAL_IND",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-09-13T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_CHI_CAR",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-09-13T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_CLE_JAX",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "12506",
+        "9487"
+      ],
+      "deadline_at": "2026-09-13T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_DEN_KC",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-09-15T00:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_GB_MIN",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-09-13T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_NE_SEA",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2026-09-10T00:20:00+00:00",
+      "locked": true,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_NO_DET",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-09-13T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_SF_LA",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-09-11T00:35:00+00:00",
+      "locked": true,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_01_WAS_PHI",
+      "kind": "game",
+      "week": 1,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-09-13T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_CLE_TB",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2026-09-20T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_IND_KC",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-09-21T00:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_JAX_DEN",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-09-20T20:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_LV_LAC",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-09-20T20:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_MIA_SF",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-09-20T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_MIN_CHI",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "4199",
+        "6790"
+      ],
+      "deadline_at": "2026-09-20T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_NO_BAL",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "12711",
+        "3198",
+        "7002",
+        "9997"
+      ],
+      "deadline_at": "2026-09-20T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_PHI_TEN",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-09-20T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_PIT_NE",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2026-09-20T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_02_SEA_ARI",
+      "kind": "game",
+      "week": 2,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2026-09-20T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_ARI_SF",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-09-27T20:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_BAL_DAL",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-09-27T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_CAR_CLE",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2026-09-27T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_CIN_PIT",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2026-09-27T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_KC_MIA",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-09-27T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_LAC_BUF",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-09-27T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_LV_NO",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-09-27T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_MIN_TB",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-09-27T20:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_NE_JAX",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-09-27T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_PHI_CHI",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "4866",
+        "6790"
+      ],
+      "deadline_at": "2026-09-29T00:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_03_SEA_WAS",
+      "kind": "game",
+      "week": 3,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2026-09-27T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_ATL_NO",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-10-06T00:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_DEN_SF",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-10-04T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_JAX_CIN",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-10-04T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_KC_LV",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-10-04T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_LAC_SEA",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "8676",
+        "9754"
+      ],
+      "deadline_at": "2026-10-04T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_LA_PHI",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-10-04T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_MIA_MIN",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-10-04T20:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_NYJ_CHI",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-10-04T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_PIT_CLE",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "12506",
+        "PIT"
+      ],
+      "deadline_at": "2026-10-02T00:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_04_TEN_BAL",
+      "kind": "game",
+      "week": 4,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-10-04T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_05_BAL_ATL",
+      "kind": "game",
+      "week": 5,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-10-12T00:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_05_CHI_GB",
+      "kind": "game",
+      "week": 5,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-10-11T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_05_CLE_NYJ",
+      "kind": "game",
+      "week": 5,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2026-10-11T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_05_DEN_LAC",
+      "kind": "game",
+      "week": 5,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-10-11T20:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_05_IND_PIT",
+      "kind": "game",
+      "week": 5,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2026-10-11T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_05_MIN_NO",
+      "kind": "game",
+      "week": 5,
+      "player_ids": [
+        "4199",
+        "7002"
+      ],
+      "deadline_at": "2026-10-11T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_05_PHI_JAX",
+      "kind": "game",
+      "week": 5,
+      "player_ids": [
+        "4866",
+        "9487"
+      ],
+      "deadline_at": "2026-10-11T13:30:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_05_SF_SEA",
+      "kind": "game",
+      "week": 5,
+      "player_ids": [
+        "8183",
+        "8676"
+      ],
+      "deadline_at": "2026-10-11T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_06_BAL_CLE",
+      "kind": "game",
+      "week": 6,
+      "player_ids": [
+        "12506",
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-10-18T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_06_CAR_PHI",
+      "kind": "game",
+      "week": 6,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-10-18T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_06_CHI_ATL",
+      "kind": "game",
+      "week": 6,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-10-18T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_06_HOU_JAX",
+      "kind": "game",
+      "week": 6,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-10-18T13:30:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_06_LAC_KC",
+      "kind": "game",
+      "week": 6,
+      "player_ids": [
+        "4046",
+        "9754"
+      ],
+      "deadline_at": "2026-10-18T20:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_06_NO_NYG",
+      "kind": "game",
+      "week": 6,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-10-18T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_06_PIT_TB",
+      "kind": "game",
+      "week": 6,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2026-10-18T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_06_SEA_DEN",
+      "kind": "game",
+      "week": 6,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2026-10-16T00:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_06_WAS_SF",
+      "kind": "game",
+      "week": 6,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-10-20T00:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_07_CIN_BAL",
+      "kind": "game",
+      "week": 7,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-10-25T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_07_CLE_TEN",
+      "kind": "game",
+      "week": 7,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2026-10-25T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_07_DAL_PHI",
+      "kind": "game",
+      "week": 7,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-10-27T00:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_07_IND_MIN",
+      "kind": "game",
+      "week": 7,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-10-25T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_07_KC_SEA",
+      "kind": "game",
+      "week": 7,
+      "player_ids": [
+        "4046",
+        "8676"
+      ],
+      "deadline_at": "2026-10-26T00:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_07_NE_CHI",
+      "kind": "game",
+      "week": 7,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-10-23T00:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_07_PIT_NO",
+      "kind": "game",
+      "week": 7,
+      "player_ids": [
+        "7002",
+        "PIT"
+      ],
+      "deadline_at": "2026-10-25T13:30:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_07_SF_ATL",
+      "kind": "game",
+      "week": 7,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-10-25T17:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_08_BAL_BUF",
+      "kind": "game",
+      "week": 8,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-11-01T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_08_CHI_SEA",
+      "kind": "game",
+      "week": 8,
+      "player_ids": [
+        "6790",
+        "8676"
+      ],
+      "deadline_at": "2026-11-03T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_08_CLE_PIT",
+      "kind": "game",
+      "week": 8,
+      "player_ids": [
+        "12506",
+        "PIT"
+      ],
+      "deadline_at": "2026-11-01T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_08_IND_JAX",
+      "kind": "game",
+      "week": 8,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-11-01T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_08_KC_DEN",
+      "kind": "game",
+      "week": 8,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-11-01T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_08_LAC_LA",
+      "kind": "game",
+      "week": 8,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-11-01T21:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_08_MIN_DET",
+      "kind": "game",
+      "week": 8,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-11-01T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_08_PHI_WAS",
+      "kind": "game",
+      "week": 8,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-11-02T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_09_ARI_SEA",
+      "kind": "game",
+      "week": 9,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2026-11-08T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_09_BUF_MIN",
+      "kind": "game",
+      "week": 9,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-11-10T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_09_CLE_NO",
+      "kind": "game",
+      "week": 9,
+      "player_ids": [
+        "12506",
+        "7002"
+      ],
+      "deadline_at": "2026-11-08T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_09_HOU_LAC",
+      "kind": "game",
+      "week": 9,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-11-08T21:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_09_JAX_BAL",
+      "kind": "game",
+      "week": 9,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9487",
+        "9997"
+      ],
+      "deadline_at": "2026-11-06T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_09_LV_SF",
+      "kind": "game",
+      "week": 9,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-11-08T21:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_09_NYG_PHI",
+      "kind": "game",
+      "week": 9,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-11-08T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_09_NYJ_KC",
+      "kind": "game",
+      "week": 9,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-11-08T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_09_TB_CHI",
+      "kind": "game",
+      "week": 9,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-11-09T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_10_CAR_NO",
+      "kind": "game",
+      "week": 10,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-11-15T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_10_HOU_CLE",
+      "kind": "game",
+      "week": 10,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2026-11-15T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_10_JAX_TEN",
+      "kind": "game",
+      "week": 10,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-11-15T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_10_KC_ATL",
+      "kind": "game",
+      "week": 10,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-11-15T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_10_LAC_BAL",
+      "kind": "game",
+      "week": 10,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9754",
+        "9997"
+      ],
+      "deadline_at": "2026-11-17T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_10_MIN_GB",
+      "kind": "game",
+      "week": 10,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-11-15T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_10_PIT_CIN",
+      "kind": "game",
+      "week": 10,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2026-11-16T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_10_SEA_LV",
+      "kind": "game",
+      "week": 10,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2026-11-15T21:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_10_SF_DAL",
+      "kind": "game",
+      "week": 10,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-11-15T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_11_ARI_KC",
+      "kind": "game",
+      "week": 11,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-11-22T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_11_BAL_CAR",
+      "kind": "game",
+      "week": 11,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-11-22T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_11_JAX_NYG",
+      "kind": "game",
+      "week": 11,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-11-22T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_11_MIN_SF",
+      "kind": "game",
+      "week": 11,
+      "player_ids": [
+        "4199",
+        "8183"
+      ],
+      "deadline_at": "2026-11-23T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_11_NO_CHI",
+      "kind": "game",
+      "week": 11,
+      "player_ids": [
+        "6790",
+        "7002"
+      ],
+      "deadline_at": "2026-11-22T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_11_NYJ_LAC",
+      "kind": "game",
+      "week": 11,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-11-22T21:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_11_PIT_PHI",
+      "kind": "game",
+      "week": 11,
+      "player_ids": [
+        "4866",
+        "PIT"
+      ],
+      "deadline_at": "2026-11-22T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_ATL_MIN",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-11-29T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_BAL_HOU",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-11-29T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_CHI_DET",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-11-26T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_DEN_PIT",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2026-11-27T20:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_KC_BUF",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-11-27T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_LV_CLE",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2026-11-29T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_NE_LAC",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-11-30T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_NO_CIN",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-11-29T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_PHI_DAL",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-11-26T21:30:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_SEA_SF",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "8183",
+        "8676"
+      ],
+      "deadline_at": "2026-11-29T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_12_TEN_JAX",
+      "kind": "game",
+      "week": 12,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-11-29T21:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_CAR_MIN",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-12-06T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_CIN_CLE",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2026-12-06T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_DAL_SEA",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2026-12-08T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_GB_NO",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-12-06T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_HOU_PIT",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2026-12-07T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_JAX_CHI",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "6790",
+        "9487"
+      ],
+      "deadline_at": "2026-12-06T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_KC_LA",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-12-04T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_LAC_TB",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-12-06T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_PHI_ARI",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-12-06T21:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_13_SF_NYG",
+      "kind": "game",
+      "week": 13,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-12-06T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_ATL_CLE",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2026-12-13T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_CHI_MIA",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-12-13T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_IND_PHI",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-12-13T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_KC_CIN",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-12-13T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_LAC_LV",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-12-13T21:05:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_LA_SF",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2026-12-13T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_MIN_NE",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-12-11T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_NO_CAR",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-12-13T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_NYG_SEA",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2026-12-13T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_PIT_JAX",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "9487",
+        "PIT"
+      ],
+      "deadline_at": "2026-12-15T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_14_TB_BAL",
+      "kind": "game",
+      "week": 14,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-12-13T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_15_BAL_PIT",
+      "kind": "game",
+      "week": 15,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997",
+        "PIT"
+      ],
+      "deadline_at": "2026-12-20T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_15_CHI_BUF",
+      "kind": "game",
+      "week": 15,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-12-20T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_15_CLE_NYG",
+      "kind": "game",
+      "week": 15,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2026-12-20T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_15_DET_MIN",
+      "kind": "game",
+      "week": 15,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-12-21T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_15_JAX_HOU",
+      "kind": "game",
+      "week": 15,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-12-20T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_15_NE_KC",
+      "kind": "game",
+      "week": 15,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2026-12-22T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_15_NO_TB",
+      "kind": "game",
+      "week": 15,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-12-20T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_15_SEA_PHI",
+      "kind": "game",
+      "week": 15,
+      "player_ids": [
+        "4866",
+        "8676"
+      ],
+      "deadline_at": "2026-12-19T22:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_15_SF_LAC",
+      "kind": "game",
+      "week": 15,
+      "player_ids": [
+        "8183",
+        "9754"
+      ],
+      "deadline_at": "2026-12-18T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_ARI_NO",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2026-12-27T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_CAR_PIT",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2026-12-27T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_CLE_BAL",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "12506",
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2026-12-27T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_GB_CHI",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2026-12-25T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_HOU_PHI",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2026-12-25T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_JAX_DAL",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2026-12-28T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_LAC_MIA",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2026-12-27T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_LA_SEA",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2026-12-26T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_SF_KC",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "4046",
+        "8183"
+      ],
+      "deadline_at": "2026-12-27T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_16_WAS_MIN",
+      "kind": "game",
+      "week": 16,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2026-12-27T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_BAL_CIN",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "deadline_at": "2027-01-01T01:15:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_DET_CHI",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "6790"
+      ],
+      "deadline_at": "2027-01-03T21:25:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_IND_CLE",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2027-01-03T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_KC_LAC",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "4046",
+        "9754"
+      ],
+      "deadline_at": "2027-01-03T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_MIN_NYJ",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "4199"
+      ],
+      "deadline_at": "2027-01-03T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_NO_ATL",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2027-01-03T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_PHI_SF",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "4866",
+        "8183"
+      ],
+      "deadline_at": "2027-01-04T01:20:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_PIT_TEN",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "PIT"
+      ],
+      "deadline_at": "2027-01-03T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_SEA_CAR",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2027-01-03T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_17_WAS_JAX",
+      "kind": "game",
+      "week": 17,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2027-01-03T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_CHI_MIN",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "4199",
+        "6790"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_CLE_CIN",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "12506"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_JAX_IND",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "9487"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_LAC_DEN",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "9754"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_LV_KC",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "4046"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_PHI_NYG",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "4866"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_PIT_BAL",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "12711",
+        "3198",
+        "9997",
+        "PIT"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_SEA_LA",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "8676"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_SF_ARI",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "8183"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    },
+    {
+      "event_id": "2026_18_TB_NO",
+      "kind": "game",
+      "week": 18,
+      "player_ids": [
+        "7002"
+      ],
+      "deadline_at": "2027-01-10T18:00:00+00:00",
+      "locked": false,
+      "source": "schedule",
+      "published_at": null
+    }
+  ],
+  "acquisition": {
+    "league": {
+      "provider": "sleeper",
+      "network_attempts": 1,
+      "cache_hit": false
+    },
+    "state": {
+      "provider": "sleeper",
+      "network_attempts": 1,
+      "cache_hit": false
+    },
+    "user": {
+      "provider": "sleeper",
+      "network_attempts": 1,
+      "cache_hit": false
+    },
+    "rosters": {
+      "provider": "sleeper",
+      "network_attempts": 1,
+      "cache_hit": false
+    },
+    "players": {
+      "provider": "sleeper",
+      "network_attempts": 1,
+      "cache_hit": false
+    },
+    "schedule": {
+      "provider": "nflverse",
+      "network_attempts": 2,
+      "cache_hit": false
+    },
+    "final_league": {
+      "provider": "sleeper",
+      "network_attempts": 1,
+      "cache_hit": false
+    },
+    "final_rosters": {
+      "provider": "sleeper",
+      "network_attempts": 1,
+      "cache_hit": false
+    }
+  },
+  "source_checksums": [
+    {
+      "path": "data/automation/observations/52c1c62c44c74202a049c499d57d1087/final_league.json",
+      "sha256": "e86b6dbd5cc33803513cd8857e9e1272ec037eb503890509247ee9cc531583ea"
+    },
+    {
+      "path": "data/automation/observations/52c1c62c44c74202a049c499d57d1087/final_rosters.json",
+      "sha256": "dcf514b3cf8b6a91f6fe37316f89a66348931f3b149bee6fbcb7cfd544650955"
+    },
+    {
+      "path": "data/automation/observations/52c1c62c44c74202a049c499d57d1087/league.json",
+      "sha256": "4e1911c04dfd2b21231cd76f0bbbd06822e6174a4f712840755194563b3ea57e"
+    },
+    {
+      "path": "data/automation/observations/52c1c62c44c74202a049c499d57d1087/players.json",
+      "sha256": "e01e384036fe5546783dd41279cc426f8453e6663eb818db2ece0430e9a15b33"
+    },
+    {
+      "path": "data/automation/observations/52c1c62c44c74202a049c499d57d1087/rosters.json",
+      "sha256": "67b344283462dba3acfaa2616c01601abba2ec970c73916b4fb73d632e3350f8"
+    },
+    {
+      "path": "data/automation/observations/52c1c62c44c74202a049c499d57d1087/schedule.json",
+      "sha256": "7933d8e2deaa33c2a100c6e809986d749c97233be04ee29bf9677b2b740ae2f2"
+    },
+    {
+      "path": "data/automation/observations/52c1c62c44c74202a049c499d57d1087/state.json",
+      "sha256": "492428f40239368fb9b779896bcd02e36ae60ef6065b35b4dab7f8f3134c3b91"
+    },
+    {
+      "path": "data/automation/observations/52c1c62c44c74202a049c499d57d1087/user.json",
+      "sha256": "e42cd3d3d1fb5b4668c5e165460690d60eaf97d87a387a275d9754e557ccf0bd"
+    }
+  ]
+}

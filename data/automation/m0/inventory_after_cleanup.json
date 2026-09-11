@@ -1,0 +1,11 @@
+{
+  "observed_at": "2026-09-11T04:34:04.389709+00:00",
+  "surface": "documented local automation.toml files",
+  "execution_mode": "interactive",
+  "scope": "All direct local automation directories; excludes cloud tasks and run history",
+  "reference": "/Users/alex/.codex/automations",
+  "complete": true,
+  "entries": [],
+  "errors": [],
+  "result": "Complete local file enumeration"
+}

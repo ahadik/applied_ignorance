@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-11T16:25:26.339478+00:00",
+  "automation": {
+    "schema_version": 1,
+    "project": "/Users/alex/Projects/Fantasy Football",
+    "observed_at": "2026-09-11T16:25:26.340127+00:00",
+    "policy": {
+      "allowed_operations": [
+        "collect_inputs",
+        "inspect_sleeper",
+        "propose_lineup",
+        "validate_lineup"
+      ],
+      "lease_seconds": 300,
+      "mode": "disabled",
+      "schema_version": 1,
+      "timezone": "America/New_York"
+    },
+    "checks": 0,
+    "runs": {},
+    "events": 1,
+    "expired_leases": 0,
+    "external_execution": false
+  },
+  "desired": null,
+  "scheduled": {
+    "complete_local_inventory": true,
+    "entries": 0,
+    "enabled_owned_tasks": 0,
+    "unresolved_operations": 0,
+    "deadline_coverage_verified": false
+  },
+  "workflow_receipts": [],
+  "browser": null,
+  "notifications": {
+    "configured": true,
+    "missing_or_invalid": [],
+    "network_attempts": 0,
+    "phone_delivery_confirmed": true,
+    "counts": {
+      "confirmed": 1
+    }
+  },
+  "external_offline_monitor": "not_configured",
+  "production_ready": false,
+  "issues": [
+    "no_workflow_receipt",
+    "browser_readiness_unverified",
+    "automatic_deadline_coverage_unverified"
+  ]
+}

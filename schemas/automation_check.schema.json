@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Automation check version 1",
+  "description": "Runtime validation also verifies time ordering and existing project references.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "check_id", "scope", "operation", "season", "week", "run_at", "latest_start_at", "expires_at", "source_refs"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "check_id": {"type": "string", "minLength": 1, "maxLength": 200},
+    "scope": {"type": "string", "minLength": 1, "maxLength": 200},
+    "operation": {"enum": ["collect_inputs", "inspect_sleeper", "propose_lineup", "validate_lineup", "integrated_review"]},
+    "season": {"type": "integer", "minimum": 2000, "maximum": 2200},
+    "week": {"type": "integer", "minimum": 1, "maximum": 22},
+    "run_at": {"type": "string", "format": "date-time"},
+    "latest_start_at": {"type": "string", "format": "date-time"},
+    "expires_at": {"type": "string", "format": "date-time"},
+    "source_refs": {"type": "array", "maxItems": 20, "items": {"type": "string", "minLength": 1, "maxLength": 500}}
+  }
+}

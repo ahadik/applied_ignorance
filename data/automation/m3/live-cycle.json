@@ -1,0 +1,960 @@
+{
+  "config": {
+    "automatic_reconciliation": false,
+    "exact_one_off_verified": false,
+    "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+    "inventory_scope": "/Users/alex/.codex/automations",
+    "project": "/Users/alex/Projects/Fantasy Football"
+  },
+  "records": [
+    {
+      "id": "4f40c36da73d4fd1a826c0c638028a85",
+      "kind": "inventory",
+      "at": 1789142492.124576,
+      "value": {
+        "account_wide": false,
+        "complete": true,
+        "entries": [],
+        "errors": [],
+        "observed_at": "2026-09-11T16:01:32.124556+00:00",
+        "provenance": "local_files_double_read",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations",
+        "source_hashes": {},
+        "started_at": "2026-09-11T16:01:32.124405+00:00",
+        "trusted_local_read": true
+      }
+    },
+    {
+      "id": "67bc578625834101a61e94fc7539930e",
+      "kind": "diff",
+      "at": 1789142500.378591,
+      "value": {
+        "automatic_reconciliation": false,
+        "coverage": [],
+        "created_at": "2026-09-11T16:01:40.378407+00:00",
+        "desired": {
+          "checks": [
+            {
+              "key": "m3-disposable-probe",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063.",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            }
+          ],
+          "created_at": "2026-09-11T16:01:31.981698+00:00",
+          "expires_at": "2026-09-11T17:01:31.981789+00:00",
+          "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+          "project": "/Users/alex/Projects/Fantasy Football",
+          "retire_keys": [],
+          "schema_version": 1,
+          "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+          "task_cap": 10
+        },
+        "expires_at": "2026-09-11T16:02:40.378407+00:00",
+        "findings": [],
+        "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+        "inventory_id": "4f40c36da73d4fd1a826c0c638028a85",
+        "operations": [
+          {
+            "action": "create",
+            "desired": {
+              "key": "m3-disposable-probe",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063.",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "expected": null,
+            "key": "m3-disposable-probe",
+            "task_id": null
+          }
+        ],
+        "project": "/Users/alex/Projects/Fantasy Football",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations"
+      }
+    },
+    {
+      "id": "9fbd9ae9dc8146aba47147f7e04f3bcf",
+      "kind": "inventory",
+      "at": 1789142509.818895,
+      "value": {
+        "account_wide": false,
+        "complete": true,
+        "entries": [],
+        "errors": [],
+        "observed_at": "2026-09-11T16:01:49.818859+00:00",
+        "provenance": "local_files_double_read",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations",
+        "source_hashes": {},
+        "started_at": "2026-09-11T16:01:49.818524+00:00",
+        "trusted_local_read": true
+      }
+    },
+    {
+      "id": "72fa7ed3d4ba4a958da8c0867db2a2c2",
+      "kind": "diff",
+      "at": 1789142509.9416058,
+      "value": {
+        "automatic_reconciliation": false,
+        "coverage": [],
+        "created_at": "2026-09-11T16:01:49.941371+00:00",
+        "desired": {
+          "checks": [
+            {
+              "key": "m3-disposable-probe",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063.",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            }
+          ],
+          "created_at": "2026-09-11T16:01:31.981698+00:00",
+          "expires_at": "2026-09-11T17:01:31.981789+00:00",
+          "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+          "project": "/Users/alex/Projects/Fantasy Football",
+          "retire_keys": [],
+          "schema_version": 1,
+          "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+          "task_cap": 10
+        },
+        "expires_at": "2026-09-11T16:02:49.941371+00:00",
+        "findings": [],
+        "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+        "inventory_id": "9fbd9ae9dc8146aba47147f7e04f3bcf",
+        "operations": [
+          {
+            "action": "create",
+            "desired": {
+              "key": "m3-disposable-probe",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063.",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "expected": null,
+            "key": "m3-disposable-probe",
+            "task_id": null
+          }
+        ],
+        "project": "/Users/alex/Projects/Fantasy Football",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations"
+      }
+    },
+    {
+      "id": "3d5163f7643b415ea7edd38a9ef17533",
+      "kind": "operation_started",
+      "at": 1789142510.095712,
+      "value": {
+        "before_inventory": "9fbd9ae9dc8146aba47147f7e04f3bcf",
+        "diff_id": "72fa7ed3d4ba4a958da8c0867db2a2c2",
+        "operation": {
+          "action": "create",
+          "desired": {
+            "key": "m3-disposable-probe",
+            "name": "Fantasy Football M3 disposable probe v1",
+            "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063.",
+            "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+            "role": "probe",
+            "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+            "status": "PAUSED",
+            "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+          },
+          "expected": null,
+          "key": "m3-disposable-probe",
+          "task_id": null
+        },
+        "operation_id": "1132bc3bc40c45f59837a3d7d442d5b2",
+        "reported_at": null,
+        "returned_task_id": null
+      }
+    },
+    {
+      "id": "664d362b5b4c4d3d8bb9ed51da69c03d",
+      "kind": "operation_reported",
+      "at": 1789142538.417974,
+      "value": {
+        "before_inventory": "9fbd9ae9dc8146aba47147f7e04f3bcf",
+        "diff_id": "72fa7ed3d4ba4a958da8c0867db2a2c2",
+        "evidence": {
+          "path": "data/automation/m3/create-tool-result.json",
+          "sha256": "3ac129e1a861343581fc8d2b852c8263ef83f894a94cf71ebc2c1de9dc770c2f"
+        },
+        "operation": {
+          "action": "create",
+          "desired": {
+            "key": "m3-disposable-probe",
+            "name": "Fantasy Football M3 disposable probe v1",
+            "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063.",
+            "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+            "role": "probe",
+            "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+            "status": "PAUSED",
+            "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+          },
+          "expected": null,
+          "key": "m3-disposable-probe",
+          "task_id": null
+        },
+        "operation_id": "1132bc3bc40c45f59837a3d7d442d5b2",
+        "reported_at": 1789142538.417654,
+        "reported_outcome": "success",
+        "returned_task_id": "fantasy-football-m3-disposable-probe-v1"
+      }
+    },
+    {
+      "id": "f571cb1946224338b252c96c064b873b",
+      "kind": "inventory",
+      "at": 1789142538.544906,
+      "value": {
+        "account_wide": false,
+        "complete": true,
+        "entries": [
+          {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "88780242aa7820be7c347e29304902de1fe793a16dd10b92e2644dde3c3e6585",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "65b675f1502558fb4985bd8c370857d904b92d45da103f205b8e7f6e56353bac",
+            "fingerprint": "6c57bf2e04243a25e9b7d2b714b216f770f2ca8075fcfb923792e59023df4c51",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe"
+            }
+          }
+        ],
+        "errors": [],
+        "observed_at": "2026-09-11T16:02:18.544883+00:00",
+        "provenance": "local_files_double_read",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations",
+        "source_hashes": {
+          "fantasy-football-m3-disposable-probe-v1": "65b675f1502558fb4985bd8c370857d904b92d45da103f205b8e7f6e56353bac"
+        },
+        "started_at": "2026-09-11T16:02:18.544404+00:00",
+        "trusted_local_read": true
+      }
+    },
+    {
+      "id": "8b137ec9b0074ee99fd6dff0bd43f209",
+      "kind": "verification",
+      "at": 1789142538.685007,
+      "value": {
+        "deadline_coverage_verified": false,
+        "inventory_id": "f571cb1946224338b252c96c064b873b",
+        "operation_id": "1132bc3bc40c45f59837a3d7d442d5b2",
+        "provenance": "local_files_double_read",
+        "scope": "/Users/alex/.codex/automations",
+        "task_id": "fantasy-football-m3-disposable-probe-v1",
+        "verified": true
+      }
+    },
+    {
+      "id": "420e9cfa80e7457bbf9440dcba606161",
+      "kind": "inventory",
+      "at": 1789142552.64943,
+      "value": {
+        "account_wide": false,
+        "complete": true,
+        "entries": [
+          {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "88780242aa7820be7c347e29304902de1fe793a16dd10b92e2644dde3c3e6585",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "65b675f1502558fb4985bd8c370857d904b92d45da103f205b8e7f6e56353bac",
+            "fingerprint": "6c57bf2e04243a25e9b7d2b714b216f770f2ca8075fcfb923792e59023df4c51",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe"
+            }
+          }
+        ],
+        "errors": [],
+        "observed_at": "2026-09-11T16:02:32.649406+00:00",
+        "provenance": "local_files_double_read",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations",
+        "source_hashes": {
+          "fantasy-football-m3-disposable-probe-v1": "65b675f1502558fb4985bd8c370857d904b92d45da103f205b8e7f6e56353bac"
+        },
+        "started_at": "2026-09-11T16:02:32.648593+00:00",
+        "trusted_local_read": true
+      }
+    },
+    {
+      "id": "b7c61ea00e9842fab4616c028ea064d1",
+      "kind": "diff",
+      "at": 1789142552.812417,
+      "value": {
+        "automatic_reconciliation": false,
+        "coverage": [
+          {
+            "configuration_verified": true,
+            "deadline_coverage_verified": false,
+            "enabled": false,
+            "key": "m3-disposable-probe",
+            "task_id": "fantasy-football-m3-disposable-probe-v1"
+          }
+        ],
+        "created_at": "2026-09-11T16:02:32.812254+00:00",
+        "desired": {
+          "checks": [
+            {
+              "key": "m3-disposable-probe",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063.",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            }
+          ],
+          "created_at": "2026-09-11T16:01:31.981698+00:00",
+          "expires_at": "2026-09-11T17:01:31.981789+00:00",
+          "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+          "project": "/Users/alex/Projects/Fantasy Football",
+          "retire_keys": [],
+          "schema_version": 1,
+          "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+          "task_cap": 10
+        },
+        "expires_at": "2026-09-11T16:03:32.812254+00:00",
+        "findings": [],
+        "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+        "inventory_id": "420e9cfa80e7457bbf9440dcba606161",
+        "operations": [],
+        "project": "/Users/alex/Projects/Fantasy Football",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations"
+      }
+    },
+    {
+      "id": "67ef93a3fbbe4867b939b25c1f2ad2c1",
+      "kind": "diff",
+      "at": 1789142553.137491,
+      "value": {
+        "automatic_reconciliation": false,
+        "coverage": [],
+        "created_at": "2026-09-11T16:02:33.137285+00:00",
+        "desired": {
+          "checks": [
+            {
+              "key": "m3-disposable-probe",
+              "name": "Fantasy Football M3 disposable probe v2",
+              "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369.",
+              "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+              "role": "probe",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            }
+          ],
+          "created_at": "2026-09-11T16:02:32.974873+00:00",
+          "expires_at": "2026-09-11T17:02:32.974978+00:00",
+          "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+          "project": "/Users/alex/Projects/Fantasy Football",
+          "retire_keys": [],
+          "schema_version": 1,
+          "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+          "task_cap": 10
+        },
+        "expires_at": "2026-09-11T16:03:33.137285+00:00",
+        "findings": [],
+        "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+        "inventory_id": "420e9cfa80e7457bbf9440dcba606161",
+        "operations": [
+          {
+            "action": "update",
+            "desired": {
+              "key": "m3-disposable-probe",
+              "name": "Fantasy Football M3 disposable probe v2",
+              "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369.",
+              "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+              "role": "probe",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "expected": {
+              "config": {
+                "cwds": [],
+                "kind": "heartbeat",
+                "name": "Fantasy Football M3 disposable probe v1",
+                "notification_policy": null,
+                "project_id": null,
+                "prompt_sha256": "88780242aa7820be7c347e29304902de1fe793a16dd10b92e2644dde3c3e6585",
+                "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+                "status": "PAUSED",
+                "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+              },
+              "file_sha256": "65b675f1502558fb4985bd8c370857d904b92d45da103f205b8e7f6e56353bac",
+              "fingerprint": "6c57bf2e04243a25e9b7d2b714b216f770f2ca8075fcfb923792e59023df4c51",
+              "id": "fantasy-football-m3-disposable-probe-v1",
+              "owner": {
+                "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+                "key": "m3-disposable-probe",
+                "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+                "role": "probe"
+              }
+            },
+            "key": "m3-disposable-probe",
+            "task_id": "fantasy-football-m3-disposable-probe-v1"
+          }
+        ],
+        "project": "/Users/alex/Projects/Fantasy Football",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations"
+      }
+    },
+    {
+      "id": "e2a51c3c36ea4b2a9d96fab3f7b65a4d",
+      "kind": "operation_started",
+      "at": 1789142553.3387399,
+      "value": {
+        "before_inventory": "420e9cfa80e7457bbf9440dcba606161",
+        "diff_id": "67ef93a3fbbe4867b939b25c1f2ad2c1",
+        "operation": {
+          "action": "update",
+          "desired": {
+            "key": "m3-disposable-probe",
+            "name": "Fantasy Football M3 disposable probe v2",
+            "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369.",
+            "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+            "role": "probe",
+            "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+            "status": "PAUSED",
+            "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+          },
+          "expected": {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "88780242aa7820be7c347e29304902de1fe793a16dd10b92e2644dde3c3e6585",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "65b675f1502558fb4985bd8c370857d904b92d45da103f205b8e7f6e56353bac",
+            "fingerprint": "6c57bf2e04243a25e9b7d2b714b216f770f2ca8075fcfb923792e59023df4c51",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe"
+            }
+          },
+          "key": "m3-disposable-probe",
+          "task_id": "fantasy-football-m3-disposable-probe-v1"
+        },
+        "operation_id": "6b130d804d344e33b86e06d33f6716f2",
+        "reported_at": null,
+        "returned_task_id": null
+      }
+    },
+    {
+      "id": "9f1f4a22bb8e4e7fa22f8c6804aca05c",
+      "kind": "operation_reported",
+      "at": 1789142569.758851,
+      "value": {
+        "before_inventory": "420e9cfa80e7457bbf9440dcba606161",
+        "diff_id": "67ef93a3fbbe4867b939b25c1f2ad2c1",
+        "evidence": {
+          "path": "data/automation/m3/update-tool-result.json",
+          "sha256": "b137ffe12e7cc5cd16b1d4edd9fc1232e36c3da8e89068afd966e5bbffad2a37"
+        },
+        "operation": {
+          "action": "update",
+          "desired": {
+            "key": "m3-disposable-probe",
+            "name": "Fantasy Football M3 disposable probe v2",
+            "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369.",
+            "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+            "role": "probe",
+            "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+            "status": "PAUSED",
+            "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+          },
+          "expected": {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "88780242aa7820be7c347e29304902de1fe793a16dd10b92e2644dde3c3e6585",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "65b675f1502558fb4985bd8c370857d904b92d45da103f205b8e7f6e56353bac",
+            "fingerprint": "6c57bf2e04243a25e9b7d2b714b216f770f2ca8075fcfb923792e59023df4c51",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe"
+            }
+          },
+          "key": "m3-disposable-probe",
+          "task_id": "fantasy-football-m3-disposable-probe-v1"
+        },
+        "operation_id": "6b130d804d344e33b86e06d33f6716f2",
+        "reported_at": 1789142569.7586482,
+        "reported_outcome": "success",
+        "returned_task_id": "fantasy-football-m3-disposable-probe-v1"
+      }
+    },
+    {
+      "id": "70352213bf274cfcb2d5688304d7e1b0",
+      "kind": "inventory",
+      "at": 1789142569.9060931,
+      "value": {
+        "account_wide": false,
+        "complete": true,
+        "entries": [
+          {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v2",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "830ac146a67225fc850ac33c68b7fc244e4c37e8ccda23097b04e4b7b5fb1ed0",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "d523f9e0951cbaaf0c97019104c2bbebc6e9ed6bdc9537e9c31b3b37910c838d",
+            "fingerprint": "0e0b6363ea96fe840ca5e8b737cad3a89c2ef182b1fe0d35757cb737da9a633b",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+              "role": "probe"
+            }
+          }
+        ],
+        "errors": [],
+        "observed_at": "2026-09-11T16:02:49.906068+00:00",
+        "provenance": "local_files_double_read",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations",
+        "source_hashes": {
+          "fantasy-football-m3-disposable-probe-v1": "d523f9e0951cbaaf0c97019104c2bbebc6e9ed6bdc9537e9c31b3b37910c838d"
+        },
+        "started_at": "2026-09-11T16:02:49.905591+00:00",
+        "trusted_local_read": true
+      }
+    },
+    {
+      "id": "935410efcfa340888723ce8a24e5a998",
+      "kind": "verification",
+      "at": 1789142570.1266282,
+      "value": {
+        "deadline_coverage_verified": false,
+        "inventory_id": "70352213bf274cfcb2d5688304d7e1b0",
+        "operation_id": "6b130d804d344e33b86e06d33f6716f2",
+        "provenance": "local_files_double_read",
+        "scope": "/Users/alex/.codex/automations",
+        "task_id": "fantasy-football-m3-disposable-probe-v1",
+        "verified": true
+      }
+    },
+    {
+      "id": "39ff6ac7b4d74f6cb1aa5a54ea47e2f2",
+      "kind": "inventory",
+      "at": 1789142580.4332001,
+      "value": {
+        "account_wide": false,
+        "complete": true,
+        "entries": [
+          {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v2",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "830ac146a67225fc850ac33c68b7fc244e4c37e8ccda23097b04e4b7b5fb1ed0",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "d523f9e0951cbaaf0c97019104c2bbebc6e9ed6bdc9537e9c31b3b37910c838d",
+            "fingerprint": "0e0b6363ea96fe840ca5e8b737cad3a89c2ef182b1fe0d35757cb737da9a633b",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+              "role": "probe"
+            }
+          }
+        ],
+        "errors": [],
+        "observed_at": "2026-09-11T16:03:00.433172+00:00",
+        "provenance": "local_files_double_read",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations",
+        "source_hashes": {
+          "fantasy-football-m3-disposable-probe-v1": "d523f9e0951cbaaf0c97019104c2bbebc6e9ed6bdc9537e9c31b3b37910c838d"
+        },
+        "started_at": "2026-09-11T16:03:00.432449+00:00",
+        "trusted_local_read": true
+      }
+    },
+    {
+      "id": "ad3d651150434c84b2755eaeee4ebfd9",
+      "kind": "diff",
+      "at": 1789142580.5708642,
+      "value": {
+        "automatic_reconciliation": false,
+        "coverage": [],
+        "created_at": "2026-09-11T16:03:00.570723+00:00",
+        "desired": {
+          "checks": [],
+          "created_at": "2026-09-11T16:02:50.252423+00:00",
+          "expires_at": "2026-09-11T17:02:50.252551+00:00",
+          "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+          "project": "/Users/alex/Projects/Fantasy Football",
+          "retire_keys": [
+            "m3-disposable-probe"
+          ],
+          "schema_version": 1,
+          "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+          "task_cap": 10
+        },
+        "expires_at": "2026-09-11T16:04:00.570723+00:00",
+        "findings": [],
+        "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+        "inventory_id": "39ff6ac7b4d74f6cb1aa5a54ea47e2f2",
+        "operations": [
+          {
+            "action": "delete",
+            "desired": null,
+            "expected": {
+              "config": {
+                "cwds": [],
+                "kind": "heartbeat",
+                "name": "Fantasy Football M3 disposable probe v2",
+                "notification_policy": null,
+                "project_id": null,
+                "prompt_sha256": "830ac146a67225fc850ac33c68b7fc244e4c37e8ccda23097b04e4b7b5fb1ed0",
+                "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+                "status": "PAUSED",
+                "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+              },
+              "file_sha256": "d523f9e0951cbaaf0c97019104c2bbebc6e9ed6bdc9537e9c31b3b37910c838d",
+              "fingerprint": "0e0b6363ea96fe840ca5e8b737cad3a89c2ef182b1fe0d35757cb737da9a633b",
+              "id": "fantasy-football-m3-disposable-probe-v1",
+              "owner": {
+                "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+                "key": "m3-disposable-probe",
+                "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+                "role": "probe"
+              }
+            },
+            "key": "m3-disposable-probe",
+            "task_id": "fantasy-football-m3-disposable-probe-v1"
+          }
+        ],
+        "project": "/Users/alex/Projects/Fantasy Football",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations"
+      }
+    },
+    {
+      "id": "14954ccbb5b041ae8da7db145bcf0482",
+      "kind": "operation_started",
+      "at": 1789142580.7080472,
+      "value": {
+        "before_inventory": "39ff6ac7b4d74f6cb1aa5a54ea47e2f2",
+        "diff_id": "ad3d651150434c84b2755eaeee4ebfd9",
+        "operation": {
+          "action": "delete",
+          "desired": null,
+          "expected": {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v2",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "830ac146a67225fc850ac33c68b7fc244e4c37e8ccda23097b04e4b7b5fb1ed0",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "d523f9e0951cbaaf0c97019104c2bbebc6e9ed6bdc9537e9c31b3b37910c838d",
+            "fingerprint": "0e0b6363ea96fe840ca5e8b737cad3a89c2ef182b1fe0d35757cb737da9a633b",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+              "role": "probe"
+            }
+          },
+          "key": "m3-disposable-probe",
+          "task_id": "fantasy-football-m3-disposable-probe-v1"
+        },
+        "operation_id": "d4db9312ec594d1cb4a5f70a7157ef37",
+        "reported_at": null,
+        "returned_task_id": null
+      }
+    },
+    {
+      "id": "8133be1aac12437ab8e209d79e02967f",
+      "kind": "operation_reported",
+      "at": 1789142595.534333,
+      "value": {
+        "before_inventory": "39ff6ac7b4d74f6cb1aa5a54ea47e2f2",
+        "diff_id": "ad3d651150434c84b2755eaeee4ebfd9",
+        "evidence": {
+          "path": "data/automation/m3/delete-tool-result.json",
+          "sha256": "f5502e4e99d46fb4df2bb9395b731050399cd8bac41553fdfa11525b816dd965"
+        },
+        "operation": {
+          "action": "delete",
+          "desired": null,
+          "expected": {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v2",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "830ac146a67225fc850ac33c68b7fc244e4c37e8ccda23097b04e4b7b5fb1ed0",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "d523f9e0951cbaaf0c97019104c2bbebc6e9ed6bdc9537e9c31b3b37910c838d",
+            "fingerprint": "0e0b6363ea96fe840ca5e8b737cad3a89c2ef182b1fe0d35757cb737da9a633b",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+              "role": "probe"
+            }
+          },
+          "key": "m3-disposable-probe",
+          "task_id": "fantasy-football-m3-disposable-probe-v1"
+        },
+        "operation_id": "d4db9312ec594d1cb4a5f70a7157ef37",
+        "reported_at": 1789142595.5337,
+        "reported_outcome": "success",
+        "returned_task_id": "fantasy-football-m3-disposable-probe-v1"
+      }
+    },
+    {
+      "id": "2f49ab9c5b854bd4bb1173ebd9da6111",
+      "kind": "inventory",
+      "at": 1789142595.67376,
+      "value": {
+        "account_wide": false,
+        "complete": true,
+        "entries": [],
+        "errors": [],
+        "observed_at": "2026-09-11T16:03:15.673742+00:00",
+        "provenance": "local_files_double_read",
+        "schema_version": 1,
+        "scope": "/Users/alex/.codex/automations",
+        "source_hashes": {},
+        "started_at": "2026-09-11T16:03:15.673572+00:00",
+        "trusted_local_read": true
+      }
+    },
+    {
+      "id": "c8fc5f95119b4bffbb17f15e59414b26",
+      "kind": "verification",
+      "at": 1789142595.812276,
+      "value": {
+        "deadline_coverage_verified": false,
+        "inventory_id": "2f49ab9c5b854bd4bb1173ebd9da6111",
+        "operation_id": "d4db9312ec594d1cb4a5f70a7157ef37",
+        "provenance": "local_files_double_read",
+        "scope": "/Users/alex/.codex/automations",
+        "task_id": "fantasy-football-m3-disposable-probe-v1",
+        "verified": true
+      }
+    }
+  ],
+  "pending": [
+    {
+      "id": "1132bc3bc40c45f59837a3d7d442d5b2",
+      "state": "verified",
+      "at": 1789142510.0954828,
+      "value": {
+        "before_inventory": "9fbd9ae9dc8146aba47147f7e04f3bcf",
+        "diff_id": "72fa7ed3d4ba4a958da8c0867db2a2c2",
+        "evidence": {
+          "path": "data/automation/m3/create-tool-result.json",
+          "sha256": "3ac129e1a861343581fc8d2b852c8263ef83f894a94cf71ebc2c1de9dc770c2f"
+        },
+        "operation": {
+          "action": "create",
+          "desired": {
+            "key": "m3-disposable-probe",
+            "name": "Fantasy Football M3 disposable probe v1",
+            "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063.",
+            "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+            "role": "probe",
+            "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+            "status": "PAUSED",
+            "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+          },
+          "expected": null,
+          "key": "m3-disposable-probe",
+          "task_id": null
+        },
+        "reported_at": 1789142538.417654,
+        "reported_outcome": "success",
+        "returned_task_id": "fantasy-football-m3-disposable-probe-v1"
+      }
+    },
+    {
+      "id": "6b130d804d344e33b86e06d33f6716f2",
+      "state": "verified",
+      "at": 1789142553.338536,
+      "value": {
+        "before_inventory": "420e9cfa80e7457bbf9440dcba606161",
+        "diff_id": "67ef93a3fbbe4867b939b25c1f2ad2c1",
+        "evidence": {
+          "path": "data/automation/m3/update-tool-result.json",
+          "sha256": "b137ffe12e7cc5cd16b1d4edd9fc1232e36c3da8e89068afd966e5bbffad2a37"
+        },
+        "operation": {
+          "action": "update",
+          "desired": {
+            "key": "m3-disposable-probe",
+            "name": "Fantasy Football M3 disposable probe v2",
+            "prompt": "This paused task tests scheduler configuration only. If manually invoked, report that it is an M3 probe and stop. Do not call providers, change files, change Sleeper, or create other tasks.\nFantasy Football ownership: a3a50b9f3e67407c97f6cd5a8a65e08a/m3-disposable-probe/probe/982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369.",
+            "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+            "role": "probe",
+            "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+            "status": "PAUSED",
+            "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+          },
+          "expected": {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v1",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "88780242aa7820be7c347e29304902de1fe793a16dd10b92e2644dde3c3e6585",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=1;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "65b675f1502558fb4985bd8c370857d904b92d45da103f205b8e7f6e56353bac",
+            "fingerprint": "6c57bf2e04243a25e9b7d2b714b216f770f2ca8075fcfb923792e59023df4c51",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "5467402dd796f43e303ddc3187eb21c8f409f3c332867ce56d4c453b4dbf3063",
+              "role": "probe"
+            }
+          },
+          "key": "m3-disposable-probe",
+          "task_id": "fantasy-football-m3-disposable-probe-v1"
+        },
+        "reported_at": 1789142569.7586482,
+        "reported_outcome": "success",
+        "returned_task_id": "fantasy-football-m3-disposable-probe-v1"
+      }
+    },
+    {
+      "id": "d4db9312ec594d1cb4a5f70a7157ef37",
+      "state": "verified",
+      "at": 1789142580.7078521,
+      "value": {
+        "before_inventory": "39ff6ac7b4d74f6cb1aa5a54ea47e2f2",
+        "diff_id": "ad3d651150434c84b2755eaeee4ebfd9",
+        "evidence": {
+          "path": "data/automation/m3/delete-tool-result.json",
+          "sha256": "f5502e4e99d46fb4df2bb9395b731050399cd8bac41553fdfa11525b816dd965"
+        },
+        "operation": {
+          "action": "delete",
+          "desired": null,
+          "expected": {
+            "config": {
+              "cwds": [],
+              "kind": "heartbeat",
+              "name": "Fantasy Football M3 disposable probe v2",
+              "notification_policy": null,
+              "project_id": null,
+              "prompt_sha256": "830ac146a67225fc850ac33c68b7fc244e4c37e8ccda23097b04e4b7b5fb1ed0",
+              "rrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=2;BYSECOND=0",
+              "status": "PAUSED",
+              "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912"
+            },
+            "file_sha256": "d523f9e0951cbaaf0c97019104c2bbebc6e9ed6bdc9537e9c31b3b37910c838d",
+            "fingerprint": "0e0b6363ea96fe840ca5e8b737cad3a89c2ef182b1fe0d35757cb737da9a633b",
+            "id": "fantasy-football-m3-disposable-probe-v1",
+            "owner": {
+              "installation": "a3a50b9f3e67407c97f6cd5a8a65e08a",
+              "key": "m3-disposable-probe",
+              "revision": "982f6984409614246a82288dd546148b2c400940ca6feb0d8b9cec16fcbaf369",
+              "role": "probe"
+            }
+          },
+          "key": "m3-disposable-probe",
+          "task_id": "fantasy-football-m3-disposable-probe-v1"
+        },
+        "reported_at": 1789142595.5337,
+        "reported_outcome": "success",
+        "returned_task_id": "fantasy-football-m3-disposable-probe-v1"
+      }
+    }
+  ],
+  "observed_at": "2026-09-11T16:03:15.965216+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "kind": "observation",
+  "observation_id": "dd9458d6961945dc97f84cada8e1ec9f",
+  "run_id": "11d0a475c2634606b7d2f65d7154325b",
+  "capability": "browser_inspection",
+  "reported_status": "verified",
+  "provenance": "operator_supplied_evidence; requires review",
+  "evidence": {
+    "observed_at": "2026-09-11T03:37:34Z",
+    "surface": "mcp__cua_repl.js; Codex In-app Browser; browser 1; tab 1",
+    "execution_mode": "interactive",
+    "result": "Sleeper team page loaded without a login screen. Visible account: ahadik. League: Free Agents, 2026 14-Team PPR. Team: Applied Ignorance. Week 1 shows Brock Purdy under STARTERS and Patrick Mahomes under BENCH. No lineup, queue, waiver, chat, or account changes were made. This verifies interactive inspection in Codex only. ChatGPT and scheduled browser access remain untested.",
+    "reference": "Current task mcp__cua_repl.js calls: createBrowserTab(iab, https://sleeper.com/leagues/1400628784381612032/team, visible=true), followed by tab.getAXState(); tab 1 title Sleeper",
+    "app_name": "Codex",
+    "app_version": null,
+    "account_workspace": "Sleeper account ahadik; local project /Users/alex/Projects/Fantasy Football; Codex account unknown",
+    "url": "https://sleeper.com/leagues/1400628784381612032/team",
+    "provider_api_attempts": "No project provider calls. Browser page network counts are unknown."
+  },
+  "evidence_sha256": "8a0ca7698bfcfee9192df725bc8412abfe75de621d798e39c8864b792455ebba"
+}

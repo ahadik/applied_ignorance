@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "in_progress",
+  "tests": {"command": "python3 -m unittest discover -v", "passed": 315, "failed": 0},
+  "proposal": "data/weekly/2026/1/proposals/5d7a3f65662444b2987d1bc17522c74f.json",
+  "execution_id": "dc0f789e44c2411eaf2cbf41acf39bde",
+  "action_id": "a840fe77a209456abd8667a6240b8bfd",
+  "execution_outcome": "confirmed",
+  "owner_approval": "data/lineup_execution/owner/20260911-swap.json",
+  "native_readback": "data/lineup_execution/native/20260911T181308Z.json",
+  "initial_api_readback": "data/lineup_execution/observations/fbc01771aa464bf9b1d3509a2f6968c5.json",
+  "confirmed_api_readback": "data/lineup_execution/observations/10f78387e7be44bd866aa3f8cc1ed7f8.json",
+  "browser_actions_repeated": false,
+  "qualifying_game_windows": 0,
+  "required_game_windows": 2,
+  "standing_autonomy_enabled": false,
+  "scheduled_followup": {
+    "id": "m5-sunday-early-game-review",
+    "date": "2026-09-13",
+    "time_zone": "America/New_York",
+    "currently_scheduled_time": "12:00",
+    "intended_later_time": "15:25",
+    "later_schedule_verified": false,
+    "later_schedule_dependency": "Noon run must first update this same automation and verify its saved configuration.",
+    "inventory_id": "6579da2555b843f5a8bce55e8372cd76",
+    "inventory_complete": true,
+    "cleanup": "Delete after late review. Date guard refuses stale future weekly work."
+  },
+  "remaining": ["Two actual owner-supervised relevant game windows", "Verify late-review schedule after noon update", "Implement and verify limited-autonomy promotion only after qualifying windows and explicit delegation"]
+}

@@ -398,9 +398,17 @@ class NFLVerse:
                 if status != 200:
                     raise NFLVerseError('Schedule download failed')
                 fetched, digest = self.clock(), hashlib.sha256(body).hexdigest()
+            recovered = False
             if (len(body) != info['size'] or hashlib.sha256(body).hexdigest() != digest
                     or hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest() != sha):
-                raise NFLVerseError('Schedule revision/checksum mismatch; rerun collection')
+                # The mutable raw URL can lag Contents metadata. Read the exact
+                # advertised blob once, through the same budget and cooldown.
+                blob_url = 'https://api.github.com/repos/nflverse/nfldata/git/blobs/' + sha
+                status, download_headers, body = self.request(db, blob_url, {'Accept': 'application/vnd.github.raw+json'}, retries=0)
+                if (status != 200 or len(body) != info['size']
+                        or hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest() != sha):
+                    raise NFLVerseError('Schedule revision/checksum mismatch after exact-blob retrieval')
+                fetched, digest, recovered = self.clock(), hashlib.sha256(body).hexdigest(), True
             rows, columns = parse_csv(body, 'games.csv',
                 {'game_id','season','game_type','week','gameday','gametime','away_team','home_team'}, None)
             selected = [r for r in rows if r['season'] == str(season)]
@@ -408,7 +416,7 @@ class NFLVerse:
                 raise NFLVerseError('Requested schedule season is unavailable')
             if validator:
                 validator(selected)
-            if not cached or refresh:
+            if not cached or refresh or recovered:
                 if 'no-store' not in download_headers.get('cache-control', '').lower() and 'no-store' not in headers.get('cache-control', '').lower():
                     db.execute('INSERT OR REPLACE INTO assets VALUES (?,?,?,?)', (revision, fetched, body, digest))
                 else:
@@ -418,7 +426,8 @@ class NFLVerse:
                 'url': url, 'git_blob_sha': sha, 'sha256': digest, 'columns': columns,
                 'asset_updated_at': None, 'fetched_at': datetime.fromtimestamp(fetched, timezone.utc).isoformat(),
                 'metadata_checked_at': datetime.fromtimestamp(self.clock(), timezone.utc).isoformat(),
-                'cache_hit': bool(cached and not refresh),
+                'cache_hit': bool(cached and not refresh and not recovered),
+                'exact_blob_recovery': recovered,
                 'network_attempts': db.execute('SELECT COUNT(*) FROM attempts').fetchone()[0]-start}}
 
 

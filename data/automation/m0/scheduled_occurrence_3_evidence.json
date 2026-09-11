@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-09-11T04:08:02Z",
+  "surface": "Scheduler heartbeat, central Sleeper probe, in-app browser and saved schedule",
+  "execution_mode": "scheduled",
+  "result": "Occurrence 3 resumed at 2026-09-11T04:07:12.489Z. The approved probe succeeded with one API attempt and no cache hit. In-app browser tab 2 displayed ahadik, Free Agents 2026 14-Team PPR and Applied Ignorance, Week 1, with Purdy starting and Mahomes benched. No login screen or tool-reported approval interruption appeared. No user intervention message arrived during the checks. The user has not yet confirmed closed-conversation status, absence of approval prompts, or notification delivery. The schedule was paused and the saved record confirmed PAUSED. No Sleeper state changed.",
+  "reference": "fantasy-football-m0-disposable-probe heartbeat; receipt 8dcf7f45486648c897b88fdd4df69962; occurrence3Tab.getAXState, tab 2; disposable_schedule_occurrence_3_paused.toml",
+  "run_id": "8dcf7f45486648c897b88fdd4df69962",
+  "requested_due_at": "2026-09-11T00:07:00-04:00",
+  "scheduler_event_at": "2026-09-11T04:07:12.489Z",
+  "event_delay_from_requested_time_seconds": 12.489,
+  "network_attempts": 1,
+  "cache_hit": false,
+  "fetched_at": "2026-09-11T04:07:30.505298+00:00",
+  "source_updated_at": null,
+  "app_version": null,
+  "account_workspace": "Sleeper ahadik; /Users/alex/Projects/Fantasy Football; app account unknown",
+  "closed_conversation_confirmed": null,
+  "no_new_approval_confirmed": null,
+  "notification_delivery_confirmed": null,
+  "controlled_restart_test": false,
+  "cleanup": "PAUSED. Local automation.toml inventory contained only this disposable schedule. App-wide inventory remains unverified."
+}

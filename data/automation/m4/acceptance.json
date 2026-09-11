@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-11",
+  "milestone": "M4",
+  "status": "complete",
+  "operating_mode": "bounded recurring dispatcher",
+  "live_acceptance": "data/automation/m4/live/acceptance.json",
+  "phone_delivery_confirmed": true,
+  "phone_confirmation": "data/automation/m4/phone-confirmation.json",
+  "health_report": "data/automation/m4/final-health.json",
+  "validation": {
+    "unit_tests_passed": 299,
+    "dispatcher_tests_passed": 8,
+    "new_workflow_tests": 10,
+    "new_pushover_tests": 7,
+    "document_structural_findings": 0,
+    "document_advisory_findings": 372,
+    "new_document_advisories_reviewed": true,
+    "git_diff_check_passed": true
+  },
+  "verified": [
+    "owner confirmed actual phone delivery",
+    "persistent notification incident deduplication",
+    "bounded retries and attempt budget",
+    "stale and disabled workflows stop before provider access",
+    "daily and deadline claims share one roster scope",
+    "uncertain workflow outcomes require recovery",
+    "browser failure can invoke notification independently",
+    "two simulated planning cycles preserve missing-coverage status",
+    "two actual scheduler-injected heartbeats completed distinct harmless workflow runs",
+    "fresh complete local inventories verified future configuration coverage in both live cycles",
+    "supported scheduler deletion and complete local cleanup verified",
+    "actual child-process exit after claim requires explicit recovery before retry",
+    "daily planner registers matching deadline recipes and next daily planner before configuration coverage"
+  ],
+  "outstanding": [],
+  "operating_limits": [
+    "live acceptance uses synthetic harmless local workflow obligations",
+    "daily football-planner integration uses simulated provider evidence in offline tests",
+    "configuration coverage assumes 120 seconds of dispatch delay and is not an uptime or punctuality guarantee",
+    "natural one-time expiration remains unverified and is not required by the recurring path",
+    "current browser and real football data readiness require fresh verification",
+    "external offline Mac monitor is not configured"
+  ],
+  "production_automation_enabled": false,
+  "sleeper_changes": false
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "observation",
+  "observation_id": "5dcdb33df7d94c71b65ca94f81f2d7b9",
+  "run_id": "5228e3404cba4654ad63ac9387476e94",
+  "capability": "browser_inspection",
+  "reported_status": "verified",
+  "provenance": "operator_supplied_evidence; requires review",
+  "evidence": {
+    "observed_at": "2026-09-11T04:29:20Z",
+    "surface": "mcp__cua_repl: Codex In-app Browser, browser 1, tab 1",
+    "execution_mode": "scheduled",
+    "result": "The configured league team page displayed account ahadik, league Free Agents, 2026 14-Team PPR, and team Applied Ignorance. No login screen or approval interruption was reported. Read-only navigation and accessibility inspection were performed; no Sleeper state changed.",
+    "reference": "mcp__cua_repl createBrowserTab and getAXState in task 01a08eb9-5f7e-7961-86b7-a97fbfa908f6; AX nodes 13, 18, 19 and 46",
+    "url": "https://sleeper.com/leagues/1400628784381612032/team",
+    "account": "ahadik",
+    "league": "Free Agents",
+    "team": "Applied Ignorance",
+    "league_id": "1400628784381612032",
+    "login_screen": false,
+    "external_writes": false,
+    "app_version": null,
+    "app_account_workspace": null,
+    "timestamp_scope": "Clock observation after browser inspection; exact browser capture timestamp unavailable"
+  },
+  "evidence_sha256": "cf573de4ead65634678c58a8eac873132312538c934e43c7e623deea769077b1"
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "league_id": "1400628784381612032",
+  "season": 2026,
+  "confirmed_on": "2026-09-09",
+  "confirmation_source": "user_supplied_league_settings_screenshot",
+  "evidence_refs": ["docs/LEAGUE_RULES_VERIFICATION.md"],
+  "matched_settings": {
+    "waiver_type": 0,
+    "waiver_day_of_week": 2,
+    "waiver_clear_days": 2
+  },
+  "confirmed_labels": {
+    "waiver_type": "Rolling Waivers",
+    "clear_waivers": "Wednesday (3 AM EDT)",
+    "waiver_time": "2 Days"
+  },
+  "weekly_processing": {
+    "weekday": "Wednesday",
+    "local_time": "03:00",
+    "displayed_timezone": "EDT",
+    "timezone": "America/New_York",
+    "dst_transition_verified": false,
+    "exact_completion_time_guaranteed": false
+  },
+  "dropped_player_wait_days": 2,
+  "remaining_checks": [
+    "candidate_specific_claim_deadline",
+    "custom_daily_waiver_ui_confirmation",
+    "acquisition_and_drop_restrictions",
+    "agent_review_deadlines"
+  ]
+}

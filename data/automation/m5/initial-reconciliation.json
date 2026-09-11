@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-11T17:50:00Z",
+  "basis": "fresh central Sleeper reads and in-app browser full reload",
+  "api_observation": "data/lineup_execution/observations/a4909febf83e4c35a57f31fa0ab442a3.json",
+  "url": "https://sleeper.com/leagues/1400628784381612032/team",
+  "account": "ahadik",
+  "team": "Applied Ignorance",
+  "league_id": "1400628784381612032",
+  "roster_id": 10,
+  "season": 2026,
+  "week": 1,
+  "starters": ["8183", "3198", "4866", "9997", "9487", "12506", "6790", "12711", "PIT"],
+  "bench": ["4046", "4199", "8676", "9754", "7002"],
+  "native_locked_player_ids": ["8183", "8676"],
+  "lock_basis": "Purdy and Shaheed show Final and N/A slot controls. Other players show named slot controls and future game times.",
+  "browser_api_agreement": true,
+  "previous_disagreement_resolved": true,
+  "network_attempts": 5,
+  "cache_hits": 0,
+  "platform_changes": false,
+  "counts_as_supervised_game_window": false
+}

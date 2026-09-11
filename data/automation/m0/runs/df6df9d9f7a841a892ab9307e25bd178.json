@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "kind": "run",
+  "run_id": "df6df9d9f7a841a892ab9307e25bd178",
+  "started_at": "2026-09-11T03:50:52.968500+00:00",
+  "context": {
+    "project": "/Users/alex/Projects/Fantasy Football",
+    "cwd": "/Users/alex/Projects/Fantasy Football",
+    "cwd_matches": true,
+    "host": "MacBookPro.lan",
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.6",
+    "executable": "/opt/homebrew/opt/python@3.13/bin/python3.13",
+    "commit": "c88be0a2cd44550e0e690fe9b4e4620e77a31db7",
+    "python_source_sha256": "0a299841082cdcdc4f34f2d2faf5faaa91c303d42599eeb7ab6fe58bb17810a8",
+    "app_version": null,
+    "account_workspace": null
+  },
+  "trigger_claim": "scheduled",
+  "task_id_claim": "fantasy-football-m0-disposable-probe",
+  "expected_at_claim": "2026-09-11T03:49:00+00:00",
+  "start_delay_seconds": 112.9685,
+  "capabilities": {
+    "local_command": {
+      "status": "verified",
+      "basis": "script_execution",
+      "scope": "this process only; trigger is a caller claim"
+    },
+    "sleeper_read": {
+      "status": "unavailable",
+      "basis": "central_sleeper_client",
+      "error_type": "SleeperError",
+      "acquisition": null,
+      "scope": "failed request; actual attempt count unavailable"
+    },
+    "scheduled_start": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "browser_inspection": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "task_inventory": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "task_create": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "task_update": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "task_cancel": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "one_off_timing": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "timezone": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "chat_closed": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "app_restart": {
+      "status": "untested",
+      "basis": "none"
+    },
+    "notification_delivery": {
+      "status": "untested",
+      "basis": "none"
+    }
+  },
+  "external_writes": false
+}

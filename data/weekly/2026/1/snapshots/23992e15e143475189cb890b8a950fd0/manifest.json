@@ -1,0 +1,20 @@
+{
+  "complete": false,
+  "season": 2026,
+  "week": 1,
+  "started_at": "2026-09-11T18:07:42.710458+00:00",
+  "purpose": "validation",
+  "datasets": [
+    {
+      "name": "context",
+      "file": "context.json",
+      "sha256": "a1f2314bc9584d7e3c27e673091d3b351cf7f3a14b265bab24749d1a59c71ce6"
+    },
+    {
+      "name": "sleeper_players",
+      "file": "sleeper_players.json",
+      "sha256": "a226345a926a7528be57c37715f51d56e583a42b3e7e143004f53924abe84734"
+    }
+  ],
+  "error": "Schedule revision/checksum mismatch; rerun collection"
+}

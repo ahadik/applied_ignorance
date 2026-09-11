@@ -1,0 +1,30 @@
+{
+  "data": {
+    "avatar": null,
+    "cookies": null,
+    "created": null,
+    "currencies": null,
+    "data_updated": null,
+    "deleted": null,
+    "display_name": "ahadik",
+    "email": null,
+    "is_bot": false,
+    "metadata": null,
+    "notifications": null,
+    "pending": null,
+    "phone": null,
+    "real_name": null,
+    "solicitable": null,
+    "summoner_name": null,
+    "summoner_region": null,
+    "token": null,
+    "user_id": "1403069775155884032",
+    "username": "ahadik",
+    "verification": null
+  },
+  "fetched_at": "2026-09-11T05:06:13.164698+00:00",
+  "cache_hit": false,
+  "cache_age_seconds": 0.0009908676147460938,
+  "network_attempts": 1,
+  "source_updated_at": null
+}

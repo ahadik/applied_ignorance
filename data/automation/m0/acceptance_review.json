@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-09-11T04:34:04Z",
+  "surface": "Supervisor review of saved receipts, user confirmations, supported task controls and local inventory",
+  "execution_mode": "scheduled",
+  "result": "M0 capability evaluation is complete with a limited operating mode. Scheduled local commands, central Sleeper reads and in-app browser inspection succeeded. Closed-conversation and controlled restart runs were confirmed by the user without approvals and with notifications. The standalone task completed with no reported approval interruption, but user confirmation for that occurrence is absent. Both disposable schedules were deleted with the supported control; a fresh complete local inventory contains no entries. Exact natural one-occurrence expiration remains unverified because the standalone schedule stayed ACTIVE and no next-run timestamp was exposed. Full dynamic deadline scheduling is not accepted.",
+  "reference": "docs/M0_EXIT_REPORT.md; inventory_before_cleanup.json; inventory_after_cleanup.json; standalone_result.json; occurrence_3_user_confirmation.json; occurrence_4_user_confirmation.json",
+  "capability_evaluation_complete": true,
+  "full_dynamic_scheduling_accepted": false,
+  "fallback_mode": "Manual activation and explicit owner-maintained schedules; deterministic desired schedules remain proposals until verified. No automatic deadline-task reconciliation or assumed one-time expiration.",
+  "capabilities": {
+    "local_project_and_interpreter": "verified",
+    "local_writes_without_user_approval": "verified for confirmed occurrence 4 with supported scoped review",
+    "central_sleeper_read": "verified; scoped permission required",
+    "other_provider_scheduled_access": "untested",
+    "scheduled_browser_inspection": "verified",
+    "standalone_execution": "verified; owner confirmation of no approval remains absent for that occurrence",
+    "closed_conversation": "verified with user confirmation",
+    "controlled_restart": "verified with user confirmation",
+    "notification_receipt": "verified with user confirmation; device unspecified",
+    "local_inventory": "verified within direct local file scope, not transactional",
+    "cloud_inventory": "untested and outside selected local mode",
+    "create_update_pause_delete": "verified",
+    "natural_one_time_expiration": "untested; ACTIVE record is inconclusive",
+    "timing": "observed scheduled events near requested Eastern times; no punctuality guarantee or daylight-saving test"
+  },
+  "cleanup": {
+    "deleted_ids": ["fantasy-football-m0-standalone-probe", "fantasy-football-m0-disposable-probe"],
+    "local_inventory_complete": true,
+    "remaining_local_schedules": 0
+  },
+  "scope": "This Mac and current account setup only. No lineup changes, new production schedules, cloud services, or second-Mac acceptance."
+}

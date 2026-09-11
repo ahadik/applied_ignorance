@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "kind": "inspection",
+  "league_id": "1400628784381612032",
+  "season": 2026,
+  "week": 1,
+  "roster_id": 999999,
+  "notify_on_failure": false,
+  "purpose": "Synthetic inspection scope. No real roster facts or advice."
+}

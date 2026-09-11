@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Automation ledger export version 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "observed_at", "policy", "checks", "current_checks", "runs", "refs", "events"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "policy": {"$ref": "automation_policy.schema.json"},
+    "checks": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["check_id", "revision", "spec"],
+      "properties": {
+        "check_id": {"type": "string"}, "revision": {"$ref": "#/$defs/hash"},
+        "spec": {"type": "object", "additionalProperties": false, "required": ["spec", "sources"], "properties": {
+          "spec": {"$ref": "automation_check.schema.json"},
+          "sources": {"type": "array", "maxItems": 20, "items": {"$ref": "#/$defs/reference"}}
+        }}
+      }
+    }},
+    "current_checks": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["check_id", "revision"],
+      "properties": {"check_id": {"type": "string"}, "revision": {"$ref": "#/$defs/hash"}}
+    }},
+    "runs": {"type": "array", "items": {"$ref": "#/$defs/run"}},
+    "refs": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["sequence", "run_id", "kind", "reference", "at"],
+      "properties": {
+        "sequence": {"type": "integer", "minimum": 1}, "run_id": {"type": "string"},
+        "kind": {"enum": ["proposal", "action", "evidence"]},
+        "reference": {"$ref": "#/$defs/reference"}, "at": {"type": "number"}
+      }
+    }},
+    "events": {"type": "array", "items": {"$ref": "#/$defs/event"}}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "reference": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+      "properties": {"path": {"type": "string", "minLength": 1, "maxLength": 500}, "sha256": {"$ref": "#/$defs/hash"}}
+    },
+    "run": {
+      "type": "object", "additionalProperties": false,
+      "required": ["run_id", "check_id", "revision", "scope", "state", "started", "lease_until", "finished", "policy_revision", "result"],
+      "properties": {
+        "run_id": {"type": "string"}, "check_id": {"type": "string"},
+        "revision": {"$ref": "#/$defs/hash"}, "scope": {"type": "string"},
+        "state": {"enum": ["running", "completed", "failed", "outcome_unknown", "abandoned"]},
+        "started": {"type": "number"}, "lease_until": {"type": "number"}, "finished": {"type": ["number", "null"]},
+        "policy_revision": {"$ref": "#/$defs/hash"},
+        "result": {"oneOf": [{"type": "null"}, {
+          "type": "object", "additionalProperties": false, "required": ["summary", "artifacts"],
+          "properties": {
+            "summary": {"type": "string", "minLength": 1, "maxLength": 1000},
+            "artifacts": {"type": "array", "maxItems": 20, "items": {"$ref": "#/$defs/reference"}}
+          }
+        }]}
+      }
+    },
+    "event": {
+      "type": "object", "additionalProperties": false, "required": ["sequence", "at", "kind", "run_id", "payload"],
+      "properties": {
+        "sequence": {"type": "integer", "minimum": 1}, "at": {"type": "number"},
+        "kind": {"enum": ["initialized", "mode_changed", "check_registered", "claimed", "renewed", "reference_added", "finished", "recovered"]},
+        "run_id": {"type": ["string", "null"]}, "payload": {"type": "object"}
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Milestone 3: draft strategy and decision engine
 
-The active strategy now distinguishes A and B turns; see [AB_STRATEGY.md](AB_STRATEGY.md).
+The active strategy now distinguishes A and B turns. See [AB_STRATEGY.md](AB_STRATEGY.md).
 The original two-pick method described below remains an explicit comparison option.
 
 Later assigned-order update: seat 13 of 14, with 14 rounds and one FLEX.
@@ -9,8 +9,8 @@ used the previous 15-round/two-FLEX configuration and remains historical evidenc
 
 Implemented September 8, 2026. The reusable system now turns the milestone 2
 board and an observed draft state into roster-specific recommendations, two-pick
-scenario comparisons, and ordered fallback candidates. Evaluation is offline;
-the third browser mock and operational source refresh remain separate checkpoints.
+scenario comparisons, and ordered fallback candidates. Evaluation is offline.
+The third browser mock and operational source refresh remain separate checkpoints.
 
 ## Review checkpoint
 
@@ -26,7 +26,7 @@ because evaluation uses the same partial season projections as the planner.
 It is **not evidence of six league wins, a calibrated win probability, or a proven
 advantage against other agents**. The report includes arbitrary projection/injury
 stress draws, timing, original seed, complete rosters and limitations. Re-run with
-additional seeds using the saved command; do not tune to these six results.
+additional seeds using the saved command. Do not tune to these six results.
 
 ## Selected strategy
 
@@ -43,7 +43,7 @@ disappear before the next selection, and preserve room for every required slot.
    first choice followed by the best marginal-value second choice. Prefer value
    that holds up across several opponent assumptions.
 4. Leave K/DEF until the last two rounds unless required-slot constraints force
-   them sooner. Use consensus order for specialists; their incomplete projection
+   them sooner. Use consensus order for specialists. Their incomplete projection
    subtotals cannot support fair comparisons with offense.
 5. Preserve injury, news, depth, historical workload and bye evidence for strategic
    review. Do not translate one week's injury probability into a full-season
@@ -55,7 +55,7 @@ availability. They can remain in planning utility even when an owned starter is
 below that reference. Final evaluation removes virtual players and uses the best
 actual offensive starting lineup. This model does not optimize weekly substitutions,
 correlations, schedules, waiver replacement, playoff performance or championship
-probability. Bye conflicts are displayed; they are not an automatic draft penalty.
+probability. Bye conflicts are displayed. They are not an automatic draft penalty.
 
 ## Explicit policy and opponent assumptions
 
@@ -63,13 +63,13 @@ probability. Bye conflicts are displayed; they are not an automatic draft penalt
 
 | Setting | Default | Meaning |
 |---|---:|---|
-| Scenario families | ECR, ADP, needs, RB run | Several plausible selection rules; no claim to know the other agents |
-| Samples per family | 2 | Eight scenarios; availability fractions are coarse and uncalibrated |
-| Shortlist | Top 5 ECR plus top 5 marginal value | Up to ten distinct candidates get lookahead; others are marginal-value fallbacks |
-| Robust blend | 75% overall mean + 25% worst family mean | Penalizes dependence on a favorable opponent assumption |
+| Scenario families | ECR, ADP, needs, RB run | Several plausible selection rules. No claim to know the other agents |
+| Samples per family | 2 | Eight scenarios. Availability fractions are coarse and uncalibrated |
+| Shortlist | Top 5 ECR plus top 5 marginal value | Up to ten distinct candidates get lookahead. Others are marginal-value fallbacks |
+| Blend of overall and worst-family means | 75% overall mean + 25% worst family mean | Penalizes dependence on a favorable opponent assumption |
 | Bench weight | 0.18 | Discount on reserve points above a deeper positional reference |
 | Bench decay | 0.6 | Each further reserve at that position gets less weight |
-| Deep reference | Index 2 × teams at QB/TE; 5 × teams at RB/WR | First player beyond that count in descending modeled points, or last available |
+| Deep reference | Index 2 × teams at QB/TE.  5 × teams at RB/WR | First player beyond that count in descending modeled points, or last available |
 | Backup QB/TE | Round 10 onward | Earlier permitted when needed for required slots/FLEX |
 | Position caps | QB 2, RB 8, WR 8, TE 2, K 1, DEF 1 | Guardrails, not a prescribed roster |
 
@@ -79,12 +79,11 @@ subtract 8 ranks for a player who fills a vacancy and add 30 otherwise. RB/QB ru
 scenarios additionally subtract 15/20 for that position. These constants are
 inspectable hypotheses, not learned behavior. All opponents preserve mandatory
 slot feasibility. The ECR baseline shares our caps, exclusions and late-specialist
-rules; it is not deliberately handicapped with invalid roster construction.
+rules. It is not deliberately handicapped with invalid roster construction.
 
-The reported “survival if passed” fraction asks: **if we choose the best legal ECR
-alternative now, how often does this player survive until our following pick?**
+The reported “survival if passed” fraction assumes we choose the best legal ECR alternative now. It measures how often this player survives until our following pick.
 It is conditional on availability at our first pick. When planning before our
-turn, a separate fraction records survival to that turn; a missing target uses a
+turn, a separate fraction records survival to that turn. A missing target uses a
 greedy fallback in that scenario. At the final pick there is no following-pick
 availability estimate. Expert rank dispersion is never treated as point variance.
 
@@ -135,8 +134,8 @@ python3 controller.py watch --draft VERIFIED_DRAFT_ID --strategy-board data/draf
 These commands make up to three uncached Sleeper reads per refresh through
 `draft_data.read_live_draft` → `sleeper.get_sleeper`, with live retries disabled.
 Then they calculate locally and save `strategy_result.json` and `candidates.json`
-in the per-draft directory. The watcher sleeps five seconds after each cycle;
-network and computation add to that interval. Repeated unchanged draft state,
+in the per-draft directory. The watcher sleeps five seconds after each cycle.
+Network and computation add to that interval. Repeated unchanged draft state,
 board hash, engine version and policy reuse the calculation. Every cycle still
 checks source expiry and the 20-second real-state deadline.
 
@@ -144,14 +143,14 @@ Use `--allow-mock` only for an explicitly verified league-less mock whose roster
 format matches, after confirming that the league board's scoring assumptions are
 appropriate. It explicitly binds the exported candidate file to that mock ID.
 It cannot override a different real league, stale data or a synthetic replay.
-This option configures the controller; it does not create or start a mock.
+This option configures the controller. It does not create or start a mock.
 
 ## Timed operation and recovery
 
-- Follow `DRAFT_RUNBOOK.md` and `CONTROLLER.md`; after compaction reload them and
+- Follow `DRAFT_RUNBOOK.md` and `CONTROLLER.md`. After compaction reload them and
   the per-draft checkpoint. The process can compute while chat pauses if the
   computer/process keeps running. The first evaluation's slowest calculation was
-  2.1 seconds, excluding provider/browser latency; this is not a time guarantee.
+  2.1 seconds, excluding provider/browser latency. This is not a time guarantee.
 - Every observed selection invalidates old strategy candidates. The watcher
   recomputes before reporting readiness. `rank` refuses a different state
   fingerprint rather than merely deleting selected names from an old ranking.
@@ -163,19 +162,30 @@ This option configures the controller; it does not create or start a mock.
   any uncertain click. A source or computation failure blocks preparation.
 - Source refresh is not automatic in milestone 3. The earliest source deadline
   often comes from 15-minute alerts. Use the saved collection/alert refresh and
-  board-build commands before expiry as described in milestone 2; the watcher
+  board-build commands before expiry as described in milestone 2. The watcher
   must not bypass this failure or consume provider calls itself to repair it.
 - Unknown selected IDs, unassigned seats, traded picks, reversal, unsupported
   additional roster slots or ownership disagreement stop the engine. Repair
-  verified inputs through the existing pipeline; do not guess identity/ownership.
+  verified inputs through the existing pipeline. Do not guess identity/ownership.
 
 ## Acceptance evidence
 
-125 offline tests passed, including 24 new strategy/handoff tests: numeric
-marginal value, FLEX/bench accounting, late mandatory slots, reproducibility,
-conditional availability at the snake turn, legal full drafts, explicit overrides,
-all-team roster ownership, changed-state invalidation, source expiry, policy cache
-invalidation, mock binding, unsupported formats and completed-roster handling.
+125 offline tests passed. These include 24 new strategy/handoff tests. The new tests cover:
+
+- Numeric marginal value.
+- FLEX/bench accounting.
+- Late mandatory slots.
+- Reproducibility.
+- Conditional availability at the snake turn.
+- Legal full drafts.
+- Explicit overrides.
+- Ownership across all team rosters.
+- Invalidation after state changes.
+- Source expiry.
+- Policy cache invalidation.
+- Mock binding.
+- Unsupported formats.
+- Completed-roster handling.
 No provider calls or Sleeper actions were made for milestone 3.
 
 The code and offline evaluation checkpoint are complete. The next operational

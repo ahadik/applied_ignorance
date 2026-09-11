@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-09-11T03:34:32Z",
+  "surface": "mcp__cua_repl",
+  "execution_mode": "interactive",
+  "result": "IDE test: browser discovery returned no browsers. getBrowser returned No browser is available. Native Chrome access was not approved. Owner selected the ChatGPT in-app browser for the next test.",
+  "reference": "M0 IDE conversation: cua.getState, cua.getBrowser and cua.getApp calls before the successful Sleeper probe",
+  "time_basis": "Recorded at the successful API probe checkpoint; exact UI observation times were not returned",
+  "app_version": null,
+  "account_workspace": null
+}

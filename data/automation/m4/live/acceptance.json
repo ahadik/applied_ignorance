@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "finished_at": "2026-09-11T16:50:58.851071+00:00",
+  "cycles": [
+    {
+      "schema_version": 1,
+      "observed_at": "2026-09-11T16:50:38.066753+00:00",
+      "trigger_evidence": {
+        "path": "data/automation/m4/live/triggers/20260911T165026217Z.json",
+        "sha256": "0ee8e64c4517e04933e6429632bd3ad873a09c5153f9ae2079b12c5b7350386f"
+      },
+      "trigger_basis": "operator_observation_of_actual_scheduler_message",
+      "workflow": {
+        "schema_version": 1,
+        "run_id": "90d19766aeeb45509314cc6991eae723",
+        "check_id": "m4-live-cycle-2",
+        "revision": "f5217a8ee37e250f033333a0b5c245ed813ece140d1ce5a639b7c8f692e6f109",
+        "kind": "inspection",
+        "started_at": "2026-09-11T16:50:38.055722+00:00",
+        "trigger_claim": "scheduled",
+        "scheduled_execution_verified": false,
+        "status": "completed",
+        "sleeper_writes": false,
+        "acquisition": {},
+        "inspection": {
+          "schema_version": 1,
+          "project": "/Users/alex/Projects/Fantasy Football",
+          "observed_at": "2026-09-11T16:50:38.056967+00:00",
+          "policy": {
+            "allowed_operations": [
+              "collect_inputs",
+              "inspect_sleeper",
+              "propose_lineup",
+              "validate_lineup"
+            ],
+            "lease_seconds": 300,
+            "mode": "observe",
+            "schema_version": 1,
+            "timezone": "America/New_York"
+          },
+          "checks": 3,
+          "runs": {
+            "completed": 1,
+            "running": 1
+          },
+          "events": 8,
+          "expired_leases": 0,
+          "external_execution": false
+        },
+        "finished_at": "2026-09-11T16:50:38.057243+00:00"
+      },
+      "coverage": {
+        "schema_version": 1,
+        "publication_id": "334f9bde584b10587a707f69f34ebccaf2c6107b520a5fa97f4a6256ddf9ea5b",
+        "observed_at": "2026-09-11T16:50:38.064401+00:00",
+        "horizon_end": "2026-09-11T18:50:38.060509+00:00",
+        "inventory": {
+          "task_id": "fantasy-football-bounded-dispatcher",
+          "fingerprint": "1233c508907ccc3b66583f59dc2e0e09a4c303a464afc9e2b97a97fce93a739e",
+          "observed_at": "2026-09-11T16:50:38.064385+00:00",
+          "complete_local_inventory": true,
+          "entries": 1
+        },
+        "checks": [
+          {
+            "check_id": "m4-live-cycle-1",
+            "revision": "2ab0d48764769a9837fd48d9ffe7c95aef5a0b4069df052118d0494a6ff62a0c",
+            "recipe": "data/automation/m4/live/cycle-1.json",
+            "state": "completed"
+          },
+          {
+            "check_id": "m4-live-cycle-2",
+            "revision": "f5217a8ee37e250f033333a0b5c245ed813ece140d1ce5a639b7c8f692e6f109",
+            "recipe": "data/automation/m4/live/cycle-2.json",
+            "state": "completed"
+          },
+          {
+            "check_id": "m4-live-future-sentinel",
+            "revision": "e8ceadd348de2b23b3f487cb510caafa916eb59773bb6e2a958b30f5ca4b9c9a",
+            "recipe": "data/automation/m4/live/future-sentinel.json",
+            "state": "pending",
+            "configuration_covered": true,
+            "estimated_start_bound": "2026-09-11T17:46:38.517787+00:00",
+            "estimated_finish_bound": "2026-09-11T17:51:38.517787+00:00"
+          }
+        ],
+        "configuration_coverage_verified": true,
+        "issues": [],
+        "timing_assumption": "At most 120 seconds of dispatch delay after each 60-second wake interval. This is not an uptime or punctuality guarantee."
+      },
+      "real_provider_data": false,
+      "scope": "harmless local workflow and scheduler integration"
+    },
+    {
+      "schema_version": 1,
+      "observed_at": "2026-09-11T16:49:14.644571+00:00",
+      "trigger_evidence": {
+        "path": "data/automation/m4/live/triggers/20260911T164856289Z.json",
+        "sha256": "22017505bbbfa190af05f68e963cceaf1bb89c746b7a50b8840c433ba191ebba"
+      },
+      "trigger_basis": "operator_observation_of_actual_scheduler_message",
+      "workflow": {
+        "schema_version": 1,
+        "run_id": "9719381271fb48738080a98d59c2dd3e",
+        "check_id": "m4-live-cycle-1",
+        "revision": "2ab0d48764769a9837fd48d9ffe7c95aef5a0b4069df052118d0494a6ff62a0c",
+        "kind": "inspection",
+        "started_at": "2026-09-11T16:49:14.631793+00:00",
+        "trigger_claim": "scheduled",
+        "scheduled_execution_verified": false,
+        "status": "completed",
+        "sleeper_writes": false,
+        "acquisition": {},
+        "inspection": {
+          "schema_version": 1,
+          "project": "/Users/alex/Projects/Fantasy Football",
+          "observed_at": "2026-09-11T16:49:14.633394+00:00",
+          "policy": {
+            "allowed_operations": [
+              "collect_inputs",
+              "inspect_sleeper",
+              "propose_lineup",
+              "validate_lineup"
+            ],
+            "lease_seconds": 300,
+            "mode": "observe",
+            "schema_version": 1,
+            "timezone": "America/New_York"
+          },
+          "checks": 3,
+          "runs": {
+            "running": 1
+          },
+          "events": 6,
+          "expired_leases": 0,
+          "external_execution": false
+        },
+        "finished_at": "2026-09-11T16:49:14.633700+00:00"
+      },
+      "coverage": {
+        "schema_version": 1,
+        "publication_id": "f518dd4bcacf1d05d9533b80dddac6a26bdd4147d84919fa279e4ba77f893fc2",
+        "observed_at": "2026-09-11T16:49:14.642468+00:00",
+        "horizon_end": "2026-09-11T18:49:14.638288+00:00",
+        "inventory": {
+          "task_id": "fantasy-football-bounded-dispatcher",
+          "fingerprint": "1233c508907ccc3b66583f59dc2e0e09a4c303a464afc9e2b97a97fce93a739e",
+          "observed_at": "2026-09-11T16:49:14.642451+00:00",
+          "complete_local_inventory": true,
+          "entries": 1
+        },
+        "checks": [
+          {
+            "check_id": "m4-live-cycle-1",
+            "revision": "2ab0d48764769a9837fd48d9ffe7c95aef5a0b4069df052118d0494a6ff62a0c",
+            "recipe": "data/automation/m4/live/cycle-1.json",
+            "state": "completed"
+          },
+          {
+            "check_id": "m4-live-cycle-2",
+            "revision": "f5217a8ee37e250f033333a0b5c245ed813ece140d1ce5a639b7c8f692e6f109",
+            "recipe": "data/automation/m4/live/cycle-2.json",
+            "state": "pending",
+            "configuration_covered": true,
+            "estimated_start_bound": "2026-09-11T16:52:14.642468+00:00",
+            "estimated_finish_bound": "2026-09-11T16:57:14.642468+00:00"
+          },
+          {
+            "check_id": "m4-live-future-sentinel",
+            "revision": "e8ceadd348de2b23b3f487cb510caafa916eb59773bb6e2a958b30f5ca4b9c9a",
+            "recipe": "data/automation/m4/live/future-sentinel.json",
+            "state": "pending",
+            "configuration_covered": true,
+            "estimated_start_bound": "2026-09-11T17:46:38.517787+00:00",
+            "estimated_finish_bound": "2026-09-11T17:51:38.517787+00:00"
+          }
+        ],
+        "configuration_coverage_verified": true,
+        "issues": [],
+        "timing_assumption": "At most 120 seconds of dispatch delay after each 60-second wake interval. This is not an uptime or punctuality guarantee."
+      },
+      "real_provider_data": false,
+      "scope": "harmless local workflow and scheduler integration"
+    }
+  ],
+  "cleanup_inventory": {
+    "schema_version": 1,
+    "started_at": "2026-09-11T16:50:58.849282+00:00",
+    "observed_at": "2026-09-11T16:50:58.849466+00:00",
+    "scope": "/Users/alex/.codex/automations",
+    "complete": true,
+    "entries": [],
+    "errors": [],
+    "source_hashes": {},
+    "provenance": "local_files_double_read",
+    "account_wide": false
+  },
+  "automation_mode": "disabled",
+  "scope": "M4 bounded recurring dispatcher and harmless workflow acceptance",
+  "limits": [
+    "configuration coverage assumes stated dispatch delay",
+    "no production football coverage or browser freshness assertion",
+    "natural one-time expiration remains unverified",
+    "offline Mac monitor is not configured"
+  ]
+}

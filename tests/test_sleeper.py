@@ -145,6 +145,27 @@ class SleeperTests(unittest.TestCase):
                 self.client.get('user/u')
         self.assertEqual(len(self.calls), 4)
 
+    def test_diagnostics_distinguish_connection_http_and_cooldown(self):
+        self.responses = [SleeperConnectionError('private transport text')]
+        with self.assertRaises(SleeperConnectionError) as caught:
+            self.client.get('league/1', retries=0)
+        self.assertEqual(caught.exception.diagnostic(), {
+            'category': 'connection', 'http_status': None,
+            'network_attempts': 1, 'cache_hit': False})
+        self.assertNotIn('private', str(caught.exception))
+        self.responses = [(503, {}, None)]
+        with self.assertRaises(SleeperError) as caught:
+            self.client.get('league/1', retries=0)
+        self.assertEqual(caught.exception.diagnostic()['http_status'], 503)
+        self.assertEqual(caught.exception.diagnostic()['category'], 'http')
+        self.responses = [(429, {'Retry-After': '60'}, None)]
+        with self.assertRaises(SleeperRateLimited):
+            self.client.get('league/1', retries=0)
+        with self.assertRaises(SleeperRateLimited) as caught:
+            self.new_client().get('league/1', retries=0)
+        self.assertEqual(caught.exception.diagnostic()['category'], 'cooldown')
+        self.assertEqual(caught.exception.diagnostic()['network_attempts'], 0)
+
     def test_rate_limit_persists_and_invalidation_cannot_bypass(self):
         self.responses = [(429, {'Retry-After': '120'}, None)]
         with self.assertRaises(SleeperRateLimited):
