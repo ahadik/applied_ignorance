@@ -1,0 +1,123 @@
+{
+  "weeks": [
+    {
+      "week": 1,
+      "bye_players": [],
+      "uncovered_slots": []
+    },
+    {
+      "week": 2,
+      "bye_players": [],
+      "uncovered_slots": []
+    },
+    {
+      "week": 3,
+      "bye_players": [],
+      "uncovered_slots": []
+    },
+    {
+      "week": 4,
+      "bye_players": [],
+      "uncovered_slots": []
+    },
+    {
+      "week": 5,
+      "bye_players": [
+        "4046"
+      ],
+      "uncovered_slots": []
+    },
+    {
+      "week": 6,
+      "bye_players": [
+        "4199"
+      ],
+      "uncovered_slots": []
+    },
+    {
+      "week": 7,
+      "bye_players": [
+        "9487",
+        "9754"
+      ],
+      "uncovered_slots": []
+    },
+    {
+      "week": 8,
+      "bye_players": [
+        "7002",
+        "8183"
+      ],
+      "uncovered_slots": []
+    },
+    {
+      "week": 9,
+      "bye_players": [
+        "PIT"
+      ],
+      "uncovered_slots": [
+        "DEF"
+      ]
+    },
+    {
+      "week": 10,
+      "bye_players": [
+        "4866",
+        "6790"
+      ],
+      "uncovered_slots": []
+    },
+    {
+      "week": 11,
+      "bye_players": [
+        "12506",
+        "8676"
+      ],
+      "uncovered_slots": []
+    },
+    {
+      "week": 12,
+      "bye_players": [],
+      "uncovered_slots": []
+    },
+    {
+      "week": 13,
+      "bye_players": [
+        "12711",
+        "3198",
+        "9997"
+      ],
+      "uncovered_slots": [
+        "K"
+      ]
+    },
+    {
+      "week": 14,
+      "bye_players": [],
+      "uncovered_slots": []
+    },
+    {
+      "week": 15,
+      "bye_players": [],
+      "uncovered_slots": []
+    },
+    {
+      "week": 16,
+      "bye_players": [],
+      "uncovered_slots": []
+    },
+    {
+      "week": 17,
+      "bye_players": [],
+      "uncovered_slots": []
+    },
+    {
+      "week": 18,
+      "bye_players": [],
+      "uncovered_slots": []
+    }
+  ],
+  "trade_deadline_week": 11,
+  "playoffs_start_week": 15,
+  "assumption": "Current roster held constant; positional coverage only, not future projections or availability clearance."
+}

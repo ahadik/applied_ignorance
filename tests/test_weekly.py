@@ -8,9 +8,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from weekly_model import optimize, fresh, timestamp, schedule_games, build
-from weekly_data import load
-from nflverse import NFLVerse, NFLVerseError
+from fantasy_agent.weekly.weekly_model import optimize, fresh, timestamp, schedule_games, build
+from fantasy_agent.weekly.weekly_data import load
+from fantasy_agent.providers.nflverse import NFLVerse, NFLVerseError
 
 
 def player(pos, points, kickoff='2026-09-13T17:00:00+00:00', **changes):
@@ -113,7 +113,7 @@ class WeeklyPipelineTests(unittest.TestCase):
         self.assertFalse(result['operational_export'])
 
     def run_build(self, inputs, games, **kwargs):
-        with patch('weekly_model.schedule_games', return_value=(games, {'BUF','NYJ'})):
+        with patch('fantasy_agent.weekly.weekly_model.schedule_games', return_value=(games, {'BUF','NYJ'})):
             return build(inputs, timestamp('2026-09-09T12:00:01+00:00'), **kwargs)
 
     def test_weekly_stat_scoring_and_reproducibility(self):

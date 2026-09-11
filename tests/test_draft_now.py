@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from draft_now import main, recommend_now, render
+from fantasy_agent.drafting.draft_now import main, recommend_now, render
 from tests.test_draft_strategy import fixture
 
 
@@ -25,8 +25,8 @@ class DraftNowTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             board = Path(directory) / 'board.json'
             board.write_text(json.dumps(self.board))
-            with patch('draft_data.get_sleeper', side_effect=[self.draft, [], picks or []]) as provider:
-                with patch('draft_now.load_policy', return_value=self.policy):
+            with patch('fantasy_agent.drafting.draft_data.get_sleeper', side_effect=[self.draft, [], picks or []]) as provider:
+                with patch('fantasy_agent.drafting.draft_now.load_policy', return_value=self.policy):
                     result = recommend_now(board, draft_id, 'u', mock=mock)
             self.assertEqual([call.args[0] for call in provider.call_args_list],
                              [f'draft/{draft_id}', f'draft/{draft_id}/traded_picks', f'draft/{draft_id}/picks'])
@@ -63,13 +63,13 @@ class DraftNowTests(unittest.TestCase):
             self.run_advice()
 
     def test_slow_collection_refuses_recommendation(self):
-        with patch('draft_now.monotonic', side_effect=[0, 21]):
+        with patch('fantasy_agent.drafting.draft_now.monotonic', side_effect=[0, 21]):
             with self.assertRaisesRegex(ValueError, '20 seconds'):
                 self.run_advice()
 
     def test_cli_failure_never_prints_old_name(self):
         out, err = StringIO(), StringIO()
-        with patch('draft_now.recommend_now', side_effect=OSError('Sleeper unavailable')):
+        with patch('fantasy_agent.drafting.draft_now.recommend_now', side_effect=OSError('Sleeper unavailable')):
             with redirect_stdout(out), redirect_stderr(err):
                 self.assertEqual(main([]), 1)
         self.assertEqual(out.getvalue(), '')
@@ -80,7 +80,7 @@ class DraftNowTests(unittest.TestCase):
         for our_turn, expected_code in [(True, 0), (False, 2)]:
             advice['state']['our_turn'] = our_turn
             out, err = StringIO(), StringIO()
-            with patch('draft_now.recommend_now', return_value=advice):
+            with patch('fantasy_agent.drafting.draft_now.recommend_now', return_value=advice):
                 with redirect_stdout(out), redirect_stderr(err):
                     self.assertEqual(main(['--name-only']), expected_code)
             self.assertEqual(out.getvalue(), advice['players'][0]['name']+'\n' if our_turn else '')
@@ -104,7 +104,7 @@ class DraftNowTests(unittest.TestCase):
     def test_cli_routes_mock_id_and_displays_target(self):
         advice = self.run_advice()
         out, err = StringIO(), StringIO()
-        with patch('draft_now.recommend_now', return_value=advice) as recommend:
+        with patch('fantasy_agent.drafting.draft_now.recommend_now', return_value=advice) as recommend:
             with redirect_stdout(out), redirect_stderr(err):
                 self.assertEqual(main(['--mock', '789']), 0)
             recommend.assert_called_once_with(draft_id='789', mock=True)

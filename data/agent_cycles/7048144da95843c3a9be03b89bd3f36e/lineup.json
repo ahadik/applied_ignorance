@@ -1,0 +1,1675 @@
+{
+  "schema_version": 1,
+  "engine_version": 1,
+  "season": 2026,
+  "week": 1,
+  "generated_at": "2026-09-11T20:54:52.756718+00:00",
+  "league_id": "1400628784381612032",
+  "state_key": "fd43233a0ced13500d3a2030247b669a8ced4c03f2660c25844f07a43241474b",
+  "input_hash": "906205c60074abe2b0a304f1f04350777a979fa2d0e75aecbc09bb5360534185",
+  "slots": [
+    "QB",
+    "RB",
+    "RB",
+    "WR",
+    "WR",
+    "TE",
+    "FLEX",
+    "K",
+    "DEF"
+  ],
+  "current_starters": [
+    "8183",
+    "3198",
+    "6790",
+    "9997",
+    "9487",
+    "12506",
+    "4866",
+    "12711",
+    "PIT"
+  ],
+  "players": {
+    "12506": {
+      "id": "12506",
+      "name": "Harold Fannin",
+      "positions": [
+        "TE"
+      ],
+      "team": "CLE",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_CLE_JAX",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "JAX",
+        "home": false,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 10.814,
+      "scoring": {
+        "supported_points": 10.814,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 4.62,
+            "coefficient": 1.0,
+            "points": 4.62
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.3,
+            "coefficient": 6.0,
+            "points": 1.7999999999999998
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 43.94,
+            "coefficient": 0.1,
+            "points": 4.394
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "rush_td",
+          "rush_yd",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 6.55,
+        "provider_points_ppr": 11.16,
+        "ppr_reception_check_error": -0.009999999999999787,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "12711": {
+      "id": "12711",
+      "name": "Tyler Loop",
+      "positions": [
+        "K"
+      ],
+      "team": "BAL",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_BAL_IND",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "IND",
+        "home": false,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 2.41,
+      "scoring": {
+        "supported_points": 2.41,
+        "contributions": {
+          "xpm": {
+            "source_field": "xpt",
+            "quantity": 2.75,
+            "coefficient": 1.0,
+            "points": 2.75
+          },
+          "fgmiss": {
+            "source_field": "fga-fg",
+            "quantity": 0.3400000000000001,
+            "coefficient": -1.0,
+            "points": -0.3400000000000001
+          }
+        },
+        "uncovered_rules": [
+          "fgm_0_19",
+          "fgm_20_29",
+          "fgm_30_39",
+          "fgm_40_49",
+          "fgm_50_59",
+          "fgm_60p",
+          "xpmiss"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 7.81,
+        "provider_points_ppr": 7.81,
+        "ppr_reception_check_error": null,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "3198": {
+      "id": "3198",
+      "name": "Derrick Henry",
+      "positions": [
+        "RB"
+      ],
+      "team": "BAL",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_BAL_IND",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "IND",
+        "home": false,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 16.162,
+      "scoring": {
+        "supported_points": 16.162,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 1.27,
+            "coefficient": 1.0,
+            "points": 1.27
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.06,
+            "coefficient": 6.0,
+            "points": 0.36
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 11.93,
+            "coefficient": 0.1,
+            "points": 1.193
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.79,
+            "coefficient": 6.0,
+            "points": 4.74
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 85.99,
+            "coefficient": 0.1,
+            "points": 8.599
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 14.72,
+        "provider_points_ppr": 15.99,
+        "ppr_reception_check_error": -4.440892098500626e-16,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "4046": {
+      "id": "4046",
+      "name": "Patrick Mahomes",
+      "positions": [
+        "QB"
+      ],
+      "team": "KC",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_DEN_KC",
+        "kickoff": "2026-09-15T00:15:00+00:00",
+        "opponent": "DEN",
+        "home": true,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {
+        "player_id": 16413,
+        "yahoo_id": "30123",
+        "name": "Patrick Mahomes II",
+        "status": "",
+        "injury_type": "",
+        "comment": "",
+        "injury_update_date": null,
+        "team_id": "KC",
+        "position_id": "QB",
+        "rank": 108,
+        "status_short": "",
+        "ir_weeks": [],
+        "probability_of_playing": "0.93119",
+        "practice_1": "Full",
+        "practice_2": "Full",
+        "practice_3": null,
+        "practice_report_injury_type": "knee",
+        "team_practice_1_submitted": true,
+        "team_practice_2_submitted": true,
+        "team_practice_3_submitted": false
+      },
+      "sleeper_injury_status": null,
+      "points": 15.899000000000001,
+      "scoring": {
+        "supported_points": 15.899000000000001,
+        "contributions": {
+          "pass_int": {
+            "source_field": "pass_ints",
+            "quantity": 0.67,
+            "coefficient": -1.0,
+            "points": -0.67
+          },
+          "pass_td": {
+            "source_field": "pass_tds",
+            "quantity": 1.37,
+            "coefficient": 4.0,
+            "points": 5.48
+          },
+          "pass_yd": {
+            "source_field": "pass_yds",
+            "quantity": 208.8,
+            "coefficient": 0.04,
+            "points": 8.352
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.15,
+            "coefficient": 6.0,
+            "points": 0.8999999999999999
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 18.37,
+            "coefficient": 0.1,
+            "points": 1.8370000000000002
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "rec",
+          "rec_2pt",
+          "rec_td",
+          "rec_yd",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 15.59,
+        "provider_points_ppr": 15.59,
+        "ppr_reception_check_error": null,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "4199": {
+      "id": "4199",
+      "name": "Aaron Jones",
+      "positions": [
+        "RB"
+      ],
+      "team": "MIN",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_GB_MIN",
+        "kickoff": "2026-09-13T20:25:00+00:00",
+        "opponent": "GB",
+        "home": true,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 9.859,
+      "scoring": {
+        "supported_points": 9.859,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 2.42,
+            "coefficient": 1.0,
+            "points": 2.42
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.11,
+            "coefficient": 6.0,
+            "points": 0.66
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 15.89,
+            "coefficient": 0.1,
+            "points": 1.5890000000000002
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.22,
+            "coefficient": 6.0,
+            "points": 1.32
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 38.7,
+            "coefficient": 0.1,
+            "points": 3.8700000000000006
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 7.33,
+        "provider_points_ppr": 9.75,
+        "ppr_reception_check_error": 0.0,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "4866": {
+      "id": "4866",
+      "name": "Saquon Barkley",
+      "positions": [
+        "RB"
+      ],
+      "team": "PHI",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_WAS_PHI",
+        "kickoff": "2026-09-13T20:25:00+00:00",
+        "opponent": "WAS",
+        "home": true,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 16.868000000000002,
+      "scoring": {
+        "supported_points": 16.868000000000002,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 2.6,
+            "coefficient": 1.0,
+            "points": 2.6
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.14,
+            "coefficient": 6.0,
+            "points": 0.8400000000000001
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 22.12,
+            "coefficient": 0.1,
+            "points": 2.212
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.51,
+            "coefficient": 6.0,
+            "points": 3.06
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 81.56,
+            "coefficient": 0.1,
+            "points": 8.156
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 14.11,
+        "provider_points_ppr": 16.71,
+        "ppr_reception_check_error": 1.3322676295501878e-15,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "6790": {
+      "id": "6790",
+      "name": "D'Andre Swift",
+      "positions": [
+        "RB"
+      ],
+      "team": "CHI",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_CHI_CAR",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "CAR",
+        "home": false,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 13.696000000000002,
+      "scoring": {
+        "supported_points": 13.696000000000002,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 2.09,
+            "coefficient": 1.0,
+            "points": 2.09
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.09,
+            "coefficient": 6.0,
+            "points": 0.54
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 16.52,
+            "coefficient": 0.1,
+            "points": 1.6520000000000001
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.52,
+            "coefficient": 6.0,
+            "points": 3.12
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 62.94,
+            "coefficient": 0.1,
+            "points": 6.2940000000000005
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 11.43,
+        "provider_points_ppr": 13.53,
+        "ppr_reception_check_error": 0.009999999999999787,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": [
+        {
+          "id": 607194,
+          "created": "2026-09-11 19:45:02",
+          "created_formated": "Fri, Sep 11th 7:45pm UTC",
+          "author": "Leo Sells",
+          "player_id": 19210,
+          "team_id": "CHI",
+          "title": "D'Andre Swift agrees to three-year extension with Bears",
+          "sport_id": "NFL",
+          "categories": [
+            "Commentary",
+            "News"
+          ],
+          "link": "https://www.fantasypros.com/nfl/news/607194/dandre-swift-agrees-to-three-year-extension-with-bears.php",
+          "desc": "D'Andre Swift and the Bears agreed to terms on a three year, $33.75 million extension with $27.5M in guaranteed money.",
+          "impact": "The Bears continue to show their commitment to Swift, this time to the tune of a three year, $33.75 million extension right before the start of the regular season. This move dispels many of the concerns that Kyle Monangai would take over this backfield in the near future. Chicago continues to display high trust in their veteran running back, and he seems to be primed for a big year in 2026 so long as he can stay healthy."
+        }
+      ]
+    },
+    "7002": {
+      "id": "7002",
+      "name": "Juwan Johnson",
+      "positions": [
+        "TE"
+      ],
+      "team": "NO",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_NO_DET",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "DET",
+        "home": false,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 10.2,
+      "scoring": {
+        "supported_points": 10.2,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 4.14,
+            "coefficient": 1.0,
+            "points": 4.14
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.25,
+            "coefficient": 6.0,
+            "points": 1.5
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 45.6,
+            "coefficient": 0.1,
+            "points": 4.5600000000000005
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "rush_td",
+          "rush_yd",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 6.0,
+        "provider_points_ppr": 10.14,
+        "ppr_reception_check_error": 8.881784197001252e-16,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "8183": {
+      "id": "8183",
+      "name": "Brock Purdy",
+      "positions": [
+        "QB"
+      ],
+      "team": "SF",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_SF_LA",
+        "kickoff": "2026-09-11T00:35:00+00:00",
+        "opponent": "LAR",
+        "home": false,
+        "has_score": true
+      },
+      "locked": true,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 17.6362,
+      "scoring": {
+        "supported_points": 17.6362,
+        "contributions": {
+          "pass_int": {
+            "source_field": "pass_ints",
+            "quantity": 0.92,
+            "coefficient": -1.0,
+            "points": -0.92
+          },
+          "pass_td": {
+            "source_field": "pass_tds",
+            "quantity": 1.56,
+            "coefficient": 4.0,
+            "points": 6.24
+          },
+          "pass_yd": {
+            "source_field": "pass_yds",
+            "quantity": 242.73,
+            "coefficient": 0.04,
+            "points": 9.7092
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.16,
+            "coefficient": 6.0,
+            "points": 0.96
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 16.47,
+            "coefficient": 0.1,
+            "points": 1.647
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "rec",
+          "rec_2pt",
+          "rec_td",
+          "rec_yd",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 17.21,
+        "provider_points_ppr": 17.21,
+        "ppr_reception_check_error": null,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "8676": {
+      "id": "8676",
+      "name": "Rashid Shaheed",
+      "positions": [
+        "WR"
+      ],
+      "team": "SEA",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_NE_SEA",
+        "kickoff": "2026-09-10T00:20:00+00:00",
+        "opponent": "NE",
+        "home": true,
+        "has_score": true
+      },
+      "locked": true,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 8.586,
+      "scoring": {
+        "supported_points": 8.586,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 2.84,
+            "coefficient": 1.0,
+            "points": 2.84
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.21,
+            "coefficient": 6.0,
+            "points": 1.26
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 39.35,
+            "coefficient": 0.1,
+            "points": 3.9350000000000005
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.02,
+            "coefficient": 6.0,
+            "points": 0.12
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 4.31,
+            "coefficient": 0.1,
+            "points": 0.431
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 5.68,
+        "provider_points_ppr": 8.53,
+        "ppr_reception_check_error": 0.009999999999999787,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "9487": {
+      "id": "9487",
+      "name": "Parker Washington",
+      "positions": [
+        "WR"
+      ],
+      "team": "JAX",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_CLE_JAX",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "CLE",
+        "home": true,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 11.987,
+      "scoring": {
+        "supported_points": 11.987,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 3.94,
+            "coefficient": 1.0,
+            "points": 3.94
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.39,
+            "coefficient": 6.0,
+            "points": 2.34
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 54.37,
+            "coefficient": 0.1,
+            "points": 5.437
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.01,
+            "coefficient": 6.0,
+            "points": 0.06
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 2.1,
+            "coefficient": 0.1,
+            "points": 0.21000000000000002
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 8.02,
+        "provider_points_ppr": 11.96,
+        "ppr_reception_check_error": 1.3322676295501878e-15,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "9754": {
+      "id": "9754",
+      "name": "Quentin Johnston",
+      "positions": [
+        "WR"
+      ],
+      "team": "LAC",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_ARI_LAC",
+        "kickoff": "2026-09-13T20:25:00+00:00",
+        "opponent": "ARI",
+        "home": true,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 11.156,
+      "scoring": {
+        "supported_points": 11.156,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 3.46,
+            "coefficient": 1.0,
+            "points": 3.46
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.45,
+            "coefficient": 6.0,
+            "points": 2.7
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 49.36,
+            "coefficient": 0.1,
+            "points": 4.936
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.0,
+            "coefficient": 6.0,
+            "points": 0.0
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 0.6,
+            "coefficient": 0.1,
+            "points": 0.06
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 7.67,
+        "provider_points_ppr": 11.13,
+        "ppr_reception_check_error": 8.881784197001252e-16,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    },
+    "9997": {
+      "id": "9997",
+      "name": "Zay Flowers",
+      "positions": [
+        "WR"
+      ],
+      "team": "BAL",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_BAL_IND",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "IND",
+        "home": false,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {
+        "player_id": 22916,
+        "yahoo_id": "40039",
+        "name": "Zay Flowers",
+        "status": "",
+        "injury_type": "",
+        "comment": "",
+        "injury_update_date": null,
+        "team_id": "BAL",
+        "position_id": "WR",
+        "rank": 29,
+        "status_short": "",
+        "ir_weeks": [],
+        "probability_of_playing": "0.99",
+        "practice_1": "Limit",
+        "practice_2": "Full",
+        "practice_3": "Full",
+        "practice_report_injury_type": "hamstring",
+        "team_practice_1_submitted": true,
+        "team_practice_2_submitted": true,
+        "team_practice_3_submitted": true
+      },
+      "sleeper_injury_status": null,
+      "points": 15.200000000000001,
+      "scoring": {
+        "supported_points": 15.200000000000001,
+        "contributions": {
+          "rec": {
+            "source_field": "rec_rec",
+            "quantity": 5.17,
+            "coefficient": 1.0,
+            "points": 5.17
+          },
+          "rec_td": {
+            "source_field": "rec_tds",
+            "quantity": 0.37,
+            "coefficient": 6.0,
+            "points": 2.2199999999999998
+          },
+          "rec_yd": {
+            "source_field": "rec_yds",
+            "quantity": 73.67,
+            "coefficient": 0.1,
+            "points": 7.367000000000001
+          },
+          "rush_td": {
+            "source_field": "rush_tds",
+            "quantity": 0.02,
+            "coefficient": 6.0,
+            "points": 0.12
+          },
+          "rush_yd": {
+            "source_field": "rush_yds",
+            "quantity": 3.23,
+            "coefficient": 0.1,
+            "points": 0.323
+          }
+        },
+        "uncovered_rules": [
+          "fum_lost",
+          "fum_rec_td",
+          "pass_2pt",
+          "pass_int",
+          "pass_td",
+          "pass_yd",
+          "rec_2pt",
+          "rush_2pt",
+          "st_ff",
+          "st_fum_rec",
+          "st_td"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 9.95,
+        "provider_points_ppr": 15.12,
+        "ppr_reception_check_error": 0.0,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": [
+        {
+          "id": 607213,
+          "created": "2026-09-11 20:13:57",
+          "created_formated": "Fri, Sep 11th 8:13pm UTC",
+          "author": "Ari Koslow",
+          "player_id": 22916,
+          "team_id": "BAL",
+          "title": "Zay Flowers (hamstring) off injury report Sunday ",
+          "sport_id": "NFL",
+          "categories": [
+            "Commentary",
+            "News",
+            "Injury"
+          ],
+          "link": "https://www.fantasypros.com/nfl/news/607213/zay-flowers-hamstring-off-injury-report-sunday.php",
+          "desc": "Zay Flowers is off the injury report for Sunday's game against the Colts. ",
+          "impact": "Flowers missed some practice time in the past couple of weeks with a hamstring injury. He'll be a full-go heading into the season off a new contract. "
+        }
+      ]
+    },
+    "PIT": {
+      "id": "PIT",
+      "name": "Pittsburgh Steelers",
+      "positions": [
+        "DEF"
+      ],
+      "team": "PIT",
+      "owned": true,
+      "game": {
+        "game_id": "2026_01_ATL_PIT",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "ATL",
+        "home": true,
+        "has_score": false
+      },
+      "locked": false,
+      "unavailable": false,
+      "availability_review": false,
+      "injury": {},
+      "sleeper_injury_status": null,
+      "points": 6.5,
+      "scoring": {
+        "supported_points": 6.5,
+        "contributions": {
+          "ff": {
+            "source_field": "def_ff",
+            "quantity": 1.0,
+            "coefficient": 1.0,
+            "points": 1.0
+          },
+          "fum_rec": {
+            "source_field": "def_fr",
+            "quantity": 0.64,
+            "coefficient": 2.0,
+            "points": 1.28
+          },
+          "int": {
+            "source_field": "def_int",
+            "quantity": 0.81,
+            "coefficient": 2.0,
+            "points": 1.62
+          },
+          "sack": {
+            "source_field": "def_sack",
+            "quantity": 2.6,
+            "coefficient": 1.0,
+            "points": 2.6
+          },
+          "safe": {
+            "source_field": "def_safety",
+            "quantity": 0.0,
+            "coefficient": 2.0,
+            "points": 0.0
+          }
+        },
+        "uncovered_rules": [
+          "blk_kick",
+          "def_st_ff",
+          "def_st_fum_rec",
+          "def_st_td",
+          "def_td",
+          "pts_allow_0",
+          "pts_allow_14_20",
+          "pts_allow_1_6",
+          "pts_allow_28_34",
+          "pts_allow_35p",
+          "pts_allow_7_13"
+        ],
+        "exact_league_total": false,
+        "core_fields_complete": true,
+        "provider_points": 7.52,
+        "provider_points_ppr": 7.52,
+        "ppr_reception_check_error": null,
+        "basis": "Sum of mapped projected components only; omitted events remain unknown, not zero."
+      },
+      "news": []
+    }
+  },
+  "locked_player_ids": [
+    "8183",
+    "8676"
+  ],
+  "blockers": [],
+  "warnings": [
+    "Partial league scoring for 12506: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, rush_td, rush_yd, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 12711: fgm_0_19, fgm_20_29, fgm_30_39, fgm_40_49, fgm_50_59, fgm_60p, xpmiss",
+    "Partial league scoring for 3198: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 4046: fum_lost, fum_rec_td, pass_2pt, rec, rec_2pt, rec_td, rec_yd, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 4199: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 4866: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 6790: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 7002: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, rush_td, rush_yd, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 8183: fum_lost, fum_rec_td, pass_2pt, rec, rec_2pt, rec_td, rec_yd, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 8676: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 9487: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 9754: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for 9997: fum_lost, fum_rec_td, pass_2pt, pass_int, pass_td, pass_yd, rec_2pt, rush_2pt, st_ff, st_fum_rec, st_td",
+    "Partial league scoring for PIT: blk_kick, def_st_ff, def_st_fum_rec, def_st_td, def_td, pts_allow_0, pts_allow_14_20, pts_allow_1_6, pts_allow_28_34, pts_allow_35p, pts_allow_7_13"
+  ],
+  "projection_sources": [
+    {
+      "position": "QB",
+      "fetched_at": "2026-09-11T17:55:36.479775+00:00",
+      "source_updated_at": null
+    },
+    {
+      "position": "RB",
+      "fetched_at": "2026-09-11T17:55:37.565120+00:00",
+      "source_updated_at": null
+    },
+    {
+      "position": "WR",
+      "fetched_at": "2026-09-11T17:55:38.738818+00:00",
+      "source_updated_at": null
+    },
+    {
+      "position": "TE",
+      "fetched_at": "2026-09-11T17:55:39.655388+00:00",
+      "source_updated_at": null
+    },
+    {
+      "position": "K",
+      "fetched_at": "2026-09-11T17:55:40.699603+00:00",
+      "source_updated_at": null
+    },
+    {
+      "position": "DST",
+      "fetched_at": "2026-09-11T17:55:41.752365+00:00",
+      "source_updated_at": null
+    }
+  ],
+  "quarantine": [
+    {
+      "fpid": "20080",
+      "name": "Desmond Ridder",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "18557",
+      "name": "Jake Browning",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "22921",
+      "name": "Jerome Ford",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "22928",
+      "name": "Phil Mafah",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "23682",
+      "name": "Devin Neal",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "18168",
+      "name": "Malik Turner",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "28067",
+      "name": "Kevin Coleman Jr.",
+      "reason": [
+        "no_shared_id"
+      ]
+    },
+    {
+      "fpid": "25758",
+      "name": "Xavier Gipson",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "18706",
+      "name": "Darius Slayton",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "25668",
+      "name": "Malik Heath",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "16427",
+      "name": "JuJu Smith-Schuster",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "26397",
+      "name": "Tahj Washington",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "17603",
+      "name": "Justin Watson",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "19704",
+      "name": "Mason Kinsey",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "20050",
+      "name": "Andre Baccellia",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "23242",
+      "name": "Terrace Marshall Jr.",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "23957",
+      "name": "Xavier Weaver",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "24353",
+      "name": "A.T. Perry",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "27829",
+      "name": "Gage Larvadain",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "24562",
+      "name": "Connor Heyward",
+      "reason": [
+        "position_mismatch"
+      ]
+    },
+    {
+      "fpid": "24181",
+      "name": "John FitzPatrick",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "24216",
+      "name": "Tanner Conner",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "17598",
+      "name": "Tyler Conklin",
+      "reason": [
+        "conflicting_ids"
+      ]
+    },
+    {
+      "fpid": "23193",
+      "name": "Jack Stoll",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "26440",
+      "name": "Devin Culp",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "17693",
+      "name": "Michael Badgley",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "18779",
+      "name": "Matthew Wright",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "13274",
+      "name": "Brandon McManus",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "16548",
+      "name": "Zane Gonzalez",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "16910",
+      "name": "Younghoe Koo",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "27798",
+      "name": "Ben Sauls",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "9232",
+      "name": "Graham Gano",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "24549",
+      "name": "Cade York",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "25222",
+      "name": "Lucas Havrisik",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "25616",
+      "name": "Tanner Brown",
+      "reason": [
+        "team_conflict"
+      ]
+    },
+    {
+      "fpid": "26478",
+      "name": "Joshua Karty",
+      "reason": [
+        "team_conflict"
+      ]
+    }
+  ],
+  "objective": "Maximize supported weekly projected components, subject to filling legal slots and fixed locks",
+  "applied": false,
+  "uncertainty": "Not calibrated; forecasts may omit scoring categories and already include injury/matchup effects.",
+  "acquisition": {
+    "sleeper": {
+      "network_attempts": 10,
+      "cache_hits": 1
+    },
+    "fantasypros": {
+      "network_attempts": 2,
+      "cache_hits": 7
+    },
+    "nflverse": {
+      "network_attempts": 2,
+      "cache_hits": 0
+    }
+  },
+  "status": "review_required",
+  "recommendation": {
+    "starters": [
+      "8183",
+      "3198",
+      "6790",
+      "9997",
+      "9487",
+      "12506",
+      "4866",
+      "12711",
+      "PIT"
+    ],
+    "adjustable_projected_points": 93.637,
+    "filled_slots": 9,
+    "fixed_slots": {
+      "0": "8183"
+    }
+  },
+  "changes": [],
+  "alternatives": [
+    {
+      "without": "3198",
+      "reason": "If unavailable / bench alternative",
+      "projected_component_loss": 5.006,
+      "decision_deadline": "2026-09-13T17:00:00+00:00",
+      "starters": [
+        "8183",
+        "4866",
+        "6790",
+        "9997",
+        "9487",
+        "12506",
+        "9754",
+        "12711",
+        "PIT"
+      ],
+      "adjustable_projected_points": 88.631,
+      "filled_slots": 9,
+      "fixed_slots": {
+        "0": "8183"
+      }
+    },
+    {
+      "without": "6790",
+      "reason": "If unavailable / bench alternative",
+      "projected_component_loss": 2.54,
+      "decision_deadline": "2026-09-13T17:00:00+00:00",
+      "starters": [
+        "8183",
+        "3198",
+        "4866",
+        "9997",
+        "9487",
+        "12506",
+        "9754",
+        "12711",
+        "PIT"
+      ],
+      "adjustable_projected_points": 91.097,
+      "filled_slots": 9,
+      "fixed_slots": {
+        "0": "8183"
+      }
+    },
+    {
+      "without": "9997",
+      "reason": "If unavailable / bench alternative",
+      "projected_component_loss": 4.044,
+      "decision_deadline": "2026-09-13T17:00:00+00:00",
+      "starters": [
+        "8183",
+        "3198",
+        "4866",
+        "9754",
+        "9487",
+        "12506",
+        "6790",
+        "12711",
+        "PIT"
+      ],
+      "adjustable_projected_points": 89.593,
+      "filled_slots": 9,
+      "fixed_slots": {
+        "0": "8183"
+      }
+    },
+    {
+      "without": "9487",
+      "reason": "If unavailable / bench alternative",
+      "projected_component_loss": 0.831,
+      "decision_deadline": "2026-09-13T17:00:00+00:00",
+      "starters": [
+        "8183",
+        "3198",
+        "6790",
+        "9997",
+        "9754",
+        "12506",
+        "4866",
+        "12711",
+        "PIT"
+      ],
+      "adjustable_projected_points": 92.806,
+      "filled_slots": 9,
+      "fixed_slots": {
+        "0": "8183"
+      }
+    },
+    {
+      "without": "12506",
+      "reason": "If unavailable / bench alternative",
+      "projected_component_loss": 0.614,
+      "decision_deadline": "2026-09-13T17:00:00+00:00",
+      "starters": [
+        "8183",
+        "3198",
+        "6790",
+        "9997",
+        "9487",
+        "7002",
+        "4866",
+        "12711",
+        "PIT"
+      ],
+      "adjustable_projected_points": 93.023,
+      "filled_slots": 9,
+      "fixed_slots": {
+        "0": "8183"
+      }
+    },
+    {
+      "without": "4866",
+      "reason": "If unavailable / bench alternative",
+      "projected_component_loss": 5.712,
+      "decision_deadline": "2026-09-13T20:25:00+00:00",
+      "starters": [
+        "8183",
+        "3198",
+        "6790",
+        "9997",
+        "9487",
+        "12506",
+        "9754",
+        "12711",
+        "PIT"
+      ],
+      "adjustable_projected_points": 87.925,
+      "filled_slots": 9,
+      "fixed_slots": {
+        "0": "8183"
+      }
+    },
+    {
+      "without": "12711",
+      "reason": "If unavailable / bench alternative",
+      "projected_component_loss": 2.41,
+      "decision_deadline": "2026-09-13T17:00:00+00:00",
+      "starters": [
+        "8183",
+        "3198",
+        "6790",
+        "9997",
+        "9487",
+        "12506",
+        "4866",
+        null,
+        "PIT"
+      ],
+      "adjustable_projected_points": 91.227,
+      "filled_slots": 8,
+      "fixed_slots": {
+        "0": "8183"
+      }
+    },
+    {
+      "without": "PIT",
+      "reason": "If unavailable / bench alternative",
+      "projected_component_loss": 6.5,
+      "decision_deadline": "2026-09-13T17:00:00+00:00",
+      "starters": [
+        "8183",
+        "3198",
+        "6790",
+        "9997",
+        "9487",
+        "12506",
+        "4866",
+        "12711",
+        null
+      ],
+      "adjustable_projected_points": 87.137,
+      "filled_slots": 8,
+      "fixed_slots": {
+        "0": "8183"
+      }
+    }
+  ],
+  "current_adjustable_projected_points": 93.637,
+  "projected_component_gain": 0.0,
+  "next_player_lock": "2026-09-13T17:00:00+00:00",
+  "weekly_matchup_points_observed": 22.1
+}

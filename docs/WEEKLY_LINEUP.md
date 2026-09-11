@@ -15,7 +15,7 @@ or legality flags in the proposal.
 From the project root:
 
 ```sh
-python3 weekly_lineup.py run --season 2026 --week 1
+python3 -m fantasy_agent weekly_lineup run --season 2026 --week 1
 ```
 
 Run this before the first relevant game and again whenever injuries, ownership,
@@ -40,13 +40,13 @@ retain the shared cache/budget directories. A second host is not coordinated.
 
 ```sh
 # Offline recomputation of the latest validated snapshot. Still checks freshness.
-python3 weekly_lineup.py recommend --season 2026 --week 1
+python3 -m fantasy_agent weekly_lineup recommend --season 2026 --week 1
 
 # After browser changes: read back current starters and compare with the report.
-python3 weekly_lineup.py verify --season 2026 --week 1
+python3 -m fantasy_agent weekly_lineup verify --season 2026 --week 1
 
 # Deliberately shorten projection cache age after material news, if necessary.
-python3 weekly_lineup.py run --season 2026 --week 1 --projection-max-age 900
+python3 -m fantasy_agent weekly_lineup run --season 2026 --week 1 --projection-max-age 900
 ```
 
 `run` always rechecks mutable league state. `recommend` does not refresh inputs
@@ -160,7 +160,7 @@ season and the weekly adapter validates the modern 272-game/32-team/17-game seas
 This adapter is intentionally limited to that regular-season format.
 
 The supported general command is
-`python3 nflverse_collect.py collect --dataset schedules --season 2026`.
+`python3 -m fantasy_agent nflverse_collect collect --dataset schedules --season 2026`.
 Schedules have no release-asset catalog. `--revalidate` is already implicit.
 `--refresh` forces a full download and should not be routine.
 

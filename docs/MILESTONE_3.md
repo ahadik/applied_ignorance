@@ -100,16 +100,16 @@ submit a selection. Reports under ignored `data/strategy/` remain private.
 
 ```sh
 # Offline examples, including two saved mock first-round replays with later data.
-python3 draft_strategy_evaluate.py examples
+python3 -m fantasy_agent draft_strategy_evaluate examples
 
 # Offline paired drafts; original seed differs from the planner seed.
-python3 draft_strategy_evaluate.py evaluate --seats 1 7 14 --modes ecr qb_run --seeds 31001
+python3 -m fantasy_agent draft_strategy_evaluate evaluate --seats 1 7 14 --modes ecr qb_run --seeds 31001
 
 # Offline: verify saved board/policy provenance and assemble the review report.
-python3 draft_strategy_evaluate.py report
+python3 -m fantasy_agent draft_strategy_evaluate report
 
 # Offline single-state calculation; saved review data may be old, so no API claims.
-python3 draft_strategy.py --state data/strategy/milestone3/examples/mid_draft/state.json --output data/strategy/review
+python3 -m fantasy_agent draft_strategy --state data/strategy/milestone3/examples/mid_draft/state.json --output data/strategy/review
 
 # Offline tests with synthetic fixtures/temp directories; zero provider calls.
 python3 -m unittest discover -q
@@ -127,8 +127,8 @@ For a separately authorized live session, after refreshing/rebuilding milestone 
 inputs and verifying the room/seat:
 
 ```sh
-python3 controller.py sync --draft VERIFIED_DRAFT_ID --strategy-board data/draft_board/2026/board.json
-python3 controller.py watch --draft VERIFIED_DRAFT_ID --strategy-board data/draft_board/2026/board.json
+python3 -m fantasy_agent controller sync --draft VERIFIED_DRAFT_ID --strategy-board data/draft_board/2026/board.json
+python3 -m fantasy_agent controller watch --draft VERIFIED_DRAFT_ID --strategy-board data/draft_board/2026/board.json
 ```
 
 These commands make up to three uncached Sleeper reads per refresh through

@@ -35,7 +35,7 @@ subsequent board rebuild. It does not claim fresh player inputs.
 See `NFLVERSE.md` for the third provider's data, collection/analysis commands and
 freshness rules. It has no FantasyPros or Sleeper dependency and uses no API key.
 See `NFLVERSE_RESEARCH.md` for the cited source/schedule/schema research and future
-feed guidance. `python3 nflverse_collect.py usage` inspects local budgets without
+feed guidance. `python3 -m fantasy_agent nflverse_collect usage` inspects local budgets without
 HTTP calls.  `--revalidate` checks metadata without forcing unchanged downloads.
 See `MILESTONE_2.md` for integrated collection/build/review commands and measured
 coverage. The candidate export is a separate review file, not an applied queue.
@@ -52,10 +52,10 @@ Run from the project root:
 
 | Command | Effect |
 |---|---|
-| `python3 draft.py sync` | Five logical Sleeper reads through `draft_data`. User profile may be cached, remaining resources are live. Saves validated `data/snapshot.json` and renders `DRAFT_CONTEXT.md` |
-| `python3 draft.py summary` | Reads the saved snapshot and rewrites `DRAFT_CONTEXT.md`. No API reads |
-| `python3 controller.py sync --draft DRAFT_ID` | Up to three live Sleeper reads through `draft_data`, without automatic retries. Controller validates the board before saving state |
-| `python3 fantasypros_diagnostic.py --season 2026` | Shared cache-first FantasyPros access probes plus a Sleeper NFL-state read when reached. Saves private reports |
+| `python3 -m fantasy_agent draft sync` | Five logical Sleeper reads through `draft_data`. User profile may be cached, remaining resources are live. Saves validated `data/snapshot.json` and renders `DRAFT_CONTEXT.md` |
+| `python3 -m fantasy_agent draft summary` | Reads the saved snapshot and rewrites `DRAFT_CONTEXT.md`. No API reads |
+| `python3 -m fantasy_agent controller sync --draft DRAFT_ID` | Up to three live Sleeper reads through `draft_data`, without automatic retries. Controller validates the board before saving state |
+| `python3 -m fantasy_agent fantasypros_diagnostic --season 2026` | Shared cache-first FantasyPros access probes plus a Sleeper NFL-state read when reached. Saves private reports |
 | `python3 -m unittest discover -v` | Offline tests using simulated provider responses and temporary storage |
 
 See `CONTROLLER.md` for user IDs, watch mode and browser observation requirements.

@@ -1,0 +1,33 @@
+{
+  "run_id": "8098efd7d7b644ef886092a3be402489",
+  "outcome": "no_change",
+  "reason": "Keep the current lineup. Saved review explains the Flowers news flag and retains a separate acquisition review; no Sleeper changes were made.",
+  "next_review_at": 1789160468.375123,
+  "evidence": [
+    "data/manager/startup-review.json",
+    "data/manager/browser-startup.json",
+    "data/agent_cycles/40a58957fb944174b75ee2a07870ef25/result.json"
+  ],
+  "recorded_at": "2026-09-11T20:31:08.384789+00:00",
+  "proofs": [
+    {
+      "path": "data/manager/startup-review.json",
+      "sha256": "367f1883c69c6c0e92348436e43c352b0ea4446fb5a4d02723a2a820522cf2aa"
+    },
+    {
+      "path": "data/manager/browser-startup.json",
+      "sha256": "05dd67d2b578c3c93244eb03d0aa075e0942fb4c226e9ba54079ff73b866bb97"
+    },
+    {
+      "path": "data/agent_cycles/40a58957fb944174b75ee2a07870ef25/result.json",
+      "sha256": "883d2be50a50149bef0b7b9124ef9924a0bbe3f80ac4260e06b0e1537f7ca901"
+    }
+  ],
+  "schedule": {
+    "verified": true,
+    "task_id": "m5-sunday-early-game-review",
+    "observed_at": "2026-09-11T20:31:08.377128+00:00",
+    "reason": "recurring_wakeup_configured",
+    "tool_arguments": null
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "kind": "roster_comparison",
+  "pool_hash": "147ae8ce5e7c4b0b2af22aaaafe07c5d2786804127c85120d86c3614bfb5a4e0",
+  "created_at": "2026-09-11T20:25:53.303580+00:00",
+  "expires_at": "2026-09-11T20:40:53.303580+00:00",
+  "owned_before": [
+    "12506",
+    "12711",
+    "3198",
+    "4046",
+    "4199",
+    "4866",
+    "6790",
+    "7002",
+    "8183",
+    "8676",
+    "9487",
+    "9754",
+    "9997",
+    "PIT"
+  ],
+  "add": [
+    "12522"
+  ],
+  "drop": [
+    "9754"
+  ],
+  "before": {
+    "complete": true,
+    "missing_forecasts": [],
+    "weeks": [
+      {
+        "week": 1,
+        "lineup": {
+          "starters": [
+            "8183",
+            "3198",
+            "6790",
+            "9997",
+            "9487",
+            "12506",
+            "4866",
+            "12711",
+            "PIT"
+          ],
+          "adjustable_projected_points": 93.637,
+          "filled_slots": 9,
+          "fixed_slots": {
+            "0": "8183"
+          }
+        },
+        "reserve_value": 8.247499999999997,
+        "value": 94.46175,
+        "unfilled_slots": [],
+        "bye_or_unavailable": []
+      }
+    ],
+    "value": 94.46175,
+    "caveats": [
+      "Partial scoring: 12506, week 1",
+      "Partial scoring: 12711, week 1",
+      "Partial scoring: 3198, week 1",
+      "Partial scoring: 4046, week 1",
+      "Partial scoring: 4199, week 1",
+      "Partial scoring: 4866, week 1",
+      "Partial scoring: 6790, week 1",
+      "Partial scoring: 7002, week 1",
+      "Partial scoring: 8183, week 1",
+      "Partial scoring: 8676, week 1",
+      "Partial scoring: 9487, week 1",
+      "Partial scoring: 9754, week 1",
+      "Partial scoring: 9997, week 1",
+      "Partial scoring: PIT, week 1"
+    ],
+    "bench_weight": 0.1,
+    "assumption": "Uncalibrated bench replacement weight; projected components are not exact league totals."
+  },
+  "after": {
+    "complete": true,
+    "missing_forecasts": [],
+    "weeks": [
+      {
+        "week": 1,
+        "lineup": {
+          "starters": [
+            "8183",
+            "3198",
+            "6790",
+            "9997",
+            "9487",
+            "12506",
+            "4866",
+            "12711",
+            "PIT"
+          ],
+          "adjustable_projected_points": 93.637,
+          "filled_slots": 9,
+          "fixed_slots": {
+            "0": "8183"
+          }
+        },
+        "reserve_value": 5.099999999999998,
+        "value": 94.147,
+        "unfilled_slots": [],
+        "bye_or_unavailable": []
+      }
+    ],
+    "value": 94.147,
+    "caveats": [
+      "Partial scoring: 12506, week 1",
+      "Partial scoring: 12522, week 1",
+      "Partial scoring: 12711, week 1",
+      "Partial scoring: 3198, week 1",
+      "Partial scoring: 4046, week 1",
+      "Partial scoring: 4199, week 1",
+      "Partial scoring: 4866, week 1",
+      "Partial scoring: 6790, week 1",
+      "Partial scoring: 7002, week 1",
+      "Partial scoring: 8183, week 1",
+      "Partial scoring: 8676, week 1",
+      "Partial scoring: 9487, week 1",
+      "Partial scoring: 9997, week 1",
+      "Partial scoring: PIT, week 1"
+    ],
+    "bench_weight": 0.1,
+    "assumption": "Uncalibrated bench replacement weight; projected components are not exact league totals."
+  },
+  "modeled_gain": -0.3147499999999894,
+  "rolling_priority_cost": 0.0,
+  "net_policy_value": -0.3147499999999894,
+  "status": "review_required",
+  "specialist_streaming_eligible": true,
+  "platform_changes": false,
+  "trade_offer_authorized": false,
+  "priority_assumption": "Owner-selected opportunity cost, not a bid or calibrated win probability.",
+  "pool_path": "data/agent_cycles/40a58957fb944174b75ee2a07870ef25/forecast_pool.json"
+}

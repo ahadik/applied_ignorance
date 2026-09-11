@@ -6,9 +6,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from draft_history import collect
-from draft_history_analysis import build
-from nflverse import NFLVerseError
+from fantasy_agent.drafting.draft_history import collect
+from fantasy_agent.drafting.draft_history_analysis import build
+from fantasy_agent.providers.nflverse import NFLVerseError
 
 
 class CollectionTests(unittest.TestCase):
@@ -20,7 +20,7 @@ class CollectionTests(unittest.TestCase):
             old.write_text('last-good')
             def fail(*args, **kwargs):
                 raise NFLVerseError('Missing dataset')
-            with patch('draft_history.ROOT', Path(directory)), redirect_stdout(StringIO()):
+            with patch('fantasy_agent.drafting.draft_history.ROOT', Path(directory)), redirect_stdout(StringIO()):
                 result = collect(2026, [2025], fail)
             self.assertFalse(result['complete'])
             self.assertEqual(old.read_text(), 'last-good')

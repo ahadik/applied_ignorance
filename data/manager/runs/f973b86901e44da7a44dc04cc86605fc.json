@@ -1,0 +1,9 @@
+{
+  "id": "f973b86901e44da7a44dc04cc86605fc",
+  "started_at": "2026-09-11T20:25:06.802599+00:00",
+  "platform_changes": false,
+  "status": "exception",
+  "error_type": "SleeperConnectionError",
+  "detail": "Inspect provider evidence and retry through central clients",
+  "finished_at": "2026-09-11T20:25:06.830493+00:00"
+}

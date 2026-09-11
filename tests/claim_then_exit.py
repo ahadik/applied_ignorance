@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from automation_store import AutomationStore
+from fantasy_agent.automation.automation_store import AutomationStore
 
 if __name__ == '__main__':
     root, check_id, revision, now = sys.argv[1:]

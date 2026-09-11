@@ -1,16 +1,33 @@
 # Working principles
 
+- Python implementation lives under `fantasy_agent/`. Read `docs/CODE_LAYOUT.md` before editing code.
+  There are no root Python launchers. Run commands with `python3 -m fantasy_agent COMMAND`.
+  Historical receipts can contain obsolete root commands. Translate those commands before use.
+  Use canonical package imports for new implementation. Do not extend provider cache ages for performance.
+
+- Owner notification policy: push after every team change and management policy or schedule change. Do not push for routine data or log writes.
+  Send a roster preview about 30 minutes before each game involving our players and an extremely brief recap after confirmed completion.
+  Follow `docs/LEAGUE_MANAGER.md` and `team_notifications.py`. Always inspect notification work even when the manager reports waiting.
+
+- LEAGUE MANAGEMENT ENTRY POINT: when the owner says "start managing my league" or equivalent, read `docs/LEAGUE_MANAGER.md`.
+  Use `league_manager.py` to establish the configured league phase and permanent recurring wakeup in the current task.
+  Verify future scheduling before collection and before ending an inference review. Retain unfinished deadline obligations.
+  A collection failure or pending owner exception must not retire the manager schedule. Stop only on an explicit owner stop request.
+  External monitoring of a dead or disconnected Mac is outside scope at the owner's request.
+  Provider-reading commands require network-enabled execution here. Reuse established permission rather than first repeating restricted network failures.
+  Historical draft IDs and status below are records, not startup defaults. Current league and user IDs come from `.env` without defaults.
+
 - Build and test the complete automation system on this Mac first. Move it to the second Mac only after local acceptance. Assume only one Mac operates at a time. Repeat machine-specific checks after transfer.
 
-- Apply [the ASD-STE100 skill](tools/ste/SKILL.md) to documents outside `data/`. Use its strict mode for procedures. Use its prose mode for explanations. Preserve facts, uncertainty, commands and requirements. Run `python3 check_docs.py` after document changes. Review advisory findings and meaning manually. The checker does not certify official dictionary compliance.
+- Apply [the ASD-STE100 skill](tools/ste/SKILL.md) to documents outside `data/`. Use its strict mode for procedures. Use its prose mode for explanations. Preserve facts, uncertainty, commands and requirements. Run `python3 -m fantasy_agent check_docs` after document changes. Review advisory findings and meaning manually. The checker does not certify official dictionary compliance.
 - Do not apply the writing skill to any file under `data/`. Do not rewrite existing data files for style. Future data files also have this exception.
 
-- Large-file exception: depth-chart JSON snapshots go under ignored `data/nflverse/local/`, not Git. After cloning, `python3 setup_repo.py --season 2026` restores them through the central nflverse client with a matching collection manifest and normal cache/quota policies.
+- Large-file exception: depth-chart JSON snapshots go under ignored `data/nflverse/local/`, not Git. After cloning, `python3 -m fantasy_agent setup_repo --season 2026` restores them through the central nflverse client with a matching collection manifest and normal cache/quota policies.
 
 - SEPTEMBER 10 UPDATE: user explicitly authorized committing all project data to Git and assumes only one Mac operates at a time. Track `data/` including snapshots and provider ledgers. Keep `.env` and credentials excluded. Use normal Git commit/push/pull for handoff. No separate data-transfer system, host-isolation system, clean-history export, or concurrent-Mac coordination is required. This supersedes older local-only data/publication instructions below. Do not push unless requested.
 
 - CURRENT STATUS (supersedes historical draft instructions below): the real draft is complete, all 196 league picks and our 14 players reconciled. Watcher stopped. No pending submission. Do not resume drafting or start another mock. Read `docs/PROGRESS.md` and `docs/REAL_DRAFT_RESULT.md` on resume. Week 1 lineup work is still outstanding.
-- DATA FREEZE RELEASED: user explicitly authorized release after completion. `python3 draft_session.py release` confirmed completion through central Sleeper access and released the guard at 2026-09-09T03:46:42Z. No FantasyPros/nflverse refresh was made during release. Historical frozen files remain evidence, not current weekly advice. Future collection must retain normal central-client cache/quota policies.
+- DATA FREEZE RELEASED: user explicitly authorized release after completion. `python3 -m fantasy_agent draft_session release` confirmed completion through central Sleeper access and released the guard at 2026-09-09T03:46:42Z. No FantasyPros/nflverse refresh was made during release. Historical frozen files remain evidence, not current weekly advice. Future collection must retain normal central-client cache/quota policies.
 - Treat informational questions as curiosity, not instructions to change strategy. Distinguish numerical advice from agent overrides and explain the evidence and uncertainty.
 - Publication: keep `.env` and all `data/` local. Generated data existed in Git history. Ignoring/untracking it does not remove older copies. Do not push or rewrite history without authorization. Curated result documentation may contain personal league identifiers. Review before publication.
 

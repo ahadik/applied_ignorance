@@ -19,7 +19,7 @@ Plans can include later weeks within the horizon.
 Run from the project root:
 
 ```sh
-python3 automation.py collect-deadlines --season 2026 --week 1
+python3 -m fantasy_agent automation collect-deadlines --season 2026 --week 1
 ```
 
 Use the actual current season and week.
@@ -61,7 +61,7 @@ The agent must not request this basic confirmation again merely because complete
 Use this offline command to attach confirmed rules to a previously saved observation:
 
 ```text
-python3 automation.py incorporate-rules --observations PROJECT_RELATIVE_OBSERVATIONS --rules PROJECT_RELATIVE_RULES
+python3 -m fantasy_agent automation incorporate-rules --observations PROJECT_RELATIVE_OBSERVATIONS --rules PROJECT_RELATIVE_RULES
 ```
 
 The command verifies source checksums and saves a new immutable observation.
@@ -93,7 +93,7 @@ Saved timing evidence must cover the full planning horizon and satisfy the polic
 ## Produce a plan
 
 ```text
-python3 automation.py plan --observations OBSERVATIONS_PATH --policy config/automation_plan_policy.example.json --as-of UTC_TIMESTAMP
+python3 -m fantasy_agent automation plan --observations OBSERVATIONS_PATH --policy config/automation_plan_policy.example.json --as-of UTC_TIMESTAMP
 ```
 
 1. Use an explicit timestamp with a time zone for `--as-of`.

@@ -16,9 +16,9 @@ Only one Mac operates at a time.
 Run these commands from the project root:
 
 ```sh
-python3 automation.py init --policy config/automation_policy.example.json
-python3 automation.py status
-python3 automation.py export --output data/automation/m1/ledger.json
+python3 -m fantasy_agent automation init --policy config/automation_policy.example.json
+python3 -m fantasy_agent automation status
+python3 -m fantasy_agent automation export --output data/automation/m1/ledger.json
 ```
 
 Initialization creates the database, disabled policy and first event.
@@ -53,8 +53,8 @@ M1 rejects `authorized_apply` because platform execution is unavailable.
 An enabled mode requires an existing setup evidence file:
 
 ```sh
-python3 automation.py mode observe --evidence docs/M0_EXIT_REPORT.md
-python3 automation.py mode disabled
+python3 -m fantasy_agent automation mode observe --evidence docs/M0_EXIT_REPORT.md
+python3 -m fantasy_agent automation mode disabled
 ```
 
 These examples describe deliberate mode changes. Initialization does not run them.
@@ -100,7 +100,7 @@ reference --run-id ID --token TOKEN --kind evidence --path PROJECT_PATH
 finish --run-id ID --token TOKEN --outcome completed --summary DESCRIPTION --artifact PROJECT_PATH
 ```
 
-Prefix each command with `python3 automation.py`.
+Prefix each command with `python3 -m fantasy_agent automation`.
 Reference kinds are `proposal`, `action` and `evidence`.
 An action reference records a file. It neither authorizes nor performs a platform action.
 Finish outcomes are `completed`, `failed` and `outcome_unknown`.
@@ -122,7 +122,7 @@ An expired lease does not establish that an external operation stopped or failed
 6. Record the resolution:
 
 ```text
-python3 automation.py recover --run-id ID --resolution safe_to_retry --evidence PROJECT_PATH --reason DESCRIPTION
+python3 -m fantasy_agent automation recover --run-id ID --resolution safe_to_retry --evidence PROJECT_PATH --reason DESCRIPTION
 ```
 
 Recovery refuses a live lease.

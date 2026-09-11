@@ -101,12 +101,12 @@ The deliberately bounded own-choice beams remain approximate.
 
 ```sh
 # All local: fixed-state benchmarks and comparisons under matching opponent seeds.
-python3 draft_ab_evaluate.py benchmark
-python3 draft_ab_evaluate.py compare
-python3 draft_ab_evaluate.py report
+python3 -m fantasy_agent draft_ab_evaluate benchmark
+python3 -m fantasy_agent draft_ab_evaluate compare
+python3 -m fantasy_agent draft_ab_evaluate report
 
 # Rebuild the static seat-13 opening plan with the active A/B policy; no API reads.
-python3 draft_preplan.py build
+python3 -m fantasy_agent draft_preplan build
 
 # Offline tests.
 python3 -m unittest discover -q

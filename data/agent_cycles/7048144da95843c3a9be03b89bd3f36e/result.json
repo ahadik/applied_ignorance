@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-09-11T20:54:47.893154+00:00",
+  "status": "owner_review_required",
+  "platform_changes": false,
+  "lineup_state": {
+    "executions": [
+      {
+        "id": "dc0f789e44c2411eaf2cbf41acf39bde",
+        "scope": "1400628784381612032:10:2026:1",
+        "proposal_hash": "8ef7d47ee84b8e8e40504352e4a04628dd1367165e4b4937bbfa2d90d036bd2c",
+        "state": "completed"
+      }
+    ],
+    "actions": [
+      {
+        "id": "a840fe77a209456abd8667a6240b8bfd",
+        "execution_id": "dc0f789e44c2411eaf2cbf41acf39bde",
+        "state": "confirmed"
+      }
+    ],
+    "standing_autonomy_enabled": false
+  },
+  "transaction_state": {
+    "plans": [],
+    "actions": [],
+    "autonomous_transactions_enabled": false
+  },
+  "acquisition": {
+    "sleeper": {
+      "network_attempts": 10,
+      "cache_hits": 1
+    },
+    "fantasypros": {
+      "network_attempts": 2,
+      "cache_hits": 7
+    },
+    "nflverse": {
+      "network_attempts": 2,
+      "cache_hits": 0
+    }
+  },
+  "snapshot": "/Users/alex/Projects/Fantasy Football/data/weekly/2026/1/snapshots/f034bffb93c345b0a9a9ce8d7c55c586",
+  "proposal": "/Users/alex/Projects/Fantasy Football/data/weekly/2026/1/proposals/4c1bc9e3ba1c47aa9ad92bc843e84687.json",
+  "validation_status": "REVIEW",
+  "forecast_pool": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/forecast_pool.json",
+  "roster_observation": {
+    "saved": "/Users/alex/Projects/Fantasy Football/data/roster_operations/observations/e5eb3bbff0de42bb8796eed10c293c76.json",
+    "network_attempts": 6,
+    "cache_hits": 1,
+    "platform_changes": false
+  },
+  "comparisons": [
+    {
+      "add": "12545",
+      "drop": "4046",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/12545-4046.json",
+      "modeled_gain": 0.0,
+      "status": "review_required"
+    },
+    {
+      "add": "12545",
+      "drop": "4199",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/12545-4199.json",
+      "modeled_gain": 0.0,
+      "status": "review_required"
+    },
+    {
+      "add": "12545",
+      "drop": "7002",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/12545-7002.json",
+      "modeled_gain": -0.12749999999999773,
+      "status": "review_required"
+    },
+    {
+      "add": "12545",
+      "drop": "9754",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/12545-9754.json",
+      "modeled_gain": -0.3147499999999894,
+      "status": "review_required"
+    },
+    {
+      "add": "9224",
+      "drop": "4046",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9224-4046.json",
+      "modeled_gain": 3.6312500000000085,
+      "status": "review_required"
+    },
+    {
+      "add": "9224",
+      "drop": "4199",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9224-4199.json",
+      "modeled_gain": 3.6312500000000085,
+      "status": "review_required"
+    },
+    {
+      "add": "9224",
+      "drop": "7002",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9224-7002.json",
+      "modeled_gain": 3.503750000000011,
+      "status": "review_required"
+    },
+    {
+      "add": "9224",
+      "drop": "9754",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9224-9754.json",
+      "modeled_gain": 3.3523500000000013,
+      "status": "review_required"
+    },
+    {
+      "add": "9228",
+      "drop": "4046",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9228-4046.json",
+      "modeled_gain": 0.0,
+      "status": "review_required"
+    },
+    {
+      "add": "9228",
+      "drop": "4199",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9228-4199.json",
+      "modeled_gain": 0.0,
+      "status": "review_required"
+    },
+    {
+      "add": "9228",
+      "drop": "7002",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9228-7002.json",
+      "modeled_gain": -0.12749999999999773,
+      "status": "review_required"
+    },
+    {
+      "add": "9228",
+      "drop": "9754",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9228-9754.json",
+      "modeled_gain": -0.3147499999999894,
+      "status": "review_required"
+    },
+    {
+      "add": "8161",
+      "drop": "4046",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/8161-4046.json",
+      "modeled_gain": 0.0,
+      "status": "review_required"
+    },
+    {
+      "add": "8161",
+      "drop": "4199",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/8161-4199.json",
+      "modeled_gain": 0.0,
+      "status": "review_required"
+    },
+    {
+      "add": "8161",
+      "drop": "7002",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/8161-7002.json",
+      "modeled_gain": -0.12749999999999773,
+      "status": "review_required"
+    },
+    {
+      "add": "8161",
+      "drop": "9754",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/8161-9754.json",
+      "modeled_gain": -0.3147499999999894,
+      "status": "review_required"
+    },
+    {
+      "add": "12522",
+      "drop": "4046",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/12522-4046.json",
+      "modeled_gain": 0.0,
+      "status": "review_required"
+    },
+    {
+      "add": "12522",
+      "drop": "4199",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/12522-4199.json",
+      "modeled_gain": 0.0,
+      "status": "review_required"
+    },
+    {
+      "add": "12522",
+      "drop": "7002",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/12522-7002.json",
+      "modeled_gain": -0.12749999999999773,
+      "status": "review_required"
+    },
+    {
+      "add": "12522",
+      "drop": "9754",
+      "path": "/Users/alex/Projects/Fantasy Football/data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/12522-9754.json",
+      "modeled_gain": -0.3147499999999894,
+      "status": "review_required"
+    }
+  ],
+  "candidate_scope": "Top five unowned offensive players by current supported projection; not an exhaustive optimal search.",
+  "priority_cost": "Not estimated. Owner must assess rolling-priority opportunity cost before a claim.",
+  "native_review_required": true,
+  "future_player_valuations_available": false,
+  "finished_at": "2026-09-11T20:54:57.001849+00:00"
+}

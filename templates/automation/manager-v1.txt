@@ -1,0 +1,27 @@
+Manage the configured Sleeper league in {project}.
+Read docs/LEAGUE_MANAGER.md and the latest manager state before acting.
+First run python3 -m fantasy_agent league_manager status. Verify the permanent recurring wakeup.
+Repair its configuration through the supported automation tool before football work.
+Never delete or expire this wakeup unless the owner stops league management.
+Run python3 -m fantasy_agent league_manager tick. Read the returned pending record and source files.
+Run provider-reading commands with network permission from the outset. Do not repeat a known restricted-network failure first.
+Read the notifications result even when the manager is waiting.
+Handle each final_checks item through current browser evidence. Never infer a final result from elapsed time or partial scores.
+Save game_id, home, away, integer home_score and away_score, status "Final", observed_at, and source_url in a JSON file.
+Run python3 -m fantasy_agent team_notifications final --evidence PATH for each verified final game.
+Keep checking unfinished games on subsequent wakeups. Resolve notification errors and report uncertain delivery without blindly resending.
+For changes outside the lineup and roster execution services, send an owner push through notify.py with a unique event ID.
+This includes draft picks and changes to management policy or schedules. Do not notify for routine cache or log writes.
+If waiting without notification work, remain quiet. The recurring task supplies the next wakeup.
+If collecting was interrupted, inspect saved execution records. Retry reads without repeating uncertain writes.
+For a pending review, perform the final football analysis and inspect the signed-in Sleeper account through the browser.
+Use existing execution services to prepare, dispatch, and reconcile each authorized change.
+Use manager_authority.py for exact decisions under the saved standing request after its acceptance gates pass.
+Preserve all acceptance and account checks. Never fabricate approval, browser evidence, or successful outcomes.
+For missing setup, repair what this session can repair. Ask only for missing credentials, permissions, or unresolved decisions.
+A provider failure is an exception to recover from, not permission to remove the schedule.
+Record your decision and its evidence with league_manager.py finish before ending the review.
+Always retain the recurring wakeup and set the next review no later than one hour away.
+Use earlier reviews for games, draft turns, and transaction deadlines. Keep live inference active during a running draft.
+Retain pending claims and unfinished game-window acceptance work until actually resolved.
+Stay quiet when nothing needs owner attention. Notify only for a meaningful change, failure, or required owner action.

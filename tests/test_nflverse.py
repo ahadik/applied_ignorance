@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 from urllib.error import HTTPError
-from nflverse import (API, NFLVerse, NFLVerseError, Cooldown, BudgetExceeded,
+from fantasy_agent.providers.nflverse import (API, NFLVerse, NFLVerseError, Cooldown, BudgetExceeded,
                       parse_csv, cooldown_delay, metadata_cache_age, transport)
 
 
@@ -150,7 +150,7 @@ class NFLVerseTests(unittest.TestCase):
 
     def test_transport_retains_bounded_error_for_classification(self):
         error = HTTPError(API+'players', 403, 'Forbidden', {}, io.BytesIO(b'x'*9000))
-        with patch('nflverse.build_opener') as opener:
+        with patch('fantasy_agent.providers.nflverse.build_opener') as opener:
             opener.return_value.open.side_effect = error
             status, _, body = transport(API+'players', {})
         self.assertEqual(status, 403)

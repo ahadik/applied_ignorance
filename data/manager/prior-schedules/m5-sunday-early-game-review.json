@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "id": "m5-sunday-early-game-review",
+  "kind": "heartbeat",
+  "name": "Sunday full-system supervised test",
+  "prompt": "Test the full local Fantasy Football system in /Users/alex/Projects/Fantasy Football on September 13, 2026. Read docs/PROGRESS.md, docs/FULL_SYSTEM_SUNDAY.md, docs/M5_EXECUTION.md and docs/M6_ROSTER_OPERATIONS.md. The early review is noon America/New_York before the 1 PM kickoff; the later review is 3:25 PM before the 4:25 PM kickoff. Check the actual date first. Before September 13, remain quiet. After September 13 at 4:25 PM Eastern, delete this exact automation and record any missed windows. On the noon run, first update this same automation to Sunday 15:25 America/New_York, preserving these instructions, and verify its saved configuration with the local inventory command. Do this before collection or waiting for owner input. If the first run starts after 1 PM but before 3:25 PM, record the early window as missed and schedule the late review. At or after 3:25 PM, test only the later window. Run python3 agent_cycle.py --season 2026 --week 1 --notify through the central provider permissions, then inspect and reload the actual Sleeper team page and private pending-claims page in the in-app browser. Review lineup validation, roster candidates, acquisition controls and season bye coverage. Follow the saved exact-approval, prepare, dispatch and reconciliation procedures for legitimate changes only. No unattended lineup writes or roster transactions are authorized by this test. Never manufacture a roster move, infer approval, or repeat an uncertain action. Record each qualifying game window only with actual owner supervision and verified native/API agreement. Preserve notification receipts, source times and actual acquisition counts. Sunday does not establish Wednesday waiver-processing or second-Mac acceptance. After two qualifying windows, present limited lineup delegation terms to the owner before promotion; do not invent that delegation. Delete this automation after delivering the later review and verify removal. Retain unresolved work in this task. Notify only for needed owner review, meaningful failure, missed window or completion; otherwise remain quiet.",
+  "status": "ACTIVE",
+  "rrule": "FREQ=WEEKLY;BYDAY=SU;BYHOUR=12;BYMINUTE=0;BYSECOND=0",
+  "target_thread_id": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+  "created_at": 1789150461875,
+  "updated_at": 1789155256663
+}

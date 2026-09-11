@@ -3,9 +3,9 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from lineup_history import append_proposal, history
-from lineup_validation import check_document, proposal_from_report
-from storage import save_new
+from fantasy_agent.weekly.lineup_history import append_proposal, history
+from fantasy_agent.weekly.lineup_validation import check_document, proposal_from_report
+from fantasy_agent.core.storage import save_new
 
 
 class LineupHistoryTests(unittest.TestCase):

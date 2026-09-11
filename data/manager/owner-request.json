@@ -1,0 +1,12 @@
+{
+  "basis": "explicit_owner_management_request",
+  "owner_statement": "Complete the work remaining such that you can run autonomously. I should be able to set up this repo, open Codex and say start managing my league or something similar. Your future actions should always schedule follow up actions. There should always be a running thread of live inference or a scheduled task.",
+  "league_id": "1400628784381612032",
+  "user_id": "1403069775155884032",
+  "roster_id": 10,
+  "season": 2026,
+  "operations": ["unlocked_starters", "free_agent", "waiver", "cancel_claim", "ir_place", "ir_activate"],
+  "lineup_actions_per_day": 10,
+  "roster_actions_per_day": 2,
+  "scope_note": "Standing request for routine management. Preserve live acceptance gates. No trades, messages to other managers, standalone drops, or protected-drop overrides."
+}

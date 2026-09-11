@@ -1,0 +1,9 @@
+{
+  "run_id": "f973b86901e44da7a44dc04cc86605fc",
+  "outcome": "retry",
+  "reason": "Restricted network connection failed before discovery. Retry through central clients with network permission.",
+  "next_review_at": 1789158336.868636,
+  "evidence": [
+    "data/manager/runs/f973b86901e44da7a44dc04cc86605fc.json"
+  ]
+}

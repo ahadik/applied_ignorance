@@ -2,12 +2,12 @@ import copy
 import json
 import unittest
 
-from automation_store import InvalidContract, utc
-from roster_operations import RosterOperations, rules_key
-from season_strategy import compare
+from fantasy_agent.automation.automation_store import InvalidContract, utc
+from fantasy_agent.execution.roster_operations import RosterOperations, rules_key
+from fantasy_agent.weekly.season_strategy import compare
 from tests.test_season_strategy import pool_fixture
 from tests import test_lineup_execution as execution_tests
-from weekly_data import fingerprint
+from fantasy_agent.weekly.weekly_data import fingerprint
 
 
 class RosterTests(unittest.TestCase):
@@ -53,6 +53,12 @@ class RosterTests(unittest.TestCase):
 
     def prepare(self, pid, ordinal=0):
         return self.ops.prepare_step(pid, ordinal, 'roster-api.json', 'roster-native.json', 'valuation.json')
+
+    def test_league_change_blocks_registered_plan(self):
+        plan_id = self.register()
+        (self.root / '.env').write_text('SLEEPER_LEAGUE_ID=another\nSLEEPER_USER_ID=owner\n')
+        with self.assertRaisesRegex(InvalidContract, 'configured league'):
+            self.prepare(plan_id)
 
     def advance(self):
         self.now += 1

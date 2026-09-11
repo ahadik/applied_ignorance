@@ -2,6 +2,11 @@
 
 ## Purpose and boundaries
 
+The permanent league manager supersedes this document's historical one-off scheduling steps.
+Both Sunday windows are saved manager obligations. Keep the recurring manager task before and after these reviews.
+Do not replace its schedule with a single later review or delete it after acceptance.
+Use `docs/LEAGUE_MANAGER.md` to finish each review and resolve its actual obligation.
+
 Test the integrated local system on September 13, 2026.
 The early review starts at noon Eastern. The later review starts at 3:25 PM Eastern.
 Recheck the actual game times before each review.
@@ -19,7 +24,7 @@ Sunday cannot establish Wednesday waiver-processing success or second-Mac accept
 2. Check the date and current execution status.
 3. Update this task's existing heartbeat to Sunday at 3:25 PM Eastern.
 4. Preserve the full-system instructions in that update.
-5. Run `python3 automation.py schedule-import`.
+5. Run `python3 -m fantasy_agent automation schedule-import`.
 6. Confirm one active task with the intended later schedule and prompt.
 7. Run the integrated review command below.
 8. Open the actual Sleeper team page in the in-app browser.
@@ -31,9 +36,9 @@ Sunday cannot establish Wednesday waiver-processing success or second-Mac accept
 14. Record the actual qualifying game window.
 
 ```sh
-python3 lineup_execution.py status
-python3 roster_operations.py status
-python3 agent_cycle.py --season 2026 --week 1 --notify
+python3 -m fantasy_agent lineup_execution status
+python3 -m fantasy_agent roster_operations status
+python3 -m fantasy_agent agent_cycle --season 2026 --week 1 --notify
 ```
 
 The review uses the central Sleeper, FantasyPros and nflverse clients.

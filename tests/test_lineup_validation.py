@@ -5,11 +5,11 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from lineup_validation import validate, check_document
+from fantasy_agent.weekly.lineup_validation import validate, check_document
 from tests.test_weekly import weekly_fixture
-from weekly_model import timestamp
-from fantasypros import APIError
-import lineup_validate
+from fantasy_agent.weekly.weekly_model import timestamp
+from fantasy_agent.providers.fantasypros import APIError
+from fantasy_agent.weekly import lineup_validate
 
 
 class LineupValidationTests(unittest.TestCase):
@@ -23,7 +23,7 @@ class LineupValidationTests(unittest.TestCase):
         self.now = timestamp('2026-09-09T12:00:01Z')
 
     def run_check(self, **kwargs):
-        with patch('lineup_validation.schedule_games', return_value=(self.games, {'BUF','NYJ'})):
+        with patch('fantasy_agent.weekly.lineup_validation.schedule_games', return_value=(self.games, {'BUF','NYJ'})):
             return validate(self.proposal, self.inputs, self.now, **kwargs)
 
     def codes(self, result):
@@ -102,12 +102,13 @@ class LineupValidationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             (root/'config.json').write_text(json.dumps({'league_id':'test','username':'me'}))
+            (root / '.env').write_text('SLEEPER_LEAGUE_ID=test\nSLEEPER_USER_ID=owner\n')
             file = root/'proposal.json'
             file.write_text(json.dumps(self.proposal))
             folder = root/'data/weekly/2026/1'
             folder.mkdir(parents=True)
             (folder/'latest_validation.json').write_text('{"status":"PASS"}')
-            with patch('lineup_validate.ROOT',root), patch('lineup_validate.collect',side_effect=APIError('unavailable')), \
+            with patch('fantasy_agent.weekly.lineup_validate.ROOT',root), patch('fantasy_agent.weekly.lineup_validate.collect',side_effect=APIError('unavailable')), \
                  patch('sys.argv',['lineup_validate.py','--lineup',str(file)]), patch('builtins.print'):
                 with self.assertRaises(SystemExit) as error:
                     lineup_validate.main()

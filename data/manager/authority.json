@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "generation": "c5f52324588e47b8b313cc042ec3bed3",
+  "request": {
+    "path": "data/manager/owner-request.json",
+    "sha256": "c9aff9d8f8943c7c903c97430097a3589860fd72069d7910711fddeb10c96559"
+  },
+  "installed_at": "2026-09-11T20:30:21.604926+00:00"
+}

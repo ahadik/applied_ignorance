@@ -140,9 +140,9 @@ because an unrelated feed is absent.
 
 ```text
 python3 weekly_inputs.py collect --season 2026 --week 1
-python3 weekly_lineup.py recommend --season 2026 --week 1
+python3 -m fantasy_agent weekly_lineup recommend --season 2026 --week 1
 python3 weekly_inputs.py refresh-alerts --season 2026 --week 1
-python3 weekly_lineup.py verify --season 2026 --week 1
+python3 -m fantasy_agent weekly_lineup verify --season 2026 --week 1
 ```
 
 Collection/refresh/verification use central provider clients. Recommendation is

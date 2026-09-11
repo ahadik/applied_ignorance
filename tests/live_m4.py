@@ -8,10 +8,10 @@ import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from automation_dispatch import Dispatcher
-from automation_run import register_workflow
-from automation_store import InvalidContract, utc
-from storage import save_new, save_atomic
+from fantasy_agent.automation.automation_dispatch import Dispatcher
+from fantasy_agent.automation.automation_run import register_workflow
+from fantasy_agent.automation.automation_store import InvalidContract, utc
+from fantasy_agent.core.storage import save_new, save_atomic
 
 FOLDER = ROOT / 'data/automation/m4/live'
 
@@ -86,7 +86,7 @@ def finish():
         raise InvalidContract('Two distinct scheduled workflow cycles are required')
     if not all(r['coverage']['configuration_coverage_verified'] for r in records):
         raise InvalidContract('A live cycle lacked verified future configuration coverage')
-    from automation_reconcile import SchedulerStore, read_local
+    from fantasy_agent.automation.automation_reconcile import SchedulerStore, read_local
     scheduler = SchedulerStore(ROOT)
     with scheduler.db() as db:
         inventory = read_local(scheduler.config(db)['inventory_scope'])

@@ -43,22 +43,22 @@ Run from the project root:
 # Network through central clients: league, Sleeper identities/state, FP feeds.
 # Reuses valid FantasyPros cache; resets the collection manifest to incomplete
 # until every required read succeeds. Also publishes the fresh league context.
-python3 draft_inputs.py collect --season 2026
+python3 -m fantasy_agent draft_inputs collect --season 2026
 
 # Explicit pre-draft refresh of FantasyPros, still under its shared budget.
-python3 draft_inputs.py collect --season 2026 --refresh
+python3 -m fantasy_agent draft_inputs collect --season 2026 --refresh
 
 # Targeted alert refresh: one Sleeper state read plus two cache-first FP reads.
-python3 draft_inputs.py refresh-alerts --season 2026
+python3 -m fantasy_agent draft_inputs refresh-alerts --season 2026
 
 # Offline: checksums, joins, scoring, history rebuild, coverage and report.
-python3 draft_board.py build --season 2026
-python3 draft_board.py summary --season 2026
-python3 draft_board.py player --season 2026 --player 'Jahmyr Gibbs'
-python3 draft_board.py issues --season 2026
+python3 -m fantasy_agent draft_board build --season 2026
+python3 -m fantasy_agent draft_board summary --season 2026
+python3 -m fantasy_agent draft_board player --season 2026 --player 'Jahmyr Gibbs'
+python3 -m fantasy_agent draft_board issues --season 2026
 
 # Offline review artifact only; no browser, queue, pick or watcher action.
-python3 draft_board.py export --season 2026 --output data/draft_board/2026/candidates.review.json
+python3 -m fantasy_agent draft_board export --season 2026 --output data/draft_board/2026/candidates.review.json
 ```
 
 Use `--as-of TIMEZONE_AWARE_ISO` on `build` for repeatable analytical time. It must

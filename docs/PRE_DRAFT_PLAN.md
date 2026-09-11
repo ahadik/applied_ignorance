@@ -34,24 +34,24 @@ No member's username is used to infer their agent strategy.
 ```sh
 # Seven logical reads through draft_data -> sleeper.get_sleeper.
 # Only the user profile can be cached; provider retry/cooldown policies apply.
-python3 draft_preplan.py sync
+python3 -m fantasy_agent draft_preplan sync
 
 # Offline inspection of the last returned observation if validation failed.
-python3 draft_preplan.py inspect
+python3 -m fantasy_agent draft_preplan inspect
 
 # Offline revalidation after a supported schema-handling fix; original time kept.
-python3 draft_preplan.py accept
+python3 -m fantasy_agent draft_preplan accept
 
 # Offline import of newer same-league context. Other source files/times stay intact.
-python3 draft_inputs.py adopt-context --season 2026 --context data/strategy/pre_draft/context.json
+python3 -m fantasy_agent draft_inputs adopt-context --season 2026 --context data/strategy/pre_draft/context.json
 
 # Offline league-specific scoring/reference rebuild, then seat-specific planning.
-python3 draft_board.py build --season 2026
-python3 draft_preplan.py build
-python3 draft_preplan.py summary
+python3 -m fantasy_agent draft_board build --season 2026
+python3 -m fantasy_agent draft_preplan build
+python3 -m fantasy_agent draft_preplan summary
 
 # Optional offline complete draft checks for the verified seat and current board.
-python3 draft_strategy_evaluate.py evaluate --seats 13 --seeds 31001 --modes ecr qb_run --output data/strategy/pre_draft/evaluation
+python3 -m fantasy_agent draft_strategy_evaluate evaluate --seats 13 --seeds 31001 --modes ecr qb_run --output data/strategy/pre_draft/evaluation
 ```
 
 `sync` saves `last_observation.json` for diagnostics, but replaces accepted

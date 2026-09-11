@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "project": "/Users/alex/Projects/Fantasy Football",
+  "installation": "0a5a4e3fb70640a5a3d36e36cf2497b5",
+  "created_at": "2026-09-11T20:23:47.822710+00:00",
+  "next_review_at": 1789161300.0,
+  "failures": 0,
+  "pending": null,
+  "obligations": {
+    "sunday-early": {
+      "id": "sunday-early",
+      "at": 1789315200,
+      "reason": "Complete the supervised early game-window acceptance in docs/FULL_SYSTEM_SUNDAY.md. Keep the permanent manager schedule."
+    },
+    "sunday-late": {
+      "id": "sunday-late",
+      "at": 1789327500,
+      "reason": "Complete the supervised later game-window acceptance. Keep the permanent manager schedule; do not follow historical one-off cleanup instructions."
+    },
+    "chase-brown-review": {
+      "id": "chase-brown-review",
+      "at": 1789161300,
+      "reason": "Recheck Brown waiver timing. Native W (Fri) has no exact deadline in the observed form. No pending claims as of this review. Assess Brown for Jones with preserved positional and bye coverage, then prepare a concrete plan under the supervised transaction gates. Do not substitute an invented deadline or silently drop Mahomes."
+    }
+  },
+  "enabled": true,
+  "target": "01a09238-ec8e-73c3-a00d-95ba632b70cb",
+  "last_wake_at": 1789160087.10248,
+  "last_result": "data/manager/runs/f2a231dd9a924af5afe20be0dfbdeb73.json",
+  "last_decision": "data/manager/decisions/f2a231dd9a924af5afe20be0dfbdeb73.json",
+  "exception": null,
+  "phase": "regular_season",
+  "transfers": [
+    {
+      "from": "01a08e8a-1c81-7432-a1d0-34b7ac0ff912",
+      "to": "01a09238-ec8e-73c3-a00d-95ba632b70cb",
+      "at": "2026-09-11T20:48:11.783095+00:00"
+    }
+  ],
+  "missed_wakeups": 1
+}

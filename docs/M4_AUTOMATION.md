@@ -79,10 +79,10 @@ Wrong targets, changed prompts, changed revisions, paused tasks, duplicates and 
 Python never edits app-owned scheduler files or calls a private scheduling endpoint.
 
 ```sh
-python3 automation_dispatch.py prepare --target TASK_ID --expires UTC_TIME
-python3 automation_dispatch.py bind
-python3 automation_dispatch.py coverage
-python3 automation_dispatch.py tick --revision REVISION
+python3 -m fantasy_agent automation_dispatch prepare --target TASK_ID --expires UTC_TIME
+python3 -m fantasy_agent automation_dispatch bind
+python3 -m fantasy_agent automation_dispatch coverage
+python3 -m fantasy_agent automation_dispatch tick --revision REVISION
 ```
 
 Use the returned tool arguments with the supported scheduling control after preparation.
@@ -108,9 +108,9 @@ See [M4_LIVE_ACCEPTANCE.md](M4_LIVE_ACCEPTANCE.md) for the two-cycle procedure a
 Register the recipe before execution:
 
 ```sh
-python3 automation.py workflow-register --recipe PATH --check-id CHECK_ID --run-at UTC_TIME --latest-start UTC_TIME --expires UTC_TIME
-python3 automation.py context --check-id CHECK_ID --revision REVISION
-python3 automation.py workflow-run --recipe PATH --check-id CHECK_ID --revision REVISION
+python3 -m fantasy_agent automation workflow-register --recipe PATH --check-id CHECK_ID --run-at UTC_TIME --latest-start UTC_TIME --expires UTC_TIME
+python3 -m fantasy_agent automation context --check-id CHECK_ID --revision REVISION
+python3 -m fantasy_agent automation workflow-run --recipe PATH --check-id CHECK_ID --revision REVISION
 ```
 
 Replace each placeholder with the saved recipe, check identity, revision or approved UTC time.
@@ -170,7 +170,7 @@ Do not delete ledgers, change cache directories or force a refresh to avoid a li
 
 ### Missed planner or missing future checks
 
-1. Run `python3 automation.py health`.
+1. Run `python3 -m fantasy_agent automation health`.
 2. Compare the last receipt, desired obligations and fresh local scheduler inventory.
 3. Inspect the dispatcher contract and published coverage, or follow the legacy M3 manual setup procedure.
 4. Retain the missing-coverage finding until actual checks cover the required horizon.

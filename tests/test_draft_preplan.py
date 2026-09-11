@@ -7,10 +7,10 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
-from draft_data import read_pre_draft_context
-from draft_preplan import assigned_order,make_plan
-from draft_inputs import adopt_context,load_inputs
-from storage import save_atomic
+from fantasy_agent.drafting.draft_data import read_pre_draft_context
+from fantasy_agent.drafting.draft_preplan import assigned_order,make_plan
+from fantasy_agent.drafting.draft_inputs import adopt_context,load_inputs
+from fantasy_agent.core.storage import save_atomic
 from tests.test_draft_strategy import fixture
 
 
@@ -105,8 +105,8 @@ class PreplanTests(unittest.TestCase):
     def test_collector_routes_seven_reads_through_central_sleeper(self):
         context,_,_ = context_fixture()
         responses = [context['league'],context['draft'],{'user_id':'us'},[],[],[],context['league_users']]
-        with patch('draft_data.get_sleeper',side_effect=responses) as get:
-            result = read_pre_draft_context({'league_id':'123','username':'example'})
+        with patch('fantasy_agent.drafting.draft_data.get_sleeper',side_effect=responses) as get:
+            result = read_pre_draft_context({'league_id':'123','username':'example','user_id':'us'})
         self.assertEqual(get.call_count,7)
         self.assertEqual(result['traded_picks'],[])
         self.assertEqual(result['league_users'],context['league_users'])

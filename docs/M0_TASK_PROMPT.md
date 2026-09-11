@@ -4,7 +4,7 @@ Run the M0 capability probe in this Fantasy Football project.
 Read `docs/M0_PROBE.md` first.
 Use the existing Python interpreter.
 
-1. Run `python3 automation_probe.py run --sleeper-read`.
+1. Run `python3 -m fantasy_agent automation_probe run --sleeper-read`.
 2. Retain the returned run ID and receipt path.
 3. Inspect the Sleeper league through the ChatGPT in-app browser.
 4. Use the league ID from `config.json`.

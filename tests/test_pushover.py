@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from pushover import Pushover, PushoverError
+from fantasy_agent.providers.pushover import Pushover, PushoverError
 
 
 class PushoverTests(unittest.TestCase):

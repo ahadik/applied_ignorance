@@ -119,7 +119,7 @@ Start this milestone only after M0–M6 pass on this Mac. Include a live Pushove
 
 Commit source, tests, documentation and tracked data to the existing Git repository. Keep the large depth-chart directory ignored. Exclude `.env` and credentials. Run `python3 -m unittest discover -v` before release, then push the completed checkpoint when requested. No clean-history export, separate data-transfer tooling or host-isolation system is required.
 
-Clone or pull the repository on the second Mac. Install the tested Python environment. Configure `.env`. Sign in to ChatGPT. Sign in to Sleeper. Run `python3 setup_repo.py --season 2026` to restore the ignored depth data. Repeat M0 scheduling/browser probes there and configure tasks for that checkout. Begin in propose mode.
+Clone or pull the repository on the second Mac. Install the tested Python environment. Configure `.env`. Sign in to ChatGPT. Sign in to Sleeper. Run `python3 -m fantasy_agent setup_repo --season 2026` to restore the ignored depth data. Repeat M0 scheduling/browser probes there and configure tasks for that checkout. Begin in propose mode.
 
 Only one Mac runs at a time. Finish work and commit/push data before switching. Pull before starting on the other Mac. This carries provider ledgers, lock history and pending-action evidence with the code. Preserve timestamps and revalidate current league state before acting. Configure task definitions and permissions on the new Mac separately.
 

@@ -8,10 +8,10 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from controller import build, rank, update_strategy
-from draft_strategy import Engine, candidate_export, fingerprint, load_policy, owner
-from draft_strategy_evaluate import draft, state_from_ids
-from storage import save_atomic
+from fantasy_agent.drafting.controller import build, rank, update_strategy
+from fantasy_agent.drafting.draft_strategy import Engine, candidate_export, fingerprint, load_policy, owner
+from fantasy_agent.drafting.draft_strategy_evaluate import draft, state_from_ids
+from fantasy_agent.core.storage import save_atomic
 
 
 def fixture():
@@ -230,7 +230,7 @@ class HandoffTests(unittest.TestCase):
             candidate_export(self.board,mock,result,current,allow_mock=True)
 
     def test_finished_controller_does_not_require_old_candidates(self):
-        from controller import report
+        from fantasy_agent.drafting.controller import report
         with tempfile.TemporaryDirectory() as directory:
             folder = Path(directory)
             save_atomic(folder/'state.json',dict(self.state,next_pick=None))
@@ -263,11 +263,11 @@ class HandoffTests(unittest.TestCase):
             board_path,policy_path = folder/'board.json',folder/'policy.json'
             save_atomic(board_path,self.board); save_atomic(policy_path,self.policy)
             update_strategy(folder,self.state,board_path,policy_path)
-            with patch('draft_strategy.Engine.recommend',side_effect=AssertionError('Unexpected recompute')):
+            with patch('fantasy_agent.drafting.draft_strategy.Engine.recommend',side_effect=AssertionError('Unexpected recompute')):
                 update_strategy(folder,self.state,board_path,policy_path)
             self.policy['seed'] += 1
             save_atomic(policy_path,self.policy)
-            with patch('draft_strategy.Engine.recommend',wraps=self.engine.recommend) as recommend:
+            with patch('fantasy_agent.drafting.draft_strategy.Engine.recommend',wraps=self.engine.recommend) as recommend:
                 update_strategy(folder,self.state,board_path,policy_path)
                 self.assertEqual(recommend.call_count,1)
             before = (folder/'candidates.json').read_bytes()
@@ -296,7 +296,7 @@ class HandoffTests(unittest.TestCase):
             previous = json.loads((folder/'strategy_result.json').read_text())
             previous['engine_version'] = 0
             save_atomic(folder/'strategy_result.json',previous)
-            with patch('draft_strategy.Engine.recommend',wraps=self.engine.recommend) as recommend:
+            with patch('fantasy_agent.drafting.draft_strategy.Engine.recommend',wraps=self.engine.recommend) as recommend:
                 update_strategy(folder,self.state,board_path,policy_path)
                 self.assertEqual(recommend.call_count,1)
 

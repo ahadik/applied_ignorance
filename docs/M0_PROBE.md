@@ -23,7 +23,7 @@ It must inspect the actual standalone result, preserve scheduler state, clean up
 An active record with no known next-run timestamp does not prove natural one-occurrence expiration.
 No recurrence beyond the next daily boundary has been observed.
 
-The local inventory command is `python3 automation_probe.py inventory --output OUTPUT.json`.
+The local inventory command is `python3 -m fantasy_agent automation_probe inventory --output OUTPUT.json`.
 It reads all direct local automation directories from `CODEX_HOME`, or `~/.codex` when that variable is absent.
 It makes no network requests and saves a new JSON file without prompt text.
 Missing, malformed or unreadable schedule records make the inventory incomplete.
@@ -233,7 +233,7 @@ No task or Sleeper state changed.
 Run this command from the project root:
 
 ```sh
-python3 automation_probe.py run
+python3 -m fantasy_agent automation_probe run
 ```
 
 It saves a new receipt under `data/automation/m0/runs/`.
@@ -245,7 +245,7 @@ It never reads `.env` or saves credentials.
 Use this command for one public league read:
 
 ```sh
-python3 automation_probe.py run --sleeper-read
+python3 -m fantasy_agent automation_probe run --sleeper-read
 ```
 
 This command uses `sleeper.get_sleeper` with metadata and no retries.
@@ -304,7 +304,7 @@ Require scheduler evidence before interpreting the delay as measured scheduler l
 Record UI or tool evidence with this command:
 
 ```sh
-python3 automation_probe.py observe --run-id RUN_ID --capability browser_inspection --status unavailable --evidence-file data/automation/m0/evidence.json
+python3 -m fantasy_agent automation_probe observe --run-id RUN_ID --capability browser_inspection --status unavailable --evidence-file data/automation/m0/evidence.json
 ```
 
 The evidence JSON requires these fields:

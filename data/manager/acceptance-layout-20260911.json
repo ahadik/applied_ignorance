@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "basis": "verified_failure_exercises",
+  "command": "python3 -m unittest discover -v",
+  "recorded_at": "2026-09-11T20:54:46.838891+00:00",
+  "source_digest": "fde7a1149e4b2acbe7d4d74d89430fe822487aac8c0a129cf79ba8bf39850512",
+  "passed": 394,
+  "failed": 0,
+  "source_unchanged": true,
+  "live_acceptance": false
+}

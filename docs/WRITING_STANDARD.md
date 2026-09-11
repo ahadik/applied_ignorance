@@ -21,8 +21,8 @@ Do not apply the skill to existing or future files under `data/`.
 Run the local checker after document changes:
 
 ```sh
-python3 check_docs.py
-python3 check_docs.py --json
+python3 -m fantasy_agent check_docs
+python3 -m fantasy_agent check_docs --json
 ```
 
 The default command checks root documents, `docs/` and `tests/`.

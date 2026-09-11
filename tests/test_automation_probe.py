@@ -5,8 +5,8 @@ import tempfile
 import unittest
 from unittest.mock import Mock
 
-from automation_probe import probe, save_run, observe, validate_record, read_inventory
-from sleeper import SleeperError
+from fantasy_agent.automation.automation_probe import probe, save_run, observe, validate_record, read_inventory
+from fantasy_agent.providers.sleeper import SleeperError
 
 
 class ProbeTests(unittest.TestCase):
@@ -15,6 +15,7 @@ class ProbeTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         (self.root / 'config.json').write_text(json.dumps({'league_id': '123'}))
+        (self.root / '.env').write_text('SLEEPER_LEAGUE_ID=123\nSLEEPER_USER_ID=owner\n')
 
     def test_offline_does_not_request_and_preserves_record(self):
         request = Mock(side_effect=AssertionError('No network'))

@@ -9,9 +9,9 @@ Environment variables take precedence. Do not print or commit credentials.
 Status reports configuration fields without their values.
 
 ```sh
-python3 notify.py status
-python3 notify.py send --incident UNIQUE_ID --message 'Actionable owner message'
-python3 notify.py confirm --incident UNIQUE_ID --evidence CONFIRMATION_PATH
+python3 -m fantasy_agent notify status
+python3 -m fantasy_agent notify send --incident UNIQUE_ID --message 'Actionable owner message'
+python3 -m fantasy_agent notify confirm --incident UNIQUE_ID --evidence CONFIRMATION_PATH
 ```
 
 Status and confirmation use local files only. Send makes an HTTPS request through the central client.

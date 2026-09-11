@@ -1,7 +1,7 @@
 import unittest
 
-from fantasypros import APIError, InvalidData
-from fantasypros_diagnostic import diagnose
+from fantasy_agent.providers.fantasypros import APIError, InvalidData
+from fantasy_agent.providers.fantasypros_diagnostic import diagnose
 
 
 class DiagnosticTests(unittest.TestCase):

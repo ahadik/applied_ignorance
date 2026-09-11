@@ -9,8 +9,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from automation import main
-from automation_store import (AutomationStore, MissingState, UnknownSchema, InvalidContract,
+from fantasy_agent.automation.automation import main
+from fantasy_agent.automation.automation_store import (AutomationStore, MissingState, UnknownSchema, InvalidContract,
                               StaleRevision, ModeBlocked, DuplicateRun, LeaseConflict, LeaseExpired,
                               IncompletePriorExecution, DEFAULT_POLICY, validate_check, validate_policy)
 
@@ -252,7 +252,7 @@ class StoreTests(unittest.TestCase):
         output = self.root / 'export.json'
         self.store.export(output)
         previous = output.read_bytes()
-        with patch('storage.os.replace', side_effect=OSError('simulated failed replacement')):
+        with patch('fantasy_agent.core.storage.os.replace', side_effect=OSError('simulated failed replacement')):
             with self.assertRaises(OSError):
                 self.store.export(output)
         self.assertEqual(output.read_bytes(), previous)

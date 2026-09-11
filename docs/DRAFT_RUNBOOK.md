@@ -47,7 +47,7 @@ Read before drafting and after every compaction, reconnect, or interruption. Bas
 
 ## Timeout, compaction, or connection recovery
 
-Manual terminal fallback: `python3 draft_now.py` prints fresh advice without a
+Manual terminal fallback: `python3 -m fantasy_agent draft_now` prints fresh advice without a
 browser or active agent. See [MANUAL_DRAFT.md](MANUAL_DRAFT.md). Stop agent browser
 actions before taking over. The command itself does not stop them.
 

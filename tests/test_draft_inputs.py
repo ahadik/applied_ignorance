@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from draft_inputs import collect, load_inputs
+from fantasy_agent.drafting.draft_inputs import collect, load_inputs
 from tests.test_draft_board import fixtures
 
 
@@ -14,6 +14,7 @@ class InputCollectionTests(unittest.TestCase):
         self.addCleanup(temp.cleanup)
         root = Path(temp.name)
         (root/'config.json').write_text(json.dumps({'league_id':'123','username':'test','timezone':'UTC'}))
+        (root / '.env').write_text('SLEEPER_LEAGUE_ID=123\nSLEEPER_USER_ID=owner\n')
         inputs, _, _ = fixtures()
         context = inputs['context']
         context['user_id'] = 'user'
@@ -35,9 +36,9 @@ class InputCollectionTests(unittest.TestCase):
             else:
                 name = path.split('/')[-1]
             return inputs[name]
-        with patch('draft_inputs.ROOT',root), patch('draft_inputs.read_draft_context',return_value=context), \
-             patch('draft_inputs.get_sleeper',side_effect=lambda path,**kw:inputs['sleeper_players' if path=='players/nfl' else 'nfl_state']), \
-             patch('draft_inputs.get_fantasypros',side_effect=fp), patch('draft_inputs.FantasyPros') as client, patch('builtins.print'):
+        with patch('fantasy_agent.drafting.draft_inputs.ROOT',root), patch('fantasy_agent.drafting.draft_inputs.read_draft_context',return_value=context), \
+             patch('fantasy_agent.drafting.draft_inputs.get_sleeper',side_effect=lambda path,**kw:inputs['sleeper_players' if path=='players/nfl' else 'nfl_state']), \
+             patch('fantasy_agent.drafting.draft_inputs.get_fantasypros',side_effect=fp), patch('fantasy_agent.drafting.draft_inputs.FantasyPros') as client, patch('builtins.print'):
             client.return_value.usage.return_value = {'attempts_last_24h':0}
             if fail:
                 with self.assertRaises(ValueError):

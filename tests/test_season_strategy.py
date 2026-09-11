@@ -1,8 +1,8 @@
 import copy
 import unittest
 
-from automation_store import InvalidContract
-from season_strategy import roster_value, compare, chronological_evaluation
+from fantasy_agent.automation.automation_store import InvalidContract
+from fantasy_agent.weekly.season_strategy import roster_value, compare, chronological_evaluation
 
 
 def pool_fixture():

@@ -4,9 +4,9 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from controller import rank
-from draft_inputs import load_inputs
-from draft_board import (OFFENSE, POSITIONS, STAT_MAP, export_candidates, index, make_board,
+from fantasy_agent.drafting.controller import rank
+from fantasy_agent.drafting.draft_inputs import load_inputs
+from fantasy_agent.drafting.draft_board import (OFFENSE, POSITIONS, STAT_MAP, export_candidates, index, make_board,
                          match_player, scoring, starter_values, validate_sources)
 
 

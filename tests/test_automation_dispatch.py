@@ -7,10 +7,10 @@ import sys
 import unittest
 from unittest.mock import patch
 
-from automation_dispatch import Dispatcher
-from automation_reconcile import SchedulerStore
-from automation_run import register_workflow
-from automation_store import AutomationError, utc
+from fantasy_agent.automation.automation_dispatch import Dispatcher
+from fantasy_agent.automation.automation_reconcile import SchedulerStore
+from fantasy_agent.automation.automation_run import register_workflow
+from fantasy_agent.automation.automation_store import AutomationError, utc
 
 
 class DispatchTests(unittest.TestCase):
@@ -23,6 +23,7 @@ class DispatchTests(unittest.TestCase):
         self.store = self.dispatch.store
         self.store.initialize()
         (self.root / 'config.json').write_text('{"league_id":"league"}')
+        (self.root / '.env').write_text('SLEEPER_LEAGUE_ID=league\nSLEEPER_USER_ID=owner\n')
         (self.root / 'evidence.json').write_text('{}')
         self.store.set_mode('observe', 'evidence.json')
         self.directory = self.root / 'schedules'
@@ -100,7 +101,7 @@ class DispatchTests(unittest.TestCase):
     def test_superseded_prompt_and_changed_source_stop_before_work(self):
         item = self.check('first')
         self.dispatch.publish([item], utc(self.now + 7200))
-        with patch('automation_dispatch.Workflow') as worker:
+        with patch('fantasy_agent.automation.automation_dispatch.Workflow') as worker:
             with self.assertRaises(AutomationError):
                 self.dispatch.tick('0' * 64)
             (self.root / item['recipe']).write_text('{}')
@@ -140,21 +141,22 @@ class DispatchTests(unittest.TestCase):
         self.assertTrue(self.dispatch.tick(self.revision)['retire'])
 
     def test_real_daily_planner_registers_deadlines_and_next_daily(self):
-        from automation_plan import DEFAULT_PLAN_POLICY
-        from automation_run import Workflow
+        from fantasy_agent.automation.automation_plan import DEFAULT_PLAN_POLICY
+        from fantasy_agent.automation.automation_run import Workflow
         from tests.test_automation_plan import observations
         self.now += 2 * 86400
         config = self.dispatch.config()
         config['contract']['expires_at'] = utc(self.now + 3 * 86400)
-        from automation_store import digest
+        from fantasy_agent.automation.automation_store import digest
         config['revision'] = digest(config['contract'])
         config['prompt'] = config['prompt'].replace(self.revision, config['revision'])
         self.task['prompt'] = config['prompt']
         self.write_task()
         # This isolated test config has no production scheduler effect.
-        from storage import save_atomic
+        from fantasy_agent.core.storage import save_atomic
         save_atomic(self.dispatch.folder / 'config.json', config)
         (self.root / 'config.json').write_text('{"league_id":"test-league"}')
+        (self.root / '.env').write_text('SLEEPER_LEAGUE_ID=test-league\nSLEEPER_USER_ID=owner\n')
         (self.root / 'inputs.json').write_text('{}')
         (self.root / 'timing-proof.json').write_text('{}')
         obs = observations(at=utc(self.now))
@@ -170,7 +172,7 @@ class DispatchTests(unittest.TestCase):
         daily.pop('proposal')
         (self.root / 'daily.json').write_text(json.dumps(daily))
         registration = register_workflow(self.root, 'daily.json', 'daily', utc(self.now), utc(self.now + 600), utc(self.now + 900))
-        with patch('automation_deadlines.collect', return_value={'saved': str(self.root / 'obs.json'), 'acquisition': {}}):
+        with patch('fantasy_agent.automation.automation_deadlines.collect', return_value={'saved': str(self.root / 'obs.json'), 'acquisition': {}}):
             result = Workflow(self.root, clock=lambda: self.now).execute('daily', registration['revision'], 'daily.json')
         self.assertEqual(result['status'], 'completed', result)
         publication = self.dispatch.publication()

@@ -1,0 +1,50 @@
+{
+  "run_id": "f2a231dd9a924af5afe20be0dfbdeb73",
+  "outcome": "retry",
+  "reason": "Retain current starters: optimizer and native roster agree. Flowers news says off injury report; preserve the validator REVIEW without an override. No game notices are due. Brown is on waivers with no pending owner claims. The form does not establish an exact processing time. Continue the acquisition review with Aaron Jones as the provisional drop candidate, preserve season-value uncertainty and execution acceptance gates, and obtain a concrete exact plan before requesting any required supervised approval. This scheduler-injected run confirms wakeup delivery in the new task.",
+  "evidence": [
+    "data/manager/runs/f2a231dd9a924af5afe20be0dfbdeb73.json",
+    "data/manager/browser-review-f2a231dd.json",
+    "data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/validation.json",
+    "data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9224-4199.json",
+    "data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/season_calendar.json"
+  ],
+  "next_review_at": 1789161300,
+  "followups": [
+    {
+      "id": "chase-brown-review",
+      "at": 1789161300,
+      "reason": "Recheck Brown waiver timing. Native W (Fri) has no exact deadline in the observed form. No pending claims as of this review. Assess Brown for Jones with preserved positional and bye coverage, then prepare a concrete plan under the supervised transaction gates. Do not substitute an invented deadline or silently drop Mahomes."
+    }
+  ],
+  "recorded_at": "2026-09-11T20:57:51.597820+00:00",
+  "proofs": [
+    {
+      "path": "data/manager/runs/f2a231dd9a924af5afe20be0dfbdeb73.json",
+      "sha256": "c86d1e01278650be52327f18b1a62f44c010a7500686a7441f692717bfc91dfc"
+    },
+    {
+      "path": "data/manager/browser-review-f2a231dd.json",
+      "sha256": "6181fe0f06cef8b1d1f8c17bed1c12730bcf52ab369e8e47ce811332cd71ae50"
+    },
+    {
+      "path": "data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/validation.json",
+      "sha256": "b603b52a6fbf7d62836b44db494b61b5f76accc039592bae87868855a05773b8"
+    },
+    {
+      "path": "data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9224-4199.json",
+      "sha256": "6d43552a36cc1161b9cdc903db5ce3be5b0b615a448403186d0f73687155cd3d"
+    },
+    {
+      "path": "data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/season_calendar.json",
+      "sha256": "fbfd56a154244441f9998f99829b1ce7a7197a7296387fa5efcaa0a856b325e8"
+    }
+  ],
+  "schedule": {
+    "verified": true,
+    "task_id": "m5-sunday-early-game-review",
+    "observed_at": "2026-09-11T20:57:51.596685+00:00",
+    "reason": "recurring_wakeup_configured",
+    "tool_arguments": null
+  }
+}

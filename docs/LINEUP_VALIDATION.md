@@ -32,10 +32,10 @@ history entry. No entry implies the lineup was applied.
 
 ```sh
 # Append an explanation/revision to an existing proposal, retaining old versions.
-python3 lineup_history.py record --lineup data/weekly/2026/1/proposed_lineup.json --rationale-file explanation.txt
+python3 -m fantasy_agent lineup_history record --lineup data/weekly/2026/1/proposed_lineup.json --rationale-file explanation.txt
 
 # Review saved versions, explanations and assignments chronologically; offline.
-python3 lineup_history.py list --season 2026 --week 1
+python3 -m fantasy_agent lineup_history list --season 2026 --week 1
 ```
 
 To revise assignments, edit a working copy and pass that file to `record`. Do not
@@ -50,14 +50,14 @@ The full suite passed 197 tests after this addition.
 
 ```sh
 # Generate fresh advice and a structured proposal using the existing pipeline.
-python3 weekly_lineup.py run --season 2026 --week 1
+python3 -m fantasy_agent weekly_lineup run --season 2026 --week 1
 
 # Or export the most recent saved recommendation without fetching anything.
 # This preserves its original date and does not validate current availability.
-python3 weekly_lineup.py export --season 2026 --week 1
+python3 -m fantasy_agent weekly_lineup export --season 2026 --week 1
 
 # Independently validate the exact proposal against current provider evidence.
-python3 lineup_validate.py --lineup data/weekly/2026/1/proposed_lineup.json
+python3 -m fantasy_agent lineup_validate --lineup data/weekly/2026/1/proposed_lineup.json
 ```
 
 Validation uses `weekly_data.collect(validation_only=True)` for Sleeper league,

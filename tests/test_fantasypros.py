@@ -1,7 +1,7 @@
 from concurrent.futures import ThreadPoolExecutor
 import tempfile
 import unittest
-from fantasypros import FantasyPros, APIError, InvalidData, BudgetExceeded, RateLimited, ROUTINE_LIMIT, HARD_LIMIT
+from fantasy_agent.providers.fantasypros import FantasyPros, APIError, InvalidData, BudgetExceeded, RateLimited, ROUTINE_LIMIT, HARD_LIMIT
 
 
 class Clock:

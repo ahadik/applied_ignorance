@@ -32,7 +32,7 @@ point to this account evidence while still checking technical access separately.
 Run the reusable access check from the project directory:
 
 ```sh
-python3 fantasypros_diagnostic.py --season 2026
+python3 -m fantasy_agent fantasypros_diagnostic --season 2026
 ```
 
 After the user saved the updated `.env`, all six access probes passed on September 8, 2026 at approximately 19:29 UTC (3:29 p.m. Eastern). The first credential-loading failure consumed zero calls. The successful run consumed six FantasyPros calls. A second run returned all six responses from cache and consumed zero additional FantasyPros calls. Each run also read Sleeper's public NFL state to establish injury week 1 of the 2026 regular season. That shared reader now lives at `sleeper.get_sleeper`. The diagnostic no longer depends on draft code. See `DATA_ACCESS.md` for the provider/domain separation.

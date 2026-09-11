@@ -2,8 +2,8 @@ import copy
 import unittest
 from unittest.mock import patch
 
-from automation_store import InvalidContract, utc
-from lineup_authority import promote, revoke, authorize
+from fantasy_agent.automation.automation_store import InvalidContract, utc
+from fantasy_agent.execution.lineup_authority import promote, revoke, authorize
 from tests import test_lineup_execution as execution_tests
 
 
@@ -35,7 +35,7 @@ class AuthorityTests(unittest.TestCase):
         proposal['rationale'] = 'Second simulated change'
         self.write('second.json', proposal)
         eid = self.engine.register('second.json', authorize(self.engine, 'second.json')['saved'])['id']
-        with patch('lineup_validation.schedule_games', return_value=(self.games, {'BUF', 'NYJ'})):
+        with patch('fantasy_agent.weekly.lineup_validation.schedule_games', return_value=(self.games, {'BUF', 'NYJ'})):
             second = self.engine.prepare(eid, 'snapshot', 'next-api.json', 'next-native.json')
         with self.assertRaisesRegex(InvalidContract, 'daily action limit'):
             self.engine.dispatch(second['action_id'], second['token'])
@@ -51,11 +51,11 @@ class AuthorityTests(unittest.TestCase):
         self.write('grant.json', grant)
         self.write('tests.json', {'basis': 'verified_failure_exercises', 'passed': 1, 'failed': 0,
                                   'command': 'python3 -m unittest discover -v',
-                                  'source_digest': __import__('system_acceptance').source_digest(self.root)})
+                                  'source_digest': __import__('fantasy_agent.maintenance.system_acceptance', fromlist=['*']).source_digest(self.root)})
         return grant
 
     def windows(self):
-        from weekly_data import fingerprint
+        from fantasy_agent.weekly.weekly_data import fingerprint
         for n in (1, 2):
             proposal = copy.deepcopy(self.proposal)
             proposal['assignments'][0]['player_id'] = 'a'
@@ -67,7 +67,7 @@ class AuthorityTests(unittest.TestCase):
             kickoff = utc(self.now + n * 1000)
             validation = {'status': 'PASS', 'locked_player_ids': [], 'expires_at': utc(self.now + 300),
                           'players': [{'game': {'kickoff': kickoff}}]}
-            with patch('lineup_execution.validate', return_value=validation):
+            with patch('fantasy_agent.execution.lineup_execution.validate', return_value=validation):
                 self.engine.prepare(eid, 'snapshot', 'api.json', 'native.json')
             self.write(f'w{n}.json', {'basis': 'actual_owner_supervised_window', 'execution_id': eid, 'kickoff': kickoff})
             self.engine.record_window(eid, kickoff, f'w{n}.json')
@@ -98,7 +98,7 @@ class AuthorityTests(unittest.TestCase):
         promote(self.engine, 'grant.json', 'tests.json')
         authority = authorize(self.engine, 'proposal.json')['saved']
         eid = self.engine.register('proposal.json', authority)['id']
-        with patch('lineup_execution.validate', return_value={'status': 'REVIEW'}):
+        with patch('fantasy_agent.execution.lineup_execution.validate', return_value={'status': 'REVIEW'}):
             with self.assertRaises(InvalidContract):
                 self.engine.prepare(eid, 'snapshot', 'api.json', 'native.json')
         self.write('w1.json', {'tampered': True})

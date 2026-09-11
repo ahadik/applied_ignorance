@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 import unittest
-from draft_history_analysis import (current_depth, historical_features, identity_maps,
+from fantasy_agent.drafting.draft_history_analysis import (current_depth, historical_features, identity_maps,
                                     metric_summary, regular_rows)
 
 

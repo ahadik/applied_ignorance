@@ -139,7 +139,7 @@ After a timeout during creation, mark the operation `OUTCOME_UNKNOWN`. Reinspect
 
 Prefer in-place updates. If replacing a task is necessary, verify the replacement before disabling the old one when capacity permits. Local check claims suppress duplicate work. If capacity prevents safe replacement, report the uncovered interval and require a supported recovery path. Scheduler inventory exported by an agent/UI has weaker provenance than a structured tool result. Label it and test field extraction. Agent declarations alone cannot establish platform state.
 
-Task prompt entry is conceptually `python3 automation.py begin --check-id CHECK_ID --revision HASH`. The actual renderer supplies the tested interpreter and project configuration. It never grants additional authority. A removed, superseded, expired task exits without provider collection or browser action. Version drift causes revalidation, not execution of the old payload.
+Task prompt entry is conceptually `python3 -m fantasy_agent automation begin --check-id CHECK_ID --revision HASH`. The actual renderer supplies the tested interpreter and project configuration. It never grants additional authority. A removed, superseded, expired task exits without provider collection or browser action. Version drift causes revalidation, not execution of the old payload.
 
 **8. Run lifecycle and browser execution**
 

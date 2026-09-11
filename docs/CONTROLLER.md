@@ -16,12 +16,12 @@ The controller implements deterministic state reconciliation, availability filte
 Run from the workspace, substituting the verified draft ID:
 
 ```sh
-python3 controller.py sync --draft DRAFT_ID
-python3 controller.py watch --draft DRAFT_ID
-python3 controller.py watch --draft DRAFT_ID --strategy-board data/draft_board/2026/board.json
-python3 controller.py observe --draft DRAFT_ID --file observed-ui.json
-python3 controller.py status --draft DRAFT_ID
-python3 controller.py prepare --draft DRAFT_ID --player PLAYER_ID
+python3 -m fantasy_agent controller sync --draft DRAFT_ID
+python3 -m fantasy_agent controller watch --draft DRAFT_ID
+python3 -m fantasy_agent controller watch --draft DRAFT_ID --strategy-board data/draft_board/2026/board.json
+python3 -m fantasy_agent controller observe --draft DRAFT_ID --file observed-ui.json
+python3 -m fantasy_agent controller status --draft DRAFT_ID
+python3 -m fantasy_agent controller prepare --draft DRAFT_ID --player PLAYER_ID
 ```
 
 `watch` sleeps five seconds after each refresh. Network calls and calculations add time. It saves checkpoints to disk. If a fetch fails, it retains the previous state and records unhealthy status. It exits when the draft is complete. Run it in a retained terminal session during a mock/live draft. It can continue through conversation compaction while its process and computer remain running. It is not a cloud service. Stop it with Ctrl-C. No watcher is automatically started by these instructions.

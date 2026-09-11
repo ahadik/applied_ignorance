@@ -1,7 +1,7 @@
 # nflverse pipeline
 
 Large depth-chart JSON outputs are now stored under ignored `data/nflverse/local/`.
-Run `python3 setup_repo.py --season 2026` after cloning to collect depth and its
+Run `python3 -m fantasy_agent setup_repo --season 2026` after cloning to collect depth and its
 companion datasets through the central client and write a matching manifest.
 This checks current publication metadata and respects existing cache/budgets.
 It does not recreate the exact historical draft snapshot if upstream changed.
@@ -69,27 +69,27 @@ Run from the project root. These are reusable commands, not inline API examples.
 
 ```sh
 # Network: collect the six datasets needed for tonight.
-python3 draft_history.py collect --draft-season 2026 --seasons 2024 2025
+python3 -m fantasy_agent draft_history collect --draft-season 2026 --seasons 2024 2025
 
 # Offline: build the draft evidence from the checksummed collection.
-python3 draft_history_analysis.py --draft-season 2026
+python3 -m fantasy_agent draft_history_analysis --draft-season 2026
 
 # Offline: inspect quarantined rows and unresolved IDs.
-python3 draft_history_analysis.py --draft-season 2026 --review-issues
+python3 -m fantasy_agent draft_history_analysis --draft-season 2026 --review-issues
 
 # Offline: query saved evidence using a name fragment or a GSIS ID.
-python3 draft_history_analysis.py --draft-season 2026 --player 'PLAYER_NAME_OR_GSIS_ID'
+python3 -m fantasy_agent draft_history_analysis --draft-season 2026 --player 'PLAYER_NAME_OR_GSIS_ID'
 
 # General provider commands; catalog and collect may use the network.
-python3 nflverse_collect.py catalog --dataset snap_counts --season 2025
-python3 nflverse_collect.py collect --dataset player_stats --season 2025
-python3 nflverse_collect.py inspect --file data/nflverse/draft/2026/depth_charts_2026.json
+python3 -m fantasy_agent nflverse_collect catalog --dataset snap_counts --season 2025
+python3 -m fantasy_agent nflverse_collect collect --dataset player_stats --season 2025
+python3 -m fantasy_agent nflverse_collect inspect --file data/nflverse/draft/2026/depth_charts_2026.json
 
 # Offline: inspect the shared local ledger and saved GitHub quota observation.
-python3 nflverse_collect.py usage
+python3 -m fantasy_agent nflverse_collect usage
 
 # Network metadata checks; unchanged assets are reused, not downloaded again.
-python3 draft_history.py collect --draft-season 2026 --seasons 2024 2025 --revalidate
+python3 -m fantasy_agent draft_history collect --draft-season 2026 --seasons 2024 2025 --revalidate
 ```
 
 The draft collector prints each dataset's status, record count, file location,

@@ -21,8 +21,8 @@ Simulated tests exercise IR capacity and return restrictions for supported confi
 ## Integrated review
 
 ```sh
-python3 agent_cycle.py --season 2026 --week 1
-python3 agent_cycle.py --replay RESULT_FILE
+python3 -m fantasy_agent agent_cycle --season 2026 --week 1
+python3 -m fantasy_agent agent_cycle --replay RESULT_FILE
 ```
 
 The live command collects through central clients and saves an immutable review package.
@@ -41,9 +41,9 @@ Existing policies must explicitly allow that operation.
 ## Collect and prepare a plan
 
 ```sh
-python3 roster_operations.py collect --season 2026 --week 1
-python3 roster_operations.py plan --api API_FILE --steps STEPS_FILE --protected PLAYER_IDS --output PLAN_FILE
-python3 roster_operations.py register --plan PLAN_FILE --approval APPROVAL_FILE
+python3 -m fantasy_agent roster_operations collect --season 2026 --week 1
+python3 -m fantasy_agent roster_operations plan --api API_FILE --steps STEPS_FILE --protected PLAYER_IDS --output PLAN_FILE
+python3 -m fantasy_agent roster_operations register --plan PLAN_FILE --approval APPROVAL_FILE
 ```
 
 Collection uses central Sleeper context, all league rosters and the documented weekly transactions endpoint.
@@ -96,9 +96,9 @@ The exact user profile retains the central five-minute cache exception.
 ## Prepare and reconcile one action
 
 ```sh
-python3 roster_operations.py prepare --plan-id PLAN_ID --ordinal 0 --api API_FILE --native NATIVE_FILE --valuation COMPARISON_FILE
-python3 roster_operations.py dispatch --action-id ACTION_ID --token TOKEN
-python3 roster_operations.py reconcile --action-id ACTION_ID --api API_FILE --native NATIVE_FILE
+python3 -m fantasy_agent roster_operations prepare --plan-id PLAN_ID --ordinal 0 --api API_FILE --native NATIVE_FILE --valuation COMPARISON_FILE
+python3 -m fantasy_agent roster_operations dispatch --action-id ACTION_ID --token TOKEN
+python3 -m fantasy_agent roster_operations reconcile --action-id ACTION_ID --api API_FILE --native NATIVE_FILE
 ```
 
 An acquisition requires a complete, unexpired comparison for the exact add/drop package and current ownership.
@@ -128,9 +128,9 @@ Retirement requires a new plan instead of replaying the old action.
 ## Forecasts and evaluation
 
 ```sh
-python3 season_strategy.py pool --snapshot SNAPSHOT --output POOL_FILE
-python3 season_strategy.py compare --pool POOL_FILE --owned PLAYER_IDS --add PLAYER_IDS --drop PLAYER_IDS --priority-cost 0 --output COMPARISON_FILE
-python3 season_strategy.py evaluate --records RECORDS_FILE --output EVALUATION_FILE
+python3 -m fantasy_agent season_strategy pool --snapshot SNAPSHOT --output POOL_FILE
+python3 -m fantasy_agent season_strategy compare --pool POOL_FILE --owned PLAYER_IDS --add PLAYER_IDS --drop PLAYER_IDS --priority-cost 0 --output COMPARISON_FILE
+python3 -m fantasy_agent season_strategy evaluate --records RECORDS_FILE --output EVALUATION_FILE
 ```
 
 Repeat `--snapshot` only for distinct, supported forecast weeks with consistent league scope.

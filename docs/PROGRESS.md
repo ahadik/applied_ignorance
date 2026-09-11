@@ -1,5 +1,46 @@
 # Current project handoff
 
+## Package-only commands
+
+The repository root contains no Python scripts. All commands use `python3 -m fantasy_agent COMMAND`.
+Tests use canonical package imports. The active manager schedule uses the new command form.
+All 394 tests passed in `data/manager/acceptance-package-only-20260911.json`.
+Earlier notes about root launchers describe an intermediate layout and no longer apply.
+
+## Python organization and scheduled-run efficiency
+
+Implementation modules now live under `fantasy_agent/`, grouped by responsibility. Root launchers preserve existing commands and imports.
+Read `docs/CODE_LAYOUT.md` before editing code. Acceptance fingerprints include nested implementation files.
+Reviews reuse verified snapshot inputs instead of loading the same snapshot three times.
+Notification checks resume after the last processed event and read player names once per new event batch.
+Due-game selection excludes future and completed games before Python decodes their records.
+All 394 tests passed in `data/manager/acceptance-layout-20260911.json`. The recurring schedule still verifies.
+These optimizations do not extend provider cache ages or remove live execution checks.
+
+## Persistent league manager
+
+Owner pushes now cover verified team changes and games involving roster players.
+The game plan contains 169 remaining relevant season games from the verified weekly snapshot.
+Pregame notices use live roster reads. Postgame recaps require fresh browser evidence of an explicit Final result.
+All 388 tests passed in `data/manager/acceptance-notifications-20260911.json`.
+Pushover accepted the setup push. Actual game notification timing remains unverified until live games.
+
+The owner requested an agent that remains active or scheduled, with startup through "start managing my league."
+Read `docs/LEAGUE_MANAGER.md` for the current entry point. Historical one-off cleanup instructions do not retire the permanent manager.
+The existing task has a verified five-minute recurring schedule and retained Sunday obligations.
+The new manager still needs an observed scheduler-triggered run. Manual startup does not establish this result.
+The manager saves pending inference, retries, decisions, and independent follow-ups.
+Standing management permission supports scoped routine operations after live acceptance gates.
+External monitoring of a dead Mac is outside scope at the owner's request.
+Provider commands must use network permission from the outset. A restricted startup failed, then the permitted run completed successfully.
+Live startup identified the configured account, roster 10, and regular-season week 1.
+The successful startup record is `data/manager/runs/8098efd7d7b644ef886092a3be402489.json`.
+Two supervised game windows and actual supervised roster transaction acceptance remain prerequisites for automatic team changes.
+Do not treat a recorded standing request as completed live acceptance.
+All 381 offline tests passed. The current acceptance record is `data/manager/acceptance.json`.
+Browser startup confirmed the account menu and unchanged starters. No team change occurred during manager startup.
+The following sections preserve earlier checkpoints. Their one-off scheduling instructions do not supersede the persistent manager.
+
 ## Full local implementation checkpoint
 
 The owner authorized all currently feasible implementation before Sunday's full-system test.
@@ -272,7 +313,7 @@ collects fresh validation evidence without projections. 193 tests passed. The
 Flowers news. A pass is time- and proposal-bound, not medical clearance or a
 guarantee of participation. No lineup submission occurred.
 
-1. Re-run `python3 weekly_lineup.py run --season 2026 --week 1`, review injuries,
+1. Re-run `python3 -m fantasy_agent weekly_lineup run --season 2026 --week 1`, review injuries,
    and apply/verify the starting lineup. Draft-day data is historical. Early live
    schedule observation puts Shaheed's game Wednesday evening. Do not assume the
    first relevant deadline is Thursday. Reverify the current schedule before use.

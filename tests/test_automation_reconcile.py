@@ -7,8 +7,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from automation_reconcile import SchedulerStore, read_local, marker, desired_config
-from automation_store import InvalidContract, StaleRevision, IncompletePriorExecution, digest, instant, utc
+from fantasy_agent.automation.automation_reconcile import SchedulerStore, read_local, marker, desired_config
+from fantasy_agent.automation.automation_store import InvalidContract, StaleRevision, IncompletePriorExecution, digest, instant, utc
 
 
 class ReconcileTests(unittest.TestCase):
@@ -232,8 +232,8 @@ class ReconcileTests(unittest.TestCase):
         self.assertEqual(self.diff()['operations'][0]['action'], 'create')
 
     def test_m2_plan_integration_keeps_manual_boundary_and_checks_sources(self):
-        from automation_plan import build, DEFAULT_PLAN_POLICY
-        from automation_store import AutomationStore
+        from fantasy_agent.automation.automation_plan import build, DEFAULT_PLAN_POLICY
+        from fantasy_agent.automation.automation_store import AutomationStore
         from tests.test_automation_plan import observations, AT
         self.now = instant(AT)
         refs = [AutomationStore(self.root).reference('receipt.json')]

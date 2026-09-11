@@ -52,19 +52,19 @@ refetched. The network guard is `data/draft_session/network_lock.json`.
 
 ```sh
 # Already completed; rerunning while frozen is rejected before network reads.
-python3 draft_session.py prefetch --season 2026
+python3 -m fantasy_agent draft_session prefetch --season 2026
 
 # Offline status and verification. Verification replaces transport with a
 # forbidden stub, so even a guard regression cannot make a live FP request.
-python3 draft_session.py status
-python3 draft_session.py verify
+python3 -m fantasy_agent draft_session status
+python3 -m fantasy_agent draft_session verify
 
 # Existing live supervision, only after the separate operational authorization.
-python3 controller.py watch --draft 1400628785413394432 --strategy-board data/draft_session/1400628785413394432/board.json
+python3 -m fantasy_agent controller watch --draft 1400628785413394432 --strategy-board data/draft_session/1400628785413394432/board.json
 
 # After the real draft: central Sleeper reads must confirm its completion before
 # network access is re-enabled. This command itself fetches no FantasyPros data.
-python3 draft_session.py release
+python3 -m fantasy_agent draft_session release
 ```
 
 For a separately verified mock, use its actual draft ID, the same pinned board,

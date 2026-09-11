@@ -3,8 +3,8 @@ import tempfile
 from pathlib import Path
 from unittest.mock import patch
 from datetime import datetime, timezone, timedelta
-from controller import assess, build, now, rank, validate, refresh, read, apply_reviewed_choice
-from storage import save_atomic
+from fantasy_agent.drafting.controller import assess, build, now, rank, validate, refresh, read, apply_reviewed_choice
+from fantasy_agent.core.storage import save_atomic
 
 
 class ControllerTests(unittest.TestCase):
@@ -78,7 +78,7 @@ class ControllerTests(unittest.TestCase):
             with tempfile.TemporaryDirectory() as directory:
                 folder = Path(directory)
                 save_atomic(folder / 'pending.json', {'pick_no': 1, 'player_id': expected})
-                with patch('draft_data.get_sleeper', side_effect=[self.draft, [], [pick]]):
+                with patch('fantasy_agent.drafting.draft_data.get_sleeper', side_effect=[self.draft, [], [pick]]):
                     refresh(folder, '123', 'u')
                 self.assertEqual(read(folder / 'last_submission.json')['matched'], matched)
                 self.assertEqual(read(folder / 'pending.json') is None, matched)
@@ -87,7 +87,7 @@ class ControllerTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             folder = Path(directory)
             save_atomic(folder / 'state.json', self.state)
-            with patch('draft_data.get_sleeper', side_effect=[self.draft, [], [{'pick_no': 2}]]):
+            with patch('fantasy_agent.drafting.draft_data.get_sleeper', side_effect=[self.draft, [], [{'pick_no': 2}]]):
                 with self.assertRaises(ValueError):
                     refresh(folder, '123', 'u')
             self.assertEqual(read(folder / 'state.json'), self.state)

@@ -5,9 +5,9 @@ import random
 import unittest
 from unittest.mock import patch
 
-from draft_ab import ABPlanner,phase
-from draft_strategy import Engine,upcoming
-from draft_strategy_evaluate import baseline_prefix,state_from_ids
+from fantasy_agent.drafting.draft_ab import ABPlanner,phase
+from fantasy_agent.drafting.draft_strategy import Engine,upcoming
+from fantasy_agent.drafting.draft_strategy_evaluate import baseline_prefix,state_from_ids
 from tests.test_draft_strategy import fixture
 
 

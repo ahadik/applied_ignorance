@@ -37,8 +37,8 @@ The daily anchor requires separate manual setup. Ordinary reconciliation cannot 
 ## Initialize and import inventory
 
 ```sh
-python3 automation.py schedule-init
-python3 automation.py schedule-import
+python3 -m fantasy_agent automation schedule-init
+python3 -m fantasy_agent automation schedule-import
 ```
 
 Initialization writes local scheduler state only.
@@ -62,9 +62,9 @@ The comparator does not interpret incomplete inventory as an empty scheduler.
 ## Compare an M2 plan
 
 ```text
-python3 automation.py schedule-spec --plan PLAN_PATH --target-thread TASK_ID --output DESIRED_PATH
-python3 automation.py schedule-import
-python3 automation.py schedule-diff --desired DESIRED_PATH --inventory-id INVENTORY_ID
+python3 -m fantasy_agent automation schedule-spec --plan PLAN_PATH --target-thread TASK_ID --output DESIRED_PATH
+python3 -m fantasy_agent automation schedule-import
+python3 -m fantasy_agent automation schedule-diff --desired DESIRED_PATH --inventory-id INVENTORY_ID
 ```
 
 1. Supply the actual target task ID.
@@ -87,7 +87,7 @@ Capacity failures remain visible as uncovered requirements.
 ## Apply one supported operation
 
 ```text
-python3 automation.py schedule-begin --diff-id DIFF_ID --index 0
+python3 -m fantasy_agent automation schedule-begin --diff-id DIFF_ID --index 0
 ```
 
 This command creates a durable pending operation before the external tool call.
@@ -118,9 +118,9 @@ Deletion requires explicit retirement keys and preserves protected anchors.
 4. Verify the operation against that new inventory.
 
 ```text
-python3 automation.py schedule-record --operation-id OP_ID --token TOKEN --outcome success --task-id RETURNED_ID --evidence EVIDENCE_PATH
-python3 automation.py schedule-import
-python3 automation.py schedule-verify --operation-id OP_ID --inventory-id NEW_INVENTORY_ID
+python3 -m fantasy_agent automation schedule-record --operation-id OP_ID --token TOKEN --outcome success --task-id RETURNED_ID --evidence EVIDENCE_PATH
+python3 -m fantasy_agent automation schedule-import
+python3 -m fantasy_agent automation schedule-verify --operation-id OP_ID --inventory-id NEW_INVENTORY_ID
 ```
 
 Use `unknown` for an uncertain tool outcome. `failed` also requires read-back before another operation.
@@ -149,7 +149,7 @@ If the operator confirms that the control request ended without a possible late 
 4. Record the explicit recovery decision:
 
 ```text
-python3 automation.py schedule-resolve --operation-id OP_ID --inventory-id INVENTORY_ID --evidence EVIDENCE_PATH --reason DESCRIPTION
+python3 -m fantasy_agent automation schedule-resolve --operation-id OP_ID --inventory-id INVENTORY_ID --evidence EVIDENCE_PATH --reason DESCRIPTION
 ```
 
 The command requires unchanged affected state and saves the reason and evidence checksum.

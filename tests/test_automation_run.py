@@ -4,9 +4,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from automation_run import Workflow, register_workflow, browser_observation
-from automation_health import health
-from automation_store import AutomationError, DuplicateRun, ModeBlocked, LeaseConflict
+from fantasy_agent.automation.automation_run import Workflow, register_workflow, browser_observation
+from fantasy_agent.automation.automation_health import health
+from fantasy_agent.automation.automation_store import AutomationError, DuplicateRun, ModeBlocked, LeaseConflict
 
 
 class WorkflowTests(unittest.TestCase):
@@ -25,6 +25,8 @@ class WorkflowTests(unittest.TestCase):
                        'season': 2026, 'week': 1, 'roster_id': 1, 'notify_on_failure': True}
 
     def write(self, name, value):
+        if name == 'config.json' and 'league_id' in value:
+            (self.root / '.env').write_text('SLEEPER_LEAGUE_ID=' + value['league_id'] + '\nSLEEPER_USER_ID=owner\n')
         (self.root / name).write_text(json.dumps(value))
 
     def register(self, name='check', recipe=None):
@@ -52,12 +54,12 @@ class WorkflowTests(unittest.TestCase):
     def test_integrated_review_uses_workflow_lease_and_proposal_mode(self):
         recipe = {**self.recipe, 'kind': 'deadline', 'operation': 'integrated_review'}
         rev = self.register(recipe=recipe)
-        with patch('agent_cycle.review') as review:
+        with patch('fantasy_agent.automation.agent_cycle.review') as review:
             with self.assertRaises(ModeBlocked):
                 self.worker.execute('check', rev, 'check.json')
             review.assert_not_called()
         self.store.set_mode('propose', 'evidence.json')
-        with patch('agent_cycle.review', return_value={'status': 'owner_review_required', 'acquisition': {}}) as review:
+        with patch('fantasy_agent.automation.agent_cycle.review', return_value={'status': 'owner_review_required', 'acquisition': {}}) as review:
             result = self.worker.execute('check', rev, 'check.json')
         self.assertEqual(result['status'], 'completed')
         self.assertTrue(result['owner_action_required'])
@@ -66,7 +68,7 @@ class WorkflowTests(unittest.TestCase):
 
     def test_changed_recipe_and_disabled_mode_stop_before_work_or_alert(self):
         rev = self.register(recipe={**self.recipe, 'kind': 'daily'})
-        with patch.object(self.worker, 'daily') as work, patch('automation_run.alert') as alert:
+        with patch.object(self.worker, 'daily') as work, patch('fantasy_agent.automation.automation_run.alert') as alert:
             self.store.set_mode('disabled')
             with self.assertRaises(ModeBlocked):
                 self.worker.execute('check', rev, 'check.json')
@@ -81,7 +83,7 @@ class WorkflowTests(unittest.TestCase):
         rev = self.register(recipe={**self.recipe, 'kind': 'daily'})
         register_workflow(self.root, 'check.json', 'check', '2026-09-11T11:58:00Z',
                           '2026-09-11T12:50:00Z', '2026-09-11T13:00:00Z', rev)
-        with patch.object(self.worker, 'daily') as work, patch('automation_run.alert') as alert:
+        with patch.object(self.worker, 'daily') as work, patch('fantasy_agent.automation.automation_run.alert') as alert:
             with self.assertRaises(AutomationError):
                 self.worker.execute('check', rev, 'check.json')
             work.assert_not_called()
@@ -98,7 +100,7 @@ class WorkflowTests(unittest.TestCase):
     def test_failure_preserves_unknown_and_notification_failure(self):
         rev = self.register(recipe={**self.recipe, 'kind': 'daily'})
         with patch.object(self.worker, 'daily', side_effect=OSError('private detail')), \
-                patch('automation_run.get_pushover') as provider:
+                patch('fantasy_agent.automation.automation_run.get_pushover') as provider:
             provider.return_value.send.side_effect = ValueError('private token')
             result = self.worker.execute('check', rev, 'check.json')
         self.assertEqual(result['status'], 'failed')
@@ -113,13 +115,13 @@ class WorkflowTests(unittest.TestCase):
         def expire(*args):
             self.now += 301
             return {'status': 'completed'}
-        with patch.object(self.worker, 'daily', side_effect=expire), patch('automation_run.alert', return_value={'state': 'queued'}):
+        with patch.object(self.worker, 'daily', side_effect=expire), patch('fantasy_agent.automation.automation_run.alert', return_value={'state': 'queued'}):
             result = self.worker.execute('check', rev, 'check.json')
         self.assertEqual(result['status'], 'failed')
         self.assertIn('recovery_required', result)
 
     def test_browser_failure_alert_is_independent_and_saved(self):
-        with patch('automation_run.get_pushover') as provider:
+        with patch('fantasy_agent.automation.automation_run.get_pushover') as provider:
             provider.return_value.send.return_value = {'state': 'queued', 'phone_delivery_confirmed': False}
             result = browser_observation(self.root, 'login_required', 'evidence.json', clock=lambda: self.now)
             provider.return_value.send.assert_called_once()
@@ -129,7 +131,7 @@ class WorkflowTests(unittest.TestCase):
     def test_health_does_not_promote_completed_inspection_to_coverage(self):
         rev = self.register()
         self.worker.execute('check', rev, 'check.json')
-        with patch('automation_health.get_pushover') as provider:
+        with patch('fantasy_agent.automation.automation_health.get_pushover') as provider:
             provider.return_value.status.return_value = {'phone_delivery_confirmed': True}
             result = health(self.root, clock=lambda: self.now)
         self.assertFalse(result['production_ready'])
@@ -137,9 +139,9 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(result['workflow_receipts'][0]['status'], 'completed')
 
     def test_two_offline_planning_cycles_retain_missing_schedule_coverage(self):
-        from automation_plan import DEFAULT_PLAN_POLICY
-        from automation_reconcile import SchedulerStore
-        from automation_store import utc
+        from fantasy_agent.automation.automation_plan import DEFAULT_PLAN_POLICY
+        from fantasy_agent.automation.automation_reconcile import SchedulerStore
+        from fantasy_agent.automation.automation_store import utc
         from tests.test_automation_plan import observations
         directory = self.root / 'schedules'
         directory.mkdir()
@@ -162,8 +164,8 @@ class WorkflowTests(unittest.TestCase):
             rev = register_workflow(self.root, name + '.json', name, '2026-09-11T11:59:00Z',
                                     '2026-09-11T12:50:00Z', '2026-09-11T13:00:00Z')['revision']
             collection = {'saved': str(self.root / ('observed' + str(cycle) + '.json')), 'acquisition': {'attempts': 0}}
-            with patch('automation_deadlines.collect', return_value=collection), \
-                    patch('automation_run.alert', return_value={'state': 'queued'}):
+            with patch('fantasy_agent.automation.automation_deadlines.collect', return_value=collection), \
+                    patch('fantasy_agent.automation.automation_run.alert', return_value={'state': 'queued'}):
                 result = Workflow(self.root, clock=lambda: self.now).execute(name, rev, name + '.json')
             self.assertEqual(result['status'], 'blocked', result)
             self.assertEqual(result['cause'], 'future_deadline_coverage_unverified')
@@ -179,11 +181,11 @@ class WorkflowTests(unittest.TestCase):
         inputs = {'final_context': {'roster': {'roster_id': 1}}}
         validation = {'status': 'REVIEW', 'locked_player_ids': ['p1'],
                       'players': [{'player_id': 'p1', 'game': {'kickoff': '2026-09-11T11:00:00Z'}}]}
-        with patch('weekly_data.collect', return_value=self.root / 'snapshot') as collect, \
-                patch('weekly_data.load', return_value=inputs), \
-                patch('weekly_data.acquisition_summary', return_value={'sleeper': {'attempts': 5}}), \
-                patch('lineup_validation.check_document'), patch('lineup_validation.validate', return_value=validation), \
-                patch('automation_run.alert', return_value={'state': 'queued'}):
+        with patch('fantasy_agent.weekly.weekly_data.collect', return_value=self.root / 'snapshot') as collect, \
+                patch('fantasy_agent.weekly.weekly_data.load', return_value=inputs), \
+                patch('fantasy_agent.weekly.weekly_data.acquisition_summary', return_value={'sleeper': {'attempts': 5}}), \
+                patch('fantasy_agent.weekly.lineup_validation.check_document'), patch('fantasy_agent.weekly.lineup_validation.validate', return_value=validation), \
+                patch('fantasy_agent.automation.automation_run.alert', return_value={'state': 'queued'}):
             result = self.worker.execute('check', rev, 'check.json')
         self.assertTrue(collect.call_args.kwargs['validation_only'])
         self.assertEqual(result['status'], 'blocked')

@@ -7,7 +7,7 @@ import unittest
 from unittest.mock import MagicMock, patch
 from urllib.error import HTTPError, URLError
 
-from sleeper import (Sleeper, SleeperError, SleeperConnectionError,
+from fantasy_agent.providers.sleeper import (Sleeper, SleeperError, SleeperConnectionError,
                      SleeperRateLimited, cache_policy, transport)
 
 
@@ -44,7 +44,7 @@ class SleeperTests(unittest.TestCase):
         body = BytesIO(b'{"week": 1}')
         body.headers = Message()
         opener.open.return_value = body
-        with patch('sleeper.build_opener', return_value=opener):
+        with patch('fantasy_agent.providers.sleeper.build_opener', return_value=opener):
             self.assertEqual(transport('state/nfl'), (200, {}, {'week': 1}))
         request = opener.open.call_args.args[0]
         self.assertEqual(request.full_url, 'https://api.sleeper.app/v1/state/nfl')
@@ -58,7 +58,7 @@ class SleeperTests(unittest.TestCase):
         body.headers = Message()
         opener.open.return_value = body
         client = Sleeper(self.temp.name, transport, self.clock.time, self.clock.sleep)
-        with patch('sleeper.build_opener', return_value=opener):
+        with patch('fantasy_agent.providers.sleeper.build_opener', return_value=opener):
             with self.assertRaises(SleeperError):
                 client.get('user/u')
         self.assertEqual(opener.open.call_count, 1)
@@ -78,12 +78,12 @@ class SleeperTests(unittest.TestCase):
     def test_transport_errors_safe(self):
         opener = MagicMock()
         opener.open.side_effect = URLError('sensitive text')
-        with patch('sleeper.build_opener', return_value=opener):
+        with patch('fantasy_agent.providers.sleeper.build_opener', return_value=opener):
             with self.assertRaises(SleeperConnectionError) as caught:
                 transport('players/nfl')
         self.assertNotIn('sensitive', str(caught.exception))
         opener.open.side_effect = HTTPError('sensitive-url', 429, 'sensitive text', {}, None)
-        with patch('sleeper.build_opener', return_value=opener):
+        with patch('fantasy_agent.providers.sleeper.build_opener', return_value=opener):
             self.assertEqual(transport('players/nfl'), (429, {}, None))
 
     def test_profile_cache_survives_restart_and_expires_at_boundary(self):

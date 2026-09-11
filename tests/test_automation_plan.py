@@ -7,10 +7,10 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from automation_deadlines import normalize, collect, incorporate_rules, incorporate_saved
-from automation_plan import build, plan_files, next_daily, validate_policy, DEFAULT_PLAN_POLICY
-from automation_store import AutomationStore, InvalidContract, UnknownSchema, canonical, digest, instant, utc
-from sleeper import SleeperError
+from fantasy_agent.automation.automation_deadlines import normalize, collect, incorporate_rules, incorporate_saved
+from fantasy_agent.automation.automation_plan import build, plan_files, next_daily, validate_policy, DEFAULT_PLAN_POLICY
+from fantasy_agent.automation.automation_store import AutomationStore, InvalidContract, UnknownSchema, canonical, digest, instant, utc
+from fantasy_agent.providers.sleeper import SleeperError
 
 AT = '2026-09-13T12:00:00+00:00'
 
@@ -262,15 +262,15 @@ class DeadlineTests(unittest.TestCase):
         raw, _ = fixture()
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
-            with patch('automation_deadlines.get_sleeper', side_effect=[raw[k] for k in ('league', 'state', 'user', 'rosters', 'players', 'final_league', 'final_rosters')]), patch('automation_deadlines.get_nflverse', return_value=raw['schedule']):
-                collected = collect({'league_id': 'test-league', 'username': 'test-user'}, 2026, 1,
+            with patch('fantasy_agent.automation.automation_deadlines.get_sleeper', side_effect=[raw[k] for k in ('league', 'state', 'user', 'rosters', 'players', 'final_league', 'final_rosters')]), patch('fantasy_agent.automation.automation_deadlines.get_nflverse', return_value=raw['schedule']):
+                collected = collect({'league_id': 'test-league', 'username': 'test-user', 'user_id': 'owner'}, 2026, 1,
                                     root=root, clock=lambda: instant(AT))
             path = Path(collected['saved']).relative_to(root.resolve()).as_posix()
             (root / 'proof.md').write_text('Saved confirmation')
             (root / 'rules.json').write_text(json.dumps({'schema_version': 1, 'league_id': 'test-league',
                 'season': 2026, 'confirmed_on': '2026-09-09', 'evidence_refs': ['proof.md'],
                 'matched_settings': {'waiver_type': 2}}))
-            with patch('automation_deadlines.get_sleeper') as sleeper, patch('automation_deadlines.get_nflverse') as nfl:
+            with patch('fantasy_agent.automation.automation_deadlines.get_sleeper') as sleeper, patch('fantasy_agent.automation.automation_deadlines.get_nflverse') as nfl:
                 first = incorporate_saved(path, 'rules.json', root=root)
                 self.assertEqual(first, incorporate_saved(path, 'rules.json', root=root))
                 sleeper.assert_not_called()
@@ -314,8 +314,8 @@ class DeadlineTests(unittest.TestCase):
             root = Path(folder)
             (root / 'timing-proof.json').write_text('{}')
             (root / 'timing.json').write_text(json.dumps(timing))
-            with patch('automation_deadlines.get_sleeper', side_effect=responses) as sleeper, patch('automation_deadlines.get_nflverse', return_value=raw['schedule']) as nfl:
-                result = collect({'league_id': 'test-league', 'username': 'test-user'}, 2026, 1,
+            with patch('fantasy_agent.automation.automation_deadlines.get_sleeper', side_effect=responses) as sleeper, patch('fantasy_agent.automation.automation_deadlines.get_nflverse', return_value=raw['schedule']) as nfl:
+                result = collect({'league_id': 'test-league', 'username': 'test-user', 'user_id': 'owner'}, 2026, 1,
                                  root=root, timing_path='timing.json', clock=lambda: instant(AT))
             self.assertTrue(result['complete'])
             self.assertEqual(sleeper.call_count, 7)
@@ -328,8 +328,8 @@ class DeadlineTests(unittest.TestCase):
     def test_failed_collection_saves_partial_evidence_without_error_body(self):
         with tempfile.TemporaryDirectory() as folder:
             error = SleeperError('PRIVATE provider body', category='connection', network_attempts=1)
-            with patch('automation_deadlines.get_sleeper', side_effect=error), patch('automation_deadlines.get_nflverse') as nfl:
-                result = collect({'league_id': 'test-league', 'username': 'test-user'}, 2026, 1,
+            with patch('fantasy_agent.automation.automation_deadlines.get_sleeper', side_effect=error), patch('fantasy_agent.automation.automation_deadlines.get_nflverse') as nfl:
+                result = collect({'league_id': 'test-league', 'username': 'test-user', 'user_id': 'owner'}, 2026, 1,
                                  root=folder, clock=lambda: instant(AT))
             self.assertFalse(result['complete'])
             nfl.assert_not_called()
@@ -340,8 +340,8 @@ class DeadlineTests(unittest.TestCase):
         raw, _ = fixture()
         raw['state']['data']['week'] = 2
         with tempfile.TemporaryDirectory() as folder:
-            with patch('automation_deadlines.get_sleeper', side_effect=[raw['league'], raw['state']]) as sleeper, patch('automation_deadlines.get_nflverse') as nfl:
-                result = collect({'league_id': 'test-league', 'username': 'test-user'}, 2026, 1,
+            with patch('fantasy_agent.automation.automation_deadlines.get_sleeper', side_effect=[raw['league'], raw['state']]) as sleeper, patch('fantasy_agent.automation.automation_deadlines.get_nflverse') as nfl:
+                result = collect({'league_id': 'test-league', 'username': 'test-user', 'user_id': 'owner'}, 2026, 1,
                                  root=folder, clock=lambda: instant(AT))
             self.assertFalse(result['complete'])
             self.assertEqual(sleeper.call_count, 2)

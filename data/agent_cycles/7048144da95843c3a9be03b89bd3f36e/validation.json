@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "status": "REVIEW",
+  "checks_passed": false,
+  "checked_at": "2026-09-11T20:54:52.756718+00:00",
+  "expires_at": "2026-09-11T20:59:48.333343+00:00",
+  "proposal_hash": "a2a50e029f28779ed70f471b3550bca5d849e9e0987fc254e800edef630f1fb7",
+  "input_hash": "906205c60074abe2b0a304f1f04350777a979fa2d0e75aecbc09bb5360534185",
+  "state_key": "fd43233a0ced13500d3a2030247b669a8ced4c03f2660c25844f07a43241474b",
+  "league_id": "1400628784381612032",
+  "season": 2026,
+  "week": 1,
+  "issues": [
+    {
+      "level": "review",
+      "code": "concerning_news",
+      "message": "News contains availability/workload language; inspect dates and context (not a medical diagnosis)",
+      "player_id": "9997",
+      "slot_index": 3
+    }
+  ],
+  "players": [
+    {
+      "slot_index": 0,
+      "player_id": "8183",
+      "name": "Brock Purdy",
+      "locked": true,
+      "fixed_existing_starter": true,
+      "game": {
+        "game_id": "2026_01_SF_LA",
+        "kickoff": "2026-09-11T00:35:00+00:00",
+        "opponent": "LAR",
+        "home": false,
+        "has_score": true
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 1,
+      "player_id": "3198",
+      "name": "Derrick Henry",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_BAL_IND",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "IND",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 2,
+      "player_id": "6790",
+      "name": "D'Andre Swift",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_CHI_CAR",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "CAR",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 3,
+      "player_id": "9997",
+      "name": "Zay Flowers",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_BAL_IND",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "IND",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {
+        "player_id": 22916,
+        "yahoo_id": "40039",
+        "name": "Zay Flowers",
+        "status": "",
+        "injury_type": "",
+        "comment": "",
+        "injury_update_date": null,
+        "team_id": "BAL",
+        "position_id": "WR",
+        "rank": 29,
+        "status_short": "",
+        "ir_weeks": [],
+        "probability_of_playing": "0.99",
+        "practice_1": "Limit",
+        "practice_2": "Full",
+        "practice_3": "Full",
+        "practice_report_injury_type": "hamstring",
+        "team_practice_1_submitted": true,
+        "team_practice_2_submitted": true,
+        "team_practice_3_submitted": true
+      },
+      "concerning_news": [
+        {
+          "id": 607213,
+          "created": "2026-09-11 20:13:57",
+          "created_formated": "Fri, Sep 11th 8:13pm UTC",
+          "author": "Ari Koslow",
+          "player_id": 22916,
+          "team_id": "BAL",
+          "title": "Zay Flowers (hamstring) off injury report Sunday ",
+          "sport_id": "NFL",
+          "categories": [
+            "Commentary",
+            "News",
+            "Injury"
+          ],
+          "link": "https://www.fantasypros.com/nfl/news/607213/zay-flowers-hamstring-off-injury-report-sunday.php",
+          "desc": "Zay Flowers is off the injury report for Sunday's game against the Colts. ",
+          "impact": "Flowers missed some practice time in the past couple of weeks with a hamstring injury. He'll be a full-go heading into the season off a new contract. "
+        }
+      ]
+    },
+    {
+      "slot_index": 4,
+      "player_id": "9487",
+      "name": "Parker Washington",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_CLE_JAX",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "CLE",
+        "home": true,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 5,
+      "player_id": "12506",
+      "name": "Harold Fannin",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_CLE_JAX",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "JAX",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 6,
+      "player_id": "4866",
+      "name": "Saquon Barkley",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_WAS_PHI",
+        "kickoff": "2026-09-13T20:25:00+00:00",
+        "opponent": "WAS",
+        "home": true,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 7,
+      "player_id": "12711",
+      "name": "Tyler Loop",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_BAL_IND",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "IND",
+        "home": false,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    },
+    {
+      "slot_index": 8,
+      "player_id": "PIT",
+      "name": "Pittsburgh Steelers",
+      "locked": false,
+      "fixed_existing_starter": false,
+      "game": {
+        "game_id": "2026_01_ATL_PIT",
+        "kickoff": "2026-09-13T17:00:00+00:00",
+        "opponent": "ATL",
+        "home": true,
+        "has_score": false
+      },
+      "sleeper_injury_status": null,
+      "injury": {},
+      "concerning_news": []
+    }
+  ],
+  "acquisition": {
+    "sleeper": {
+      "network_attempts": 10,
+      "cache_hits": 1
+    },
+    "fantasypros": {
+      "network_attempts": 2,
+      "cache_hits": 7
+    },
+    "nflverse": {
+      "network_attempts": 2,
+      "cache_hits": 0
+    }
+  },
+  "locked_player_ids": [
+    "8183",
+    "8676"
+  ],
+  "meaning": "No detected error at check time is not guaranteed participation, medical clearance, optimality, or native unlock confirmation.",
+  "source_limits": [
+    "Provider publication times may be unknown; retrieval freshness is not source completeness.",
+    "News keyword screening is conservative and can miss subtle reports or flag old/negated reports.",
+    "Official inactives are not directly integrated. Repeat after new news or state changes."
+  ],
+  "applied": false
+}

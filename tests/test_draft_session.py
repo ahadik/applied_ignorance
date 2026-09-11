@@ -6,11 +6,11 @@ import tempfile
 import unittest
 from unittest.mock import Mock,patch
 
-from draft_session import board_digest,verify_board,release
-from fantasypros import FantasyPros
-from nflverse import NFLVerse,API
-from provider_freeze import FrozenNetwork,check,DEFAULTS
-from storage import save_atomic
+from fantasy_agent.drafting.draft_session import board_digest,verify_board,release
+from fantasy_agent.providers.fantasypros import FantasyPros
+from fantasy_agent.providers.nflverse import NFLVerse,API
+from fantasy_agent.providers.provider_freeze import FrozenNetwork,check,DEFAULTS
+from fantasy_agent.core.storage import save_atomic
 from tests.test_draft_strategy import fixture
 
 
@@ -44,7 +44,7 @@ class SessionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)/'lock.json'
             save_atomic(path,{'active':True,'blocked_providers':['fantasypros','nflverse']})
-            with patch('provider_freeze.LOCK',path):
+            with patch('fantasy_agent.providers.provider_freeze.LOCK',path):
                 for provider in DEFAULTS:
                     with self.assertRaises(FrozenNetwork):
                         check(provider,DEFAULTS[provider])
@@ -69,9 +69,9 @@ class SessionTests(unittest.TestCase):
                 verify_board(board,now,lock)
 
     def test_export_uses_session_deadline_without_extending_live_state(self):
-        from draft_board import export_candidates
-        from draft_strategy import Engine,candidate_export
-        from draft_strategy_evaluate import state_from_ids
+        from fantasy_agent.drafting.draft_board import export_candidates
+        from fantasy_agent.drafting.draft_strategy import Engine,candidate_export
+        from fantasy_agent.drafting.draft_strategy_evaluate import state_from_ids
         board,policy = fixture()
         now = datetime.now(timezone.utc)
         session = {'draft_id':board['draft_id'],'league_id':board['league_id'],
@@ -81,7 +81,7 @@ class SessionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)/'lock.json'
             save_atomic(path,{'active':True,'status':'ready','session':session})
-            with patch('draft_session.LOCK',path):
+            with patch('fantasy_agent.drafting.draft_session.LOCK',path):
                 exported = export_candidates(board,now+timedelta(hours=3))
                 self.assertEqual(exported['expires_at'],session['valid_until'])
                 self.assertEqual(exported['observed_at'],board['sources'][0]['fetched_at'])
@@ -96,12 +96,12 @@ class SessionTests(unittest.TestCase):
             path = Path(directory)/'lock.json'
             lock = {'active':True,'status':'ready','session':{'draft_id':'123','league_id':'456'}}
             save_atomic(path,lock)
-            with patch('draft_session.LOCK',path):
-                with patch('draft_data.read_live_draft',return_value=({'status':'drafting','league_id':'456'},[])):
+            with patch('fantasy_agent.drafting.draft_session.LOCK',path):
+                with patch('fantasy_agent.drafting.draft_data.read_live_draft',return_value=({'status':'drafting','league_id':'456'},[])):
                     with self.assertRaises(ValueError):
                         release()
                 self.assertEqual(json.loads(path.read_text()),lock)
-                with patch('draft_data.read_live_draft',return_value=({'status':'complete','league_id':'456'},[])):
+                with patch('fantasy_agent.drafting.draft_data.read_live_draft',return_value=({'status':'complete','league_id':'456'},[])):
                     self.assertFalse(release()['active'])
 
 

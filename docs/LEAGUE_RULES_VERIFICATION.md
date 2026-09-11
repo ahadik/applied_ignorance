@@ -1,7 +1,7 @@
 # Weekly rules verification
 
 Live central Sleeper reads completed September 9, 2026 at 00:20 Eastern
-(04:20 UTC). Command: `python3 league_rules.py`. Private raw evidence and
+(04:20 UTC). Command: `python3 -m fantasy_agent league_rules`. Private raw evidence and
 per-request metadata: `data/league_rules/latest.json`.
 
 Three successful network requests, zero cache hits. An earlier restricted attempt

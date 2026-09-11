@@ -1,0 +1,23 @@
+{
+  "run_id": "f973b86901e44da7a44dc04cc86605fc",
+  "outcome": "retry",
+  "reason": "Restricted network connection failed before discovery. Retry through central clients with network permission.",
+  "next_review_at": 1789158336.868636,
+  "evidence": [
+    "data/manager/runs/f973b86901e44da7a44dc04cc86605fc.json"
+  ],
+  "recorded_at": "2026-09-11T20:25:35.871099+00:00",
+  "proofs": [
+    {
+      "path": "data/manager/runs/f973b86901e44da7a44dc04cc86605fc.json",
+      "sha256": "e2e1e264745979dc03767d680bf23592dba0bf208d956a0150b509fdc1cd58c0"
+    }
+  ],
+  "schedule": {
+    "verified": true,
+    "task_id": "m5-sunday-early-game-review",
+    "observed_at": "2026-09-11T20:25:35.870476+00:00",
+    "reason": "recurring_wakeup_configured",
+    "tool_arguments": null
+  }
+}

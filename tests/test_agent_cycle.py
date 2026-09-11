@@ -3,7 +3,7 @@ import json
 import unittest
 from unittest.mock import patch
 
-from agent_cycle import review
+from fantasy_agent.automation.agent_cycle import review
 from tests import test_lineup_execution as base
 from tests import test_roster_operations as roster_base
 
@@ -19,12 +19,13 @@ class CycleTests(unittest.TestCase):
         self.snapshot()
         observation = {'context': self.inputs['final_context'], 'rosters': {'data': [self.inputs['final_context']['roster']]}}
         self.write('observation.json', observation)
-        with patch('agent_cycle.collect', return_value=self.root / 'snapshot') as provider, \
-             patch('agent_cycle.collect_rosters', return_value={'saved': str(self.root / 'observation.json'), 'network_attempts': 0}), \
-             patch('weekly_model.schedule_games', return_value=(self.games, {'BUF', 'NYJ'})), \
-             patch('lineup_validation.schedule_games', return_value=(self.games, {'BUF', 'NYJ'})), \
-             patch('agent_cycle.season_calendar', return_value={'weeks': [], 'assumption': 'Simulated schedule'}), \
-             patch('agent_cycle.datetime') as clock:
+        with patch('fantasy_agent.automation.agent_cycle.collect', return_value=self.root / 'snapshot') as provider, \
+             patch('fantasy_agent.automation.agent_cycle.collect_rosters', return_value={'saved': str(self.root / 'observation.json'), 'network_attempts': 0}), \
+             patch('fantasy_agent.weekly.weekly_model.schedule_games', return_value=(self.games, {'BUF', 'NYJ'})), \
+             patch('fantasy_agent.weekly.lineup_validation.schedule_games', return_value=(self.games, {'BUF', 'NYJ'})), \
+             patch('fantasy_agent.automation.agent_cycle.season_calendar', return_value={'weeks': [], 'assumption': 'Simulated schedule'}), \
+             patch('fantasy_agent.weekly.season_strategy.load', side_effect=AssertionError('Review must reuse verified inputs')), \
+             patch('fantasy_agent.automation.agent_cycle.datetime') as clock:
             clock.now.return_value = current
             result = review(self.root, 2026, 1)
         self.assertEqual(result['status'], 'owner_review_required', result)
@@ -34,7 +35,7 @@ class CycleTests(unittest.TestCase):
         provider.assert_called_once()
 
     def test_provider_failure_saves_blocked_result_and_no_authority(self):
-        with patch('agent_cycle.collect', side_effect=OSError('Simulated provider failure')):
+        with patch('fantasy_agent.automation.agent_cycle.collect', side_effect=OSError('Simulated provider failure')):
             result = review(self.root, 2026, 1)
         self.assertEqual(result['status'], 'blocked')
         self.assertFalse(result['lineup_state']['standing_autonomy_enabled'])
@@ -42,7 +43,7 @@ class CycleTests(unittest.TestCase):
 
     def test_unresolved_action_blocks_collection(self):
         eid = self.engine.register('proposal.json', 'authority.json')['id']
-        with patch('agent_cycle.collect') as collect:
+        with patch('fantasy_agent.automation.agent_cycle.collect') as collect:
             result = review(self.root, 2026, 1)
         self.assertEqual(result['status'], 'blocked')
         collect.assert_not_called()

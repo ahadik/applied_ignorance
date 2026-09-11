@@ -1,0 +1,1 @@
+"""Fantasy team management application."""

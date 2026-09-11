@@ -1,0 +1,8 @@
+{
+  "run_id": "f2a231dd9a924af5afe20be0dfbdeb73",
+  "outcome": "retry",
+  "reason": "Retain current starters: optimizer and native roster agree. Flowers news says off injury report; preserve the validator REVIEW without an override. No game notices are due. Brown is on waivers with no pending owner claims. The form does not establish an exact processing time. Continue the acquisition review with Aaron Jones as the provisional drop candidate, preserve season-value uncertainty and execution acceptance gates, and obtain a concrete exact plan before requesting any required supervised approval. This scheduler-injected run confirms wakeup delivery in the new task.",
+  "evidence": ["data/manager/runs/f2a231dd9a924af5afe20be0dfbdeb73.json", "data/manager/browser-review-f2a231dd.json", "data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/validation.json", "data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/comparisons/9224-4199.json", "data/agent_cycles/7048144da95843c3a9be03b89bd3f36e/season_calendar.json"],
+  "next_review_at": 1789161300,
+  "followups": [{"id": "chase-brown-review", "at": 1789161300, "reason": "Recheck Brown waiver timing. Native W (Fri) has no exact deadline in the observed form. No pending claims as of this review. Assess Brown for Jones with preserved positional and bye coverage, then prepare a concrete plan under the supervised transaction gates. Do not substitute an invented deadline or silently drop Mahomes."}]
+}

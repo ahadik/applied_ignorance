@@ -1,0 +1,16 @@
+{
+  "basis": "observed_sleeper_browser",
+  "observation_window": "2026-09-11T20:55:00Z/2026-09-11T20:57:00Z",
+  "account": "ahadik",
+  "account_menu_observed": true,
+  "league_id": "1400628784381612032",
+  "team": "Applied Ignorance",
+  "url": "https://sleeper.com/leagues/1400628784381612032/team",
+  "starters": ["8183", "3198", "6790", "9997", "9487", "12506", "4866", "12711", "PIT"],
+  "pending_claims": [],
+  "pending_claims_basis": "My Waivers explicitly displayed No pending waivers for your roster.",
+  "candidate": {"id": "9224", "name": "Chase Brown", "action": "waiver", "displayed_processing_label": "W (Fri)", "exact_deadline": null, "claim_form_observed": true, "submitted": false, "bye": 6},
+  "season_judgment": "Brown merits further acquisition review. Replacing Aaron Jones would preserve four running backs and the same week-six bye. Dropping Mahomes removes quarterback backup and week-eight coverage. Dropping Juwan Johnson removes tight-end backup and week-eleven coverage. Dropping Johnston reduces receiver depth and injury flexibility. The current-week model favors Brown over Jones, but it supplies no future-week valuations. Do not represent the current-week gain as a measured season gain. Native timing remains unresolved and first-transaction acceptance remains incomplete.",
+  "platform_changes": false,
+  "execution_evidence_eligible": false
+}

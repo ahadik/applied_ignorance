@@ -1,5 +1,5 @@
 import unittest
-from draft import score, snake_picks
+from fantasy_agent.drafting.draft import score, snake_picks
 
 
 class DraftTests(unittest.TestCase):
