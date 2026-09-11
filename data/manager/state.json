@@ -25,7 +25,7 @@
   },
   "enabled": true,
   "target": "01a09238-ec8e-73c3-a00d-95ba632b70cb",
-  "last_wake_at": 1789160087.10248,
+  "last_wake_at": 1789160655.104991,
   "last_result": "data/manager/runs/f2a231dd9a924af5afe20be0dfbdeb73.json",
   "last_decision": "data/manager/decisions/f2a231dd9a924af5afe20be0dfbdeb73.json",
   "exception": null,
